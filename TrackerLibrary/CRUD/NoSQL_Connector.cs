@@ -146,5 +146,27 @@ namespace TrackerLibrary.CRUD
 
             return serializedHandsAsJson; 
         }
+
+        public static List<CevModel> GetCevByPosParallel(string tournamentType, string pos, string sqlQuery)
+        {
+            string output;
+
+            using (var _conn = new NpgsqlConnection(GetConnectionString(GlobalConfig.dbName)))
+            {
+                _conn.Open();
+                using (var _cmd = new NpgsqlCommand(sqlQuery, _conn))
+                {
+                    _cmd.Parameters.Clear();
+                    //_cmd.Parameters.Add(new NpgsqlParameter("activePlayer", playerNickName));
+                    _cmd.Parameters.Add(new NpgsqlParameter("tourneyType", tournamentType));
+                    _cmd.Parameters.Add(new NpgsqlParameter("pos", pos));
+
+                    output = _cmd.ExecuteScalar().ToString();
+                }
+                _conn.Close();
+            }
+
+            return JsonConvert.DeserializeObject<List<CevModel>>(output);
+        }
     }
 }

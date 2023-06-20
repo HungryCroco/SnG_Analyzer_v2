@@ -8,4 +8,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="OxyPlot.WindowsForms" Version="2.1.2" />
+  </ItemGroup>
+
+    <ItemGroup>
+	    <ProjectReference Include="..\TrackerLibrary\TrackerLibrary.csproj" />
+    </ItemGroup>
+
 </Project>
