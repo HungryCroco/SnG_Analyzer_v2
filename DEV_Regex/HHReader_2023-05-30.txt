@@ -1,0 +1,646 @@
+
+using System.Text.RegularExpressions;
+using TrackerLibrary.Models;
+
+
+
+
+namespace TrackerLibrary
+{
+    public static partial class HHReader
+    {
+        public static List<string> ReadFileReturnListOfString(this string filePath)
+        {
+            string[] text = System.IO.File.ReadAllLines(filePath);
+            List<string> output = text.ToList();
+            //Add empty line to read the last Hand
+            output.Add("");
+            return output;
+
+        }
+
+        public static string ReadFileReturnString(this string filePath)
+        {
+            string text = System.IO.File.ReadAllText(filePath);
+
+            return text;
+
+        }
+
+        // Line 1:
+        private static void ReadEntieHand(this Hand _hand, string _hh)
+        {
+            Regex patternFirstLine = new Regex("^([\\w\\d]+) Hand #([\\d]+): Tournament #([\\d]+), ([$€])([.\\d]+)\\+[$€]([.\\d]+).+\\s\\(([\\d]+\\/[\\d]+)\\).+([\\d]+\\/[\\d]+\\/[\\d]+ )([\\d:]+) ET$");
+
+            //_hand.Info.Room = pattern.Match(_hh).Groups[1].ToString();
+        }
+
+        private static void ReadHandIdBySite(this Hand _hand, string _hh)
+        {
+            List<Hand> hands = new List<Hand>();
+            //G00 - entire EDITED Hand as string    -> LINE 01 -> {PokerStars Hand #232702857612: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level VII (100/200) ...}
+            //G01 - Room                            -> LINE 01 -> {PokerStars}
+            //G02 - HandIdBySite                    -> LINE 01 -> {232702857612}
+            //G03 - TournamentIdBySite              -> LINE 01 -> {3332579367}
+            //G04 - Currency                        -> LINE 01 -> {$}
+            //G05 - BuyIn                           -> LINE 01 -> {9.22}
+            //G06 - Fee                             -> LINE 01 -> {0.78}
+            //G07 - Level                           -> LINE 01 -> {100/200}
+            //G08 - Date                            -> LINE 01 -> {2021/12/31}
+            //G09 - Time                            -> LINE 01 -> {22:45:34}
+            //G10 - TableIdBySite                   -> LINE 02 -> {3332579367 2}
+            //G11 - TourneyType                     -> LINE 02 -> {9-max}
+            //G12 - BTN's Seat#                     -> LINE 02 -> {2}
+            //G13 - List<Seat#>                     -> LINE 03 -> {{2} , {3} , {4} , {6} , {7} , {9}}         //List of all SeatNumbers active Preflop
+            //G14 - List<PlayerNickName>            -> LINE 03 -> {{TLNDink2749} , {Günex66} , {IPray2Buddha} , {Willifold777} , {Sickofitall5}} , {perussatto4}}
+            //G15 - List<StartingStack>             -> LINE 03 -> {{9603} , {1662} , {3245} , {5377} , {3521} , {3592}}
+            //G16 - List<PlayerNickName>            -> LINE 04 -> {{TLNDink2749} , {Günex66} , {IPray2Buddha} , {Willifold777} , {Sickofitall5} , {perussatto4} , {Günex66} , {IPray2Buddha}}
+            //G17 - List<ante | SB | BB>            -> LINE 04 -> {{ the ante } , { the ante } , { the ante } , { the ante } , { the ante } , { the ante } , { small blind } , { big blind }}
+            //G18 - List<Chips>                     -> LINE 04 -> {{25} , {25} , {25} , {25} , {25} , {25} , {100} , {200}}
+            //G19 - Hero                            -> LINE 05 -> {IPray2Buddha}
+            //G20 - HC1                                         -> LINE 05 -> {3h}
+            //G21 - HC2                                         -> LINE 05 -> {Kh}
+            //G22 - List<PlayerNickName>                        -> LINE 06 -> {{Willifold777} , {Sickofitall5} , {perussatto4} , {TLNDink2749} , {Günex66} , {IPray2Buddha}}
+            //G23 - List<Action>                                -> LINE 06 -> {{folds} , {raises 300 to 500} , {folds} , {folds} , {folds} , {folds}}   
+            //G24 - List<Chips> //Uncalled bet                          -> LINE 08 -> {300}             //Amt of unmatched chipes, returned to the player
+            //G25 - List<PlayerNickName> //G24 returned to              -> LINE 08 -> {Sickofitall5}    // Player that did make a bet, that is not matched and gets his chips returned
+            //G26 - List<PlayerNickName> //collected G27 from pot       -> LINE 09 -> {Sickofitall5}    // Winner of the pot, hand finished PF
+            //G27 - List<Chips> //collectet from pot                    -> LINE 09 -> {650}             // Chips won, hand finished PF
+            //G28 - FC1                                                 -> LINE 11 -> {4c}
+            //G29 - FC2                                                 -> LINE 11 -> {7d}
+            //G30 - FC3                                                 -> LINE 11 -> {9s}
+            //G31 - List<PlayerNickName> on Flop                        -> LINE 12 -> {{Willifold777} , {Sickofitall5} , {perussatto4} , {TLNDink2749} , {Günex66} , {IPray2Buddha}}
+            //G32 - List<Action> on Flop                                -> LINE 12 -> {{folds} , {raises 300 to 500} , {folds} , {folds} , {folds} , {folds}}
+            //G33 - -//- G24 Flop                                       -> LINE 13
+            //G34 - -//- G25 Flop                                       -> LINE 13
+            //G35 - -//- G26 Flop                                       -> LINE 14
+            //G36 - -//- G27 Flop                                       -> LINE 14
+            //G37 - TC                                                  -> LINE 16 -> {9s} 
+            //G38 - List<PlayerNickName> on Turn                        -> LINE 17 -> {{Willifold777} , {Sickofitall5} , {perussatto4} , {TLNDink2749} , {Günex66} , {IPray2Buddha}} 
+            //G39 - List<Action> on Turn                                -> LINE 17 -> {{folds} , {raises 300 to 500} , {folds} , {folds} , {folds} , {folds}} 
+            //G40 - -//- G24 Turn                                       -> LINE 18
+            //G41 - -//- G25 Turn                                       -> LINE 18
+            //G42 - -//- G26 Turn                                       -> LINE 19
+            //G43 - -//- G27 Turn                                       -> LINE 19
+            //G44 - RC                                                  -> LINE 21 -> {9s}
+            //G45 - List<PlayerNickName> on River                       -> LINE 22 -> {{Willifold777} , {Sickofitall5} , {perussatto4} , {TLNDink2749} , {Günex66} , {IPray2Buddha}}
+            //G46 - List<Action> on River                               -> LINE 22 -> {{folds} , {raises 300 to 500} , {folds} , {folds} , {folds} , {folds}}
+            //G47 - -//- G24 River                                      -> LINE 23 
+            //G48 - -//- G25 River                                      -> LINE 23 
+            //G49 - -//- G26 River                                      -> LINE 24
+            //G50 - -//- G27 River                                      -> LINE 24 
+            //G51 - List<PlayerNickName> on ShowDown                    -> LINE 27 -> {{x_Jaures_x} , {Sakura2892}}
+            //G52 - List<HC1> on ShowDown                               -> LINE 27 -> {{Ks} , {Td}}
+            //G53 - List<HC2> on ShowDown                               -> LINE 27 -> {{2s} , {Qd}}
+            //G54 - -//- G26 Flop                                       -> LINE 28 
+            //G55 - -//- G27 Flop                                       -> LINE 28 
+            //G56 - Total Pot                                           -> LINE 32 -> {1115}
+            //G57 - Main Pot                                            -> LINE 32 -> {5485}
+            //G58 - List<Side Pot>                                      -> LINE 32 -> {6400}
+            //G59 - Rake                                                -> LINE 32 -> {0}
+            //G60 -  
+            //G61 - 
+            //G62 - 
+            //G63 - 
+            //G64 - 
+            //G65 - 
+            //G66 - 
+            //G67 - 
+            //G68 - 
+            //G69 - 
+            //G70 - 
+            //G71 - 
+            //G72 - 
+            //G73 - 
+            //G74 - 
+            //G75 - 
+            //G76 - 
+            //G77 - 
+            //G78 - 
+            //G79 - 
+            //G80 - 
+            //G55 - 
+            //G56 - 
+            string pattern = @"^(.+) Hand #(\d+): Tournament #(\d+), ([$€])([\.\d]+)\+[$€]([\.\d]+).+(\d+/\d+)\) - ([\d/]+) ([\d:]+) ET" +                              // LINE 01  //PokerStars Hand #222088763207: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 8:57:50 ET
+                                @"[\s\r\n]+^Table '([\s\d]+)' (.+) Seat #(\d+) is the button" +                                                                         // LINE 02  //Table '3091025143 1' 2-max Seat #2 is the button
+                                @"(?:[\s\r\n]+^Seat (\d+): (.+) \((\d+) in chips\).+)*" +  //in web wo last "."                                                                             // LINE 03  //Seat 2: katarina1011 (1953 in chips) 
+                                @"(?:[\s\r\n]+^(.+): posts( the ante | small blind | big blind )(\d+).+)*" +                                                            // LINE 04  //IPray2Buddha: posts big blind 40
+                                @"[\s\r\n]+^\*\*\* HOLE CARDS \*\*\*" +                                                                                                 // LINE 05  // *** HOLE CARDS ***\r\n
+                                @"[\s\r\n]+^Dealt to (.+) \[([a-zA-Z2-9]+) ([a-zA-Z2-9]+)\]" +                                                                          // LINE 06  //Dealt to IPray2Buddha [6s 4c]
+                                @"(?:[\s\r\n]+(.+): (raises *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?|folds|calls (?:\d+)*(?: and is all-in)?|checks|bets *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?))*" +           // LINE 07  //katarina1011: raises 40 to 80
+                                @"(?:[\s\r\n]+^Uncalled bet \((\d+)\) returned to (.+)\r)*" +                                                                           // LINE 08  //Uncalled bet (40) returned to katarina1011
+                                @"(?:[\s\r\n]+^(.+) collected (\d+) from pot)*" +                                                                                       // LINE 09  //katarina1011 collected 80 from pot
+                                @"(?:[\s\r\n]+^.+: doesn't show hand)*" +                                                                                               // LINE 10  //katarina1011: doesn't show hand
+                                @"(?:[\s\r\n]+^\*\*\* FLOP \*\*\* (?:\[([a-zA-Z2-9]+) ([a-zA-Z2-9]+) ([a-zA-Z2-9]+)\]))*" +                                             // LINE 11  //*** FLOP *** [4c 7d 9s]
+                                @"(?:[\s\r\n]+(.+): (raises *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?|folds|calls (?:\d+)*(?: and is all-in)?|checks|bets *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?))*" +           // LINE 12  //katarina1011: raises 40 to 80
+                                @"(?:[\s\r\n]+^Uncalled bet \((\d+)\) returned to (.+)\r)*" +                                                                           // LINE 13  //Uncalled bet (40) returned to katarina1011
+                                @"(?:[\s\r\n]+^(.+) collected (\d+) from pot)*" +                                                                                       // LINE 14  //katarina1011 collected 80 from pot
+                                @"(?:[\s\r\n]+^.+: doesn't show hand)*" +                                                                                               // LINE 15  //katarina1011: doesn't show hand
+                                @"(?:[\s\r\n]+^\*\*\* TURN \*\*\* (?:.+\[([a-zA-Z2-9]+)\]))*" +                                                                         // LINE 16  //*** TURN *** [2d 6h 2h] [2s]
+                                @"(?:[\s\r\n]+(.+): (raises *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?|folds|calls (?:\d+)*(?: and is all-in)?|checks|bets *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?))*" +           // LINE 17  //katarina1011: raises 40 to 80
+                                @"(?:[\s\r\n]+^Uncalled bet \((\d+)\) returned to (.+)\r)*" +                                                                           // LINE 18  //Uncalled bet (40) returned to katarina1011
+                                @"(?:[\s\r\n]+^(.+) collected (\d+) from pot)*" +                                                                                       // LINE 19  //katarina1011 collected 80 from pot
+                                @"(?:[\s\r\n]+^.+: doesn't show hand)*" +                                                                                               // LINE 20  //katarina1011: doesn't show hand
+                                @"(?:[\s\r\n]+^\*\*\* RIVER \*\*\* (?:.+\[([a-zA-Z2-9]+)\]))*" +                                                                        // LINE 21  //*** RIVER *** [2d 6h 6c 3c] [5s]
+                                @"(?:[\s\r\n]+(.+): (raises *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?|folds|calls (?:\d+)*(?: and is all-in)?|checks|bets *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?))*" +           // LINE 22  //katarina1011: raises 40 to 80
+                                @"(?:[\s\r\n]+^Uncalled bet \((\d+)\) returned to (.+)\r)*" +                                                                           // LINE 23  //Uncalled bet (40) returned to katarina1011
+                                @"(?:[\s\r\n]+^(.+) collected (\d+) from pot)*" +                                                                                       // LINE 24  //katarina1011 collected 80 from pot
+                                @"(?:[\s\r\n]+^.+: doesn't show hand)*" +                                                                                               // LINE 25  //katarina1011: doesn't show hand
+                                @"(?:[\s\r\n]+^\*\*\* SHOW DOWN \*\*\*)*" +                                                                                             // LINE 26 //*** SHOW DOWN ***
+                                @"(?:[\s\r\n]+^(.+): shows \[([a-zA-Z2-9]+) ([a-zA-Z2-9]+)\] .+)*" +                                                                    // LINE 27  //sgctps: shows [Th Td] (a pair of Tens)
+                                @"(?:[\s\r\n]+^(.+) collected (\d+) from (?:side pot|main pot|pot)?)*" +                                                                // LINE 28  //katarina1011 collected 80 from pot
+                                @"(?:[\s\r\n]+^.+ finished the tournament .+)*" +                                                                                       // LINE 29  //Kevin2049 finished the tournament in 10th place
+                                @"(?:[\s\r\n]+^.+ wins the tournament .+)*" +                                                                                           // LINE 30  //katarina1011 wins the tournament and receives $57.56 - congratulations!
+                                @"(?:[\s\r\n]+^\*\*\* SUMMARY \*\*\*)" +                                                                                                // LINE 31  //*** SUMMARY ***
+                                @"(?:[\s\r\n]+^Total pot (\d+) (?:Main pot (\d+). )*(?:Side pot (\d+). )*(?:\| Rake (\d+))(?:.+))*" +                                   // LINE 32  //Total pot 11885 Main pot 5485. Side pot 6400. | Rake 0
+                                @"(?:[\s\r\n]+^Board .+)?";                                                                                                             // LINE 33  //Board [3h 2s 6c 4h Ts]
+
+
+            string patternCleanHH = @"([\s\r\n]+.+ will be allowed .+)" +
+                                    @"|([\s\r\n]+(.+) (has returned|is disconnected|is connected|has timed out|is sitting out))" +
+                                    @"|([\s\r\n]+(.+) mucks hand)";
+
+            string cleanHH = Regex.Replace(_hh, patternCleanHH, "\r\n",RegexOptions.Multiline);
+
+
+            MatchCollection matches = Regex.Matches(cleanHH, pattern, RegexOptions.Multiline);
+
+            //foreach (Match match in matches)
+            //{
+            //    Hand h = new Hand();
+            //    h.Info.HandIdBySite = long.Parse(match.Groups[2].Value);
+            //    hands.Add(h);
+            //}
+            if (true)
+            {
+
+            }
+
+            //_hand.Info.HandIdBySite = long.Parse(pattern.Match(_hh).Groups[2].ToString());
+        }
+
+        private static void ReadTournamentIdBySite(this Hand _hand, string _hh)
+        {
+            Regex pattern = new Regex("(^Tournament #)([\\d]+)");
+
+            _hand.Info.TournamentIdBySite = long.Parse(pattern.Match(_hh).Groups[2].ToString());
+        }
+
+        private static void ReadBuyIn(this Tournament _tourney, string _hh)
+        {
+            //// TODO: REFACTORE2: Currently working only for USD, and Euro
+            Regex pattern = new Regex("^([$€])([.\\d]+)\\+([$€])([.\\d]+)");
+
+            _tourney.Info.AmtBuyIn = double.Parse(pattern.Match(_hh).Groups[2].ToString()) + double.Parse(pattern.Match(_hh).Groups[4].ToString());
+        }
+
+        private static void ReadFee(this Tournament _tourney, string _hh)
+        {
+            //// TODO: REFACTORE2: Currently working only for USD, and Euro
+            Regex pattern = new Regex("^([$€])([.\\d]+)\\+([$€])([.\\d]+)");
+
+            _tourney.Info.AmtFee = double.Parse(pattern.Match(_hh).Groups[4].ToString());
+        }
+
+        private static void ReadCurrency(this Tournament _tourney, string _hh)
+        {
+            //// TODO: REFACTORE2: Currently working only for USD, and Euro
+            Regex pattern = new Regex("^([$€])([.\\d]+)\\+([$€])([.\\d]+)");
+
+            _tourney.Info.Currency = pattern.Match(_hh).Groups[1].ToString();
+        }
+
+        private static void ReadLevel(this Hand _hand, string _hh)
+        {
+            Regex pattern = new Regex("^\\s\\(([\\d]+\\/([\\d]+))\\)");
+
+            _hand.Info.Level = pattern.Match(_hh).Groups[1].ToString();
+            _hand.Info.Amt_bb = int.Parse(pattern.Match(_hh).Groups[2].ToString());
+        }
+
+        private static void ReadDate(this Hand _hand, string _hh)
+        {
+            Regex pattern = new Regex("^([\\d]+\\/[\\d]+\\/[\\d]+ )([\\d:]+) ET");
+
+            _hand.Info.DateTime = DateTime.Parse(pattern.Match(_hh).Groups[1].ToString());
+        }
+
+        private static void ReadTime(this Hand _hand, string _hh)
+        {
+            Regex pattern = new Regex("^([\\d]+\\/[\\d]+\\/[\\d]+ )([\\d:]+) ET");
+
+            _hand.Info.Time = TimeSpan.Parse(pattern.Match(_hh).Groups[2].ToString());
+        }
+
+        //Line 2:
+        private static void ReadTableIdBySite(this Hand _hand, string _hh)
+        {
+            Regex pattern = new Regex("^Table '([\\s\\d]+)");
+
+            _hand.Info.TableIdBySite = pattern.Match(_hh).Groups[1].ToString();
+        }
+
+        private static void ReadTournamentType(this Tournament _tourney, string _hh)
+        {
+            Regex pattern = new Regex("^Table '([\\s\\d]+)' (.+) Seat");
+
+            _tourney.Info.TournamentIdBySite = long.Parse(pattern.Match(_hh).Groups[2].ToString());
+        }
+
+        private static void ReadBtn(this Hand _hand, string _hh)
+        {
+            Regex pattern = new Regex("^Seat #([0-9]+) is the button");
+
+            _hand.Info.SeatBtn = sbyte.Parse(pattern.Match(_hh).Groups[1].ToString());
+        }
+
+        //*** HOLE CARDS ***
+        private static void ReadHero(this Hand _hand, string _hh)
+        {
+            Regex pattern = new Regex("^Dealt to (.+) \\[");
+
+            _hand.Info.Hero = pattern.Match(_hh).Groups[1].ToString();
+        }
+        private static void ReadHoleCards(this Hand _hand, string _hh)
+        {
+            //TODO: REFACTORE2: may be add enum or simillar or attach HCs to Ids;
+            //TODO: REFACTORE2: read both HoleCards together;
+            Regex pattern = new Regex("^Dealt to (.+) \\[([a-zA-Z2-9]+) ([a-zA-Z2-9]+)]");
+
+            if (pattern.IsMatch(_hh))
+            {
+                _hand.Info.HCs.Add(pattern.Match(_hh).Groups[2].ToString().ToCard());
+                _hand.Info.HCs.Add(pattern.Match(_hh).Groups[3].ToString().ToCard());
+            }
+            
+        }
+
+        private static void ReadFlopCards(this Hand _hand, string _hh)
+        {
+            Regex line = new Regex("^\\*{3} FLOP \\*{3}");
+
+            if (line.IsMatch(_hh))
+            {
+                Regex pattern = new Regex("^\\*{3} FLOP \\*{3} \\[([a-zA-Z2-9]{2}) ([a-zA-Z2-9]{2}) ([a-zA-Z2-9]{2})]");
+
+                _hand.Info.Board.Add(pattern.Match(_hh).Groups[1].ToString().ToCard());
+                _hand.Info.Board.Add(pattern.Match(_hh).Groups[2].ToString().ToCard());
+                _hand.Info.Board.Add(pattern.Match(_hh).Groups[3].ToString().ToCard());
+            }
+        }
+
+        private static void ReadTurnCard(this Hand _hand, string _hh)
+        {
+            Regex line = new Regex("^\\*{3} TURN \\*{3}");
+
+            if (line.IsMatch(_hh))
+            {
+                Regex pattern = new Regex("^\\*{3} TURN \\*{3} \\[([a-zA-Z2-9]{2}) ([a-zA-Z2-9]{2}) ([a-zA-Z2-9]{2})] \\[([a-zA-Z2-9]{2})]");
+
+                _hand.Info.Board.Add(pattern.Match(_hh).Groups[4].ToString().ToCard());
+            }
+        }
+
+        private static void ReadRiverCard(this Hand _hand, string _hh)
+        {
+            Regex line = new Regex("^\\*{3} RIVER \\*{3}");
+
+            if (line.IsMatch(_hh))
+            {
+                Regex pattern = new Regex("^\\*{3} RIVER \\*{3} \\[([a-zA-Z2-9]{2}) ([a-zA-Z2-9]{2}) ([a-zA-Z2-9]{2}) ([a-zA-Z2-9]{2})] \\[([a-zA-Z2-9]{2})]");
+
+                _hand.Info.Board.Add(pattern.Match(_hh).Groups[5].ToString().ToCard());
+            }
+        }
+
+        private static void ReadPreflopSeatAction(this Hand _hand, string _hh)
+        {
+            Regex patternStartingStack = new Regex("^Seat ([\\d]+): (.+) \\(([\\d]+) in chips\\)");
+            Regex patternBlinds = new Regex("^(.+): posts( the ante | small blind | big blind )([0-9]+)");
+
+            //if (_hh == "IPray2Buddha: posts small blind 10")
+            //{
+
+            //}
+            string playerNickName =     patternStartingStack.Match(_hh).Groups[2].ToString() != "" ? patternStartingStack.Match(_hh).Groups[2].ToString() :
+                                        patternBlinds.Match(_hh).Groups[1].ToString();
+            sbyte seatNum =  sbyte.Parse(patternStartingStack.Match(_hh).Groups[1].ToString() != "" ? patternStartingStack.Match(_hh).Groups[1].ToString() : "0");
+            float size =    float.Parse(patternStartingStack.Match(_hh).Groups[3].ToString() != "" ? patternStartingStack.Match(_hh).Groups[3].ToString() : patternBlinds.Match(_hh).Groups[3].ToString());
+            string payForWhat =     patternBlinds.Match(_hh).Groups[2].ToString() != "" ? patternBlinds.Match(_hh).Groups[2].ToString() : "";
+
+            if (patternStartingStack.IsMatch(_hh))
+            {
+                if (!_hand.SeatActions.ContainsKey(playerNickName))
+                {
+                    _hand.SeatActions.Add(playerNickName, new SeatAction());
+                }
+                _hand.SeatActions[playerNickName].SeatNumber = seatNum;
+                _hand.SeatActions[playerNickName].SeatStartingStack = size;
+
+            }
+            else if (patternBlinds.IsMatch(_hh))
+            {
+                if (payForWhat == " the ante ")
+                {
+                    _hand.SeatActions[playerNickName].Ante = size;
+                }
+                else
+                {
+                    _hand.SeatActions[playerNickName].Blind = size;
+                }
+            }
+        }
+
+        private static void ReadFullHandAsString(this Hand _hand, string _hh)
+        {
+            if (!string.IsNullOrEmpty(_hh))
+            {
+                _hand.Info.FullHandAsString.AppendLine(_hh);
+            }
+        }
+
+        private static HHReaderLines CurrentLine(this string _hh)
+        {
+            Regex patternFirstLine = new Regex("^(PokerStars Hand #)([\\d]+): (Tournament #)([\\d]+)");
+            Regex patternSecondLine = new Regex("^Table '");
+            Regex patternThirdToFifthLine = new Regex("^in chips");
+            Regex patternPreflop = new Regex("^\\* HOLE CARDS \\*");
+            Regex patternFlop = new Regex("^\\* FLOP \\*");
+            Regex patternTurn = new Regex("^\\* TURN \\*");
+            Regex patternRiver = new Regex("^\\* RIVER \\*");
+            Regex patternShowdown = new Regex("^\\* SHOW DOWN \\*");
+            Regex patternSummary = new Regex("^\\* SUMMARY \\*");
+
+
+
+            if (patternFirstLine.IsMatch(_hh))
+            {
+                return HHReaderLines.FirstLine;
+            }
+            else if (patternSecondLine.IsMatch(_hh))
+            {
+                return HHReaderLines.SecondLine;
+            }
+            else if (patternThirdToFifthLine.IsMatch(_hh))
+            {
+                return HHReaderLines.ThirdToFifthLine;
+            }
+            else if (patternPreflop.IsMatch(_hh))
+            {
+                return HHReaderLines.Preflop;
+            }
+            else if (patternFlop.IsMatch(_hh))
+            {
+                return HHReaderLines.Flop;
+            }
+            else if (patternTurn.IsMatch(_hh))
+            {
+                return HHReaderLines.Turn;
+            }
+            else if (patternRiver.IsMatch(_hh))
+            {
+                return HHReaderLines.River;
+            }
+            else if (patternShowdown.IsMatch(_hh))
+            {
+                return HHReaderLines.Showdown;
+            }
+            else if (patternSummary.IsMatch(_hh))
+            {
+                return HHReaderLines.Summary;
+            }
+            else
+            {
+                return HHReaderLines.Unknown;
+            }
+        }
+
+        public static bool CompleteCurrentHand(this Hand _hand, string _hh)
+        {
+            if (_hh == "" && _hand.Info.HandIdBySite != 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static void ReadEntireAction(this Hand _hand, string _hh, ref HHReaderLines _currLine)
+        {
+            string action = "";
+
+            // G1: NickName, G2: Action, G3: Size, G5: totalPot, G6: AI?
+            Regex pattern = new Regex("^(.+): (raises|folds|calls|checks|bets) ?([\\d]+)?( to )?([\\d]+)?( and is all-in)?");
+            Regex patternUB = new Regex("^Uncalled bet \\(([0-9]+)\\) returned to (.+)");
+
+            string playerNickName = (pattern.Match(_hh).Groups[1].ToString() != "") ? pattern.Match(_hh).Groups[1].ToString() :
+                                    patternUB.Match(_hh).Groups[2].ToString();
+
+            float size = float.Parse((pattern.Match(_hh).Groups[5].ToString() != "") ? pattern.Match(_hh).Groups[5].ToString() :
+                                ((pattern.Match(_hh).Groups[3].ToString() != "") ? pattern.Match(_hh).Groups[3].ToString() :
+                                ((patternUB.Match(_hh).Groups[1].ToString() != "") ? patternUB.Match(_hh).Groups[1].ToString() :
+                                "0")));
+            string actionFull = pattern.Match(_hh).Groups[2].ToString();
+
+
+            if (actionFull == "checks")
+            {
+                action = "X";
+            }
+            else
+            {
+                action = actionFull[0].ToString().ToUpper();
+            }
+
+            if (action != "")
+            {
+                if (!_hand.SeatActions.ContainsKey(playerNickName))
+                {
+                    _hand.SeatActions.Add(pattern.Match(_hh).Groups[1].ToString(), new SeatAction());
+                }
+                if (!_hand.SeatActions[playerNickName].Action.ContainsKey(_currLine.GetDescription()))
+                {
+                    _hand.SeatActions[playerNickName].Action.Add(_currLine.GetDescription(), new());
+                }
+
+                _hand.SeatActions[playerNickName].Action[_currLine.GetDescription()].Add((action, size));
+            }
+        }
+
+        public static void CalculatePositions(this Hand _hand)
+        {
+            List<string> players = new();
+            List<string> temp = new();
+            bool btnFound = false;
+            foreach (var player in _hand.SeatActions)
+            {
+                if (player.Value.SeatNumber == _hand.Info.SeatBtn)
+                {
+                    btnFound = true;
+                }
+                if (btnFound)
+                {
+                    players.Add(player.Key);
+                }
+                else
+                {
+                    temp.Add(player.Key);
+                }
+            }
+            foreach (var player in temp)
+            {
+                players.Add(player);
+            }
+
+            for (int i = 0; i < players.Count; i++)
+            {
+                if (i == 0)
+                {
+                    _hand.SeatActions[players[i]].SeatPosition = 0;
+                }
+                else if (i == 1 & players.Count > 2)
+                {
+                    _hand.SeatActions[players[i]].SeatPosition = -1;
+                }
+                else if (i == 1 & players.Count == 2)
+                {
+                    _hand.SeatActions[players[i]].SeatPosition = -2;
+                }
+                else if (i == 2)
+                {
+                    _hand.SeatActions[players[i]].SeatPosition = -2;
+                }
+                else
+                {
+                    _hand.SeatActions[players[i]].SeatPosition = (sbyte)(players.Count - i); 
+                }
+                
+            }
+        }
+
+        public static void ReadEntireHand(this Hand _hand, Tournament _tourney, string _hh, ref HHReaderLines _prevLine)
+        {
+
+            HHReaderLines currLine = _hh.CurrentLine();
+            _hand.ReadFullHandAsString(_hh);
+
+            if (currLine != HHReaderLines.Unknown)
+            {
+                _prevLine = currLine;
+            }
+
+            _hand.ReadHandIdBySite(_hh);
+
+
+            //if (_prevLine == HHReaderLines.FirstLine)
+            //{
+            //    _hand.ReadRoom(_hh);
+            //    _hand.ReadHandIdBySite(_hh);
+            //    _hand.ReadTournamentIdBySite(_hh);
+            //    _hand.ReadLevel(_hh);
+            //    _hand.ReadDate(_hh);
+            //    _hand.ReadTime(_hh);
+
+            //    if (_tourney.Info.AmtBuyIn == 0)
+            //    {
+            //        _tourney.ReadBuyIn(_hh);
+            //        _tourney.ReadFee(_hh);
+            //        _tourney.ReadCurrency(_hh);
+            //    }
+
+            //}
+
+            //else if (_prevLine == HHReaderLines.SecondLine)
+            //{
+            //    _hand.ReadTableIdBySite(_hh);
+            //    _hand.ReadBtn(_hh);
+
+            //    if (_tourney.Info.TournamentType == "")
+            //    {
+            //        _tourney.ReadTournamentType(_hh);
+
+            //    }
+            //}
+
+            //else if (_prevLine == HHReaderLines.ThirdToFifthLine)
+            //{
+            //    _hand.ReadPreflopSeatAction(_hh);
+            //    //hh.ReadSeats();
+            //}
+
+            //else if (_prevLine == HHReaderLines.Preflop)
+            //{
+
+            //    if (_hand.Info.Level == "")
+            //    {
+            //        _hand.ReadHero(_hh);
+            //        _hand.ReadHoleCards(_hh);
+            //    }
+            //    else
+            //    {
+            //        _hand.ReadEntireAction(_hh, ref _prevLine);
+            //    }
+            //}
+
+
+            //else if (_prevLine == HHReaderLines.Flop)
+            //{
+            //    if (_hand.Info.Board.Count == 0)
+            //    {
+            //        _hand.ReadFlopCards(_hh);
+            //        _hand.CalculatePositions();
+            //    }
+            //    else
+            //    {
+            //        _hand.ReadEntireAction(_hh, ref _prevLine);
+            //    }
+
+
+            //}
+            //else if (_prevLine == HHReaderLines.Turn)
+            //{
+            //    if (_hand.Info.Board.Count == 2)
+            //    {
+            //        _hand.ReadTurnCard(_hh);
+            //    }
+            //    else
+            //    {
+            //        _hand.ReadEntireAction(_hh, ref _prevLine);
+            //    }
+
+            //    //hh.ReadAI();
+            //}
+            //else if (_prevLine == HHReaderLines.River)
+            //{
+            //    if (_hand.Info.Board.Count == 3)
+            //    {
+            //        _hand.ReadRiverCard(_hh);
+
+            //    }
+            //    else
+            //    {
+            //        _hand.ReadEntireAction(_hh, ref _prevLine);
+            //    }
+
+            //    //hh.ReadAI();
+            //}
+            //else if (_prevLine == HHReaderLines.Showdown)
+            //{
+            //    //hh.ReadWinner();
+            //    //hh.ReadShowDownHoleCards();
+            //    //hh.ReadTournamentWinnerInfo();
+            //    //hh.ReadAI();
+
+            //}
+            //else if (_prevLine == HHReaderLines.Summary)
+            //{
+            //    //hh.ReadAllPots();
+            //    //hh.ReadMainAndSidePot();
+            //    //hh.ReadFinalResults();
+
+            //    // TODO: REFACTORE2: mb solo if condition for Calculate positions to not do it few times?
+            //    // Same for totalPot and others?
+            //}
+
+        }
+    }
+}

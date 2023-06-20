@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SpinsAnalyzer_v1": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

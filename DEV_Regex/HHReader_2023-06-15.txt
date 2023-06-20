@@ -1,0 +1,78 @@
+//string pattern = @"^(?<Room>.+) Hand #(?<HandId>\d+): Tournament #(?<TournamentId>\d+), (?<Currancy>[$€])(?<BuyIn>[\.\d]+)(?:\+[$€](?<Fee>[\.\d]+))*.+(?<Level>\d+/\d+)\) - (?<Date>[\d/]+) (?<Time>[\d:]+) ET" +
+            //@"[\s\r\n]+^Table '(?<TableId>[\s\d]+)' (?<Type>.+) Seat #(?<SeatBtn>\d+) is the button" +
+            //@"(?:[\s\r\n]+^Seat (?<Seat_Num>\d+): (?<Seat_Player>.+) \((?:(?<Seat_Stack>[\d\.]+) in chips)(?:, [$€](?<Seat_Bounty>[\d\.]+) bounty)?\))*" +
+            //@"(?:[\s\r\n]+^(?<PreHCsAction_Player>.+): posts(?<PreHCsAction_Post> the ante | small blind | big blind )(?<PreHCsAction_Chips>\d+)(?: and is all-in)?)*" +
+            //@"[\s\r\n]+^\*\*\* HOLE CARDS \*\*\*[\s\r\n]+" +
+            ////PRE FLOP
+            //@"(?:^Dealt to (?<Hero>.+) \[(?<HC1>[a-zA-Z2-9]+) (?<HC2>[a-zA-Z2-9]+)\])?" +
+            //@"(?:[\s\r\n]+^(?<Action_Player>.+): (?:(?<Action_Action>raises|bets|folds|calls|checks)(?: \d+ to)?(?: )?(?<Action_Size>\d+)?)(?<AI> and is all-in)?)*" +
+            //@"(?:[\s\r\n]+^Uncalled bet \((?<PreFlopAction_UncallectedBet>\d+)\) returned to (?<PreFlopAction_ReturnedTo>.+)\r)*" +
+            //@"(?:[\s\r\n]+^(?<PreFlopAction_PlayerCollect>.+) collected (?<PreFlopAction_AmountCollect>\d+) from (?<PreFlopAction_CollectFrom>(?:side pot|main pot|pot)?))*" +
+            //// FLOP
+            //@"(?:[\s\r\n]+^\*\*\* FLOP \*\*\* (?:\[(?<FC1>[a-zA-Z2-9]+) (?<FC2>[a-zA-Z2-9]+) (?<FC3>[a-zA-Z2-9]+)\]))*" +
+            //@"(?:[\s\r\n]+^(?<FlopAction_Player>.+): (?<FlopAction_Action>raises *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?|folds|calls (?:\d+)*(?: and is all-in)?|checks|bets *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?))*" +
+            //@"(?:[\s\r\n]+^Uncalled bet \((?<FlopAction_UncallectedBet>\d+)\) returned to (?<FlopAction_ReturnedTo>.+)\r)*" +
+            //@"(?:[\s\r\n]+^(?<FlopAction_PlayerCollect>.+) collected (?<FlopAction_AmountCollect>\d+) from (?<FlopAction_CollectFrom>(?:side pot|main pot|pot)?))*" +
+            //// TURN
+            //@"(?:[\s\r\n]+^\*\*\* TURN \*\*\* (?:.+\[(?<TC>[a-zA-Z2-9]+)\]))*" +
+            //@"(?:[\s\r\n]+(?<TurnAction_Player>.+): (?<TurnAction_Action>raises *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?|folds|calls (?:\d+)*(?: and is all-in)?|checks|bets *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?))*" +
+            //@"(?:[\s\r\n]+^Uncalled bet \((?<TurnAction_UncallectedBet>\d+)\) returned to (?<TurnAction_ReturnedTo>.+)\r)*" +
+            //@"(?:[\s\r\n]+^(?<TurnAction_PlayerCollect>.+) collected (?<TurnAction_AmountCollect>\d+) from (?<TurnAction_CollectFrom>(?:side pot|main pot|pot)?))*" +
+            //// RIVER
+            //@"(?:[\s\r\n]+^\*\*\* RIVER \*\*\* (?:.+\[(?<RC>[a-zA-Z2-9]+)\]))*" +
+            //@"(?:[\s\r\n]+^(?<RiverAction_Player>.+): (?<RiverAction_Action>raises *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?|folds|calls (?:\d+)*(?: and is all-in)?|checks|bets *(?:\d+)*(?: to )*(?:\d+)*(?: and is all-in)?))*" +
+            //@"(?:[\s\r\n]+^Uncalled bet \((?<RiverAction_UncallectedBet>\d+)\) returned to (?<RiverAction_ReturnedTo>.+)\r)*" +
+            //@"(?:[\s\r\n]+^(?<RiverAction_PlayerCollect>.+) collected (?<RiverAction_AmountCollect>\d+) from (?<RiverAction_CollectFrom>(?:side pot|main pot|pot)?))*" +
+            //// SHOW DOWN
+            //@"(?:[\s\r\n]+^\*\*\* SHOW DOWN \*\*\*)*" +
+            //@"(?:[\s\r\n]+^(?<ShowDown_Player>.+): shows \[(?<ShowDown_HC1>[a-zA-Z2-9]+) (?<ShowDown_HC2>[a-zA-Z2-9]+)\] .+)*" +
+            //@"(?:[\s\r\n]+^(?<ShowDown_PlayerCollect>.+) collected (?<ShowDown_AmountCollect>\d+) from (?<ShowDown_CollectFrom>(?:side pot|main pot|pot)?))*" +
+            //@"(?:[\s\r\n]+^(?<ShowDown_PlayerFinished>.+) finished the tournament in (?<ShowDown_AtPlace>.+)(?:nd|rd|th) place(?: and received [$€](?<Prize>[\.\d]+).)?)*" +
+            //@"(?:[\s\r\n]+^(?<ShowDown_PlayerWon>.+) wins the tournament and receives [$€](?<PrizeWinner>[\.\d]+) - congratulations!)*" +
+            //// SUMMARY
+            //@"(?:[\s\r\n]+^\*\*\* SUMMARY \*\*\*)*" +
+            //@"(?:[\s\r\n]+^Total pot (?<TotalPot>\d+)(?: Main pot (?<MainPot>\d+).)*(?: Side pot (?<SidePot>\d+).)* \| Rake (?<Rake>\d+))*" +
+            //@"(?:[\s\r\n]+^Board .+)?" +
+            //@"(?:[\s\r\n]+^.+: (?<Summary_Player>.+) (?:/(button|small blind|big blind/) )?(?:showed|mucked)( (\[(?<Summary_HC1>[a-zA-Z2-9]+) (?<Summary_HC2>[a-zA-Z2-9]+)\](?:.+)?))?)*";
+
+
+            string pattern = @"^(?<Room>.+) Hand #(?<HandId>\d+): Tournament #(?<TournamentId>\d+), (?<Currency>[$€])(?<BuyIn>[\.\d]+)(?:\+[$€](?<Fee>[\.\d]+))*.+(?<Level>\d+/\d+)\) - (?<Date>[\d/]+) (?<Time>[\d:]+) (.+)" +
+            @"[\s\r\n]+^Table '(?<TableId>[\s\d]+)' (?<Type>.+) Seat #(?<SeatBtn>\d+) is the button" +
+            @"(?:[\s\r\n]+^Seat (?<Seat_Num>\d+): (?<Seat_Player>.+) \((?:(?<Seat_Stack>[\d\.]+) in chips)(?:, [$€](?<Seat_Bounty>[\d\.]+) bounty)?\))*" +
+            @"(?:[\s\r\n]+^(?<PreHCsAction_Player>.+): posts(?<PreHCsAction_Post> the ante | small blind | big blind )(?<PreHCsAction_Chips>\d+)(?: and is all-in)?)*" +
+            @"[\s\r\n]+^\*\*\* HOLE CARDS \*\*\*[\s\r\n]+" +
+            //PRE FLOP
+            @"(?:^Dealt to (?<Hero>.+) \[(?<HC1>[a-zA-Z2-9]+) (?<HC2>[a-zA-Z2-9]+)\](?:.+))?" +
+            @"(?:[\s\r\n]+^(?<PreFlopAction_Player>.+): (?<PreFlopAction_Action>raises|bets|folds|calls|checks|uBet) (?<PreFlopAction_Size>-?\d+) (?<PreFlopAction_AI>1|0))*" +
+            //@"(?:[\s\r\n]+^(?<PreFlopAction_PlayerCollect>.+) collected (?<PreFlopAction_AmountCollect>\d+) from (?<PreFlopAction_CollectFrom>(?:side pot|main pot|pot)?))*" +
+            //@"(?:[\s\r\n]+^(?<PlayerCollect>.+) collected (?<AmountCollect>\d+) from (?<CollectFrom>(?:side pot|main pot|pot)?))*" +
+            // FLOP
+            @"(?:[\s\r\n]+^\*\*\* FLOP \*\*\* (?:\[(?<FC1>[a-zA-Z2-9]+) (?<FC2>[a-zA-Z2-9]+) (?<FC3>[a-zA-Z2-9]+)\]))?" +
+            @"(?:[\s\r\n]+^(?<FlopAction_Player>.+): (?<FlopAction_Action>raises|bets|folds|calls|checks|uBet) (?<FlopAction_Size>-?\d+) (?<FlopAction_AI>1|0))*" +
+            //@"(?:[\s\r\n]+^(?<FlopAction_PlayerCollect>.+) collected (?<FlopAction_AmountCollect>\d+) from (?<FlopAction_CollectFrom>(?:side pot|main pot|pot)?))*" +
+            //@"(?:[\s\r\n]+^(?<PlayerCollect>.+) collected (?<AmountCollect>\d+) from (?<CollectFrom>(?:side pot|main pot|pot)?))*" +
+            // TURN
+            @"(?:[\s\r\n]+^\*\*\* TURN \*\*\* (?:.+\[(?<TC>[a-zA-Z2-9]+)\]))?" +
+            @"(?:[\s\r\n]+^(?<TurnAction_Player>.+): (?<TurnAction_Action>raises|bets|folds|calls|checks|uBet) (?<TurnAction_Size>-?\d+) (?<TurnAction_AI>1|0))*" +
+            //@"(?:[\s\r\n]+^(?<TurnAction_PlayerCollect>.+) collected (?<TurnAction_AmountCollect>\d+) from (?<TurnAction_CollectFrom>(?:side pot|main pot|pot)?))*" +
+            //@"(?:[\s\r\n]+^(?<PlayerCollect>.+) collected (?<AmountCollect>\d+) from (?<CollectFrom>(?:side pot|main pot|pot)?))*" +
+            // RIVER
+            @"(?:[\s\r\n]+^\*\*\* RIVER \*\*\* (?:.+\[(?<RC>[a-zA-Z2-9]+)\]))?" +
+            @"(?:[\s\r\n]+^(?<RiverAction_Player>.+): (?<RiverAction_Action>raises|bets|folds|calls|checks|uBet) (?<RiverAction_Size>-?\d+) (?<RiverAction_AI>1|0))*" +
+            //@"(?:[\s\r\n]+^(?<RiverAction_PlayerCollect>.+) collected (?<RiverAction_AmountCollect>\d+) from (?<RiverAction_CollectFrom>(?:side pot|main pot|pot)?))*" +
+            @"(?:[\s\r\n]+^(?<PlayerCollect>.+) collected (?<AmountCollect>\d+) from (?<CollectFrom>(?:side pot|main pot|pot)?))*" +
+            // SHOW DOWN
+            @"(?:[\s\r\n]+^\*\*\* SHOW DOWN \*\*\*)?" +
+            @"(?:[\s\r\n]+^(?<ShowDown_Player>.+): shows \[(?<ShowDown_HC1>[a-zA-Z2-9]+) (?<ShowDown_HC2>[a-zA-Z2-9]+)\] .+)*" +
+            //@"(?:[\s\r\n]+^(?<ShowDown_PlayerCollect>.+) collected (?<ShowDown_AmountCollect>\d+) from (?<ShowDown_CollectFrom>(?:side pot|main pot|pot)?))*" +
+            //@"(?:[\s\r\n]+^(?<PlayerCollect>.+) collected (?<AmountCollect>\d+) from (?<CollectFrom>(?:side pot|main pot|pot)?))*" +
+            @"(?:[\s\r\n]+^(?<ShowDown_PlayerFinished>.+) finished the tournament in (?<ShowDown_AtPlace>.+)(?:nd|rd|th) place(?: and received [$€](?<Prize>[\.\d]+).)?)*" +
+            @"(?:[\s\r\n]+^(?<ShowDown_PlayerWon>.+) wins the tournament and receives [$€](?<PrizeWinner>[\.\d]+) - congratulations!)*" +
+            // SUMMARY
+            @"(?:[\s\r\n]+^\*\*\* SUMMARY \*\*\*)?" +
+            @"(?:[\s\r\n]+^Total pot (?<TotalPot>\d+)(?: Main pot (?<SidePot>\d+)\.)?(?: Side pot(?:[-\d]+)? (?<SidePot>\d+)\.)* \| Rake (?<Rake>\d+))?" +
+            @"(?:[\s\r\n]+^Board .+)?" +
+            //@"(?:[\s\r\n]+^.+: (?<Summary_Player>(?:(?!\((?:button|small blind|big blind)\)).)+)(?: \((?:button|small blind|big blind)\))? (?:showed|mucked)(?: (\[(?<Summary_HC1>[a-zA-Z2-9]+) (?<Summary_HC2>[a-zA-Z2-9]+)\](?:.+)?)))*" +
+            //@"(?:[\s\r\n]+^Seat (?:\d+):(?<Summary_Player>(?:(?!\((?:button|small blind|big blind)\)).)+)(?: \((?:button|small blind|big blind)\))? collected \((?<Summary_AmountCollected>\d+)\))*" +
+            //@"([\s\r\n]+^.+: (?<Summary_Player>(?:(?!\((?:button|small blind|big blind)\)).)+)(?: \((?:button|small blind|big blind|button\) \(small blind)\))? (?:showed|mucked)(?: (\[(?<Summary_HC1>[a-zA-Z2-9]+) (?<Summary_HC2>[a-zA-Z2-9]+)\]( and won \((?<Summary_AmountCollected>\d+)\))?(?:.+)?)))*";
+            @"(?:[\s\r\n]+^(?<Summary_Player>(.+)): \[(?<Summary_HC1>[a-zA-Z2-9]+) (?<Summary_HC2>[a-zA-Z2-9]+)\] (?<Summary_AmountCollected>-?\d+))*";

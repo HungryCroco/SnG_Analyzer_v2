@@ -1,0 +1,4976 @@
+PokerStars Hand #232702983618: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level IX (200/400) - 2021/12/31 22:54:36 ET
+Table '3332579367 2' 9-max Seat #4 is the button
+Seat 2: TLNDink2749 (6632 in chips)
+Seat 4: IPray2Buddha (1745 in chips)
+Seat 6: Willifold777 (5477 in chips)
+Seat 7: Sickofitall5 (8704 in chips)
+Seat 9: perussatto4 (4442 in chips)
+TLNDink2749: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+Willifold777: posts small blind 200
+Sickofitall5: posts big blind 400
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Kc Kd]
+perussatto4: folds
+TLNDink2749: raises 400 to 800
+IPray2Buddha: raises 920 to 1720 and is all-in
+Willifold777: folds
+Sickofitall5: calls 1320
+TLNDink2749: calls 920
+*** FLOP *** [3h 2s 6c]
+Sickofitall5: checks
+TLNDink2749: checks
+*** TURN *** [3h 2s 6c] [4h]
+Sickofitall5: bets 800
+TLNDink2749: calls 800
+*** RIVER *** [3h 2s 6c 4h] [Ts]
+Sickofitall5: bets 1200
+TLNDink2749: raises 1200 to 2400
+Sickofitall5: calls 1200
+*** SHOW DOWN ***
+TLNDink2749: shows [Th Js] (a pair of Tens)
+Sickofitall5: shows [Ad 5d] (a straight, Deuce to Six)
+Sickofitall5 collected 6400 from side pot
+Sickofitall5 collected 5485 from main pot
+IPray2Buddha finished the tournament in 5th place
+*** SUMMARY ***
+Total pot 11885 Main pot 5485. Side pot 6400. | Rake 0
+Board [3h 2s 6c 4h Ts]
+Seat 2: TLNDink2749 showed [Th Js] and lost with a pair of Tens
+Seat 4: IPray2Buddha (button) mucked [Kc Kd]
+Seat 6: Willifold777 (small blind) folded before Flop
+Seat 7: Sickofitall5 (big blind) showed [Ad 5d] and won (11885) with a straight, Deuce to Six
+Seat 9: perussatto4 folded before Flop (didn't bet)
+
+PokerStars Hand #232702792607: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level V (60/120) - 2021/12/31 22:40:56 ET
+Table '3332581238 2' 9-max Seat #9 is the button
+Seat 1: Sakura2892 (763 in chips)
+Seat 2: chuckie247 (2313 in chips)
+Seat 3: w.gator900 (7553 in chips)
+Seat 4: Lillien66 (3300 in chips)
+Seat 5: papajoe179 (1291 in chips)
+Seat 6: x_Jaures_x (806 in chips)
+Seat 7: IPray2Buddha (1805 in chips)
+Seat 8: mpolishuk (3381 in chips)
+Seat 9: owlie45 (5788 in chips)
+Sakura2892: posts the ante 15
+chuckie247: posts the ante 15
+w.gator900: posts the ante 15
+Lillien66: posts the ante 15
+papajoe179: posts the ante 15
+x_Jaures_x: posts the ante 15
+IPray2Buddha: posts the ante 15
+mpolishuk: posts the ante 15
+owlie45: posts the ante 15
+Sakura2892: posts small blind 60
+chuckie247: posts big blind 120
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Qd 8h]
+w.gator900: folds
+Lillien66: folds
+papajoe179: folds
+x_Jaures_x: folds
+IPray2Buddha: folds
+mpolishuk: raises 120 to 240
+owlie45: folds
+Sakura2892: folds
+chuckie247: calls 120
+*** FLOP *** [2d 6h 6c]
+chuckie247: checks
+mpolishuk: checks
+*** TURN *** [2d 6h 6c] [3c]
+chuckie247: bets 240
+mpolishuk: calls 240
+*** RIVER *** [2d 6h 6c 3c] [5s]
+chuckie247: bets 840
+mpolishuk: folds
+Uncalled bet (840) returned to chuckie247
+chuckie247 collected 1155 from pot
+*** SUMMARY ***
+Total pot 1155 | Rake 0
+Board [2d 6h 6c 3c 5s]
+Seat 1: Sakura2892 (small blind) folded before Flop
+Seat 2: chuckie247 (big blind) collected (1155)
+Seat 3: w.gator900 folded before Flop (didn't bet)
+Seat 4: Lillien66 folded before Flop (didn't bet)
+Seat 5: papajoe179 folded before Flop (didn't bet)
+Seat 6: x_Jaures_x folded before Flop (didn't bet)
+Seat 7: IPray2Buddha folded before Flop (didn't bet)
+Seat 8: mpolishuk folded on the River
+Seat 9: owlie45 (button) folded before Flop (didn't bet)
+
+PokerStars Hand #232702857612: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level VII (100/200) - 2021/12/31 22:45:34 ET
+Table '3332579367 2' 9-max Seat #2 is the button
+Seat 2: TLNDink2749 (9603 in chips)
+Seat 3: Günex66 (1662 in chips)
+Seat 4: IPray2Buddha (3245 in chips)
+Seat 6: Willifold777 (5377 in chips)
+Seat 7: Sickofitall5 (3521 in chips)
+Seat 9: perussatto4 (3592 in chips)
+TLNDink2749: posts the ante 25
+Günex66: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+Günex66: posts small blind 100
+IPray2Buddha: posts big blind 200
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [3h Kh]
+Willifold777: folds
+Sickofitall5: raises 300 to 500
+perussatto4: folds
+TLNDink2749: folds
+Günex66: folds
+IPray2Buddha: folds
+Uncalled bet (300) returned to Sickofitall5
+Sickofitall5 collected 650 from pot
+*** SUMMARY ***
+Total pot 650 | Rake 0
+Seat 2: TLNDink2749 (button) folded before Flop (didn't bet)
+Seat 3: Günex66 (small blind) folded before Flop
+Seat 4: IPray2Buddha (big blind) folded before Flop
+Seat 6: Willifold777 folded before Flop (didn't bet)
+Seat 7: Sickofitall5 collected (650)
+Seat 9: perussatto4 folded before Flop (didn't bet)
+
+PokerStars Hand #232702729984: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level IV (40/80) - 2021/12/31 22:35:52 ET
+Table '3332581238 2' 9-max Seat #3 is the button
+Seat 1: Sakura2892 (419 in chips)
+Seat 2: chuckie247 (2498 in chips)
+Seat 3: w.gator900 (8166 in chips)
+Seat 4: Lillien66 (3355 in chips)
+Seat 5: papajoe179 (1516 in chips)
+Seat 6: x_Jaures_x (1320 in chips)
+Seat 7: IPray2Buddha (2090 in chips)
+Seat 8: mpolishuk (1998 in chips)
+Seat 9: owlie45 (5638 in chips)
+Sakura2892: posts the ante 10
+chuckie247: posts the ante 10
+w.gator900: posts the ante 10
+papajoe179: posts the ante 10
+x_Jaures_x: posts the ante 10
+IPray2Buddha: posts the ante 10
+mpolishuk: posts the ante 10
+owlie45: posts the ante 10
+papajoe179: posts small blind 40
+x_Jaures_x: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [8c 5d]
+IPray2Buddha: folds
+mpolishuk: folds
+owlie45: folds
+Sakura2892: raises 329 to 409 and is all-in
+chuckie247: folds
+w.gator900: folds
+papajoe179: folds
+x_Jaures_x: calls 329
+*** FLOP *** [4c 7d 9s]
+*** TURN *** [4c 7d 9s] [6d]
+*** RIVER *** [4c 7d 9s 6d] [8d]
+*** SHOW DOWN ***
+x_Jaures_x: shows [Ks 2s] (high card King)
+Sakura2892: shows [Td Qd] (a flush, Queen high)
+Sakura2892 collected 938 from pot
+*** SUMMARY ***
+Total pot 938 | Rake 0
+Board [4c 7d 9s 6d 8d]
+Seat 1: Sakura2892 showed [Td Qd] and won (938) with a flush, Queen high
+Seat 2: chuckie247 folded before Flop (didn't bet)
+Seat 3: w.gator900 (button) folded before Flop (didn't bet)
+Seat 5: papajoe179 (small blind) folded before Flop
+Seat 6: x_Jaures_x (big blind) showed [Ks 2s] and lost with high card King
+Seat 7: IPray2Buddha folded before Flop (didn't bet)
+Seat 8: mpolishuk folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+PokerStars Hand #232702773002: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level V (60/120) - 2021/12/31 22:39:17 ET
+Table '3332581238 2' 9-max Seat #7 is the button
+Seat 1: Sakura2892 (913 in chips)
+Seat 2: chuckie247 (2463 in chips)
+Seat 3: w.gator900 (7583 in chips)
+Seat 4: Lillien66 (3330 in chips)
+Seat 5: papajoe179 (1441 in chips)
+Seat 6: x_Jaures_x (836 in chips)
+Seat 7: IPray2Buddha (1835 in chips)
+Seat 8: mpolishuk (3156 in chips)
+Seat 9: owlie45 (5443 in chips)
+Sakura2892: posts the ante 15
+chuckie247: posts the ante 15
+w.gator900: posts the ante 15
+Lillien66: posts the ante 15
+papajoe179: posts the ante 15
+x_Jaures_x: posts the ante 15
+IPray2Buddha: posts the ante 15
+mpolishuk: posts the ante 15
+owlie45: posts the ante 15
+mpolishuk: posts small blind 60
+owlie45: posts big blind 120
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [8c Td]
+Sakura2892: folds
+chuckie247: folds
+w.gator900: folds
+Lillien66: folds
+papajoe179: folds
+x_Jaures_x: folds
+IPray2Buddha: folds
+mpolishuk: raises 245 to 365
+owlie45: folds
+Uncalled bet (245) returned to mpolishuk
+mpolishuk collected 375 from pot
+*** SUMMARY ***
+Total pot 375 | Rake 0
+Seat 1: Sakura2892 folded before Flop (didn't bet)
+Seat 2: chuckie247 folded before Flop (didn't bet)
+Seat 3: w.gator900 folded before Flop (didn't bet)
+Seat 4: Lillien66 folded before Flop (didn't bet)
+Seat 5: papajoe179 folded before Flop (didn't bet)
+Seat 6: x_Jaures_x folded before Flop (didn't bet)
+Seat 7: IPray2Buddha (button) folded before Flop (didn't bet)
+Seat 8: mpolishuk (small blind) collected (375)
+Seat 9: owlie45 (big blind) folded before Flop
+
+
+PokerStars Hand #222088763207: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 8:57:50 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1047 in chips) 
+Seat 2: katarina1011 (1953 in chips) 
+katarina1011: posts small blind 20
+IPray2Buddha: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [6s 4c]
+katarina1011: raises 40 to 80
+IPray2Buddha: folds 
+Uncalled bet (40) returned to katarina1011
+katarina1011 collected 80 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: katarina1011 (button) (small blind) collected (80)
+
+
+PokerStars Hand #222089018538: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VI (40/80) - 2021/01/01 9:08:43 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1136 in chips) 
+Seat 2: katarina1011 (1864 in chips) 
+IPray2Buddha: posts small blind 40
+katarina1011: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [7c Ts]
+IPray2Buddha: calls 40
+katarina1011: raises 1784 to 1864 and is all-in
+IPray2Buddha: folds 
+Uncalled bet (1784) returned to katarina1011
+katarina1011 collected 160 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 160 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) folded before Flop
+Seat 2: katarina1011 (big blind) collected (160)
+
+
+
+PokerStars Hand #228114177869: Tournament #3225821185, $23.50+$1.50 USD Hold'em No Limit - Level I (10/20) - 2021/07/07 6:03:17 ET
+Table '3225821185 1' 3-max Seat #1 is the button
+Seat 1: IPray2Buddha (500 in chips)
+Seat 2: elquemero100 (500 in chips)
+Seat 3: sgctps (500 in chips)
+elquemero100: posts small blind 10
+sgctps: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Js 8d]
+IPray2Buddha: folds
+elquemero100: calls 10
+sgctps: checks
+*** FLOP *** [2d 6h 2h]
+elquemero100: bets 20
+sgctps: calls 20
+*** TURN *** [2d 6h 2h] [2s]
+elquemero100: bets 40
+sgctps: folds
+Uncalled bet (40) returned to elquemero100
+elquemero100 collected 80 from pot
+elquemero100: doesn't show hand
+*** SUMMARY ***
+Total pot 80 | Rake 0
+Board [2d 6h 2h 2s]
+Seat 1: IPray2Buddha (button) folded before Flop (didn't bet)
+Seat 2: elquemero100 (small blind) collected (80)
+Seat 3: sgctps (big blind) folded on the Turn
+
+
+PokerStars Hand #228114183099: Tournament #3225821185, $23.50+$1.50 USD Hold'em No Limit - Level I (10/20) - 2021/07/07 6:03:46 ET
+Table '3225821185 1' 3-max Seat #2 is the button
+Seat 1: IPray2Buddha (500 in chips)
+Seat 2: elquemero100 (540 in chips)
+Seat 3: sgctps (460 in chips)
+sgctps: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [2h Td]
+elquemero100: raises 20 to 40
+sgctps: folds
+IPray2Buddha: folds
+Uncalled bet (20) returned to elquemero100
+elquemero100 collected 50 from pot
+elquemero100: doesn't show hand
+*** SUMMARY ***
+Total pot 50 | Rake 0
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: elquemero100 (button) collected (50)
+Seat 3: sgctps (small blind) folded before Flop
+
+
+PokerStars Hand #228114185476: Tournament #3225821185, $23.50+$1.50 USD Hold'em No Limit - Level I (10/20) - 2021/07/07 6:03:59 ET
+Table '3225821185 1' 3-max Seat #3 is the button
+Seat 1: IPray2Buddha (480 in chips)
+Seat 2: elquemero100 (570 in chips)
+Seat 3: sgctps (450 in chips)
+IPray2Buddha: posts small blind 10
+elquemero100: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [8c Ah]
+sgctps: raises 20 to 40
+IPray2Buddha: raises 70 to 110
+elquemero100: folds
+sgctps: folds
+Uncalled bet (70) returned to IPray2Buddha
+IPray2Buddha collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0
+Seat 1: IPray2Buddha (small blind) collected (100)
+Seat 2: elquemero100 (big blind) folded before Flop
+Seat 3: sgctps (button) folded before Flop
+
+
+PokerStars Hand #228114188964: Tournament #3225821185, $23.50+$1.50 USD Hold'em No Limit - Level I (10/20) - 2021/07/07 6:04:18 ET
+Table '3225821185 1' 3-max Seat #1 is the button
+Seat 1: IPray2Buddha (540 in chips)
+Seat 2: elquemero100 (550 in chips)
+Seat 3: sgctps (410 in chips)
+elquemero100: posts small blind 10
+sgctps: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4c 5d]
+IPray2Buddha: folds
+elquemero100: calls 10
+sgctps: checks
+*** FLOP *** [Qs 9d 6h]
+elquemero100: checks
+sgctps: checks
+*** TURN *** [Qs 9d 6h] [Tc]
+elquemero100: checks
+sgctps: bets 30
+elquemero100: folds
+Uncalled bet (30) returned to sgctps
+sgctps collected 40 from pot
+sgctps: doesn't show hand
+*** SUMMARY ***
+Total pot 40 | Rake 0
+Board [Qs 9d 6h Tc]
+Seat 1: IPray2Buddha (button) folded before Flop (didn't bet)
+Seat 2: elquemero100 (small blind) folded on the Turn
+Seat 3: sgctps (big blind) collected (40)
+
+
+PokerStars Hand #228114193613: Tournament #3225821185, $23.50+$1.50 USD Hold'em No Limit - Level I (10/20) - 2021/07/07 6:04:44 ET
+Table '3225821185 1' 3-max Seat #2 is the button
+Seat 1: IPray2Buddha (540 in chips)
+Seat 2: elquemero100 (530 in chips)
+Seat 3: sgctps (430 in chips)
+sgctps: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [2d 2h]
+elquemero100: raises 20 to 40
+sgctps: folds
+IPray2Buddha: raises 500 to 540 and is all-in
+elquemero100: folds
+Uncalled bet (500) returned to IPray2Buddha
+IPray2Buddha collected 90 from pot
+*** SUMMARY ***
+Total pot 90 | Rake 0
+Seat 1: IPray2Buddha (big blind) collected (90)
+Seat 2: elquemero100 (button) folded before Flop
+Seat 3: sgctps (small blind) folded before Flop
+
+
+PokerStars Hand #228114196734: Tournament #3225821185, $23.50+$1.50 USD Hold'em No Limit - Level I (10/20) - 2021/07/07 6:05:01 ET
+Table '3225821185 1' 3-max Seat #3 is the button
+Seat 1: IPray2Buddha (590 in chips)
+Seat 2: elquemero100 (490 in chips)
+Seat 3: sgctps (420 in chips)
+IPray2Buddha: posts small blind 10
+elquemero100: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ts 7h]
+sgctps: raises 20 to 40
+IPray2Buddha: folds
+elquemero100: calls 20
+*** FLOP *** [Tc 6h 6d]
+elquemero100: checks
+sgctps: bets 30
+elquemero100: calls 30
+*** TURN *** [Tc 6h 6d] [Jh]
+elquemero100: checks
+sgctps: checks
+*** RIVER *** [Tc 6h 6d Jh] [7d]
+elquemero100: bets 75
+sgctps: folds
+Uncalled bet (75) returned to elquemero100
+elquemero100 collected 150 from pot
+elquemero100: doesn't show hand
+*** SUMMARY ***
+Total pot 150 | Rake 0
+Board [Tc 6h 6d Jh 7d]
+Seat 1: IPray2Buddha (small blind) folded before Flop
+Seat 2: elquemero100 (big blind) collected (150)
+Seat 3: sgctps (button) folded on the River
+
+
+PokerStars Hand #228114204391: Tournament #3225821185, $23.50+$1.50 USD Hold'em No Limit - Level I (10/20) - 2021/07/07 6:05:42 ET
+Table '3225821185 1' 3-max Seat #1 is the button
+Seat 1: IPray2Buddha (580 in chips)
+Seat 2: elquemero100 (570 in chips)
+Seat 3: sgctps (350 in chips)
+elquemero100: posts small blind 10
+sgctps: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ah 6c]
+IPray2Buddha: raises 20 to 40
+elquemero100: folds
+sgctps: folds
+Uncalled bet (20) returned to IPray2Buddha
+IPray2Buddha collected 50 from pot
+*** SUMMARY ***
+Total pot 50 | Rake 0
+Seat 1: IPray2Buddha (button) collected (50)
+Seat 2: elquemero100 (small blind) folded before Flop
+Seat 3: sgctps (big blind) folded before Flop
+
+
+PokerStars Hand #228114205744: Tournament #3225821185, $23.50+$1.50 USD Hold'em No Limit - Level I (10/20) - 2021/07/07 6:05:50 ET
+Table '3225821185 1' 3-max Seat #2 is the button
+Seat 1: IPray2Buddha (610 in chips)
+Seat 2: elquemero100 (560 in chips)
+Seat 3: sgctps (330 in chips)
+sgctps: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [8d Jh]
+elquemero100: raises 40 to 60
+sgctps: folds
+IPray2Buddha: folds
+Uncalled bet (40) returned to elquemero100
+elquemero100 collected 50 from pot
+elquemero100: doesn't show hand
+*** SUMMARY ***
+Total pot 50 | Rake 0
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: elquemero100 (button) collected (50)
+Seat 3: sgctps (small blind) folded before Flop
+
+
+PokerStars Hand #228114208567: Tournament #3225821185, $23.50+$1.50 USD Hold'em No Limit - Level I (10/20) - 2021/07/07 6:06:05 ET
+Table '3225821185 1' 3-max Seat #3 is the button
+Seat 1: IPray2Buddha (590 in chips)
+Seat 2: elquemero100 (590 in chips)
+Seat 3: sgctps (320 in chips)
+IPray2Buddha: posts small blind 10
+elquemero100: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [2h 7c]
+sgctps: raises 300 to 320 and is all-in
+IPray2Buddha: folds
+elquemero100: folds
+Uncalled bet (300) returned to sgctps
+sgctps collected 50 from pot
+sgctps: doesn't show hand
+*** SUMMARY ***
+Total pot 50 | Rake 0
+Seat 1: IPray2Buddha (small blind) folded before Flop
+Seat 2: elquemero100 (big blind) folded before Flop
+Seat 3: sgctps (button) collected (50)
+
+
+PokerStars Hand #228114210664: Tournament #3225821185, $23.50+$1.50 USD Hold'em No Limit - Level I (10/20) - 2021/07/07 6:06:17 ET
+Table '3225821185 1' 3-max Seat #1 is the button
+Seat 1: IPray2Buddha (580 in chips)
+Seat 2: elquemero100 (570 in chips)
+Seat 3: sgctps (350 in chips)
+elquemero100: posts small blind 10
+sgctps: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [6h 4c]
+IPray2Buddha: folds
+elquemero100: folds
+Uncalled bet (10) returned to sgctps
+sgctps collected 20 from pot
+sgctps: doesn't show hand
+*** SUMMARY ***
+Total pot 20 | Rake 0
+Seat 1: IPray2Buddha (button) folded before Flop (didn't bet)
+Seat 2: elquemero100 (small blind) folded before Flop
+Seat 3: sgctps (big blind) collected (20)
+
+
+PokerStars Hand #228114212693: Tournament #3225821185, $23.50+$1.50 USD Hold'em No Limit - Level II (15/30) - 2021/07/07 6:06:28 ET
+Table '3225821185 1' 3-max Seat #2 is the button
+Seat 1: IPray2Buddha (580 in chips)
+Seat 2: elquemero100 (560 in chips)
+Seat 3: sgctps (360 in chips)
+sgctps: posts small blind 15
+IPray2Buddha: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Jd 2h]
+elquemero100: raises 30 to 60
+sgctps: raises 300 to 360 and is all-in
+IPray2Buddha: folds
+elquemero100: calls 300
+*** FLOP *** [2d 6s 7s]
+*** TURN *** [2d 6s 7s] [3s]
+*** RIVER *** [2d 6s 7s 3s] [8s]
+*** SHOW DOWN ***
+sgctps: shows [Th Td] (a pair of Tens)
+elquemero100: shows [5s 5h] (a flush, Eight high)
+elquemero100 collected 750 from pot
+sgctps finished the tournament in 3rd place
+*** SUMMARY ***
+Total pot 750 | Rake 0
+Board [2d 6s 7s 3s 8s]
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: elquemero100 (button) showed [5s 5h] and won (750) with a flush, Eight high
+Seat 3: sgctps (small blind) showed [Th Td] and lost with a pair of Tens
+
+
+PokerStars Hand #228114217374: Tournament #3225821185, $23.50+$1.50 USD Hold'em No Limit - Level II (15/30) - 2021/07/07 6:06:53 ET
+Table '3225821185 1' 3-max Seat #1 is the button
+Seat 1: IPray2Buddha (550 in chips)
+Seat 2: elquemero100 (950 in chips)
+IPray2Buddha: posts small blind 15
+elquemero100: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [8c Kh]
+IPray2Buddha: raises 30 to 60
+elquemero100: folds
+Uncalled bet (30) returned to IPray2Buddha
+IPray2Buddha collected 60 from pot
+*** SUMMARY ***
+Total pot 60 | Rake 0
+Seat 1: IPray2Buddha (button) (small blind) collected (60)
+Seat 2: elquemero100 (big blind) folded before Flop
+
+
+PokerStars Hand #228114218952: Tournament #3225821185, $23.50+$1.50 USD Hold'em No Limit - Level II (15/30) - 2021/07/07 6:07:01 ET
+Table '3225821185 1' 3-max Seat #2 is the button
+Seat 1: IPray2Buddha (580 in chips)
+Seat 2: elquemero100 (920 in chips)
+elquemero100: posts small blind 15
+IPray2Buddha: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [6d 6c]
+elquemero100: raises 30 to 60
+IPray2Buddha: raises 520 to 580 and is all-in
+elquemero100: folds
+Uncalled bet (520) returned to IPray2Buddha
+IPray2Buddha collected 120 from pot
+*** SUMMARY ***
+Total pot 120 | Rake 0
+Seat 1: IPray2Buddha (big blind) collected (120)
+Seat 2: elquemero100 (button) (small blind) folded before Flop
+
+
+PokerStars Hand #228114154399: Tournament #3225820203, $23.50+$1.50 USD Hold'em No Limit - Level I (10/20) - 2021/07/07 6:01:04 ET
+Table '3225820203 1' 3-max Seat #1 is the button
+Seat 1: lll_HWDP_lll (500 in chips)
+Seat 2: misterTOPPP (500 in chips)
+Seat 3: IPray2Buddha (500 in chips)
+misterTOPPP: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [9d 3s]
+lll_HWDP_lll: raises 20 to 40
+misterTOPPP: folds
+IPray2Buddha: folds
+Uncalled bet (20) returned to lll_HWDP_lll
+lll_HWDP_lll collected 50 from pot
+lll_HWDP_lll: doesn't show hand
+*** SUMMARY ***
+Total pot 50 | Rake 0
+Seat 1: lll_HWDP_lll (button) collected (50)
+Seat 2: misterTOPPP (small blind) folded before Flop
+Seat 3: IPray2Buddha (big blind) folded before Flop
+
+
+PokerStars Hand #228114155881: Tournament #3225820203, $23.50+$1.50 USD Hold'em No Limit - Level I (10/20) - 2021/07/07 6:01:13 ET
+Table '3225820203 1' 3-max Seat #2 is the button
+Seat 1: lll_HWDP_lll (530 in chips)
+Seat 2: misterTOPPP (490 in chips)
+Seat 3: IPray2Buddha (480 in chips)
+IPray2Buddha: posts small blind 10
+lll_HWDP_lll: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [6s 6c]
+misterTOPPP: folds
+IPray2Buddha: calls 10
+lll_HWDP_lll: checks
+*** FLOP *** [7d Jc Tc]
+IPray2Buddha: checks
+lll_HWDP_lll: checks
+*** TURN *** [7d Jc Tc] [Kh]
+IPray2Buddha: bets 40
+lll_HWDP_lll: folds
+Uncalled bet (40) returned to IPray2Buddha
+IPray2Buddha collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0
+Board [7d Jc Tc Kh]
+Seat 1: lll_HWDP_lll (big blind) folded on the Turn
+Seat 2: misterTOPPP (button) folded before Flop (didn't bet)
+Seat 3: IPray2Buddha (small blind) collected (40)
+
+Hand #12: 
+
+PokerStars Hand #222088744614: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 8:56:53 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1047 in chips) 
+Seat 2: katarina1011 (1953 in chips) 
+katarina1011: posts small blind 15
+IPray2Buddha: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [2c Ad]
+katarina1011: calls 15
+IPray2Buddha: checks 
+*** FLOP *** [6h Jd 7h]
+IPray2Buddha: checks 
+katarina1011: checks 
+*** TURN *** [6h Jd 7h] [4h]
+IPray2Buddha: checks 
+katarina1011: checks 
+*** RIVER *** [6h Jd 7h 4h] [Qs]
+IPray2Buddha: checks 
+katarina1011: bets 30
+IPray2Buddha: folds 
+Uncalled bet (30) returned to katarina1011
+katarina1011 collected 60 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Board [6h Jd 7h 4h Qs]
+Seat 1: IPray2Buddha (big blind) folded on the River
+Seat 2: katarina1011 (button) (small blind) collected (60)
+
+Hand #13: 
+
+PokerStars Hand #222088751672: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 8:57:14 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1017 in chips) 
+Seat 2: katarina1011 (1983 in chips) 
+IPray2Buddha: posts small blind 15
+katarina1011: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ad 7c]
+IPray2Buddha: calls 15
+katarina1011: checks 
+*** FLOP *** [Kh 6c 5d]
+katarina1011: checks 
+IPray2Buddha: checks 
+*** TURN *** [Kh 6c 5d] [Ts]
+katarina1011: checks 
+IPray2Buddha: checks 
+*** RIVER *** [Kh 6c 5d Ts] [8d]
+katarina1011: checks 
+IPray2Buddha: checks 
+*** SHOW DOWN ***
+katarina1011: shows [Jc 2s] (high card King)
+IPray2Buddha: shows [Ad 7c] (high card Ace)
+IPray2Buddha collected 60 from pot
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Board [Kh 6c 5d Ts 8d]
+Seat 1: IPray2Buddha (button) (small blind) showed [Ad 7c] and won (60) with high card Ace
+Seat 2: katarina1011 (big blind) showed [Jc 2s] and lost with high card King
+
+Hand #14: 
+
+PokerStars Hand #222088763207: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 8:57:50 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1047 in chips) 
+Seat 2: katarina1011 (1953 in chips) 
+katarina1011: posts small blind 20
+IPray2Buddha: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [6s 4c]
+katarina1011: raises 40 to 80
+IPray2Buddha: folds 
+Uncalled bet (40) returned to katarina1011
+katarina1011 collected 80 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: katarina1011 (button) (small blind) collected (80)
+
+Hand #15: 
+
+PokerStars Hand #222088768194: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 8:58:05 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1007 in chips) 
+Seat 2: katarina1011 (1993 in chips) 
+IPray2Buddha: posts small blind 20
+katarina1011: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [5d 7s]
+IPray2Buddha: calls 20
+katarina1011: checks 
+*** FLOP *** [3h 7c Qh]
+katarina1011: checks 
+IPray2Buddha: checks 
+*** TURN *** [3h 7c Qh] [Ah]
+katarina1011: checks 
+IPray2Buddha: bets 40
+katarina1011: calls 40
+*** RIVER *** [3h 7c Qh Ah] [9s]
+katarina1011: checks 
+IPray2Buddha: checks 
+*** SHOW DOWN ***
+katarina1011: shows [7h 8d] (a pair of Sevens)
+IPray2Buddha: shows [5d 7s] (a pair of Sevens)
+katarina1011 collected 80 from pot
+IPray2Buddha collected 80 from pot
+*** SUMMARY ***
+Total pot 160 | Rake 0 
+Board [3h 7c Qh Ah 9s]
+Seat 1: IPray2Buddha (button) (small blind) showed [5d 7s] and won (80) with a pair of Sevens
+Seat 2: katarina1011 (big blind) showed [7h 8d] and won (80) with a pair of Sevens
+
+Hand #16: 
+
+PokerStars Hand #222088785289: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 8:58:56 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1007 in chips) 
+Seat 2: katarina1011 (1993 in chips) 
+katarina1011: posts small blind 20
+IPray2Buddha: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [3h 8d]
+katarina1011: calls 20
+IPray2Buddha: checks 
+*** FLOP *** [7d Ks 8s]
+IPray2Buddha: checks 
+katarina1011: bets 80
+IPray2Buddha: folds 
+Uncalled bet (80) returned to katarina1011
+katarina1011 collected 80 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Board [7d Ks 8s]
+Seat 1: IPray2Buddha (big blind) folded on the Flop
+Seat 2: katarina1011 (button) (small blind) collected (80)
+
+Hand #17: 
+
+PokerStars Hand #222088798334: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 8:59:35 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (967 in chips) 
+Seat 2: katarina1011 (2033 in chips) 
+IPray2Buddha: posts small blind 20
+katarina1011: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Tc Ac]
+IPray2Buddha: raises 40 to 80
+katarina1011: calls 40
+*** FLOP *** [2c 9s 4h]
+katarina1011: checks 
+IPray2Buddha: bets 48
+katarina1011: calls 48
+*** TURN *** [2c 9s 4h] [Kd]
+katarina1011: bets 128
+IPray2Buddha: folds 
+Uncalled bet (128) returned to katarina1011
+katarina1011 collected 256 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 256 | Rake 0 
+Board [2c 9s 4h Kd]
+Seat 1: IPray2Buddha (button) (small blind) folded on the Turn
+Seat 2: katarina1011 (big blind) collected (256)
+
+Hand #18: 
+
+PokerStars Hand #222088808051: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 9:00:04 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (839 in chips) 
+Seat 2: katarina1011 (2161 in chips) 
+katarina1011: posts small blind 20
+IPray2Buddha: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Jh 6s]
+katarina1011: calls 20
+IPray2Buddha: checks 
+*** FLOP *** [Kd 4s 8c]
+IPray2Buddha: checks 
+katarina1011: bets 80
+IPray2Buddha: folds 
+Uncalled bet (80) returned to katarina1011
+katarina1011 collected 80 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Board [Kd 4s 8c]
+Seat 1: IPray2Buddha (big blind) folded on the Flop
+Seat 2: katarina1011 (button) (small blind) collected (80)
+
+Hand #19: 
+
+PokerStars Hand #222088817000: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 9:00:30 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (799 in chips) 
+Seat 2: katarina1011 (2201 in chips) 
+IPray2Buddha: posts small blind 20
+katarina1011: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Tc Jd]
+IPray2Buddha: raises 40 to 80
+katarina1011: calls 40
+*** FLOP *** [As 7d Td]
+katarina1011: checks 
+IPray2Buddha: bets 107
+katarina1011: folds 
+Uncalled bet (107) returned to IPray2Buddha
+IPray2Buddha collected 160 from pot
+*** SUMMARY ***
+Total pot 160 | Rake 0 
+Board [As 7d Td]
+Seat 1: IPray2Buddha (button) (small blind) collected (160)
+Seat 2: katarina1011 (big blind) folded on the Flop
+
+Hand #20: 
+
+PokerStars Hand #222088823027: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level IV (25/50) - 2021/01/01 9:00:47 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (879 in chips) 
+Seat 2: katarina1011 (2121 in chips) 
+katarina1011: posts small blind 25
+IPray2Buddha: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Kd 6h]
+katarina1011: calls 25
+IPray2Buddha: checks 
+*** FLOP *** [As Jc 4d]
+IPray2Buddha: checks 
+katarina1011: bets 50
+IPray2Buddha: calls 50
+*** TURN *** [As Jc 4d] [6d]
+IPray2Buddha: checks 
+katarina1011: checks 
+*** RIVER *** [As Jc 4d 6d] [7s]
+IPray2Buddha: checks 
+katarina1011: bets 50
+IPray2Buddha: calls 50
+*** SHOW DOWN ***
+katarina1011: shows [Kh 6s] (a pair of Sixes)
+IPray2Buddha: shows [Kd 6h] (a pair of Sixes)
+IPray2Buddha collected 150 from pot
+katarina1011 collected 150 from pot
+*** SUMMARY ***
+Total pot 300 | Rake 0 
+Board [As Jc 4d 6d 7s]
+Seat 1: IPray2Buddha (big blind) showed [Kd 6h] and won (150) with a pair of Sixes
+Seat 2: katarina1011 (button) (small blind) showed [Kh 6s] and won (150) with a pair of Sixes
+
+Hand #21: 
+
+PokerStars Hand #222088841562: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level IV (25/50) - 2021/01/01 9:01:35 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (879 in chips) 
+Seat 2: katarina1011 (2121 in chips) 
+IPray2Buddha: posts small blind 25
+katarina1011: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ah 9c]
+IPray2Buddha: raises 829 to 879 and is all-in
+katarina1011: folds 
+Uncalled bet (829) returned to IPray2Buddha
+IPray2Buddha collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) collected (100)
+Seat 2: katarina1011 (big blind) folded before Flop
+
+Hand #22: 
+
+PokerStars Hand #222088844971: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level IV (25/50) - 2021/01/01 9:01:44 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (929 in chips) 
+Seat 2: katarina1011 (2071 in chips) 
+katarina1011: posts small blind 25
+IPray2Buddha: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Js Qc]
+katarina1011: folds 
+Uncalled bet (25) returned to IPray2Buddha
+IPray2Buddha collected 50 from pot
+*** SUMMARY ***
+Total pot 50 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (50)
+Seat 2: katarina1011 (button) (small blind) folded before Flop
+
+Hand #23: 
+
+PokerStars Hand #222088849006: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level IV (25/50) - 2021/01/01 9:01:54 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (954 in chips) 
+Seat 2: katarina1011 (2046 in chips) 
+IPray2Buddha: posts small blind 25
+katarina1011: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Th Tc]
+IPray2Buddha: raises 50 to 100
+katarina1011: raises 1946 to 2046 and is all-in
+IPray2Buddha: calls 854 and is all-in
+Uncalled bet (1092) returned to katarina1011
+*** FLOP *** [7d 5s 3h]
+*** TURN *** [7d 5s 3h] [9h]
+*** RIVER *** [7d 5s 3h 9h] [7s]
+*** SHOW DOWN ***
+katarina1011: shows [2h Ac] (a pair of Sevens)
+IPray2Buddha: shows [Th Tc] (two pair, Tens and Sevens)
+IPray2Buddha collected 1908 from pot
+*** SUMMARY ***
+Total pot 1908 | Rake 0 
+Board [7d 5s 3h 9h 7s]
+Seat 1: IPray2Buddha (button) (small blind) showed [Th Tc] and won (1908) with two pair, Tens and Sevens
+Seat 2: katarina1011 (big blind) showed [2h Ac] and lost with a pair of Sevens
+
+Hand #24: 
+
+PokerStars Hand #222088863422: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level IV (25/50) - 2021/01/01 9:02:29 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1908 in chips) 
+Seat 2: katarina1011 (1092 in chips) 
+katarina1011: posts small blind 25
+IPray2Buddha: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [2s 5d]
+katarina1011: raises 1042 to 1092 and is all-in
+IPray2Buddha: folds 
+Uncalled bet (1042) returned to katarina1011
+katarina1011 collected 100 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: katarina1011 (button) (small blind) collected (100)
+
+Hand #25: 
+
+PokerStars Hand #222088868727: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level IV (25/50) - 2021/01/01 9:02:42 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1858 in chips) 
+Seat 2: katarina1011 (1142 in chips) 
+IPray2Buddha: posts small blind 25
+katarina1011: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [3c 9c]
+IPray2Buddha: calls 25
+katarina1011: raises 50 to 100
+IPray2Buddha: calls 50
+*** FLOP *** [Js Qc 3s]
+katarina1011: bets 50
+IPray2Buddha: calls 50
+*** TURN *** [Js Qc 3s] [5c]
+katarina1011: bets 100
+IPray2Buddha: calls 100
+*** RIVER *** [Js Qc 3s 5c] [2d]
+katarina1011: bets 250
+IPray2Buddha: folds 
+Uncalled bet (250) returned to katarina1011
+katarina1011 collected 500 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 500 | Rake 0 
+Board [Js Qc 3s 5c 2d]
+Seat 1: IPray2Buddha (button) (small blind) folded on the River
+Seat 2: katarina1011 (big blind) collected (500)
+
+Hand #26: 
+
+PokerStars Hand #222088888212: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level IV (25/50) - 2021/01/01 9:03:30 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1608 in chips) 
+Seat 2: katarina1011 (1392 in chips) 
+katarina1011: posts small blind 25
+IPray2Buddha: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Js Ts]
+katarina1011: calls 25
+IPray2Buddha: raises 95 to 145
+katarina1011: folds 
+Uncalled bet (95) returned to IPray2Buddha
+IPray2Buddha collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (100)
+Seat 2: katarina1011 (button) (small blind) folded before Flop
+
+Hand #27: 
+
+PokerStars Hand #222088895026: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level V (30/60) - 2021/01/01 9:03:46 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1658 in chips) 
+Seat 2: katarina1011 (1342 in chips) 
+IPray2Buddha: posts small blind 30
+katarina1011: posts big blind 60
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Tc 3h]
+IPray2Buddha: calls 30
+katarina1011: checks 
+*** FLOP *** [Jc Jh Kh]
+katarina1011: checks 
+IPray2Buddha: checks 
+*** TURN *** [Jc Jh Kh] [6s]
+katarina1011: bets 60
+IPray2Buddha: folds 
+Uncalled bet (60) returned to katarina1011
+katarina1011 collected 120 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Board [Jc Jh Kh 6s]
+Seat 1: IPray2Buddha (button) (small blind) folded on the Turn
+Seat 2: katarina1011 (big blind) collected (120)
+
+Hand #28: 
+
+PokerStars Hand #222088906321: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level V (30/60) - 2021/01/01 9:04:13 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1598 in chips) 
+Seat 2: katarina1011 (1402 in chips) 
+katarina1011: posts small blind 30
+IPray2Buddha: posts big blind 60
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Td Kd]
+katarina1011: calls 30
+IPray2Buddha: raises 114 to 174
+katarina1011: folds 
+Uncalled bet (114) returned to IPray2Buddha
+IPray2Buddha collected 120 from pot
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (120)
+Seat 2: katarina1011 (button) (small blind) folded before Flop
+
+Hand #29: 
+
+PokerStars Hand #222088911377: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level V (30/60) - 2021/01/01 9:04:25 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1658 in chips) 
+Seat 2: katarina1011 (1342 in chips) 
+IPray2Buddha: posts small blind 30
+katarina1011: posts big blind 60
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [7c Jc]
+IPray2Buddha: raises 60 to 120
+katarina1011: folds 
+Uncalled bet (60) returned to IPray2Buddha
+IPray2Buddha collected 120 from pot
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) collected (120)
+Seat 2: katarina1011 (big blind) folded before Flop
+
+Hand #30: 
+
+PokerStars Hand #222088914247: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level V (30/60) - 2021/01/01 9:04:32 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1718 in chips) 
+Seat 2: katarina1011 (1282 in chips) 
+katarina1011: posts small blind 30
+IPray2Buddha: posts big blind 60
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [3d Ts]
+katarina1011: folds 
+Uncalled bet (30) returned to IPray2Buddha
+IPray2Buddha collected 60 from pot
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (60)
+Seat 2: katarina1011 (button) (small blind) folded before Flop
+
+Hand #31: 
+
+PokerStars Hand #222088915915: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level V (30/60) - 2021/01/01 9:04:36 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1748 in chips) 
+Seat 2: katarina1011 (1252 in chips) 
+IPray2Buddha: posts small blind 30
+katarina1011: posts big blind 60
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [2h 3c]
+IPray2Buddha: calls 30
+katarina1011: checks 
+*** FLOP *** [7h 5c 4d]
+katarina1011: checks 
+IPray2Buddha: checks 
+*** TURN *** [7h 5c 4d] [6h]
+katarina1011: checks 
+IPray2Buddha: checks 
+*** RIVER *** [7h 5c 4d 6h] [Qd]
+katarina1011: bets 180
+IPray2Buddha: calls 180
+*** SHOW DOWN ***
+katarina1011: shows [Kc 4s] (a pair of Fours)
+IPray2Buddha: shows [2h 3c] (a straight, Three to Seven)
+IPray2Buddha collected 480 from pot
+*** SUMMARY ***
+Total pot 480 | Rake 0 
+Board [7h 5c 4d 6h Qd]
+Seat 1: IPray2Buddha (button) (small blind) showed [2h 3c] and won (480) with a straight, Three to Seven
+Seat 2: katarina1011 (big blind) showed [Kc 4s] and lost with a pair of Fours
+
+Hand #32: 
+
+PokerStars Hand #222088927833: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level V (30/60) - 2021/01/01 9:05:05 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1988 in chips) 
+Seat 2: katarina1011 (1012 in chips) 
+katarina1011: posts small blind 30
+IPray2Buddha: posts big blind 60
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4h Jh]
+katarina1011: calls 30
+IPray2Buddha: checks 
+*** FLOP *** [Kd 8h 7s]
+IPray2Buddha: checks 
+katarina1011: bets 60
+IPray2Buddha: folds 
+Uncalled bet (60) returned to katarina1011
+katarina1011 collected 120 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Board [Kd 8h 7s]
+Seat 1: IPray2Buddha (big blind) folded on the Flop
+Seat 2: katarina1011 (button) (small blind) collected (120)
+
+Hand #33: 
+
+PokerStars Hand #222088941862: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level V (30/60) - 2021/01/01 9:05:39 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1928 in chips) 
+Seat 2: katarina1011 (1072 in chips) 
+IPray2Buddha: posts small blind 30
+katarina1011: posts big blind 60
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [9d 6s]
+IPray2Buddha: calls 30
+katarina1011: checks 
+*** FLOP *** [Ts 3h 4s]
+katarina1011: bets 60
+IPray2Buddha: folds 
+Uncalled bet (60) returned to katarina1011
+katarina1011 collected 120 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Board [Ts 3h 4s]
+Seat 1: IPray2Buddha (button) (small blind) folded on the Flop
+Seat 2: katarina1011 (big blind) collected (120)
+
+Hand #34: 
+
+PokerStars Hand #222088951316: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level V (30/60) - 2021/01/01 9:06:02 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1868 in chips) 
+Seat 2: katarina1011 (1132 in chips) 
+katarina1011: posts small blind 30
+IPray2Buddha: posts big blind 60
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [8s 7d]
+katarina1011: calls 30
+IPray2Buddha: checks 
+*** FLOP *** [9c Qd 3d]
+IPray2Buddha: checks 
+katarina1011: checks 
+*** TURN *** [9c Qd 3d] [7c]
+IPray2Buddha: bets 60
+katarina1011: calls 60
+*** RIVER *** [9c Qd 3d 7c] [2c]
+IPray2Buddha: checks 
+katarina1011: bets 240
+IPray2Buddha: calls 240
+*** SHOW DOWN ***
+katarina1011: shows [Kc Ah] (high card Ace)
+IPray2Buddha: shows [8s 7d] (a pair of Sevens)
+IPray2Buddha collected 720 from pot
+*** SUMMARY ***
+Total pot 720 | Rake 0 
+Board [9c Qd 3d 7c 2c]
+Seat 1: IPray2Buddha (big blind) showed [8s 7d] and won (720) with a pair of Sevens
+Seat 2: katarina1011 (button) (small blind) showed [Kc Ah] and lost with high card Ace
+
+Hand #35: 
+
+PokerStars Hand #222088975004: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VI (40/80) - 2021/01/01 9:06:59 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (2228 in chips) 
+Seat 2: katarina1011 (772 in chips) 
+IPray2Buddha: posts small blind 40
+katarina1011: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [5d 5c]
+IPray2Buddha: calls 40
+katarina1011: checks 
+*** FLOP *** [As Qs 4h]
+katarina1011: checks 
+IPray2Buddha: bets 80
+katarina1011: folds 
+Uncalled bet (80) returned to IPray2Buddha
+IPray2Buddha collected 160 from pot
+*** SUMMARY ***
+Total pot 160 | Rake 0 
+Board [As Qs 4h]
+Seat 1: IPray2Buddha (button) (small blind) collected (160)
+Seat 2: katarina1011 (big blind) folded on the Flop
+
+Hand #36: 
+
+PokerStars Hand #222088983929: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VI (40/80) - 2021/01/01 9:07:20 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2308 in chips) 
+Seat 2: katarina1011 (692 in chips) 
+katarina1011: posts small blind 40
+IPray2Buddha: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [9d 6s]
+katarina1011: raises 612 to 692 and is all-in
+IPray2Buddha: folds 
+Uncalled bet (612) returned to katarina1011
+katarina1011 collected 160 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 160 | Rake 0 
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: katarina1011 (button) (small blind) collected (160)
+
+Hand #37: 
+
+PokerStars Hand #222088988235: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VI (40/80) - 2021/01/01 9:07:30 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (2228 in chips) 
+Seat 2: katarina1011 (772 in chips) 
+IPray2Buddha: posts small blind 40
+katarina1011: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Qd 9d]
+IPray2Buddha: raises 80 to 160
+katarina1011: calls 80
+*** FLOP *** [4s 6d 8h]
+katarina1011: checks 
+IPray2Buddha: checks 
+*** TURN *** [4s 6d 8h] [5c]
+katarina1011: checks 
+IPray2Buddha: checks 
+*** RIVER *** [4s 6d 8h 5c] [2c]
+katarina1011: checks 
+IPray2Buddha: checks 
+*** SHOW DOWN ***
+katarina1011: shows [2h Ah] (a pair of Deuces)
+IPray2Buddha: mucks hand 
+katarina1011 collected 320 from pot
+*** SUMMARY ***
+Total pot 320 | Rake 0 
+Board [4s 6d 8h 5c 2c]
+Seat 1: IPray2Buddha (button) (small blind) mucked [Qd 9d]
+Seat 2: katarina1011 (big blind) showed [2h Ah] and won (320) with a pair of Deuces
+
+Hand #38: 
+
+PokerStars Hand #222089001612: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VI (40/80) - 2021/01/01 9:08:03 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2068 in chips) 
+Seat 2: katarina1011 (932 in chips) 
+katarina1011: posts small blind 40
+IPray2Buddha: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [8h As]
+katarina1011: calls 40
+IPray2Buddha: raises 1520 to 1600
+katarina1011: folds 
+Uncalled bet (1520) returned to IPray2Buddha
+IPray2Buddha collected 160 from pot
+*** SUMMARY ***
+Total pot 160 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (160)
+Seat 2: katarina1011 (button) (small blind) folded before Flop
+
+Hand #39: 
+
+PokerStars Hand #222089005679: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VI (40/80) - 2021/01/01 9:08:12 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (2148 in chips) 
+Seat 2: katarina1011 (852 in chips) 
+IPray2Buddha: posts small blind 40
+katarina1011: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Qs 8h]
+IPray2Buddha: calls 40
+katarina1011: raises 772 to 852 and is all-in
+IPray2Buddha: folds 
+Uncalled bet (772) returned to katarina1011
+katarina1011 collected 160 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 160 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) folded before Flop
+Seat 2: katarina1011 (big blind) collected (160)
+
+Hand #40: 
+
+PokerStars Hand #222089009810: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VI (40/80) - 2021/01/01 9:08:22 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2068 in chips) 
+Seat 2: katarina1011 (932 in chips) 
+katarina1011: posts small blind 40
+IPray2Buddha: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Td Jh]
+katarina1011: calls 40
+IPray2Buddha: raises 120 to 200
+katarina1011: raises 732 to 932 and is all-in
+IPray2Buddha: calls 732
+*** FLOP *** [Jd Th Ah]
+*** TURN *** [Jd Th Ah] [Ts]
+*** RIVER *** [Jd Th Ah Ts] [8s]
+*** SHOW DOWN ***
+IPray2Buddha: shows [Td Jh] (a full house, Tens full of Jacks)
+katarina1011: shows [Tc As] (a full house, Tens full of Aces)
+katarina1011 collected 1864 from pot
+*** SUMMARY ***
+Total pot 1864 | Rake 0 
+Board [Jd Th Ah Ts 8s]
+Seat 1: IPray2Buddha (big blind) showed [Td Jh] and lost with a full house, Tens full of Jacks
+Seat 2: katarina1011 (button) (small blind) showed [Tc As] and won (1864) with a full house, Tens full of Aces
+
+
+
+Hand #42: 
+
+PokerStars Hand #222089025500: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VI (40/80) - 2021/01/01 9:09:00 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1056 in chips) 
+Seat 2: katarina1011 (1944 in chips) 
+katarina1011: posts small blind 40
+IPray2Buddha: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Td Tc]
+katarina1011: calls 40
+IPray2Buddha: raises 144 to 224
+katarina1011: folds 
+Uncalled bet (144) returned to IPray2Buddha
+IPray2Buddha collected 160 from pot
+*** SUMMARY ***
+Total pot 160 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (160)
+Seat 2: katarina1011 (button) (small blind) folded before Flop
+
+Hand #43: 
+
+PokerStars Hand #222089032128: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VI (40/80) - 2021/01/01 9:09:16 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1136 in chips) 
+Seat 2: katarina1011 (1864 in chips) 
+IPray2Buddha: posts small blind 40
+katarina1011: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ks 7d]
+IPray2Buddha: calls 40
+katarina1011: checks 
+*** FLOP *** [3h Ts Qs]
+katarina1011: checks 
+IPray2Buddha: checks 
+*** TURN *** [3h Ts Qs] [2s]
+katarina1011: bets 80
+IPray2Buddha: calls 80
+*** RIVER *** [3h Ts Qs 2s] [5s]
+katarina1011: checks 
+IPray2Buddha: bets 480
+katarina1011: folds 
+Uncalled bet (480) returned to IPray2Buddha
+IPray2Buddha collected 320 from pot
+*** SUMMARY ***
+Total pot 320 | Rake 0 
+Board [3h Ts Qs 2s 5s]
+Seat 1: IPray2Buddha (button) (small blind) collected (320)
+Seat 2: katarina1011 (big blind) folded on the River
+
+Hand #44: 
+
+PokerStars Hand #222089047363: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VII (50/100) - 2021/01/01 9:09:52 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1296 in chips) 
+Seat 2: katarina1011 (1704 in chips) 
+katarina1011: posts small blind 50
+IPray2Buddha: posts big blind 100
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4h 9h]
+katarina1011: folds 
+Uncalled bet (50) returned to IPray2Buddha
+IPray2Buddha collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (100)
+Seat 2: katarina1011 (button) (small blind) folded before Flop
+
+Hand #45: 
+
+PokerStars Hand #222089049220: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VII (50/100) - 2021/01/01 9:09:57 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1346 in chips) 
+Seat 2: katarina1011 (1654 in chips) 
+IPray2Buddha: posts small blind 50
+katarina1011: posts big blind 100
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Kd Ks]
+IPray2Buddha: folds 
+Uncalled bet (50) returned to katarina1011
+katarina1011 collected 100 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) folded before Flop
+Seat 2: katarina1011 (big blind) collected (100)
+
+Hand #46: 
+
+PokerStars Hand #222089061525: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VII (50/100) - 2021/01/01 9:10:26 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1296 in chips) 
+Seat 2: katarina1011 (1704 in chips) 
+katarina1011: posts small blind 50
+IPray2Buddha: posts big blind 100
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Tc 6s]
+katarina1011: raises 1604 to 1704 and is all-in
+IPray2Buddha: folds 
+Uncalled bet (1604) returned to katarina1011
+katarina1011 collected 200 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: katarina1011 (button) (small blind) collected (200)
+
+Hand #47: 
+
+PokerStars Hand #222089065076: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VII (50/100) - 2021/01/01 9:10:34 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1196 in chips) 
+Seat 2: katarina1011 (1804 in chips) 
+IPray2Buddha: posts small blind 50
+katarina1011: posts big blind 100
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Jc 9h]
+IPray2Buddha: raises 100 to 200
+katarina1011: folds 
+Uncalled bet (100) returned to IPray2Buddha
+IPray2Buddha collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) collected (200)
+Seat 2: katarina1011 (big blind) folded before Flop
+
+Hand #48: 
+
+PokerStars Hand #222089071403: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VII (50/100) - 2021/01/01 9:10:49 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1296 in chips) 
+Seat 2: katarina1011 (1704 in chips) 
+katarina1011: posts small blind 50
+IPray2Buddha: posts big blind 100
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4h Td]
+katarina1011: raises 1604 to 1704 and is all-in
+IPray2Buddha: folds 
+Uncalled bet (1604) returned to katarina1011
+katarina1011 collected 200 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: katarina1011 (button) (small blind) collected (200)
+
+Hand #49: 
+
+PokerStars Hand #222089075298: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VII (50/100) - 2021/01/01 9:10:59 ET
+Table '3091025143 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1196 in chips) 
+Seat 2: katarina1011 (1804 in chips) 
+IPray2Buddha: posts small blind 50
+katarina1011: posts big blind 100
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Qh 6c]
+IPray2Buddha: calls 50
+katarina1011: raises 300 to 400
+IPray2Buddha: folds 
+Uncalled bet (300) returned to katarina1011
+katarina1011 collected 200 from pot
+katarina1011: doesn't show hand 
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) folded before Flop
+Seat 2: katarina1011 (big blind) collected (200)
+
+Hand #50: 
+
+PokerStars Hand #222089085253: Tournament #3091025143, $28.78+$1.22 USD Hold'em No Limit - Level VII (50/100) - 2021/01/01 9:11:22 ET
+Table '3091025143 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1096 in chips) 
+Seat 2: katarina1011 (1904 in chips) 
+katarina1011: posts small blind 50
+IPray2Buddha: posts big blind 100
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [9c 4s]
+katarina1011: calls 50
+IPray2Buddha: checks 
+*** FLOP *** [9h Tc 4h]
+IPray2Buddha: checks 
+katarina1011: bets 100
+IPray2Buddha: raises 300 to 400
+katarina1011: raises 1000 to 1400
+IPray2Buddha: calls 596 and is all-in
+Uncalled bet (404) returned to katarina1011
+*** TURN *** [9h Tc 4h] [3c]
+*** RIVER *** [9h Tc 4h 3c] [Jc]
+*** SHOW DOWN ***
+IPray2Buddha: shows [9c 4s] (two pair, Nines and Fours)
+katarina1011: shows [Td 9s] (two pair, Tens and Nines)
+katarina1011 collected 2192 from pot
+IPray2Buddha finished the tournament in 2nd place
+katarina1011 wins the tournament and receives $57.56 - congratulations!
+*** SUMMARY ***
+Total pot 2192 | Rake 0 
+Board [9h Tc 4h 3c Jc]
+Seat 1: IPray2Buddha (big blind) showed [9c 4s] and lost with two pair, Nines and Fours
+Seat 2: katarina1011 (button) (small blind) showed [Td 9s] and won (2192) with two pair, Tens and Nines
+
+Hand #51: 
+
+PokerStars Hand #222090442427: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:03:22 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1500 in chips) 
+Seat 2: dariusz1979 (1500 in chips) 
+IPray2Buddha: posts small blind 10
+dariusz1979: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Js 8s]
+IPray2Buddha: raises 30 to 50
+dariusz1979: folds 
+Uncalled bet (30) returned to IPray2Buddha
+IPray2Buddha collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) collected (40)
+Seat 2: dariusz1979 (big blind) folded before Flop
+
+Hand #52: 
+
+PokerStars Hand #222090453443: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:03:45 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1520 in chips) 
+Seat 2: dariusz1979 (1480 in chips) 
+dariusz1979: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [As 9d]
+dariusz1979: folds 
+Uncalled bet (10) returned to IPray2Buddha
+IPray2Buddha collected 20 from pot
+*** SUMMARY ***
+Total pot 20 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (20)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #53: 
+
+PokerStars Hand #222090456427: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:03:52 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1530 in chips) 
+Seat 2: dariusz1979 (1470 in chips) 
+IPray2Buddha: posts small blind 10
+dariusz1979: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ad Kh]
+IPray2Buddha: raises 30 to 50
+dariusz1979: folds 
+Uncalled bet (30) returned to IPray2Buddha
+IPray2Buddha collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) collected (40)
+Seat 2: dariusz1979 (big blind) folded before Flop
+
+Hand #54: 
+
+PokerStars Hand #222090460934: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:04:02 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1550 in chips) 
+Seat 2: dariusz1979 (1450 in chips) 
+dariusz1979: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Qc 8d]
+dariusz1979: folds 
+Uncalled bet (10) returned to IPray2Buddha
+IPray2Buddha collected 20 from pot
+*** SUMMARY ***
+Total pot 20 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (20)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #55: 
+
+PokerStars Hand #222090466167: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:04:13 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1560 in chips) 
+Seat 2: dariusz1979 (1440 in chips) 
+IPray2Buddha: posts small blind 10
+dariusz1979: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ac 6h]
+IPray2Buddha: raises 30 to 50
+dariusz1979: folds 
+Uncalled bet (30) returned to IPray2Buddha
+IPray2Buddha collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) collected (40)
+Seat 2: dariusz1979 (big blind) folded before Flop
+
+Hand #56: 
+
+PokerStars Hand #222090471677: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:04:25 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1580 in chips) 
+Seat 2: dariusz1979 (1420 in chips) 
+dariusz1979: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [7c Td]
+dariusz1979: folds 
+Uncalled bet (10) returned to IPray2Buddha
+IPray2Buddha collected 20 from pot
+*** SUMMARY ***
+Total pot 20 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (20)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #57: 
+
+PokerStars Hand #222090475679: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:04:33 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1590 in chips) 
+Seat 2: dariusz1979 (1410 in chips) 
+IPray2Buddha: posts small blind 10
+dariusz1979: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4d 9s]
+IPray2Buddha: calls 10
+dariusz1979: checks 
+*** FLOP *** [3h 6c Kd]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** TURN *** [3h 6c Kd] [Ah]
+dariusz1979: checks 
+IPray2Buddha: bets 20
+dariusz1979: folds 
+Uncalled bet (20) returned to IPray2Buddha
+IPray2Buddha collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Board [3h 6c Kd Ah]
+Seat 1: IPray2Buddha (button) (small blind) collected (40)
+Seat 2: dariusz1979 (big blind) folded on the Turn
+
+Hand #58: 
+
+PokerStars Hand #222090492232: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:05:08 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1610 in chips) 
+Seat 2: dariusz1979 (1390 in chips) 
+dariusz1979: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [3d 9d]
+dariusz1979: raises 20 to 40
+IPray2Buddha: calls 20
+*** FLOP *** [9c 3c 5h]
+IPray2Buddha: checks 
+dariusz1979: checks 
+*** TURN *** [9c 3c 5h] [3h]
+IPray2Buddha: checks 
+dariusz1979: checks 
+*** RIVER *** [9c 3c 5h 3h] [Kh]
+IPray2Buddha: checks 
+dariusz1979: bets 40
+IPray2Buddha: raises 1530 to 1570 and is all-in
+dariusz1979: folds 
+Uncalled bet (1530) returned to IPray2Buddha
+IPray2Buddha collected 160 from pot
+*** SUMMARY ***
+Total pot 160 | Rake 0 
+Board [9c 3c 5h 3h Kh]
+Seat 1: IPray2Buddha (big blind) collected (160)
+Seat 2: dariusz1979 (button) (small blind) folded on the River
+
+Hand #59: 
+
+PokerStars Hand #222090525214: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:06:19 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1690 in chips) 
+Seat 2: dariusz1979 (1310 in chips) 
+IPray2Buddha: posts small blind 10
+dariusz1979: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [5h Kd]
+IPray2Buddha: raises 30 to 50
+dariusz1979: calls 30
+*** FLOP *** [4d 6h 9c]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** TURN *** [4d 6h 9c] [8h]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** RIVER *** [4d 6h 9c 8h] [8d]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** SHOW DOWN ***
+dariusz1979: shows [Tc Qh] (a pair of Eights)
+IPray2Buddha: shows [5h Kd] (a pair of Eights - King kicker)
+IPray2Buddha collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Board [4d 6h 9c 8h 8d]
+Seat 1: IPray2Buddha (button) (small blind) showed [5h Kd] and won (100) with a pair of Eights
+Seat 2: dariusz1979 (big blind) showed [Tc Qh] and lost with a pair of Eights
+
+Hand #60: 
+
+PokerStars Hand #222090546490: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:07:04 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1740 in chips) 
+Seat 2: dariusz1979 (1260 in chips) 
+dariusz1979: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Qd 6c]
+dariusz1979: folds 
+Uncalled bet (10) returned to IPray2Buddha
+IPray2Buddha collected 20 from pot
+*** SUMMARY ***
+Total pot 20 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (20)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #61: 
+
+PokerStars Hand #222090549671: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:07:11 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1750 in chips) 
+Seat 2: dariusz1979 (1250 in chips) 
+IPray2Buddha: posts small blind 10
+dariusz1979: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [7d 5s]
+IPray2Buddha: raises 30 to 50
+dariusz1979: folds 
+Uncalled bet (30) returned to IPray2Buddha
+IPray2Buddha collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) collected (40)
+Seat 2: dariusz1979 (big blind) folded before Flop
+
+Hand #62: 
+
+PokerStars Hand #222090557265: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:07:27 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1770 in chips) 
+Seat 2: dariusz1979 (1230 in chips) 
+dariusz1979: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Jd Ah]
+dariusz1979: folds 
+Uncalled bet (10) returned to IPray2Buddha
+IPray2Buddha collected 20 from pot
+*** SUMMARY ***
+Total pot 20 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (20)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #63: 
+
+PokerStars Hand #222090560269: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:07:34 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1780 in chips) 
+Seat 2: dariusz1979 (1220 in chips) 
+IPray2Buddha: posts small blind 10
+dariusz1979: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [2s 2d]
+IPray2Buddha: raises 30 to 50
+dariusz1979: folds 
+Uncalled bet (30) returned to IPray2Buddha
+IPray2Buddha collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) collected (40)
+Seat 2: dariusz1979 (big blind) folded before Flop
+
+Hand #64: 
+
+PokerStars Hand #222090568416: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:07:51 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1800 in chips) 
+Seat 2: dariusz1979 (1200 in chips) 
+dariusz1979: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Kd 3s]
+dariusz1979: raises 20 to 40
+IPray2Buddha: folds 
+Uncalled bet (20) returned to dariusz1979
+dariusz1979 collected 40 from pot
+dariusz1979: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: dariusz1979 (button) (small blind) collected (40)
+
+Hand #65: 
+
+PokerStars Hand #222090574937: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:08:05 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1780 in chips) 
+Seat 2: dariusz1979 (1220 in chips) 
+IPray2Buddha: posts small blind 10
+dariusz1979: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [3d 2h]
+IPray2Buddha: calls 10
+dariusz1979: raises 80 to 100
+IPray2Buddha: folds 
+Uncalled bet (80) returned to dariusz1979
+dariusz1979 collected 40 from pot
+dariusz1979: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) folded before Flop
+Seat 2: dariusz1979 (big blind) collected (40)
+
+Hand #66: 
+
+PokerStars Hand #222090583614: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:08:24 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1760 in chips) 
+Seat 2: dariusz1979 (1240 in chips) 
+dariusz1979: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ac 7c]
+dariusz1979: raises 20 to 40
+IPray2Buddha: calls 20
+*** FLOP *** [4s Js 2h]
+IPray2Buddha: checks 
+dariusz1979: bets 40
+IPray2Buddha: folds 
+Uncalled bet (40) returned to dariusz1979
+dariusz1979 collected 80 from pot
+dariusz1979: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Board [4s Js 2h]
+Seat 1: IPray2Buddha (big blind) folded on the Flop
+Seat 2: dariusz1979 (button) (small blind) collected (80)
+
+Hand #67: 
+
+PokerStars Hand #222090595401: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:08:49 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1720 in chips) 
+Seat 2: dariusz1979 (1280 in chips) 
+IPray2Buddha: posts small blind 10
+dariusz1979: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [2d Tc]
+IPray2Buddha: calls 10
+dariusz1979: raises 80 to 100
+IPray2Buddha: folds 
+Uncalled bet (80) returned to dariusz1979
+dariusz1979 collected 40 from pot
+dariusz1979: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) folded before Flop
+Seat 2: dariusz1979 (big blind) collected (40)
+
+Hand #68: 
+
+PokerStars Hand #222090605065: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level I (10/20) - 2021/01/01 10:09:10 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1700 in chips) 
+Seat 2: dariusz1979 (1300 in chips) 
+dariusz1979: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Qc 7h]
+dariusz1979: raises 20 to 40
+IPray2Buddha: calls 20
+*** FLOP *** [5c 8h 4h]
+IPray2Buddha: checks 
+dariusz1979: checks 
+*** TURN *** [5c 8h 4h] [Tc]
+IPray2Buddha: bets 160
+dariusz1979: folds 
+Uncalled bet (160) returned to IPray2Buddha
+IPray2Buddha collected 80 from pot
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Board [5c 8h 4h Tc]
+Seat 1: IPray2Buddha (big blind) collected (80)
+Seat 2: dariusz1979 (button) (small blind) folded on the Turn
+
+Hand #69: 
+
+PokerStars Hand #222090621670: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:09:45 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1740 in chips) 
+Seat 2: dariusz1979 (1260 in chips) 
+IPray2Buddha: posts small blind 15
+dariusz1979: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ad 3d]
+IPray2Buddha: calls 15
+dariusz1979: checks 
+*** FLOP *** [9h 4h 4d]
+dariusz1979: checks 
+IPray2Buddha: bets 30
+dariusz1979: calls 30
+*** TURN *** [9h 4h 4d] [2c]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** RIVER *** [9h 4h 4d 2c] [Ac]
+dariusz1979: checks 
+IPray2Buddha: bets 90
+dariusz1979: calls 90
+*** SHOW DOWN ***
+IPray2Buddha: shows [Ad 3d] (two pair, Aces and Fours)
+IPray2Buddha collected 300 from pot
+*** SUMMARY ***
+Total pot 300 | Rake 0 
+Board [9h 4h 4d 2c Ac]
+Seat 1: IPray2Buddha (button) (small blind) showed [Ad 3d] and won (300) with two pair, Aces and Fours
+Seat 2: dariusz1979 (big blind) mucked [Ts 9c]
+
+Hand #70: 
+
+PokerStars Hand #222090651739: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:10:48 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1890 in chips) 
+Seat 2: dariusz1979 (1110 in chips) 
+dariusz1979: posts small blind 15
+IPray2Buddha: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ts 7c]
+dariusz1979: folds 
+Uncalled bet (15) returned to IPray2Buddha
+IPray2Buddha collected 30 from pot
+*** SUMMARY ***
+Total pot 30 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (30)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #71: 
+
+PokerStars Hand #222090654625: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:10:54 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1905 in chips) 
+Seat 2: dariusz1979 (1095 in chips) 
+IPray2Buddha: posts small blind 15
+dariusz1979: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ks Th]
+IPray2Buddha: raises 33 to 63
+dariusz1979: calls 33
+*** FLOP *** [8c 9s 4d]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** TURN *** [8c 9s 4d] [4h]
+dariusz1979: bets 90
+IPray2Buddha: calls 90
+*** RIVER *** [8c 9s 4d 4h] [Ts]
+dariusz1979: checks 
+IPray2Buddha: bets 230
+dariusz1979: folds 
+Uncalled bet (230) returned to IPray2Buddha
+IPray2Buddha collected 306 from pot
+*** SUMMARY ***
+Total pot 306 | Rake 0 
+Board [8c 9s 4d 4h Ts]
+Seat 1: IPray2Buddha (button) (small blind) collected (306)
+Seat 2: dariusz1979 (big blind) folded on the River
+
+Hand #72: 
+
+PokerStars Hand #222090672358: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:11:32 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2058 in chips) 
+Seat 2: dariusz1979 (942 in chips) 
+dariusz1979: posts small blind 15
+IPray2Buddha: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Th Ad]
+dariusz1979: calls 15
+IPray2Buddha: raises 75 to 105
+dariusz1979: folds 
+Uncalled bet (75) returned to IPray2Buddha
+IPray2Buddha collected 60 from pot
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (60)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #73: 
+
+PokerStars Hand #222090685276: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:11:59 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (2088 in chips) 
+Seat 2: dariusz1979 (912 in chips) 
+IPray2Buddha: posts small blind 15
+dariusz1979: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4d 3h]
+IPray2Buddha: calls 15
+dariusz1979: raises 90 to 120
+IPray2Buddha: folds 
+Uncalled bet (90) returned to dariusz1979
+dariusz1979 collected 60 from pot
+dariusz1979: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) folded before Flop
+Seat 2: dariusz1979 (big blind) collected (60)
+
+Hand #74: 
+
+PokerStars Hand #222090691267: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:12:12 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2058 in chips) 
+Seat 2: dariusz1979 (942 in chips) 
+dariusz1979: posts small blind 15
+IPray2Buddha: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [3c Qc]
+dariusz1979: folds 
+Uncalled bet (15) returned to IPray2Buddha
+IPray2Buddha collected 30 from pot
+*** SUMMARY ***
+Total pot 30 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (30)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #75: 
+
+PokerStars Hand #222090694651: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:12:19 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (2073 in chips) 
+Seat 2: dariusz1979 (927 in chips) 
+IPray2Buddha: posts small blind 15
+dariusz1979: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [7h 6h]
+IPray2Buddha: raises 33 to 63
+dariusz1979: calls 33
+*** FLOP *** [Jh 3s 6c]
+dariusz1979: checks 
+IPray2Buddha: bets 95
+dariusz1979: folds 
+Uncalled bet (95) returned to IPray2Buddha
+IPray2Buddha collected 126 from pot
+*** SUMMARY ***
+Total pot 126 | Rake 0 
+Board [Jh 3s 6c]
+Seat 1: IPray2Buddha (button) (small blind) collected (126)
+Seat 2: dariusz1979 (big blind) folded on the Flop
+
+Hand #76: 
+
+PokerStars Hand #222090708900: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:12:49 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2136 in chips) 
+Seat 2: dariusz1979 (864 in chips) 
+dariusz1979: posts small blind 15
+IPray2Buddha: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4c Ts]
+dariusz1979: raises 30 to 60
+IPray2Buddha: folds 
+Uncalled bet (30) returned to dariusz1979
+dariusz1979 collected 60 from pot
+dariusz1979: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: dariusz1979 (button) (small blind) collected (60)
+
+Hand #77: 
+
+PokerStars Hand #222090716994: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:13:05 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (2106 in chips) 
+Seat 2: dariusz1979 (894 in chips) 
+IPray2Buddha: posts small blind 15
+dariusz1979: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [6h 4c]
+IPray2Buddha: calls 15
+dariusz1979: checks 
+*** FLOP *** [Qs 9h Kh]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** TURN *** [Qs 9h Kh] [7h]
+dariusz1979: bets 30
+IPray2Buddha: raises 90 to 120
+dariusz1979: calls 90
+*** RIVER *** [Qs 9h Kh 7h] [2c]
+dariusz1979: checks 
+IPray2Buddha: bets 90
+dariusz1979: calls 90
+*** SHOW DOWN ***
+IPray2Buddha: shows [6h 4c] (high card King)
+dariusz1979: shows [8h Qd] (a pair of Queens)
+dariusz1979 collected 480 from pot
+*** SUMMARY ***
+Total pot 480 | Rake 0 
+Board [Qs 9h Kh 7h 2c]
+Seat 1: IPray2Buddha (button) (small blind) showed [6h 4c] and lost with high card King
+Seat 2: dariusz1979 (big blind) showed [8h Qd] and won (480) with a pair of Queens
+
+Hand #78: 
+
+PokerStars Hand #222090736848: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:13:47 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1866 in chips) 
+Seat 2: dariusz1979 (1134 in chips) 
+dariusz1979: posts small blind 15
+IPray2Buddha: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ah Th]
+dariusz1979: raises 30 to 60
+IPray2Buddha: raises 120 to 180
+dariusz1979: folds 
+Uncalled bet (120) returned to IPray2Buddha
+IPray2Buddha collected 120 from pot
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (120)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #79: 
+
+PokerStars Hand #222090745869: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:14:06 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1926 in chips) 
+Seat 2: dariusz1979 (1074 in chips) 
+IPray2Buddha: posts small blind 15
+dariusz1979: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4h 5c]
+IPray2Buddha: raises 33 to 63
+dariusz1979: folds 
+Uncalled bet (33) returned to IPray2Buddha
+IPray2Buddha collected 60 from pot
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) collected (60)
+Seat 2: dariusz1979 (big blind) folded before Flop
+
+Hand #80: 
+
+PokerStars Hand #222090757179: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:14:29 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1956 in chips) 
+Seat 2: dariusz1979 (1044 in chips) 
+dariusz1979: posts small blind 15
+IPray2Buddha: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4d 8h]
+dariusz1979: raises 30 to 60
+IPray2Buddha: folds 
+Uncalled bet (30) returned to dariusz1979
+dariusz1979 collected 60 from pot
+dariusz1979: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: dariusz1979 (button) (small blind) collected (60)
+
+Hand #81: 
+
+PokerStars Hand #222090769739: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:14:52 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1926 in chips) 
+Seat 2: dariusz1979 (1074 in chips) 
+IPray2Buddha: posts small blind 15
+dariusz1979: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Qs Th]
+IPray2Buddha: raises 33 to 63
+dariusz1979: folds 
+Uncalled bet (33) returned to IPray2Buddha
+IPray2Buddha collected 60 from pot
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) collected (60)
+Seat 2: dariusz1979 (big blind) folded before Flop
+
+Hand #82: 
+
+PokerStars Hand #222090776523: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level II (15/30) - 2021/01/01 10:15:06 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1956 in chips) 
+Seat 2: dariusz1979 (1044 in chips) 
+dariusz1979: posts small blind 15
+IPray2Buddha: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [2d Qh]
+dariusz1979: calls 15
+IPray2Buddha: checks 
+*** FLOP *** [6h 6d 9h]
+IPray2Buddha: checks 
+dariusz1979: bets 30
+IPray2Buddha: folds 
+Uncalled bet (30) returned to dariusz1979
+dariusz1979 collected 60 from pot
+dariusz1979: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Board [6h 6d 9h]
+Seat 1: IPray2Buddha (big blind) folded on the Flop
+Seat 2: dariusz1979 (button) (small blind) collected (60)
+
+Hand #83: 
+
+PokerStars Hand #222090793514: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:15:39 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1926 in chips) 
+Seat 2: dariusz1979 (1074 in chips) 
+IPray2Buddha: posts small blind 20
+dariusz1979: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ts Qs]
+IPray2Buddha: calls 20
+dariusz1979: checks 
+*** FLOP *** [Tc 8h 3h]
+dariusz1979: checks 
+IPray2Buddha: bets 60
+dariusz1979: folds 
+Uncalled bet (60) returned to IPray2Buddha
+IPray2Buddha collected 80 from pot
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Board [Tc 8h 3h]
+Seat 1: IPray2Buddha (button) (small blind) collected (80)
+Seat 2: dariusz1979 (big blind) folded on the Flop
+
+Hand #84: 
+
+PokerStars Hand #222090813097: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:16:20 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (1966 in chips) 
+Seat 2: dariusz1979 (1034 in chips) 
+dariusz1979: posts small blind 20
+IPray2Buddha: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ks 9s]
+dariusz1979: folds 
+Uncalled bet (20) returned to IPray2Buddha
+IPray2Buddha collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (40)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #85: 
+
+PokerStars Hand #222090816160: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:16:26 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (1986 in chips) 
+Seat 2: dariusz1979 (1014 in chips) 
+IPray2Buddha: posts small blind 20
+dariusz1979: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [8s Qd]
+IPray2Buddha: raises 40 to 80
+dariusz1979: folds 
+Uncalled bet (40) returned to IPray2Buddha
+IPray2Buddha collected 80 from pot
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) collected (80)
+Seat 2: dariusz1979 (big blind) folded before Flop
+
+Hand #86: 
+
+PokerStars Hand #222090823612: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:16:42 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2026 in chips) 
+Seat 2: dariusz1979 (974 in chips) 
+dariusz1979: posts small blind 20
+IPray2Buddha: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Th Js]
+dariusz1979: folds 
+Uncalled bet (20) returned to IPray2Buddha
+IPray2Buddha collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (40)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #87: 
+
+PokerStars Hand #222090826735: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:16:48 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (2046 in chips) 
+Seat 2: dariusz1979 (954 in chips) 
+IPray2Buddha: posts small blind 20
+dariusz1979: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [As 6h]
+IPray2Buddha: calls 20
+dariusz1979: checks 
+*** FLOP *** [Ah Jd 7c]
+dariusz1979: checks 
+IPray2Buddha: bets 40
+dariusz1979: calls 40
+*** TURN *** [Ah Jd 7c] [3d]
+dariusz1979: checks 
+IPray2Buddha: bets 120
+dariusz1979: folds 
+Uncalled bet (120) returned to IPray2Buddha
+IPray2Buddha collected 160 from pot
+*** SUMMARY ***
+Total pot 160 | Rake 0 
+Board [Ah Jd 7c 3d]
+Seat 1: IPray2Buddha (button) (small blind) collected (160)
+Seat 2: dariusz1979 (big blind) folded on the Turn
+
+Hand #88: 
+
+PokerStars Hand #222090844731: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:17:25 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2126 in chips) 
+Seat 2: dariusz1979 (874 in chips) 
+dariusz1979: posts small blind 20
+IPray2Buddha: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [5s 2c]
+dariusz1979: folds 
+Uncalled bet (20) returned to IPray2Buddha
+IPray2Buddha collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (40)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #89: 
+
+PokerStars Hand #222090847798: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:17:31 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (2146 in chips) 
+Seat 2: dariusz1979 (854 in chips) 
+IPray2Buddha: posts small blind 20
+dariusz1979: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [5s 8d]
+IPray2Buddha: raises 40 to 80
+dariusz1979: folds 
+Uncalled bet (40) returned to IPray2Buddha
+IPray2Buddha collected 80 from pot
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) collected (80)
+Seat 2: dariusz1979 (big blind) folded before Flop
+
+Hand #90: 
+
+PokerStars Hand #222090853044: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:17:42 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2186 in chips) 
+Seat 2: dariusz1979 (814 in chips) 
+dariusz1979: posts small blind 20
+IPray2Buddha: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [5h 2s]
+dariusz1979: raises 40 to 80
+IPray2Buddha: folds 
+Uncalled bet (40) returned to dariusz1979
+dariusz1979 collected 80 from pot
+dariusz1979: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: dariusz1979 (button) (small blind) collected (80)
+
+Hand #91: 
+
+PokerStars Hand #222090858969: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:17:54 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (2146 in chips) 
+Seat 2: dariusz1979 (854 in chips) 
+IPray2Buddha: posts small blind 20
+dariusz1979: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4s 9c]
+IPray2Buddha: calls 20
+dariusz1979: checks 
+*** FLOP *** [Qd 9h Ad]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** TURN *** [Qd 9h Ad] [5c]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** RIVER *** [Qd 9h Ad 5c] [2h]
+dariusz1979: checks 
+IPray2Buddha: bets 40
+dariusz1979: folds 
+Uncalled bet (40) returned to IPray2Buddha
+IPray2Buddha collected 80 from pot
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Board [Qd 9h Ad 5c 2h]
+Seat 1: IPray2Buddha (button) (small blind) collected (80)
+Seat 2: dariusz1979 (big blind) folded on the River
+
+Hand #92: 
+
+PokerStars Hand #222090889380: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:18:57 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2186 in chips) 
+Seat 2: dariusz1979 (814 in chips) 
+dariusz1979: posts small blind 20
+IPray2Buddha: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Qh Ks]
+dariusz1979: folds 
+Uncalled bet (20) returned to IPray2Buddha
+IPray2Buddha collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (40)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #93: 
+
+PokerStars Hand #222090892514: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:19:03 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (2206 in chips) 
+Seat 2: dariusz1979 (794 in chips) 
+IPray2Buddha: posts small blind 20
+dariusz1979: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [3d 9s]
+IPray2Buddha: calls 20
+dariusz1979: checks 
+*** FLOP *** [Jh 6c 4c]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** TURN *** [Jh 6c 4c] [Kc]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** RIVER *** [Jh 6c 4c Kc] [Ks]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** SHOW DOWN ***
+dariusz1979: shows [Qd 3c] (a pair of Kings)
+IPray2Buddha: mucks hand 
+dariusz1979 collected 80 from pot
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Board [Jh 6c 4c Kc Ks]
+Seat 1: IPray2Buddha (button) (small blind) mucked [3d 9s]
+Seat 2: dariusz1979 (big blind) showed [Qd 3c] and won (80) with a pair of Kings
+
+Hand #94: 
+
+PokerStars Hand #222090919746: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:19:59 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2166 in chips) 
+Seat 2: dariusz1979 (834 in chips) 
+dariusz1979: posts small blind 20
+IPray2Buddha: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ks 8d]
+dariusz1979: calls 20
+IPray2Buddha: raises 60 to 100
+dariusz1979: calls 60
+*** FLOP *** [8c 6h Jd]
+IPray2Buddha: checks 
+dariusz1979: checks 
+*** TURN *** [8c 6h Jd] [Jh]
+IPray2Buddha: bets 150
+dariusz1979: folds 
+Uncalled bet (150) returned to IPray2Buddha
+IPray2Buddha collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Board [8c 6h Jd Jh]
+Seat 1: IPray2Buddha (big blind) collected (200)
+Seat 2: dariusz1979 (button) (small blind) folded on the Turn
+
+Hand #95: 
+
+PokerStars Hand #222090945972: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:20:53 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (2266 in chips) 
+Seat 2: dariusz1979 (734 in chips) 
+IPray2Buddha: posts small blind 20
+dariusz1979: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [9c 4d]
+IPray2Buddha: raises 40 to 80
+dariusz1979: folds 
+Uncalled bet (40) returned to IPray2Buddha
+IPray2Buddha collected 80 from pot
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 1: IPray2Buddha (button) (small blind) collected (80)
+Seat 2: dariusz1979 (big blind) folded before Flop
+
+Hand #96: 
+
+PokerStars Hand #222090951417: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:21:04 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2306 in chips) 
+Seat 2: dariusz1979 (694 in chips) 
+dariusz1979: posts small blind 20
+IPray2Buddha: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [9s 2d]
+dariusz1979: folds 
+Uncalled bet (20) returned to IPray2Buddha
+IPray2Buddha collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (40)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+Hand #97: 
+
+PokerStars Hand #222090954604: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level III (20/40) - 2021/01/01 10:21:11 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (2326 in chips) 
+Seat 2: dariusz1979 (674 in chips) 
+IPray2Buddha: posts small blind 20
+dariusz1979: posts big blind 40
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [2s Ks]
+IPray2Buddha: raises 40 to 80
+dariusz1979: calls 40
+*** FLOP *** [4h 3c 2d]
+dariusz1979: checks 
+IPray2Buddha: bets 48
+dariusz1979: calls 48
+*** TURN *** [4h 3c 2d] [Ah]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** RIVER *** [4h 3c 2d Ah] [Qs]
+dariusz1979: checks 
+IPray2Buddha: checks 
+*** SHOW DOWN ***
+dariusz1979: shows [Kd Js] (high card Ace)
+IPray2Buddha: shows [2s Ks] (a pair of Deuces)
+IPray2Buddha collected 256 from pot
+*** SUMMARY ***
+Total pot 256 | Rake 0 
+Board [4h 3c 2d Ah Qs]
+Seat 1: IPray2Buddha (button) (small blind) showed [2s Ks] and won (256) with a pair of Deuces
+Seat 2: dariusz1979 (big blind) showed [Kd Js] and lost with high card Ace
+
+Hand #98: 
+
+PokerStars Hand #222090984671: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level IV (25/50) - 2021/01/01 10:22:00 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2454 in chips) 
+Seat 2: dariusz1979 (546 in chips) 
+dariusz1979: posts small blind 25
+IPray2Buddha: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [5h 8h]
+dariusz1979: raises 496 to 546 and is all-in
+IPray2Buddha: folds 
+Uncalled bet (496) returned to dariusz1979
+dariusz1979 collected 100 from pot
+dariusz1979: doesn't show hand 
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 1: IPray2Buddha (big blind) folded before Flop
+Seat 2: dariusz1979 (button) (small blind) collected (100)
+
+Hand #99: 
+
+PokerStars Hand #222090989598: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level IV (25/50) - 2021/01/01 10:22:10 ET
+Table '3091070723 1' 2-max Seat #1 is the button
+Seat 1: IPray2Buddha (2404 in chips) 
+Seat 2: dariusz1979 (596 in chips) 
+IPray2Buddha: posts small blind 25
+dariusz1979: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Jh Kc]
+IPray2Buddha: calls 25
+dariusz1979: checks 
+*** FLOP *** [4d 9s 5d]
+dariusz1979: bets 546 and is all-in
+IPray2Buddha: folds 
+Uncalled bet (546) returned to dariusz1979
+dariusz1979 collected 100 from pot
+dariusz1979: doesn't show hand 
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Board [4d 9s 5d]
+Seat 1: IPray2Buddha (button) (small blind) folded on the Flop
+Seat 2: dariusz1979 (big blind) collected (100)
+
+Hand #100: 
+
+PokerStars Hand #222091000448: Tournament #3091070723, $28.57+$1.43 USD Hold'em No Limit - Level IV (25/50) - 2021/01/01 10:22:32 ET
+Table '3091070723 1' 2-max Seat #2 is the button
+Seat 1: IPray2Buddha (2354 in chips) 
+Seat 2: dariusz1979 (646 in chips) 
+dariusz1979: posts small blind 25
+IPray2Buddha: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ad 9s]
+dariusz1979: folds 
+Uncalled bet (25) returned to IPray2Buddha
+IPray2Buddha collected 50 from pot
+*** SUMMARY ***
+Total pot 50 | Rake 0 
+Seat 1: IPray2Buddha (big blind) collected (50)
+Seat 2: dariusz1979 (button) (small blind) folded before Flop
+
+
+PokerStars Hand #232702845894: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level VII (100/200) - 2021/12/31 22:44:34 ET
+Table '3332579367 2' 9-max Seat #1 is the button
+Seat 1: Sakura2892 (549 in chips)
+Seat 2: TLNDink2749 (9728 in chips)
+Seat 3: Günex66 (2211 in chips)
+Seat 4: IPray2Buddha (3270 in chips)
+Seat 6: Willifold777 (4079 in chips)
+Seat 7: Sickofitall5 (3546 in chips)
+Seat 9: perussatto4 (3617 in chips)
+Sakura2892: posts the ante 25
+TLNDink2749: posts the ante 25
+Günex66: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+TLNDink2749: posts small blind 100
+Günex66: posts big blind 200
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4h Jc]
+IPray2Buddha: folds
+Willifold777: raises 200 to 400
+Sickofitall5: folds
+perussatto4: folds
+Sakura2892: raises 124 to 524 and is all-in
+TLNDink2749: folds
+Günex66: calls 324
+Willifold777: calls 124
+*** FLOP *** [Td 4d 4s]
+Günex66: checks
+Willifold777: checks
+*** TURN *** [Td 4d 4s] [Kd]
+Günex66: checks
+Willifold777: bets 924
+Günex66: folds
+Uncalled bet (924) returned to Willifold777
+*** RIVER *** [Td 4d 4s Kd] [2c]
+*** SHOW DOWN ***
+Willifold777: shows [Js Ac] (a pair of Fours)
+Sakura2892: shows [7h Ah] (a pair of Fours - lower kicker)
+Willifold777 collected 1847 from pot
+Sakura2892 finished the tournament in 7th place
+*** SUMMARY ***
+Total pot 1847 | Rake 0
+Board [Td 4d 4s Kd 2c]
+Seat 1: Sakura2892 (button) showed [7h Ah] and lost with a pair of Fours
+Seat 2: TLNDink2749 (small blind) folded before Flop
+Seat 3: Günex66 (big blind) folded on the Turn
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 6: Willifold777 showed [Js Ac] and won (1847) with a pair of Fours
+Seat 7: Sickofitall5 folded before Flop (didn't bet)
+Seat 9: perussatto4 folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #232702865436: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level VII (100/200) - 2021/12/31 22:46:07 ET
+Table '3332579367 2' 9-max Seat #3 is the button
+Seat 2: TLNDink2749 (9578 in chips)
+Seat 3: Günex66 (1537 in chips)
+Seat 4: IPray2Buddha (3020 in chips)
+Seat 6: Willifold777 (5352 in chips)
+Seat 7: Sickofitall5 (3946 in chips)
+Seat 9: perussatto4 (3567 in chips)
+TLNDink2749: posts the ante 25
+Günex66: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+IPray2Buddha: posts small blind 100
+Willifold777: posts big blind 200
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Td 3c]
+Sickofitall5: raises 400 to 600
+perussatto4: folds
+TLNDink2749: raises 400 to 1000
+Günex66: folds
+IPray2Buddha: folds
+Willifold777: folds
+Sickofitall5: calls 400
+*** FLOP *** [5c 2s Js]
+Sickofitall5: checks
+TLNDink2749: bets 200
+Sickofitall5: calls 200
+*** TURN *** [5c 2s Js] [9h]
+Sickofitall5: checks
+TLNDink2749: bets 1600
+Sickofitall5: folds
+Uncalled bet (1600) returned to TLNDink2749
+TLNDink2749 collected 2850 from pot
+TLNDink2749: doesn't show hand
+*** SUMMARY ***
+Total pot 2850 | Rake 0
+Board [5c 2s Js 9h]
+Seat 2: TLNDink2749 collected (2850)
+Seat 3: Günex66 (button) folded before Flop (didn't bet)
+Seat 4: IPray2Buddha (small blind) folded before Flop
+Seat 6: Willifold777 (big blind) folded before Flop
+Seat 7: Sickofitall5 folded on the Turn
+Seat 9: perussatto4 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702881786: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level VIII (150/300) - 2021/12/31 22:47:31 ET
+Table '3332579367 2' 9-max Seat #4 is the button
+Seat 2: TLNDink2749 (11203 in chips)
+Seat 3: Günex66 (1512 in chips)
+Seat 4: IPray2Buddha (2895 in chips)
+Seat 6: Willifold777 (5127 in chips)
+Seat 7: Sickofitall5 (2721 in chips)
+Seat 9: perussatto4 (3542 in chips)
+TLNDink2749: posts the ante 25
+Günex66: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+Willifold777: posts small blind 150
+Sickofitall5: posts big blind 300
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [7d 5h]
+perussatto4: folds
+TLNDink2749: raises 300 to 600
+Günex66: folds
+IPray2Buddha: folds
+Willifold777: folds
+Sickofitall5: folds
+Uncalled bet (300) returned to TLNDink2749
+TLNDink2749 collected 900 from pot
+TLNDink2749: doesn't show hand
+*** SUMMARY ***
+Total pot 900 | Rake 0
+Seat 2: TLNDink2749 collected (900)
+Seat 3: Günex66 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha (button) folded before Flop (didn't bet)
+Seat 6: Willifold777 (small blind) folded before Flop
+Seat 7: Sickofitall5 (big blind) folded before Flop
+Seat 9: perussatto4 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702887927: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level VIII (150/300) - 2021/12/31 22:48:02 ET
+Table '3332579367 2' 9-max Seat #6 is the button
+Seat 2: TLNDink2749 (11778 in chips)
+Seat 3: Günex66 (1487 in chips)
+Seat 4: IPray2Buddha (2870 in chips)
+Seat 6: Willifold777 (4952 in chips)
+Seat 7: Sickofitall5 (2396 in chips)
+Seat 9: perussatto4 (3517 in chips)
+TLNDink2749: posts the ante 25
+Günex66: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+Sickofitall5: posts small blind 150
+perussatto4: posts big blind 300
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ks Qh]
+TLNDink2749: raises 300 to 600
+Günex66: folds
+IPray2Buddha: folds
+Willifold777: folds
+Sickofitall5: calls 450
+perussatto4: folds
+*** FLOP *** [7c 5d 3d]
+Sickofitall5: bets 1771 and is all-in
+TLNDink2749: calls 1771
+*** TURN *** [7c 5d 3d] [4d]
+*** RIVER *** [7c 5d 3d 4d] [7s]
+*** SHOW DOWN ***
+Sickofitall5: shows [As 4s] (two pair, Sevens and Fours)
+TLNDink2749: shows [2d 8s] (a pair of Sevens)
+Sickofitall5 collected 5192 from pot
+*** SUMMARY ***
+Total pot 5192 | Rake 0
+Board [7c 5d 3d 4d 7s]
+Seat 2: TLNDink2749 showed [2d 8s] and lost with a pair of Sevens
+Seat 3: Günex66 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 6: Willifold777 (button) folded before Flop (didn't bet)
+Seat 7: Sickofitall5 (small blind) showed [As 4s] and won (5192) with two pair, Sevens and Fours
+Seat 9: perussatto4 (big blind) folded before Flop
+
+
+PokerStars Hand #232702897476: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level VIII (150/300) - 2021/12/31 22:48:44 ET
+Table '3332579367 2' 9-max Seat #7 is the button
+Seat 2: TLNDink2749 (9382 in chips)
+Seat 3: Günex66 (1462 in chips)
+Seat 4: IPray2Buddha (2845 in chips)
+Seat 6: Willifold777 (4927 in chips)
+Seat 7: Sickofitall5 (5192 in chips)
+Seat 9: perussatto4 (3192 in chips)
+TLNDink2749: posts the ante 25
+Günex66: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+perussatto4: posts small blind 150
+TLNDink2749: posts big blind 300
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [5s 4c]
+Günex66: folds
+IPray2Buddha: folds
+Willifold777: raises 300 to 600
+Sickofitall5: folds
+perussatto4: folds
+TLNDink2749: raises 300 to 900
+Willifold777: calls 300
+*** FLOP *** [Td Ah 8s]
+TLNDink2749: bets 300
+Willifold777: calls 300
+*** TURN *** [Td Ah 8s] [2s]
+TLNDink2749: bets 300
+Willifold777: calls 300
+*** RIVER *** [Td Ah 8s 2s] [5h]
+TLNDink2749: bets 300
+Willifold777: calls 300
+*** SHOW DOWN ***
+TLNDink2749: shows [6c Qs] (high card Ace)
+Willifold777: shows [7c 7d] (a pair of Sevens)
+Willifold777 collected 3900 from pot
+*** SUMMARY ***
+Total pot 3900 | Rake 0
+Board [Td Ah 8s 2s 5h]
+Seat 2: TLNDink2749 (big blind) showed [6c Qs] and lost with high card Ace
+Seat 3: Günex66 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 6: Willifold777 showed [7c 7d] and won (3900) with a pair of Sevens
+Seat 7: Sickofitall5 (button) folded before Flop (didn't bet)
+Seat 9: perussatto4 (small blind) folded before Flop
+
+
+PokerStars Hand #232702905356: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level VIII (150/300) - 2021/12/31 22:49:24 ET
+Table '3332579367 2' 9-max Seat #9 is the button
+Seat 2: TLNDink2749 (7557 in chips)
+Seat 3: Günex66 (1437 in chips)
+Seat 4: IPray2Buddha (2820 in chips)
+Seat 6: Willifold777 (7002 in chips)
+Seat 7: Sickofitall5 (5167 in chips)
+Seat 9: perussatto4 (3017 in chips)
+TLNDink2749: posts the ante 25
+Günex66: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+TLNDink2749: posts small blind 150
+Günex66: posts big blind 300
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [3s Kc]
+IPray2Buddha: folds
+Willifold777: folds
+Sickofitall5: raises 300 to 600
+perussatto4: folds
+TLNDink2749: calls 450
+Günex66: folds
+*** FLOP *** [6h 5d 4h]
+TLNDink2749: bets 300
+Sickofitall5: calls 300
+*** TURN *** [6h 5d 4h] [Ts]
+TLNDink2749: bets 300
+Sickofitall5: calls 300
+*** RIVER *** [6h 5d 4h Ts] [5h]
+TLNDink2749: bets 900
+Sickofitall5: calls 900
+*** SHOW DOWN ***
+TLNDink2749: shows [6s Js] (two pair, Sixes and Fives)
+TLNDink2749 collected 4650 from pot
+*** SUMMARY ***
+Total pot 4650 | Rake 0
+Board [6h 5d 4h Ts 5h]
+Seat 2: TLNDink2749 (small blind) showed [6s Js] and won (4650) with two pair, Sixes and Fives
+Seat 3: Günex66 (big blind) folded before Flop
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 6: Willifold777 folded before Flop (didn't bet)
+Seat 7: Sickofitall5 mucked [Ac 2c]
+Seat 9: perussatto4 (button) folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702916868: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level VIII (150/300) - 2021/12/31 22:50:24 ET
+Table '3332579367 2' 9-max Seat #2 is the button
+Seat 2: TLNDink2749 (10082 in chips)
+Seat 3: Günex66 (1112 in chips)
+Seat 4: IPray2Buddha (2795 in chips)
+Seat 6: Willifold777 (6977 in chips)
+Seat 7: Sickofitall5 (3042 in chips)
+Seat 9: perussatto4 (2992 in chips)
+TLNDink2749: posts the ante 25
+Günex66: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+Günex66: posts small blind 150
+IPray2Buddha: posts big blind 300
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [3h Td]
+Willifold777: folds
+Sickofitall5: raises 2717 to 3017 and is all-in
+perussatto4: folds
+TLNDink2749: folds
+Günex66: calls 937 and is all-in
+IPray2Buddha: folds
+Uncalled bet (1930) returned to Sickofitall5
+*** FLOP *** [6d Jh 9s]
+*** TURN *** [6d Jh 9s] [6s]
+*** RIVER *** [6d Jh 9s 6s] [Tc]
+*** SHOW DOWN ***
+Günex66: shows [Kd Jd] (two pair, Jacks and Sixes)
+Sickofitall5: shows [Kc 6c] (three of a kind, Sixes)
+Sickofitall5 collected 2624 from pot
+Günex66 finished the tournament in 6th place
+*** SUMMARY ***
+Total pot 2624 | Rake 0
+Board [6d Jh 9s 6s Tc]
+Seat 2: TLNDink2749 (button) folded before Flop (didn't bet)
+Seat 3: Günex66 (small blind) showed [Kd Jd] and lost with two pair, Jacks and Sixes
+Seat 4: IPray2Buddha (big blind) folded before Flop
+Seat 6: Willifold777 folded before Flop (didn't bet)
+Seat 7: Sickofitall5 showed [Kc 6c] and won (2624) with three of a kind, Sixes
+Seat 9: perussatto4 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702922986: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level VIII (150/300) - 2021/12/31 22:50:56 ET
+Table '3332579367 2' 9-max Seat #4 is the button
+Seat 2: TLNDink2749 (10057 in chips)
+Seat 4: IPray2Buddha (2470 in chips)
+Seat 6: Willifold777 (6952 in chips)
+Seat 7: Sickofitall5 (4554 in chips)
+Seat 9: perussatto4 (2967 in chips)
+TLNDink2749: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+Willifold777: posts small blind 150
+Sickofitall5: posts big blind 300
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [2c Js]
+perussatto4: raises 2642 to 2942 and is all-in
+TLNDink2749: folds
+IPray2Buddha: folds
+Willifold777: folds
+Sickofitall5: folds
+Uncalled bet (2642) returned to perussatto4
+perussatto4 collected 875 from pot
+*** SUMMARY ***
+Total pot 875 | Rake 0
+Seat 2: TLNDink2749 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha (button) folded before Flop (didn't bet)
+Seat 6: Willifold777 (small blind) folded before Flop
+Seat 7: Sickofitall5 (big blind) folded before Flop
+Seat 9: perussatto4 collected (875)
+
+
+PokerStars Hand #232702930440: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level VIII (150/300) - 2021/12/31 22:51:34 ET
+Table '3332579367 2' 9-max Seat #6 is the button
+Seat 2: TLNDink2749 (10032 in chips)
+Seat 4: IPray2Buddha (2445 in chips)
+Seat 6: Willifold777 (6777 in chips)
+Seat 7: Sickofitall5 (4229 in chips)
+Seat 9: perussatto4 (3517 in chips)
+TLNDink2749: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+Sickofitall5: posts small blind 150
+perussatto4: posts big blind 300
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Js 7s]
+TLNDink2749: calls 300
+IPray2Buddha: folds
+Willifold777: folds
+Sickofitall5: calls 150
+perussatto4: checks
+*** FLOP *** [5h 4s Qd]
+Sickofitall5: checks
+perussatto4: checks
+TLNDink2749: checks
+*** TURN *** [5h 4s Qd] [9s]
+Sickofitall5: checks
+perussatto4: checks
+TLNDink2749: checks
+*** RIVER *** [5h 4s Qd 9s] [3d]
+Sickofitall5: checks
+perussatto4: checks
+TLNDink2749: checks
+*** SHOW DOWN ***
+Sickofitall5: shows [8c 8h] (a pair of Eights)
+Sickofitall5 collected 1025 from pot
+*** SUMMARY ***
+Total pot 1025 | Rake 0
+Board [5h 4s Qd 9s 3d]
+Seat 2: TLNDink2749 mucked [7c 8s]
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 6: Willifold777 (button) folded before Flop (didn't bet)
+Seat 7: Sickofitall5 (small blind) showed [8c 8h] and won (1025) with a pair of Eights
+Seat 9: perussatto4 (big blind) mucked [5d Tc]
+
+
+PokerStars Hand #232702950427: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level IX (200/400) - 2021/12/31 22:52:28 ET
+Table '3332579367 2' 9-max Seat #7 is the button
+Seat 2: TLNDink2749 (9707 in chips)
+Seat 4: IPray2Buddha (2420 in chips)
+Seat 6: Willifold777 (6752 in chips)
+Seat 7: Sickofitall5 (4929 in chips)
+Seat 9: perussatto4 (3192 in chips)
+TLNDink2749: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+perussatto4: posts small blind 200
+TLNDink2749: posts big blind 400
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [7d Ks]
+IPray2Buddha: folds
+Willifold777: raises 400 to 800
+Sickofitall5: folds
+perussatto4: raises 2367 to 3167 and is all-in
+TLNDink2749: folds
+Willifold777: folds
+Uncalled bet (2367) returned to perussatto4
+perussatto4 collected 2125 from pot
+*** SUMMARY ***
+Total pot 2125 | Rake 0
+Seat 2: TLNDink2749 (big blind) folded before Flop
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 6: Willifold777 folded before Flop
+Seat 7: Sickofitall5 (button) folded before Flop (didn't bet)
+Seat 9: perussatto4 (small blind) collected (2125)
+
+
+PokerStars Hand #232702967652: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level IX (200/400) - 2021/12/31 22:53:13 ET
+Table '3332579367 2' 9-max Seat #9 is the button
+Seat 2: TLNDink2749 (9282 in chips)
+Seat 4: IPray2Buddha (2395 in chips)
+Seat 6: Willifold777 (5927 in chips)
+Seat 7: Sickofitall5 (4904 in chips)
+Seat 9: perussatto4 (4492 in chips)
+TLNDink2749: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+TLNDink2749: posts small blind 200
+IPray2Buddha: posts big blind 400
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Jd 5s]
+Willifold777: folds
+Sickofitall5: raises 4479 to 4879 and is all-in
+perussatto4: folds
+TLNDink2749: folds
+IPray2Buddha: folds
+Uncalled bet (4479) returned to Sickofitall5
+Sickofitall5 collected 1125 from pot
+*** SUMMARY ***
+Total pot 1125 | Rake 0
+Seat 2: TLNDink2749 (small blind) folded before Flop
+Seat 4: IPray2Buddha (big blind) folded before Flop
+Seat 6: Willifold777 folded before Flop (didn't bet)
+Seat 7: Sickofitall5 collected (1125)
+Seat 9: perussatto4 (button) folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702973065: Tournament #3332579367, $9.22+$0.78 USD Hold'em No Limit - Level IX (200/400) - 2021/12/31 22:53:41 ET
+Table '3332579367 2' 9-max Seat #2 is the button
+Seat 2: TLNDink2749 (9057 in chips)
+Seat 4: IPray2Buddha (1970 in chips)
+Seat 6: Willifold777 (5902 in chips)
+Seat 7: Sickofitall5 (5604 in chips)
+Seat 9: perussatto4 (4467 in chips)
+TLNDink2749: posts the ante 25
+IPray2Buddha: posts the ante 25
+Willifold777: posts the ante 25
+Sickofitall5: posts the ante 25
+perussatto4: posts the ante 25
+IPray2Buddha: posts small blind 200
+Willifold777: posts big blind 400
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Qs 4h]
+Sickofitall5: raises 400 to 800
+perussatto4: folds
+TLNDink2749: calls 800
+IPray2Buddha: folds
+Willifold777: folds
+*** FLOP *** [Kc 6d 8h]
+Sickofitall5: checks
+TLNDink2749: bets 400
+Sickofitall5: calls 400
+*** TURN *** [Kc 6d 8h] [5d]
+Sickofitall5: checks
+TLNDink2749: bets 400
+Sickofitall5: calls 400
+*** RIVER *** [Kc 6d 8h 5d] [3c]
+Sickofitall5: checks
+TLNDink2749: bets 800
+Sickofitall5: calls 800
+*** SHOW DOWN ***
+TLNDink2749: shows [Js 3h] (a pair of Threes)
+Sickofitall5: shows [9h Kh] (a pair of Kings)
+Sickofitall5 collected 5525 from pot
+*** SUMMARY ***
+Total pot 5525 | Rake 0
+Board [Kc 6d 8h 5d 3c]
+Seat 2: TLNDink2749 (button) showed [Js 3h] and lost with a pair of Threes
+Seat 4: IPray2Buddha (small blind) folded before Flop
+Seat 6: Willifold777 (big blind) folded before Flop
+Seat 7: Sickofitall5 showed [9h Kh] and won (5525) with a pair of Kings
+Seat 9: perussatto4 folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #232702464732: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level I (10/20) - 2021/12/31 22:16:40 ET
+Table '3332581238 1' 9-max Seat #1 is the button
+Seat 1: mpolishuk (1500 in chips)
+Seat 2: cameltoe3350 (1500 in chips)
+Seat 3: Kevin2049 (1500 in chips)
+Seat 4: IPray2Buddha (1500 in chips)
+Seat 5: Sakura2892 (1500 in chips)
+Seat 6: GFJun10r (1500 in chips)
+Seat 7: Lillien66 (1500 in chips)
+Seat 8: 100%tigerfan (1500 in chips)
+Seat 9: owlie45 (1500 in chips)
+mpolishuk: posts the ante 3
+cameltoe3350: posts the ante 3
+Kevin2049: posts the ante 3
+IPray2Buddha: posts the ante 3
+Sakura2892: posts the ante 3
+GFJun10r: posts the ante 3
+Lillien66: posts the ante 3
+100%tigerfan: posts the ante 3
+owlie45: posts the ante 3
+cameltoe3350: posts small blind 10
+Kevin2049: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ac Tc]
+IPray2Buddha: raises 40 to 60
+Sakura2892: folds
+GFJun10r: folds
+Lillien66: folds
+100%tigerfan: folds
+owlie45: folds
+mpolishuk: folds
+cameltoe3350: folds
+Kevin2049: raises 157 to 217
+IPray2Buddha: calls 157
+*** FLOP *** [4h 8h As]
+Kevin2049: checks
+IPray2Buddha: checks
+*** TURN *** [4h 8h As] [5c]
+Kevin2049: bets 120
+IPray2Buddha: calls 120
+*** RIVER *** [4h 8h As 5c] [3d]
+Kevin2049: checks
+IPray2Buddha: bets 600
+Kevin2049: folds
+Uncalled bet (600) returned to IPray2Buddha
+IPray2Buddha collected 711 from pot
+*** SUMMARY ***
+Total pot 711 | Rake 0
+Board [4h 8h As 5c 3d]
+Seat 1: mpolishuk (button) folded before Flop (didn't bet)
+Seat 2: cameltoe3350 (small blind) folded before Flop
+Seat 3: Kevin2049 (big blind) folded on the River
+Seat 4: IPray2Buddha collected (711)
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 6: GFJun10r folded before Flop (didn't bet)
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 8: 100%tigerfan folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702491957: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level I (10/20) - 2021/12/31 22:18:28 ET
+Table '3332581238 1' 9-max Seat #2 is the button
+Seat 1: mpolishuk (1497 in chips)
+Seat 2: cameltoe3350 (1487 in chips)
+Seat 3: Kevin2049 (1160 in chips)
+Seat 4: IPray2Buddha (1871 in chips)
+Seat 5: Sakura2892 (1497 in chips)
+Seat 6: GFJun10r (1497 in chips)
+Seat 7: Lillien66 (1497 in chips)
+Seat 8: 100%tigerfan (1497 in chips)
+Seat 9: owlie45 (1497 in chips)
+mpolishuk: posts the ante 3
+cameltoe3350: posts the ante 3
+Kevin2049: posts the ante 3
+IPray2Buddha: posts the ante 3
+Sakura2892: posts the ante 3
+GFJun10r: posts the ante 3
+Lillien66: posts the ante 3
+100%tigerfan: posts the ante 3
+owlie45: posts the ante 3
+Kevin2049: posts small blind 10
+IPray2Buddha: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4s 9d]
+Sakura2892: folds
+GFJun10r: raises 29 to 49
+Lillien66: folds
+100%tigerfan: folds
+owlie45: folds
+mpolishuk: raises 121 to 170
+cameltoe3350: folds
+Kevin2049: folds
+IPray2Buddha: folds
+GFJun10r: calls 121
+*** FLOP *** [6d Js 9h]
+GFJun10r: checks
+mpolishuk: bets 199
+GFJun10r: folds
+Uncalled bet (199) returned to mpolishuk
+mpolishuk collected 397 from pot
+mpolishuk: doesn't show hand
+*** SUMMARY ***
+Total pot 397 | Rake 0
+Board [6d Js 9h]
+Seat 1: mpolishuk collected (397)
+Seat 2: cameltoe3350 (button) folded before Flop (didn't bet)
+Seat 3: Kevin2049 (small blind) folded before Flop
+Seat 4: IPray2Buddha (big blind) folded before Flop
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 6: GFJun10r folded on the Flop
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 8: 100%tigerfan folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702507303: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level I (10/20) - 2021/12/31 22:19:21 ET
+Table '3332581238 1' 9-max Seat #3 is the button
+Seat 1: mpolishuk (1721 in chips)
+Seat 2: cameltoe3350 (1484 in chips)
+Seat 3: Kevin2049 (1147 in chips)
+Seat 4: IPray2Buddha (1848 in chips)
+Seat 5: Sakura2892 (1494 in chips)
+Seat 6: GFJun10r (1324 in chips)
+Seat 7: Lillien66 (1494 in chips)
+Seat 8: 100%tigerfan (1494 in chips)
+Seat 9: owlie45 (1494 in chips)
+mpolishuk: posts the ante 3
+cameltoe3350: posts the ante 3
+Kevin2049: posts the ante 3
+IPray2Buddha: posts the ante 3
+Sakura2892: posts the ante 3
+GFJun10r: posts the ante 3
+Lillien66: posts the ante 3
+100%tigerfan: posts the ante 3
+owlie45: posts the ante 3
+IPray2Buddha: posts small blind 10
+Sakura2892: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [8d 9s]
+GFJun10r: raises 40 to 60
+Lillien66: folds
+100%tigerfan: calls 60
+owlie45: raises 220 to 280
+mpolishuk: folds
+cameltoe3350: folds
+Kevin2049: folds
+IPray2Buddha: folds
+Sakura2892: folds
+GFJun10r: calls 220
+100%tigerfan: folds
+*** FLOP *** [Qs 2h 2c]
+GFJun10r: checks
+owlie45: bets 160
+GFJun10r: calls 160
+*** TURN *** [Qs 2h 2c] [3c]
+GFJun10r: checks
+owlie45: checks
+*** RIVER *** [Qs 2h 2c 3c] [Kc]
+GFJun10r: checks
+owlie45: bets 1051 and is all-in
+GFJun10r: folds
+Uncalled bet (1051) returned to owlie45
+owlie45 collected 997 from pot
+owlie45: doesn't show hand
+*** SUMMARY ***
+Total pot 997 | Rake 0
+Board [Qs 2h 2c 3c Kc]
+Seat 1: mpolishuk folded before Flop (didn't bet)
+Seat 2: cameltoe3350 folded before Flop (didn't bet)
+Seat 3: Kevin2049 (button) folded before Flop (didn't bet)
+Seat 4: IPray2Buddha (small blind) folded before Flop
+Seat 5: Sakura2892 (big blind) folded before Flop
+Seat 6: GFJun10r folded on the River
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 8: 100%tigerfan folded before Flop
+Seat 9: owlie45 collected (997)
+
+
+PokerStars Hand #232702522368: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level I (10/20) - 2021/12/31 22:20:31 ET
+Table '3332581238 1' 9-max Seat #4 is the button
+Seat 1: mpolishuk (1718 in chips)
+Seat 2: cameltoe3350 (1481 in chips)
+Seat 3: Kevin2049 (1144 in chips)
+Seat 4: IPray2Buddha (1835 in chips)
+Seat 5: Sakura2892 (1471 in chips)
+Seat 6: GFJun10r (881 in chips)
+Seat 7: Lillien66 (1491 in chips)
+Seat 8: 100%tigerfan (1431 in chips)
+Seat 9: owlie45 (2048 in chips)
+mpolishuk: posts the ante 3
+cameltoe3350: posts the ante 3
+Kevin2049: posts the ante 3
+IPray2Buddha: posts the ante 3
+Sakura2892: posts the ante 3
+GFJun10r: posts the ante 3
+Lillien66: posts the ante 3
+100%tigerfan: posts the ante 3
+owlie45: posts the ante 3
+Sakura2892: posts small blind 10
+GFJun10r: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Js 4s]
+Lillien66: folds
+100%tigerfan: folds
+owlie45: folds
+mpolishuk: folds
+cameltoe3350: folds
+Kevin2049: folds
+IPray2Buddha: raises 22 to 42
+Sakura2892: folds
+GFJun10r: calls 22
+*** FLOP *** [Ac 3d Jc]
+GFJun10r: checks
+IPray2Buddha: checks
+*** TURN *** [Ac 3d Jc] [8s]
+GFJun10r: bets 121
+IPray2Buddha: calls 121
+*** RIVER *** [Ac 3d Jc 8s] [Qs]
+GFJun10r: bets 159
+IPray2Buddha: folds
+Uncalled bet (159) returned to GFJun10r
+GFJun10r collected 363 from pot
+GFJun10r: doesn't show hand
+*** SUMMARY ***
+Total pot 363 | Rake 0
+Board [Ac 3d Jc 8s Qs]
+Seat 1: mpolishuk folded before Flop (didn't bet)
+Seat 2: cameltoe3350 folded before Flop (didn't bet)
+Seat 3: Kevin2049 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha (button) folded on the River
+Seat 5: Sakura2892 (small blind) folded before Flop
+Seat 6: GFJun10r (big blind) collected (363)
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 8: 100%tigerfan folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702533216: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level I (10/20) - 2021/12/31 22:21:23 ET
+Table '3332581238 1' 9-max Seat #5 is the button
+Seat 1: mpolishuk (1715 in chips)
+Seat 2: cameltoe3350 (1478 in chips)
+Seat 3: Kevin2049 (1141 in chips)
+Seat 4: IPray2Buddha (1669 in chips)
+Seat 5: Sakura2892 (1458 in chips)
+Seat 6: GFJun10r (1078 in chips)
+Seat 7: Lillien66 (1488 in chips)
+Seat 8: 100%tigerfan (1428 in chips)
+Seat 9: owlie45 (2045 in chips)
+mpolishuk: posts the ante 3
+cameltoe3350: posts the ante 3
+Kevin2049: posts the ante 3
+IPray2Buddha: posts the ante 3
+Sakura2892: posts the ante 3
+GFJun10r: posts the ante 3
+Lillien66: posts the ante 3
+100%tigerfan: posts the ante 3
+owlie45: posts the ante 3
+GFJun10r: posts small blind 10
+Lillien66: posts big blind 20
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [7s Qh]
+100%tigerfan: folds
+owlie45: raises 23 to 43
+mpolishuk: folds
+cameltoe3350: folds
+Kevin2049: folds
+IPray2Buddha: folds
+Sakura2892: calls 43
+GFJun10r: folds
+Lillien66: folds
+*** FLOP *** [3s 5s 9s]
+owlie45: checks
+Sakura2892: checks
+*** TURN *** [3s 5s 9s] [8s]
+owlie45: checks
+Sakura2892: checks
+*** RIVER *** [3s 5s 9s 8s] [5h]
+owlie45: bets 47
+Sakura2892: folds
+Uncalled bet (47) returned to owlie45
+owlie45 collected 143 from pot
+owlie45: doesn't show hand
+*** SUMMARY ***
+Total pot 143 | Rake 0
+Board [3s 5s 9s 8s 5h]
+Seat 1: mpolishuk folded before Flop (didn't bet)
+Seat 2: cameltoe3350 folded before Flop (didn't bet)
+Seat 3: Kevin2049 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 5: Sakura2892 (button) folded on the River
+Seat 6: GFJun10r (small blind) folded before Flop
+Seat 7: Lillien66 (big blind) folded before Flop
+Seat 8: 100%tigerfan folded before Flop (didn't bet)
+Seat 9: owlie45 collected (143)
+
+
+PokerStars Hand #232702547804: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level II (15/30) - 2021/12/31 22:22:24 ET
+Table '3332581238 1' 9-max Seat #6 is the button
+Seat 1: mpolishuk (1712 in chips)
+Seat 2: cameltoe3350 (1475 in chips)
+Seat 3: Kevin2049 (1138 in chips)
+Seat 4: IPray2Buddha (1666 in chips)
+Seat 5: Sakura2892 (1412 in chips)
+Seat 6: GFJun10r (1065 in chips)
+Seat 7: Lillien66 (1465 in chips)
+Seat 8: 100%tigerfan (1425 in chips)
+Seat 9: owlie45 (2142 in chips)
+mpolishuk: posts the ante 4
+cameltoe3350: posts the ante 4
+Kevin2049: posts the ante 4
+IPray2Buddha: posts the ante 4
+Sakura2892: posts the ante 4
+GFJun10r: posts the ante 4
+Lillien66: posts the ante 4
+100%tigerfan: posts the ante 4
+owlie45: posts the ante 4
+Lillien66: posts small blind 15
+100%tigerfan: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [2c 9h]
+owlie45: folds
+mpolishuk: folds
+cameltoe3350: folds
+Kevin2049: folds
+IPray2Buddha: folds
+Sakura2892: folds
+GFJun10r: raises 60 to 90
+Lillien66: raises 120 to 210
+100%tigerfan: folds
+GFJun10r: calls 120
+*** FLOP *** [2d Ah Ad]
+Lillien66: bets 180
+GFJun10r: raises 671 to 851 and is all-in
+Lillien66: calls 671
+*** TURN *** [2d Ah Ad] [As]
+*** RIVER *** [2d Ah Ad As] [Ts]
+*** SHOW DOWN ***
+Lillien66: shows [Ac Jh] (four of a kind, Aces)
+GFJun10r: shows [Js 4s] (three of a kind, Aces)
+Lillien66 collected 2188 from pot
+GFJun10r finished the tournament in 17th place
+*** SUMMARY ***
+Total pot 2188 | Rake 0
+Board [2d Ah Ad As Ts]
+Seat 1: mpolishuk folded before Flop (didn't bet)
+Seat 2: cameltoe3350 folded before Flop (didn't bet)
+Seat 3: Kevin2049 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 6: GFJun10r (button) showed [Js 4s] and lost with three of a kind, Aces
+Seat 7: Lillien66 (small blind) showed [Ac Jh] and won (2188) with four of a kind, Aces
+Seat 8: 100%tigerfan (big blind) folded before Flop
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702558807: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level II (15/30) - 2021/12/31 22:23:16 ET
+Table '3332581238 1' 9-max Seat #7 is the button
+Seat 1: mpolishuk (1708 in chips)
+Seat 2: cameltoe3350 (1471 in chips)
+Seat 3: Kevin2049 (1134 in chips)
+Seat 4: IPray2Buddha (1662 in chips)
+Seat 5: Sakura2892 (1408 in chips)
+Seat 7: Lillien66 (2588 in chips)
+Seat 8: 100%tigerfan (1391 in chips)
+Seat 9: owlie45 (2138 in chips)
+mpolishuk: posts the ante 4
+cameltoe3350: posts the ante 4
+Kevin2049: posts the ante 4
+IPray2Buddha: posts the ante 4
+Sakura2892: posts the ante 4
+Lillien66: posts the ante 4
+100%tigerfan: posts the ante 4
+owlie45: posts the ante 4
+100%tigerfan: posts small blind 15
+owlie45: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [5d 3h]
+mpolishuk: raises 45 to 75
+cameltoe3350: folds
+Kevin2049: folds
+IPray2Buddha: folds
+Sakura2892: folds
+Lillien66: folds
+100%tigerfan: folds
+owlie45: folds
+Uncalled bet (45) returned to mpolishuk
+mpolishuk collected 107 from pot
+mpolishuk: doesn't show hand
+*** SUMMARY ***
+Total pot 107 | Rake 0
+Seat 1: mpolishuk collected (107)
+Seat 2: cameltoe3350 folded before Flop (didn't bet)
+Seat 3: Kevin2049 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 7: Lillien66 (button) folded before Flop (didn't bet)
+Seat 8: 100%tigerfan (small blind) folded before Flop
+Seat 9: owlie45 (big blind) folded before Flop
+
+
+PokerStars Hand #232702564083: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level II (15/30) - 2021/12/31 22:23:41 ET
+Table '3332581238 1' 9-max Seat #8 is the button
+Seat 1: mpolishuk (1781 in chips)
+Seat 2: cameltoe3350 (1467 in chips)
+Seat 3: Kevin2049 (1130 in chips)
+Seat 4: IPray2Buddha (1658 in chips)
+Seat 5: Sakura2892 (1404 in chips)
+Seat 7: Lillien66 (2584 in chips)
+Seat 8: 100%tigerfan (1372 in chips)
+Seat 9: owlie45 (2104 in chips)
+mpolishuk: posts the ante 4
+cameltoe3350: posts the ante 4
+Kevin2049: posts the ante 4
+IPray2Buddha: posts the ante 4
+Sakura2892: posts the ante 4
+Lillien66: posts the ante 4
+100%tigerfan: posts the ante 4
+owlie45: posts the ante 4
+owlie45: posts small blind 15
+mpolishuk: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [6s Kd]
+cameltoe3350: folds
+Kevin2049: folds
+IPray2Buddha: folds
+Sakura2892: folds
+Lillien66: folds
+100%tigerfan: folds
+owlie45: calls 15
+mpolishuk: checks
+*** FLOP *** [Js 4h 3d]
+owlie45: bets 46
+mpolishuk: folds
+Uncalled bet (46) returned to owlie45
+owlie45 collected 92 from pot
+owlie45: doesn't show hand
+*** SUMMARY ***
+Total pot 92 | Rake 0
+Board [Js 4h 3d]
+Seat 1: mpolishuk (big blind) folded on the Flop
+Seat 2: cameltoe3350 folded before Flop (didn't bet)
+Seat 3: Kevin2049 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 8: 100%tigerfan (button) folded before Flop (didn't bet)
+Seat 9: owlie45 (small blind) collected (92)
+
+
+PokerStars Hand #232702572008: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level II (15/30) - 2021/12/31 22:24:19 ET
+Table '3332581238 1' 9-max Seat #9 is the button
+Seat 1: mpolishuk (1747 in chips)
+Seat 2: cameltoe3350 (1463 in chips)
+Seat 3: Kevin2049 (1126 in chips)
+Seat 4: IPray2Buddha (1654 in chips)
+Seat 5: Sakura2892 (1400 in chips)
+Seat 7: Lillien66 (2580 in chips)
+Seat 8: 100%tigerfan (1368 in chips)
+Seat 9: owlie45 (2162 in chips)
+mpolishuk: posts the ante 4
+cameltoe3350: posts the ante 4
+Kevin2049: posts the ante 4
+IPray2Buddha: posts the ante 4
+Sakura2892: posts the ante 4
+Lillien66: posts the ante 4
+100%tigerfan: posts the ante 4
+owlie45: posts the ante 4
+mpolishuk: posts small blind 15
+cameltoe3350: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Kd 2s]
+Kevin2049: folds
+IPray2Buddha: folds
+Sakura2892: folds
+Lillien66: raises 60 to 90
+100%tigerfan: folds
+owlie45: folds
+mpolishuk: folds
+cameltoe3350: folds
+Uncalled bet (60) returned to Lillien66
+Lillien66 collected 107 from pot
+Lillien66: doesn't show hand
+*** SUMMARY ***
+Total pot 107 | Rake 0
+Seat 1: mpolishuk (small blind) folded before Flop
+Seat 2: cameltoe3350 (big blind) folded before Flop
+Seat 3: Kevin2049 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 7: Lillien66 collected (107)
+Seat 8: 100%tigerfan folded before Flop (didn't bet)
+Seat 9: owlie45 (button) folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702577022: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level II (15/30) - 2021/12/31 22:24:42 ET
+Table '3332581238 1' 9-max Seat #1 is the button
+Seat 1: mpolishuk (1728 in chips)
+Seat 2: cameltoe3350 (1429 in chips)
+Seat 3: Kevin2049 (1122 in chips)
+Seat 4: IPray2Buddha (1650 in chips)
+Seat 5: Sakura2892 (1396 in chips)
+Seat 7: Lillien66 (2653 in chips)
+Seat 8: 100%tigerfan (1364 in chips)
+Seat 9: owlie45 (2158 in chips)
+mpolishuk: posts the ante 4
+cameltoe3350: posts the ante 4
+Kevin2049: posts the ante 4
+IPray2Buddha: posts the ante 4
+Sakura2892: posts the ante 4
+Lillien66: posts the ante 4
+100%tigerfan: posts the ante 4
+owlie45: posts the ante 4
+cameltoe3350: posts small blind 15
+Kevin2049: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [6d 5h]
+IPray2Buddha: folds
+Sakura2892: folds
+Lillien66: folds
+100%tigerfan: folds
+owlie45: folds
+mpolishuk: folds
+cameltoe3350: raises 92 to 122
+Kevin2049: folds
+Uncalled bet (92) returned to cameltoe3350
+cameltoe3350 collected 92 from pot
+*** SUMMARY ***
+Total pot 92 | Rake 0
+Seat 1: mpolishuk (button) folded before Flop (didn't bet)
+Seat 2: cameltoe3350 (small blind) collected (92)
+Seat 3: Kevin2049 (big blind) folded before Flop
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 8: 100%tigerfan folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702583894: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level II (15/30) - 2021/12/31 22:25:16 ET
+Table '3332581238 1' 9-max Seat #2 is the button
+Seat 1: mpolishuk (1724 in chips)
+Seat 2: cameltoe3350 (1487 in chips)
+Seat 3: Kevin2049 (1088 in chips)
+Seat 4: IPray2Buddha (1646 in chips)
+Seat 5: Sakura2892 (1392 in chips)
+Seat 7: Lillien66 (2649 in chips)
+Seat 8: 100%tigerfan (1360 in chips)
+Seat 9: owlie45 (2154 in chips)
+mpolishuk: posts the ante 4
+cameltoe3350: posts the ante 4
+Kevin2049: posts the ante 4
+IPray2Buddha: posts the ante 4
+Sakura2892: posts the ante 4
+Lillien66: posts the ante 4
+100%tigerfan: posts the ante 4
+owlie45: posts the ante 4
+Kevin2049: posts small blind 15
+IPray2Buddha: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [7d Qh]
+Sakura2892: folds
+Lillien66: folds
+100%tigerfan: folds
+owlie45: folds
+mpolishuk: folds
+cameltoe3350: folds
+Kevin2049: folds
+Uncalled bet (15) returned to IPray2Buddha
+IPray2Buddha collected 62 from pot
+*** SUMMARY ***
+Total pot 62 | Rake 0
+Seat 1: mpolishuk folded before Flop (didn't bet)
+Seat 2: cameltoe3350 (button) folded before Flop (didn't bet)
+Seat 3: Kevin2049 (small blind) folded before Flop
+Seat 4: IPray2Buddha (big blind) collected (62)
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 8: 100%tigerfan folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702587149: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level II (15/30) - 2021/12/31 22:25:31 ET
+Table '3332581238 1' 9-max Seat #3 is the button
+Seat 1: mpolishuk (1720 in chips)
+Seat 2: cameltoe3350 (1483 in chips)
+Seat 3: Kevin2049 (1069 in chips)
+Seat 4: IPray2Buddha (1689 in chips)
+Seat 5: Sakura2892 (1388 in chips)
+Seat 7: Lillien66 (2645 in chips)
+Seat 8: 100%tigerfan (1356 in chips)
+Seat 9: owlie45 (2150 in chips)
+mpolishuk: posts the ante 4
+cameltoe3350: posts the ante 4
+Kevin2049: posts the ante 4
+IPray2Buddha: posts the ante 4
+Sakura2892: posts the ante 4
+Lillien66: posts the ante 4
+100%tigerfan: posts the ante 4
+owlie45: posts the ante 4
+IPray2Buddha: posts small blind 15
+Sakura2892: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Tc 7d]
+Lillien66: folds
+100%tigerfan: folds
+owlie45: folds
+mpolishuk: raises 45 to 75
+cameltoe3350: folds
+Kevin2049: calls 75
+IPray2Buddha: folds
+Sakura2892: folds
+*** FLOP *** [Qc 8s Jc]
+mpolishuk: checks
+Kevin2049: bets 143
+mpolishuk: folds
+Uncalled bet (143) returned to Kevin2049
+Kevin2049 collected 227 from pot
+Kevin2049: doesn't show hand
+*** SUMMARY ***
+Total pot 227 | Rake 0
+Board [Qc 8s Jc]
+Seat 1: mpolishuk folded on the Flop
+Seat 2: cameltoe3350 folded before Flop (didn't bet)
+Seat 3: Kevin2049 (button) collected (227)
+Seat 4: IPray2Buddha (small blind) folded before Flop
+Seat 5: Sakura2892 (big blind) folded before Flop
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 8: 100%tigerfan folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702596156: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level II (15/30) - 2021/12/31 22:26:14 ET
+Table '3332581238 1' 9-max Seat #4 is the button
+Seat 1: mpolishuk (1641 in chips)
+Seat 2: cameltoe3350 (1479 in chips)
+Seat 3: Kevin2049 (1217 in chips)
+Seat 4: IPray2Buddha (1670 in chips)
+Seat 5: Sakura2892 (1354 in chips)
+Seat 7: Lillien66 (2641 in chips)
+Seat 8: 100%tigerfan (1352 in chips)
+Seat 9: owlie45 (2146 in chips)
+mpolishuk: posts the ante 4
+cameltoe3350: posts the ante 4
+Kevin2049: posts the ante 4
+IPray2Buddha: posts the ante 4
+Sakura2892: posts the ante 4
+Lillien66: posts the ante 4
+100%tigerfan: posts the ante 4
+owlie45: posts the ante 4
+Sakura2892: posts small blind 15
+Lillien66: posts big blind 30
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4d 7h]
+100%tigerfan: calls 30
+owlie45: raises 120 to 150
+mpolishuk: folds
+cameltoe3350: folds
+Kevin2049: folds
+IPray2Buddha: folds
+Sakura2892: folds
+Lillien66: folds
+100%tigerfan: calls 120
+*** FLOP *** [2c 8c Qs]
+100%tigerfan: bets 60
+owlie45: raises 240 to 300
+100%tigerfan: raises 898 to 1198 and is all-in
+owlie45: calls 898
+*** TURN *** [2c 8c Qs] [8d]
+*** RIVER *** [2c 8c Qs 8d] [3h]
+*** SHOW DOWN ***
+100%tigerfan: shows [Jh Qc] (two pair, Queens and Eights)
+owlie45: shows [Kh Ks] (two pair, Kings and Eights)
+owlie45 collected 2773 from pot
+100%tigerfan finished the tournament in 16th place
+*** SUMMARY ***
+Total pot 2773 | Rake 0
+Board [2c 8c Qs 8d 3h]
+Seat 1: mpolishuk folded before Flop (didn't bet)
+Seat 2: cameltoe3350 folded before Flop (didn't bet)
+Seat 3: Kevin2049 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha (button) folded before Flop (didn't bet)
+Seat 5: Sakura2892 (small blind) folded before Flop
+Seat 7: Lillien66 (big blind) folded before Flop
+Seat 8: 100%tigerfan showed [Jh Qc] and lost with two pair, Queens and Eights
+Seat 9: owlie45 showed [Kh Ks] and won (2773) with two pair, Kings and Eights
+
+
+PokerStars Hand #232702615205: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level III (25/50) - 2021/12/31 22:27:07 ET
+Table '3332581238 1' 9-max Seat #5 is the button
+Seat 1: mpolishuk (1637 in chips)
+Seat 2: cameltoe3350 (1475 in chips)
+Seat 3: Kevin2049 (1213 in chips)
+Seat 4: IPray2Buddha (1666 in chips)
+Seat 5: Sakura2892 (1335 in chips)
+Seat 7: Lillien66 (2607 in chips)
+Seat 9: owlie45 (3567 in chips)
+mpolishuk: posts the ante 6
+cameltoe3350: posts the ante 6
+Kevin2049: posts the ante 6
+IPray2Buddha: posts the ante 6
+Sakura2892: posts the ante 6
+Lillien66: posts the ante 6
+owlie45: posts the ante 6
+Lillien66: posts small blind 25
+owlie45: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4h 2s]
+mpolishuk: folds
+cameltoe3350: folds
+Kevin2049: raises 50 to 100
+IPray2Buddha: folds
+Sakura2892: folds
+Lillien66: calls 75
+owlie45: calls 50
+*** FLOP *** [Ah 8c 8s]
+Lillien66: checks
+owlie45: bets 113
+Kevin2049: folds
+Lillien66: folds
+Uncalled bet (113) returned to owlie45
+owlie45 collected 342 from pot
+owlie45: doesn't show hand
+*** SUMMARY ***
+Total pot 342 | Rake 0
+Board [Ah 8c 8s]
+Seat 1: mpolishuk folded before Flop (didn't bet)
+Seat 2: cameltoe3350 folded before Flop (didn't bet)
+Seat 3: Kevin2049 folded on the Flop
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 5: Sakura2892 (button) folded before Flop (didn't bet)
+Seat 7: Lillien66 (small blind) folded on the Flop
+Seat 9: owlie45 (big blind) collected (342)
+
+
+PokerStars Hand #232702622128: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level III (25/50) - 2021/12/31 22:27:40 ET
+Table '3332581238 1' 9-max Seat #7 is the button
+Seat 1: mpolishuk (1631 in chips)
+Seat 2: cameltoe3350 (1469 in chips)
+Seat 3: Kevin2049 (1107 in chips)
+Seat 4: IPray2Buddha (1660 in chips)
+Seat 5: Sakura2892 (1329 in chips)
+Seat 7: Lillien66 (2501 in chips)
+Seat 9: owlie45 (3803 in chips)
+mpolishuk: posts the ante 6
+cameltoe3350: posts the ante 6
+Kevin2049: posts the ante 6
+IPray2Buddha: posts the ante 6
+Sakura2892: posts the ante 6
+Lillien66: posts the ante 6
+owlie45: posts the ante 6
+owlie45: posts small blind 25
+mpolishuk: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ac Ks]
+cameltoe3350: folds
+Kevin2049: folds
+IPray2Buddha: raises 55 to 105
+Sakura2892: folds
+Lillien66: folds
+owlie45: folds
+mpolishuk: folds
+Uncalled bet (55) returned to IPray2Buddha
+IPray2Buddha collected 167 from pot
+*** SUMMARY ***
+Total pot 167 | Rake 0
+Seat 1: mpolishuk (big blind) folded before Flop
+Seat 2: cameltoe3350 folded before Flop (didn't bet)
+Seat 3: Kevin2049 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha collected (167)
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 7: Lillien66 (button) folded before Flop (didn't bet)
+Seat 9: owlie45 (small blind) folded before Flop
+
+
+PokerStars Hand #232702626699: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level III (25/50) - 2021/12/31 22:28:02 ET
+Table '3332581238 1' 9-max Seat #9 is the button
+Seat 1: mpolishuk (1575 in chips)
+Seat 2: cameltoe3350 (1463 in chips)
+Seat 3: Kevin2049 (1101 in chips)
+Seat 4: IPray2Buddha (1771 in chips)
+Seat 5: Sakura2892 (1323 in chips)
+Seat 7: Lillien66 (2495 in chips)
+Seat 9: owlie45 (3772 in chips)
+mpolishuk: posts the ante 6
+cameltoe3350: posts the ante 6
+Kevin2049: posts the ante 6
+IPray2Buddha: posts the ante 6
+Sakura2892: posts the ante 6
+Lillien66: posts the ante 6
+owlie45: posts the ante 6
+mpolishuk: posts small blind 25
+cameltoe3350: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [9d 2s]
+Kevin2049: folds
+IPray2Buddha: folds
+Sakura2892: folds
+Lillien66: folds
+owlie45: folds
+mpolishuk: calls 25
+cameltoe3350: checks
+*** FLOP *** [2c 5s 8d]
+mpolishuk: bets 70
+cameltoe3350: calls 70
+*** TURN *** [2c 5s 8d] [Js]
+mpolishuk: bets 135
+cameltoe3350: calls 135
+*** RIVER *** [2c 5s 8d Js] [Qd]
+mpolishuk: checks
+cameltoe3350: checks
+*** SHOW DOWN ***
+mpolishuk: shows [8c 9h] (a pair of Eights)
+cameltoe3350: mucks hand
+mpolishuk collected 552 from pot
+*** SUMMARY ***
+Total pot 552 | Rake 0
+Board [2c 5s 8d Js Qd]
+Seat 1: mpolishuk (small blind) showed [8c 9h] and won (552) with a pair of Eights
+Seat 2: cameltoe3350 (big blind) mucked [5c 3h]
+Seat 3: Kevin2049 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 9: owlie45 (button) folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702639779: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level III (25/50) - 2021/12/31 22:29:05 ET
+Table '3332581238 1' 9-max Seat #1 is the button
+Seat 1: mpolishuk (1866 in chips)
+Seat 2: cameltoe3350 (1202 in chips)
+Seat 3: Kevin2049 (1095 in chips)
+Seat 4: IPray2Buddha (1765 in chips)
+Seat 5: Sakura2892 (1317 in chips)
+Seat 7: Lillien66 (2489 in chips)
+Seat 9: owlie45 (3766 in chips)
+mpolishuk: posts the ante 6
+cameltoe3350: posts the ante 6
+Kevin2049: posts the ante 6
+IPray2Buddha: posts the ante 6
+Sakura2892: posts the ante 6
+Lillien66: posts the ante 6
+owlie45: posts the ante 6
+cameltoe3350: posts small blind 25
+Kevin2049: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [5h 3d]
+IPray2Buddha: folds
+Sakura2892: folds
+Lillien66: folds
+owlie45: folds
+mpolishuk: folds
+cameltoe3350: calls 25
+Kevin2049: raises 142 to 192
+cameltoe3350: folds
+Uncalled bet (142) returned to Kevin2049
+Kevin2049 collected 142 from pot
+Kevin2049: doesn't show hand
+*** SUMMARY ***
+Total pot 142 | Rake 0
+Seat 1: mpolishuk (button) folded before Flop (didn't bet)
+Seat 2: cameltoe3350 (small blind) folded before Flop
+Seat 3: Kevin2049 (big blind) collected (142)
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702644272: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level III (25/50) - 2021/12/31 22:29:27 ET
+Table '3332581238 1' 9-max Seat #2 is the button
+Seat 1: mpolishuk (1860 in chips)
+Seat 2: cameltoe3350 (1146 in chips)
+Seat 3: Kevin2049 (1181 in chips)
+Seat 4: IPray2Buddha (1759 in chips)
+Seat 5: Sakura2892 (1311 in chips)
+Seat 7: Lillien66 (2483 in chips)
+Seat 9: owlie45 (3760 in chips)
+mpolishuk: posts the ante 6
+cameltoe3350: posts the ante 6
+Kevin2049: posts the ante 6
+IPray2Buddha: posts the ante 6
+Sakura2892: posts the ante 6
+Lillien66: posts the ante 6
+owlie45: posts the ante 6
+Kevin2049: posts small blind 25
+IPray2Buddha: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [6s 3d]
+Sakura2892: folds
+Lillien66: folds
+owlie45: raises 57 to 107
+mpolishuk: folds
+cameltoe3350: raises 93 to 200
+Kevin2049: folds
+IPray2Buddha: folds
+owlie45: calls 93
+*** FLOP *** [Ad 6c Tc]
+owlie45: checks
+cameltoe3350: bets 200
+owlie45: raises 3354 to 3554 and is all-in
+cameltoe3350: calls 740 and is all-in
+Uncalled bet (2614) returned to owlie45
+*** TURN *** [Ad 6c Tc] [4h]
+*** RIVER *** [Ad 6c Tc 4h] [Js]
+*** SHOW DOWN ***
+owlie45: shows [3s As] (a pair of Aces)
+cameltoe3350: shows [Ks Kh] (a pair of Kings)
+owlie45 collected 2397 from pot
+cameltoe3350 finished the tournament in 15th place
+*** SUMMARY ***
+Total pot 2397 | Rake 0
+Board [Ad 6c Tc 4h Js]
+Seat 1: mpolishuk folded before Flop (didn't bet)
+Seat 2: cameltoe3350 (button) showed [Ks Kh] and lost with a pair of Kings
+Seat 3: Kevin2049 (small blind) folded before Flop
+Seat 4: IPray2Buddha (big blind) folded before Flop
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 9: owlie45 showed [3s As] and won (2397) with a pair of Aces
+
+
+PokerStars Hand #232702660648: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level III (25/50) - 2021/12/31 22:30:44 ET
+Table '3332581238 1' 9-max Seat #3 is the button
+Seat 1: mpolishuk (1854 in chips)
+Seat 3: Kevin2049 (1150 in chips)
+Seat 4: IPray2Buddha (1703 in chips)
+Seat 5: Sakura2892 (1305 in chips)
+Seat 7: Lillien66 (2477 in chips)
+Seat 9: owlie45 (5011 in chips)
+mpolishuk: posts the ante 6
+Kevin2049: posts the ante 6
+IPray2Buddha: posts the ante 6
+Sakura2892: posts the ante 6
+Lillien66: posts the ante 6
+owlie45: posts the ante 6
+IPray2Buddha: posts small blind 25
+Sakura2892: posts big blind 50
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [2h Ah]
+Lillien66: folds
+owlie45: raises 57 to 107
+mpolishuk: folds
+Kevin2049: folds
+IPray2Buddha: calls 82
+Sakura2892: folds
+*** FLOP *** [Qc 8s 2d]
+IPray2Buddha: checks
+owlie45: checks
+*** TURN *** [Qc 8s 2d] [3s]
+IPray2Buddha: bets 90
+owlie45: calls 90
+*** RIVER *** [Qc 8s 2d 3s] [5c]
+IPray2Buddha: checks
+owlie45: bets 700
+IPray2Buddha: calls 700
+*** SHOW DOWN ***
+owlie45: shows [5h 5s] (three of a kind, Fives)
+IPray2Buddha: mucks hand
+owlie45 collected 1880 from pot
+*** SUMMARY ***
+Total pot 1880 | Rake 0
+Board [Qc 8s 2d 3s 5c]
+Seat 1: mpolishuk folded before Flop (didn't bet)
+Seat 3: Kevin2049 (button) folded before Flop (didn't bet)
+Seat 4: IPray2Buddha (small blind) mucked [2h Ah]
+Seat 5: Sakura2892 (big blind) folded before Flop
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 9: owlie45 showed [5h 5s] and won (1880) with three of a kind, Fives
+
+
+PokerStars Hand #232702683661: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level IV (40/80) - 2021/12/31 22:32:07 ET
+Table '3332581238 1' 9-max Seat #4 is the button
+Seat 1: mpolishuk (1848 in chips)
+Seat 3: Kevin2049 (1144 in chips)
+Seat 4: IPray2Buddha (800 in chips)
+Seat 5: Sakura2892 (1249 in chips)
+Seat 7: Lillien66 (2471 in chips)
+Seat 9: owlie45 (5988 in chips)
+mpolishuk: posts the ante 10
+Kevin2049: posts the ante 10
+IPray2Buddha: posts the ante 10
+Sakura2892: posts the ante 10
+Lillien66: posts the ante 10
+owlie45: posts the ante 10
+Sakura2892: posts small blind 40
+Lillien66: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [6h 8s]
+owlie45: folds
+mpolishuk: folds
+Kevin2049: folds
+IPray2Buddha: folds
+Sakura2892: calls 40
+Lillien66: checks
+*** FLOP *** [5h 2s 4s]
+Sakura2892: checks
+Lillien66: bets 160
+Sakura2892: raises 383 to 543
+Lillien66: folds
+Uncalled bet (383) returned to Sakura2892
+Sakura2892 collected 540 from pot
+*** SUMMARY ***
+Total pot 540 | Rake 0
+Board [5h 2s 4s]
+Seat 1: mpolishuk folded before Flop (didn't bet)
+Seat 3: Kevin2049 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha (button) folded before Flop (didn't bet)
+Seat 5: Sakura2892 (small blind) collected (540)
+Seat 7: Lillien66 (big blind) folded on the Flop
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702693961: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level IV (40/80) - 2021/12/31 22:32:57 ET
+Table '3332581238 1' 9-max Seat #5 is the button
+Seat 1: mpolishuk (1838 in chips)
+Seat 3: Kevin2049 (1134 in chips)
+Seat 4: IPray2Buddha (790 in chips)
+Seat 5: Sakura2892 (1539 in chips)
+Seat 7: Lillien66 (2221 in chips)
+Seat 9: owlie45 (5978 in chips)
+mpolishuk: posts the ante 10
+Kevin2049: posts the ante 10
+IPray2Buddha: posts the ante 10
+Sakura2892: posts the ante 10
+Lillien66: posts the ante 10
+owlie45: posts the ante 10
+Lillien66: posts small blind 40
+owlie45: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [As 6c]
+mpolishuk: folds
+Kevin2049: raises 80 to 160
+IPray2Buddha: folds
+Sakura2892: folds
+Lillien66: folds
+owlie45: folds
+Uncalled bet (80) returned to Kevin2049
+Kevin2049 collected 260 from pot
+Kevin2049: doesn't show hand
+*** SUMMARY ***
+Total pot 260 | Rake 0
+Seat 1: mpolishuk folded before Flop (didn't bet)
+Seat 3: Kevin2049 collected (260)
+Seat 4: IPray2Buddha folded before Flop (didn't bet)
+Seat 5: Sakura2892 (button) folded before Flop (didn't bet)
+Seat 7: Lillien66 (small blind) folded before Flop
+Seat 9: owlie45 (big blind) folded before Flop
+
+
+PokerStars Hand #232702698178: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level IV (40/80) - 2021/12/31 22:33:17 ET
+Table '3332581238 1' 9-max Seat #7 is the button
+Seat 1: mpolishuk (1828 in chips)
+Seat 3: Kevin2049 (1304 in chips)
+Seat 4: IPray2Buddha (780 in chips)
+Seat 5: Sakura2892 (1529 in chips)
+Seat 7: Lillien66 (2171 in chips)
+Seat 9: owlie45 (5888 in chips)
+mpolishuk: posts the ante 10
+Kevin2049: posts the ante 10
+IPray2Buddha: posts the ante 10
+Sakura2892: posts the ante 10
+Lillien66: posts the ante 10
+owlie45: posts the ante 10
+owlie45: posts small blind 40
+mpolishuk: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [5s 5c]
+Kevin2049: folds
+IPray2Buddha: raises 690 to 770 and is all-in
+Sakura2892: folds
+Lillien66: folds
+owlie45: folds
+mpolishuk: folds
+Uncalled bet (690) returned to IPray2Buddha
+IPray2Buddha collected 260 from pot
+*** SUMMARY ***
+Total pot 260 | Rake 0
+Seat 1: mpolishuk (big blind) folded before Flop
+Seat 3: Kevin2049 folded before Flop (didn't bet)
+Seat 4: IPray2Buddha collected (260)
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 7: Lillien66 (button) folded before Flop (didn't bet)
+Seat 9: owlie45 (small blind) folded before Flop
+
+
+PokerStars Hand #232702702841: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level IV (40/80) - 2021/12/31 22:33:40 ET
+Table '3332581238 1' 9-max Seat #9 is the button
+Seat 1: mpolishuk (1738 in chips)
+Seat 3: Kevin2049 (1294 in chips)
+Seat 4: IPray2Buddha (950 in chips)
+Seat 5: Sakura2892 (1519 in chips)
+Seat 7: Lillien66 (2161 in chips)
+Seat 9: owlie45 (5838 in chips)
+mpolishuk: posts the ante 10
+Kevin2049: posts the ante 10
+IPray2Buddha: posts the ante 10
+Sakura2892: posts the ante 10
+Lillien66: posts the ante 10
+owlie45: posts the ante 10
+mpolishuk: posts small blind 40
+Kevin2049: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ad Qh]
+IPray2Buddha: raises 860 to 940 and is all-in
+Sakura2892: folds
+Lillien66: folds
+owlie45: folds
+mpolishuk: folds
+Kevin2049: folds
+Uncalled bet (860) returned to IPray2Buddha
+IPray2Buddha collected 260 from pot
+*** SUMMARY ***
+Total pot 260 | Rake 0
+Seat 1: mpolishuk (small blind) folded before Flop
+Seat 3: Kevin2049 (big blind) folded before Flop
+Seat 4: IPray2Buddha collected (260)
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 9: owlie45 (button) folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702705660: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level IV (40/80) - 2021/12/31 22:33:54 ET
+Table '3332581238 1' 9-max Seat #1 is the button
+Seat 1: mpolishuk (1688 in chips)
+Seat 3: Kevin2049 (1204 in chips)
+Seat 4: IPray2Buddha (1120 in chips)
+Seat 5: Sakura2892 (1509 in chips)
+Seat 7: Lillien66 (2151 in chips)
+Seat 9: owlie45 (5828 in chips)
+mpolishuk: posts the ante 10
+Kevin2049: posts the ante 10
+IPray2Buddha: posts the ante 10
+Sakura2892: posts the ante 10
+Lillien66: posts the ante 10
+owlie45: posts the ante 10
+Kevin2049: posts small blind 40
+IPray2Buddha: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [7c Ad]
+Sakura2892: folds
+Lillien66: folds
+owlie45: raises 80 to 160
+mpolishuk: raises 340 to 500
+Kevin2049: folds
+IPray2Buddha: folds
+owlie45: folds
+Uncalled bet (340) returned to mpolishuk
+mpolishuk collected 500 from pot
+mpolishuk: doesn't show hand
+*** SUMMARY ***
+Total pot 500 | Rake 0
+Seat 1: mpolishuk (button) collected (500)
+Seat 3: Kevin2049 (small blind) folded before Flop
+Seat 4: IPray2Buddha (big blind) folded before Flop
+Seat 5: Sakura2892 folded before Flop (didn't bet)
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop
+
+
+PokerStars Hand #232702710836: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level IV (40/80) - 2021/12/31 22:34:19 ET
+Table '3332581238 1' 9-max Seat #3 is the button
+Seat 1: mpolishuk (2018 in chips)
+Seat 3: Kevin2049 (1154 in chips)
+Seat 4: IPray2Buddha (1030 in chips)
+Seat 5: Sakura2892 (1499 in chips)
+Seat 7: Lillien66 (2141 in chips)
+Seat 9: owlie45 (5658 in chips)
+mpolishuk: posts the ante 10
+Kevin2049: posts the ante 10
+IPray2Buddha: posts the ante 10
+Sakura2892: posts the ante 10
+Lillien66: posts the ante 10
+owlie45: posts the ante 10
+IPray2Buddha: posts small blind 40
+Sakura2892: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [6c 6h]
+Lillien66: folds
+owlie45: folds
+mpolishuk: folds
+Kevin2049: folds
+IPray2Buddha: calls 40
+Sakura2892: raises 1409 to 1489 and is all-in
+IPray2Buddha: calls 940 and is all-in
+Uncalled bet (469) returned to Sakura2892
+*** FLOP *** [8d 7c Ts]
+*** TURN *** [8d 7c Ts] [6s]
+*** RIVER *** [8d 7c Ts 6s] [Ah]
+*** SHOW DOWN ***
+IPray2Buddha: shows [6c 6h] (three of a kind, Sixes)
+Sakura2892: shows [Kd Qh] (high card Ace)
+IPray2Buddha collected 2100 from pot
+*** SUMMARY ***
+Total pot 2100 | Rake 0
+Board [8d 7c Ts 6s Ah]
+Seat 1: mpolishuk folded before Flop (didn't bet)
+Seat 3: Kevin2049 (button) folded before Flop (didn't bet)
+Seat 4: IPray2Buddha (small blind) showed [6c 6h] and won (2100) with three of a kind, Sixes
+Seat 5: Sakura2892 (big blind) showed [Kd Qh] and lost with high card Ace
+Seat 7: Lillien66 folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702717457: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level IV (40/80) - 2021/12/31 22:34:51 ET
+Table '3332581238 1' 9-max Seat #4 is the button
+Seat 1: mpolishuk (2008 in chips)
+Seat 3: Kevin2049 (1144 in chips)
+Seat 4: IPray2Buddha (2100 in chips)
+Seat 5: Sakura2892 (469 in chips)
+Seat 7: Lillien66 (2131 in chips)
+Seat 9: owlie45 (5648 in chips)
+mpolishuk: posts the ante 10
+Kevin2049: posts the ante 10
+IPray2Buddha: posts the ante 10
+Sakura2892: posts the ante 10
+Lillien66: posts the ante 10
+owlie45: posts the ante 10
+Sakura2892: posts small blind 40
+Lillien66: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4c 4h]
+owlie45: folds
+mpolishuk: folds
+Kevin2049: raises 80 to 160
+IPray2Buddha: folds
+Sakura2892: folds
+Lillien66: raises 1961 to 2121 and is all-in
+Kevin2049: calls 974 and is all-in
+Uncalled bet (987) returned to Lillien66
+*** FLOP *** [8d 2h Qs]
+*** TURN *** [8d 2h Qs] [Qc]
+*** RIVER *** [8d 2h Qs Qc] [Th]
+*** SHOW DOWN ***
+Lillien66: shows [Tc Ad] (two pair, Queens and Tens)
+Kevin2049: shows [3c Ac] (a pair of Queens)
+Lillien66 collected 2368 from pot
+Kevin2049 finished the tournament in 10th place
+*** SUMMARY ***
+Total pot 2368 | Rake 0
+Board [8d 2h Qs Qc Th]
+Seat 1: mpolishuk folded before Flop (didn't bet)
+Seat 3: Kevin2049 showed [3c Ac] and lost with a pair of Queens
+Seat 4: IPray2Buddha (button) folded before Flop (didn't bet)
+Seat 5: Sakura2892 (small blind) folded before Flop
+Seat 7: Lillien66 (big blind) showed [Tc Ad] and won (2368) with two pair, Queens and Tens
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #232702738510: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level IV (40/80) - 2021/12/31 22:36:34 ET
+Table '3332581238 2' 9-max Seat #5 is the button
+Seat 1: Sakura2892 (938 in chips)
+Seat 2: chuckie247 (2488 in chips)
+Seat 3: w.gator900 (8156 in chips)
+Seat 4: Lillien66 (3355 in chips)
+Seat 5: papajoe179 (1466 in chips)
+Seat 6: x_Jaures_x (901 in chips)
+Seat 7: IPray2Buddha (2080 in chips)
+Seat 8: mpolishuk (1988 in chips)
+Seat 9: owlie45 (5628 in chips)
+Sakura2892: posts the ante 10
+chuckie247: posts the ante 10
+w.gator900: posts the ante 10
+Lillien66: posts the ante 10
+papajoe179: posts the ante 10
+x_Jaures_x: posts the ante 10
+IPray2Buddha: posts the ante 10
+mpolishuk: posts the ante 10
+owlie45: posts the ante 10
+x_Jaures_x: posts small blind 40
+IPray2Buddha: posts big blind 80
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [8c 9c]
+mpolishuk: folds
+owlie45: raises 80 to 160
+Sakura2892: folds
+chuckie247: folds
+w.gator900: calls 160
+Lillien66: folds
+papajoe179: folds
+x_Jaures_x: folds
+IPray2Buddha: calls 80
+*** FLOP *** [Ah Qh 4s]
+IPray2Buddha: checks
+owlie45: checks
+w.gator900: bets 305
+IPray2Buddha: folds
+owlie45: folds
+Uncalled bet (305) returned to w.gator900
+w.gator900 collected 610 from pot
+w.gator900: doesn't show hand
+*** SUMMARY ***
+Total pot 610 | Rake 0
+Board [Ah Qh 4s]
+Seat 1: Sakura2892 folded before Flop (didn't bet)
+Seat 2: chuckie247 folded before Flop (didn't bet)
+Seat 3: w.gator900 collected (610)
+Seat 4: Lillien66 folded before Flop (didn't bet)
+Seat 5: papajoe179 (button) folded before Flop (didn't bet)
+Seat 6: x_Jaures_x (small blind) folded before Flop
+Seat 7: IPray2Buddha (big blind) folded on the Flop
+Seat 8: mpolishuk folded before Flop (didn't bet)
+Seat 9: owlie45 folded on the Flop
+
+
+PokerStars Hand #232702747754: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level V (60/120) - 2021/12/31 22:37:18 ET
+Table '3332581238 2' 9-max Seat #6 is the button
+Seat 1: Sakura2892 (928 in chips)
+Seat 2: chuckie247 (2478 in chips)
+Seat 3: w.gator900 (8596 in chips)
+Seat 4: Lillien66 (3345 in chips)
+Seat 5: papajoe179 (1456 in chips)
+Seat 6: x_Jaures_x (851 in chips)
+Seat 7: IPray2Buddha (1910 in chips)
+Seat 8: mpolishuk (1978 in chips)
+Seat 9: owlie45 (5458 in chips)
+Sakura2892: posts the ante 15
+chuckie247: posts the ante 15
+w.gator900: posts the ante 15
+Lillien66: posts the ante 15
+papajoe179: posts the ante 15
+x_Jaures_x: posts the ante 15
+IPray2Buddha: posts the ante 15
+mpolishuk: posts the ante 15
+owlie45: posts the ante 15
+IPray2Buddha: posts small blind 60
+mpolishuk: posts big blind 120
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [4c Th]
+owlie45: folds
+Sakura2892: folds
+chuckie247: folds
+w.gator900: raises 120 to 240
+Lillien66: folds
+papajoe179: folds
+x_Jaures_x: folds
+IPray2Buddha: folds
+mpolishuk: calls 120
+*** FLOP *** [Td Ah 4h]
+mpolishuk: checks
+w.gator900: bets 338
+mpolishuk: calls 338
+*** TURN *** [Td Ah 4h] [5s]
+mpolishuk: checks
+w.gator900: checks
+*** RIVER *** [Td Ah 4h 5s] [Kd]
+mpolishuk: bets 420
+w.gator900: calls 420
+*** SHOW DOWN ***
+mpolishuk: shows [As 2s] (a pair of Aces)
+mpolishuk collected 2191 from pot
+*** SUMMARY ***
+Total pot 2191 | Rake 0
+Board [Td Ah 4h 5s Kd]
+Seat 1: Sakura2892 folded before Flop (didn't bet)
+Seat 2: chuckie247 folded before Flop (didn't bet)
+Seat 3: w.gator900 mucked [Kc Qs]
+Seat 4: Lillien66 folded before Flop (didn't bet)
+Seat 5: papajoe179 folded before Flop (didn't bet)
+Seat 6: x_Jaures_x (button) folded before Flop (didn't bet)
+Seat 7: IPray2Buddha (small blind) folded before Flop
+Seat 8: mpolishuk (big blind) showed [As 2s] and won (2191) with a pair of Aces
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #232702779586: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level V (60/120) - 2021/12/31 22:39:50 ET
+Table '3332581238 2' 9-max Seat #8 is the button
+Seat 1: Sakura2892 (898 in chips)
+Seat 2: chuckie247 (2448 in chips)
+Seat 3: w.gator900 (7568 in chips)
+Seat 4: Lillien66 (3315 in chips)
+Seat 5: papajoe179 (1426 in chips)
+Seat 6: x_Jaures_x (821 in chips)
+Seat 7: IPray2Buddha (1820 in chips)
+Seat 8: mpolishuk (3396 in chips)
+Seat 9: owlie45 (5308 in chips)
+Sakura2892: posts the ante 15
+chuckie247: posts the ante 15
+w.gator900: posts the ante 15
+Lillien66: posts the ante 15
+papajoe179: posts the ante 15
+x_Jaures_x: posts the ante 15
+IPray2Buddha: posts the ante 15
+mpolishuk: posts the ante 15
+owlie45: posts the ante 15
+owlie45: posts small blind 60
+Sakura2892: posts big blind 120
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Td Qh]
+chuckie247: calls 120
+w.gator900: folds
+Lillien66: folds
+papajoe179: calls 120
+x_Jaures_x: folds
+IPray2Buddha: folds
+mpolishuk: folds
+owlie45: raises 5173 to 5293 and is all-in
+Sakura2892: folds
+chuckie247: folds
+papajoe179: folds
+Uncalled bet (5173) returned to owlie45
+owlie45 collected 615 from pot
+owlie45: doesn't show hand
+*** SUMMARY ***
+Total pot 615 | Rake 0
+Seat 1: Sakura2892 (big blind) folded before Flop
+Seat 2: chuckie247 folded before Flop
+Seat 3: w.gator900 folded before Flop (didn't bet)
+Seat 4: Lillien66 folded before Flop (didn't bet)
+Seat 5: papajoe179 folded before Flop
+Seat 6: x_Jaures_x folded before Flop (didn't bet)
+Seat 7: IPray2Buddha folded before Flop (didn't bet)
+Seat 8: mpolishuk (button) folded before Flop (didn't bet)
+Seat 9: owlie45 (small blind) collected (615)
+
+
+
+PokerStars Hand #232702816013: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level VI (80/160) - 2021/12/31 22:42:04 ET
+Table '3332581238 2' 9-max Seat #1 is the button
+Seat 1: Sakura2892 (688 in chips)
+Seat 2: chuckie247 (2973 in chips)
+Seat 3: w.gator900 (7538 in chips)
+Seat 4: Lillien66 (3285 in chips)
+Seat 5: papajoe179 (1276 in chips)
+Seat 6: x_Jaures_x (791 in chips)
+Seat 7: IPray2Buddha (1790 in chips)
+Seat 8: mpolishuk (2886 in chips)
+Seat 9: owlie45 (5773 in chips)
+Sakura2892: posts the ante 20
+chuckie247: posts the ante 20
+w.gator900: posts the ante 20
+Lillien66: posts the ante 20
+papajoe179: posts the ante 20
+x_Jaures_x: posts the ante 20
+IPray2Buddha: posts the ante 20
+mpolishuk: posts the ante 20
+owlie45: posts the ante 20
+chuckie247: posts small blind 80
+w.gator900: posts big blind 160
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ac Kh]
+Lillien66: folds
+papajoe179: calls 160
+x_Jaures_x: folds
+IPray2Buddha: raises 1610 to 1770 and is all-in
+mpolishuk: folds
+owlie45: folds
+Sakura2892: folds
+chuckie247: folds
+w.gator900: folds
+papajoe179: folds
+Uncalled bet (1610) returned to IPray2Buddha
+IPray2Buddha collected 740 from pot
+*** SUMMARY ***
+Total pot 740 | Rake 0
+Seat 1: Sakura2892 (button) folded before Flop (didn't bet)
+Seat 2: chuckie247 (small blind) folded before Flop
+Seat 3: w.gator900 (big blind) folded before Flop
+Seat 4: Lillien66 folded before Flop (didn't bet)
+Seat 5: papajoe179 folded before Flop
+Seat 6: x_Jaures_x folded before Flop (didn't bet)
+Seat 7: IPray2Buddha collected (740)
+Seat 8: mpolishuk folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702821315: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level VI (80/160) - 2021/12/31 22:42:31 ET
+Table '3332581238 2' 9-max Seat #2 is the button
+Seat 1: Sakura2892 (668 in chips)
+Seat 2: chuckie247 (2873 in chips)
+Seat 3: w.gator900 (7358 in chips)
+Seat 4: Lillien66 (3265 in chips)
+Seat 5: papajoe179 (1096 in chips)
+Seat 6: x_Jaures_x (771 in chips)
+Seat 7: IPray2Buddha (2350 in chips)
+Seat 8: mpolishuk (2866 in chips)
+Seat 9: owlie45 (5753 in chips)
+Sakura2892: posts the ante 20
+chuckie247: posts the ante 20
+w.gator900: posts the ante 20
+Lillien66: posts the ante 20
+papajoe179: posts the ante 20
+x_Jaures_x: posts the ante 20
+IPray2Buddha: posts the ante 20
+mpolishuk: posts the ante 20
+owlie45: posts the ante 20
+w.gator900: posts small blind 80
+Lillien66: posts big blind 160
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [5d 4s]
+papajoe179: calls 160
+x_Jaures_x: calls 160
+IPray2Buddha: folds
+mpolishuk: folds
+owlie45: folds
+Sakura2892: folds
+chuckie247: folds
+w.gator900: folds
+Lillien66: checks
+*** FLOP *** [7d 2c 4d]
+Lillien66: checks
+papajoe179: bets 370
+x_Jaures_x: folds
+Lillien66: folds
+Uncalled bet (370) returned to papajoe179
+papajoe179 collected 740 from pot
+papajoe179: doesn't show hand
+*** SUMMARY ***
+Total pot 740 | Rake 0
+Board [7d 2c 4d]
+Seat 1: Sakura2892 folded before Flop (didn't bet)
+Seat 2: chuckie247 (button) folded before Flop (didn't bet)
+Seat 3: w.gator900 (small blind) folded before Flop
+Seat 4: Lillien66 (big blind) folded on the Flop
+Seat 5: papajoe179 collected (740)
+Seat 6: x_Jaures_x folded on the Flop
+Seat 7: IPray2Buddha folded before Flop (didn't bet)
+Seat 8: mpolishuk folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702830850: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level VI (80/160) - 2021/12/31 22:43:19 ET
+Table '3332581238 2' 9-max Seat #3 is the button
+Seat 1: Sakura2892 (648 in chips)
+Seat 2: chuckie247 (2853 in chips)
+Seat 3: w.gator900 (7258 in chips)
+Seat 4: Lillien66 (3085 in chips)
+Seat 5: papajoe179 (1656 in chips)
+Seat 6: x_Jaures_x (591 in chips)
+Seat 7: IPray2Buddha (2330 in chips)
+Seat 8: mpolishuk (2846 in chips)
+Seat 9: owlie45 (5733 in chips)
+Sakura2892: posts the ante 20
+chuckie247: posts the ante 20
+w.gator900: posts the ante 20
+Lillien66: posts the ante 20
+papajoe179: posts the ante 20
+x_Jaures_x: posts the ante 20
+IPray2Buddha: posts the ante 20
+mpolishuk: posts the ante 20
+owlie45: posts the ante 20
+Lillien66: posts small blind 80
+papajoe179: posts big blind 160
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [3d 5c]
+x_Jaures_x: folds
+IPray2Buddha: folds
+mpolishuk: folds
+owlie45: raises 160 to 320
+Sakura2892: folds
+chuckie247: folds
+w.gator900: folds
+Lillien66: folds
+papajoe179: calls 160
+*** FLOP *** [6s 2h 9d]
+papajoe179: checks
+owlie45: checks
+*** TURN *** [6s 2h 9d] [Ks]
+papajoe179: bets 1316 and is all-in
+owlie45: folds
+Uncalled bet (1316) returned to papajoe179
+papajoe179 collected 900 from pot
+papajoe179: doesn't show hand
+*** SUMMARY ***
+Total pot 900 | Rake 0
+Board [6s 2h 9d Ks]
+Seat 1: Sakura2892 folded before Flop (didn't bet)
+Seat 2: chuckie247 folded before Flop (didn't bet)
+Seat 3: w.gator900 (button) folded before Flop (didn't bet)
+Seat 4: Lillien66 (small blind) folded before Flop
+Seat 5: papajoe179 (big blind) collected (900)
+Seat 6: x_Jaures_x folded before Flop (didn't bet)
+Seat 7: IPray2Buddha folded before Flop (didn't bet)
+Seat 8: mpolishuk folded before Flop (didn't bet)
+Seat 9: owlie45 folded on the Turn
+
+
+PokerStars Hand #232702842055: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level VI (80/160) - 2021/12/31 22:44:16 ET
+Table '3332581238 2' 9-max Seat #4 is the button
+Seat 1: Sakura2892 (628 in chips)
+Seat 2: chuckie247 (2833 in chips)
+Seat 3: w.gator900 (7238 in chips)
+Seat 4: Lillien66 (2985 in chips)
+Seat 5: papajoe179 (2216 in chips)
+Seat 6: x_Jaures_x (571 in chips)
+Seat 7: IPray2Buddha (2310 in chips)
+Seat 8: mpolishuk (2826 in chips)
+Seat 9: owlie45 (5393 in chips)
+Sakura2892: posts the ante 20
+chuckie247: posts the ante 20
+w.gator900: posts the ante 20
+Lillien66: posts the ante 20
+papajoe179: posts the ante 20
+x_Jaures_x: posts the ante 20
+IPray2Buddha: posts the ante 20
+mpolishuk: posts the ante 20
+owlie45: posts the ante 20
+papajoe179: posts small blind 80
+x_Jaures_x: posts big blind 160
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Jd 6c]
+IPray2Buddha: folds
+mpolishuk: folds
+owlie45: folds
+Sakura2892: folds
+chuckie247: folds
+w.gator900: folds
+Lillien66: raises 2805 to 2965 and is all-in
+papajoe179: folds
+x_Jaures_x: folds
+Uncalled bet (2805) returned to Lillien66
+Lillien66 collected 580 from pot
+Lillien66: doesn't show hand
+*** SUMMARY ***
+Total pot 580 | Rake 0
+Seat 1: Sakura2892 folded before Flop (didn't bet)
+Seat 2: chuckie247 folded before Flop (didn't bet)
+Seat 3: w.gator900 folded before Flop (didn't bet)
+Seat 4: Lillien66 (button) collected (580)
+Seat 5: papajoe179 (small blind) folded before Flop
+Seat 6: x_Jaures_x (big blind) folded before Flop
+Seat 7: IPray2Buddha folded before Flop (didn't bet)
+Seat 8: mpolishuk folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702850485: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level VI (80/160) - 2021/12/31 22:44:58 ET
+Table '3332581238 2' 9-max Seat #5 is the button
+Seat 1: Sakura2892 (608 in chips)
+Seat 2: chuckie247 (2813 in chips)
+Seat 3: w.gator900 (7218 in chips)
+Seat 4: Lillien66 (3385 in chips)
+Seat 5: papajoe179 (2116 in chips)
+Seat 6: x_Jaures_x (391 in chips)
+Seat 7: IPray2Buddha (2290 in chips)
+Seat 8: mpolishuk (2806 in chips)
+Seat 9: owlie45 (5373 in chips)
+Sakura2892: posts the ante 20
+chuckie247: posts the ante 20
+w.gator900: posts the ante 20
+Lillien66: posts the ante 20
+papajoe179: posts the ante 20
+x_Jaures_x: posts the ante 20
+IPray2Buddha: posts the ante 20
+mpolishuk: posts the ante 20
+owlie45: posts the ante 20
+x_Jaures_x: posts small blind 80
+IPray2Buddha: posts big blind 160
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [Ts 6s]
+mpolishuk: folds
+owlie45: folds
+Sakura2892: folds
+chuckie247: folds
+w.gator900: folds
+Lillien66: folds
+papajoe179: calls 160
+x_Jaures_x: folds
+IPray2Buddha: checks
+*** FLOP *** [Td Ah Qs]
+IPray2Buddha: checks
+papajoe179: bets 580
+IPray2Buddha: folds
+Uncalled bet (580) returned to papajoe179
+papajoe179 collected 580 from pot
+papajoe179: doesn't show hand
+*** SUMMARY ***
+Total pot 580 | Rake 0
+Board [Td Ah Qs]
+Seat 1: Sakura2892 folded before Flop (didn't bet)
+Seat 2: chuckie247 folded before Flop (didn't bet)
+Seat 3: w.gator900 folded before Flop (didn't bet)
+Seat 4: Lillien66 folded before Flop (didn't bet)
+Seat 5: papajoe179 (button) collected (580)
+Seat 6: x_Jaures_x (small blind) folded before Flop
+Seat 7: IPray2Buddha (big blind) folded on the Flop
+Seat 8: mpolishuk folded before Flop (didn't bet)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702860417: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level VI (80/160) - 2021/12/31 22:45:41 ET
+Table '3332581238 2' 9-max Seat #6 is the button
+Seat 1: Sakura2892 (588 in chips)
+Seat 2: chuckie247 (2793 in chips)
+Seat 3: w.gator900 (7198 in chips)
+Seat 4: Lillien66 (3365 in chips)
+Seat 5: papajoe179 (2516 in chips)
+Seat 6: x_Jaures_x (291 in chips)
+Seat 7: IPray2Buddha (2110 in chips)
+Seat 8: mpolishuk (2786 in chips)
+Seat 9: owlie45 (5353 in chips)
+Sakura2892: posts the ante 20
+chuckie247: posts the ante 20
+w.gator900: posts the ante 20
+Lillien66: posts the ante 20
+papajoe179: posts the ante 20
+x_Jaures_x: posts the ante 20
+IPray2Buddha: posts the ante 20
+mpolishuk: posts the ante 20
+owlie45: posts the ante 20
+IPray2Buddha: posts small blind 80
+mpolishuk: posts big blind 160
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [5d 5h]
+owlie45: folds
+Sakura2892: folds
+chuckie247: calls 160
+w.gator900: folds
+Lillien66: folds
+papajoe179: calls 160
+x_Jaures_x: folds
+IPray2Buddha: calls 80
+mpolishuk: checks
+*** FLOP *** [6c 4h 9c]
+IPray2Buddha: checks
+mpolishuk: bets 400
+chuckie247: folds
+papajoe179: folds
+IPray2Buddha: folds
+Uncalled bet (400) returned to mpolishuk
+mpolishuk collected 820 from pot
+*** SUMMARY ***
+Total pot 820 | Rake 0
+Board [6c 4h 9c]
+Seat 1: Sakura2892 folded before Flop (didn't bet)
+Seat 2: chuckie247 folded on the Flop
+Seat 3: w.gator900 folded before Flop (didn't bet)
+Seat 4: Lillien66 folded before Flop (didn't bet)
+Seat 5: papajoe179 folded on the Flop
+Seat 6: x_Jaures_x (button) folded before Flop (didn't bet)
+Seat 7: IPray2Buddha (small blind) folded on the Flop
+Seat 8: mpolishuk (big blind) collected (820)
+Seat 9: owlie45 folded before Flop (didn't bet)
+
+
+PokerStars Hand #232702871282: Tournament #3332581238, $9.22+$0.78 USD Hold'em No Limit - Level VI (80/160) - 2021/12/31 22:46:37 ET
+Table '3332581238 2' 9-max Seat #7 is the button
+Seat 1: Sakura2892 (568 in chips)
+Seat 2: chuckie247 (2613 in chips)
+Seat 3: w.gator900 (7178 in chips)
+Seat 4: Lillien66 (3345 in chips)
+Seat 5: papajoe179 (2336 in chips)
+Seat 6: x_Jaures_x (271 in chips)
+Seat 7: IPray2Buddha (1930 in chips)
+Seat 8: mpolishuk (3426 in chips)
+Seat 9: owlie45 (5333 in chips)
+Sakura2892: posts the ante 20
+chuckie247: posts the ante 20
+w.gator900: posts the ante 20
+Lillien66: posts the ante 20
+papajoe179: posts the ante 20
+x_Jaures_x: posts the ante 20
+IPray2Buddha: posts the ante 20
+mpolishuk: posts the ante 20
+owlie45: posts the ante 20
+mpolishuk: posts small blind 80
+owlie45: posts big blind 160
+*** HOLE CARDS ***
+Dealt to IPray2Buddha [9s 4c]
+Sakura2892: raises 388 to 548 and is all-in
+chuckie247: folds
+w.gator900: folds
+Lillien66: folds
+papajoe179: folds
+x_Jaures_x: folds
+IPray2Buddha: folds
+mpolishuk: folds
+owlie45: calls 388
+*** FLOP *** [8s Tc Jh]
+*** TURN *** [8s Tc Jh] [Qc]
+*** RIVER *** [8s Tc Jh Qc] [Kd]
+*** SHOW DOWN ***
+owlie45: shows [Ac Qs] (a straight, Ten to Ace)
+Sakura2892: shows [Ah Td] (a straight, Ten to Ace)
+owlie45 collected 678 from pot
+Sakura2892 collected 678 from pot
+*** SUMMARY ***
+Total pot 1356 | Rake 0
+Board [8s Tc Jh Qc Kd]
+Seat 1: Sakura2892 showed [Ah Td] and won (678) with a straight, Ten to Ace
+Seat 2: chuckie247 folded before Flop (didn't bet)
+Seat 3: w.gator900 folded before Flop (didn't bet)
+Seat 4: Lillien66 folded before Flop (didn't bet)
+Seat 5: papajoe179 folded before Flop (didn't bet)
+Seat 6: x_Jaures_x folded before Flop (didn't bet)
+Seat 7: IPray2Buddha (button) folded before Flop (didn't bet)
+Seat 8: mpolishuk (small blind) folded before Flop
+Seat 9: owlie45 (big blind) showed [Ac Qs] and won (678) with a straight, Ten to Ace
+
+
