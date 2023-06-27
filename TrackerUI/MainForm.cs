@@ -42,7 +42,7 @@ namespace TrackerUI
 
         private void btnDashBoard_Click(object sender, EventArgs e)
         {
-            //Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Dashboard(), sender); });
+            Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Dashboard(), sender); });
 
             //OpenChildForm(new ChildForms.Dashboard(), sender);
         }
@@ -65,6 +65,7 @@ namespace TrackerUI
 
         private void btnImport_Click(object sender, EventArgs e)
         {
+            Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Import(), sender); });
             //OpenChildForm(new ChildForms.Import(), sender);
         }
 

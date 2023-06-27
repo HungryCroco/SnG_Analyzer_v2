@@ -139,9 +139,13 @@ namespace TrackerLibrary.CRUD
         {
             List<string> serializedHandsAsJson = new();
 
+            var options = new JsonSerializerOptions();
+            options.Converters.Add(new PlayerActionListConverter());
+            options.Converters.Add(new FullActionListConverter());
+
             foreach (Hand hand in hands)
             {
-                serializedHandsAsJson.Add(System.Text.Json.JsonSerializer.Serialize(hand));
+                serializedHandsAsJson.Add(System.Text.Json.JsonSerializer.Serialize(hand, options));
             }
 
             return serializedHandsAsJson; 
@@ -161,6 +165,23 @@ namespace TrackerLibrary.CRUD
                     _cmd.Parameters.Add(new NpgsqlParameter("tourneyType", tournamentType));
                     _cmd.Parameters.Add(new NpgsqlParameter("pos", pos));
 
+                    output = _cmd.ExecuteScalar().ToString();
+                }
+                _conn.Close();
+            }
+
+            return JsonConvert.DeserializeObject<List<CevModel>>(output);
+        }
+
+        public static List<CevModel> GetCevChartParallel(this string sqlQuery)
+        {
+            string output;
+
+            using (var _conn = new NpgsqlConnection(GetConnectionString(GlobalConfig.dbName)))
+            {
+                _conn.Open();
+                using (var _cmd = new NpgsqlCommand(sqlQuery, _conn))
+                { 
                     output = _cmd.ExecuteScalar().ToString();
                 }
                 _conn.Close();

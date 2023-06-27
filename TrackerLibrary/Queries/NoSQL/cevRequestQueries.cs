@@ -9,44 +9,38 @@ namespace TrackerLibrary.Queries.NoSQL
     public static class cevRequestQueries
     {
         public static string sql_ExportCevPerTournamentAsJSON =
-            @"
-set join_collapse_limit = 1;
-select array_to_json(array_agg(row_to_json(t)))
-			from (
-
-					select  sum (sa.cev_won) as cev , sum(sa.chips_won) as amt_won
-						FROM public.tournament ta
-										inner join public.hands ha on ha.tournamentid=ta.id
-										inner join public.seataction sa on sa.Id=ha.heroseatactionid
-										inner join public.player pl on (sa.playerId = pl.id)
-										
-						@whereClause
-						group by ta.id order by ta.tournamentidbysite
-
-			) t";
+            @"SELECT array_to_json(array_agg(row_to_json(t2)))
+				FROM (
+					SELECT MAX(tourney_id) as tourney_id, SUM(t1.cev_won) as cev, SUM(t1.chips_won) as amt_won, SUM(t1.cev_won / t1.amt_bb) AS aBB, MAX(t1.t_date) AS t_date 
+						FROM (
+							SELECT data->'Info'->>'TournamentIdBySite' AS tourney_id, (data->'SeatActions'->'@hero'->'CevWon')::numeric AS cev_won, (data->'SeatActions'->'@hero'->'ChipsWon')::numeric AS chips_won,
+								(data->'Info'->'Amt_bb')::numeric AS amt_bb, TO_DATE((data->'Info'->>'Date')::text, 'YYYY-MM-DD') AS t_date	
+									FROM hands ha
+									WHERE data->'Info'->>'TournamentType' = '@tourneyType' AND data->'SeatActions'->'@hero' IS NOT NULL
+							) t1
+				GROUP BY tourney_id
+				ORDER BY tourney_id ASC
+					) t2";
 
         public static string sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths =
-            @"
-SELECT array_to_json(array_agg(row_to_json(t2)))
-				FROM (SELECT sum (t1.aBB) as aBB , count(t1.aBB) as situations, to_char(min(t1.t_date),'YYYY-MM-DD') as min_Date, to_char(max(t1.t_date),'YYYY-MM-DD') as max_Date
-							FROM (
-								SELECT (sa.cev_won / ha.amt_bb) as aBB,  ta.tournamentdate as t_date, ha.handid as hid
-										FROM public.hands ha
-														inner join public.tournament ta ON ta.id = ha.tournamentid
-														inner join public.seataction sa on ha.heroseatactionid = sa.id
-
-										where ta.tournamenttype = @tourneyType::Varchar  AND sa.position = @pos::Varchar and ha.handid in 
-												(select h.handid FROM public.hands h
-																inner join public.tournament ta ON ta.id = h.tournamentid
-																inner join public.seataction sa on sa.Id=h.@villianSAID
-																inner join public.player villian ON villian.id = sa.playerid 
-												where @HU_3W_Filter villian.playernickname @regList
-												) 
-										GROUP BY hid, aBB, t_date
-								) t1
-					GROUP BY DATE_TRUNC('month',t_date)
-					ORDER BY DATE_TRUNC('month',t_date) DESC
-					) t2";
+            @"SELECT array_to_json(array_agg(row_to_json(t3)))
+				FROM (
+					SELECT COUNT(t2.cev_won)::numeric AS situations, SUM(t2.cev_won) AS cev, SUM(t2.chips_won) as amt_won, SUM(t2.cev_won / t2.amt_bb) AS aBB, MAX(t2.t_date) AS t_date 
+						FROM (
+							SELECT ha->'Info'->>'TournamentIdBySite' AS tourney_id, (ha->'SeatActions'->'@hero'->'CevWon')::numeric AS cev_won, (ha->'SeatActions'->'@hero'->'ChipsWon')::numeric AS chips_won,
+									(ha->'Info'->'Amt_bb')::numeric AS amt_bb, TO_DATE((ha->'Info'->>'Date')::text, 'YYYY-MM-DD') AS t_date	
+										FROM (
+												SELECT data AS ha
+												FROM hands h
+												CROSS JOIN LATERAL jsonb_each(h.data->'SeatActions') AS t(k,v)
+												WHERE t.k @regList AND t.v->'SeatPosition' = '@posVillain')  t1
+							WHERE ha->'SeatActions'->'@hero'->'SeatPosition' = '@posHero'
+							GROUP BY tourney_id, t1.ha
+							ORDER BY tourney_id 
+							) t2
+						GROUP BY DATE_TRUNC('month',t2.t_date)
+						ORDER BY DATE_TRUNC('month',t2.t_date) DESC 
+					) t3";
 
         public static string sql_ExportTlpOverviewAsJSON_GeneralInfo_GroupByBlocks =
             @"	

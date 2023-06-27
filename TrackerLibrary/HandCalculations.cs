@@ -233,7 +233,7 @@ namespace TrackerLibrary
             }
         }
 
-        private static float CalculateChipsInvestedPerStreet(this List<Models.Action>  actions, float amtBlind = 0) // Set amtBlinds only if seatAction.Value.Actions.PreFlop !!!
+        private static float CalculateChipsInvestedPerStreet(this List<Models.PlayerAction>  actions, float amtBlind = 0) // Set amtBlinds only if seatAction.Value.Actions.PreFlop !!!
         {
             float output = 0;
             if (true)

@@ -152,6 +152,7 @@ namespace TrackerLibrary
                 TournamentType = regexHand.Groups["Type"].Value,
                 SeatBtn = sbyte.Parse(regexHand.Groups["SeatBtn"].Value),
                 Hero = regexHand.Groups["Hero"].Value,
+                Amt_bb = float.Parse(regexHand.Groups["AmtBb"].Value),
                 FullHandAsString = regexHand.Groups["0"].Value,
                 CntPlayers = Convert.ToUInt16(regexHand.Groups["Seat_Player"].Captures.Count()),
                 CntPlayers_Flop = Convert.ToUInt16(regexHand.Groups["FlopAction_Player"].Captures.Count()),
@@ -191,7 +192,7 @@ namespace TrackerLibrary
                 if (street == "Flop")
                 {
                     actions.Item2[currPlayer].saw_flop = true;
-                    actions.Item2[currPlayer].Actions.Flop.Add(new Models.Action() { Act = currAction, Size = float.Parse(currSize), AI = sbyte.Parse(currAI) });
+                    actions.Item2[currPlayer].Actions.Flop.Add(new Models.PlayerAction() { Act = currAction, Size = float.Parse(currSize), AI = sbyte.Parse(currAI) });
                     actions.Item1.FlopActions.Add(new StreetAction.FullAction() { Player = currPlayer, Act = currAction, Size = float.Parse(currSize), AI = sbyte.Parse(currAI) });
 
                     if (currAI == "1")
@@ -206,7 +207,7 @@ namespace TrackerLibrary
                 {
                     actions.Item2[currPlayer].saw_turn = true;
 
-                    actions.Item2[currPlayer].Actions.Turn.Add(new Models.Action() { Act = currAction, Size = float.Parse(currSize), AI = sbyte.Parse(currAI) });
+                    actions.Item2[currPlayer].Actions.Turn.Add(new Models.PlayerAction() { Act = currAction, Size = float.Parse(currSize), AI = sbyte.Parse(currAI) });
                     actions.Item1.TurnActions.Add(new StreetAction.FullAction() { Player = currPlayer, Act = currAction, Size = float.Parse(currSize), AI = sbyte.Parse(currAI) });
 
                     if (currAI == "1")
@@ -219,7 +220,7 @@ namespace TrackerLibrary
                 else if (street == "River")
                 {
                     actions.Item2[currPlayer].saw_river = true;
-                    actions.Item2[currPlayer].Actions.River.Add(new Models.Action() { Act = currAction, Size = float.Parse(currSize), AI = sbyte.Parse(currAI) });
+                    actions.Item2[currPlayer].Actions.River.Add(new Models.PlayerAction() { Act = currAction, Size = float.Parse(currSize), AI = sbyte.Parse(currAI) });
                     actions.Item1.RiverActions.Add(new StreetAction.FullAction() { Player = currPlayer, Act = currAction, Size = float.Parse(currSize), AI = sbyte.Parse(currAI) });
 
                     if (currAI == "1")
@@ -310,7 +311,7 @@ namespace TrackerLibrary
                 {
                     actionDict[currPlayer].SeatPosition = Convert.ToUInt16(regexHand.Groups["Seat_Player"].Captures.Count() - i - 3); //As the first layer to act pF is always the firthes one, his pos = cntPlayers - 3(btn=0, SB=8 and BB=9 are fixed POS); -- For every next pos until we reach the SB;  
                 }
-                actionDict[currPlayer].Actions.PreFlop.Add(new Models.Action() { Act = currAction, Size = float.Parse(currSize), AI = sbyte.Parse(currAI) });
+                actionDict[currPlayer].Actions.PreFlop.Add(new Models.PlayerAction() { Act = currAction, Size = float.Parse(currSize), AI = sbyte.Parse(currAI) });
                 streetAction.PreflopActions.Add(new StreetAction.FullAction() { Player = currPlayer, Act = currAction, Size = float.Parse(currSize), AI = sbyte.Parse(currAI) });
 
                 if (currAI == "1")
@@ -357,8 +358,9 @@ namespace TrackerLibrary
             Console.WriteLine("start");
             Stopwatch watch = new();
             watch.Start();
+            //"^(?<Room>.+) Hand #(?<HandId>\d+): Tournament #(?<TournamentId>\d+), (?<Currency>[$€])(?<BuyIn>[\.\d]+)(?:\+[$€](?<Fee>[\.\d]+))*.+(?<Level>\d+/\d+)\) - (?<Date>[\d/]+) (?<Time>[\d:]+) (.+)"
 
-            string pattern = @"^(?<Room>.+) Hand #(?<HandId>\d+): Tournament #(?<TournamentId>\d+), (?<Currency>[$€])(?<BuyIn>[\.\d]+)(?:\+[$€](?<Fee>[\.\d]+))*.+(?<Level>\d+/\d+)\) - (?<Date>[\d/]+) (?<Time>[\d:]+) (.+)" +
+            string pattern = @"^(?<Room>.+) Hand #(?<HandId>\d+): Tournament #(?<TournamentId>\d+), (?<Currency>[$€])(?<BuyIn>[\.\d]+)(?:\+[$€](?<Fee>[\.\d]+))*[^0-9]+(?<Level>(?:\d+)/(?<AmtBb>\d+))\) - (?<Date>[\d/]+) (?<Time>[\d:]+) (.+)" +
             @"[\s\r\n]+^Table '(?<TableId>[\s\d]+)' (?<Type>.+) Seat #(?<SeatBtn>\d+) is the button" +
             @"(?:[\s\r\n]+^Seat (?<Seat_Num>\d+): (?<Seat_Player>.+) \((?:(?<Seat_Stack>[\d\.]+) in chips)(?:, [$€](?<Seat_Bounty>[\d\.]+) bounty)?\))*" +
             @"(?:[\s\r\n]+^(?<PreHCsAction_Player>.+): posts(?<PreHCsAction_Post> the ante | small blind | big blind )(?<PreHCsAction_Chips>\d+)(?: and is all-in)?)*" +

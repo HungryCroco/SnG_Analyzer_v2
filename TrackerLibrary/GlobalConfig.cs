@@ -11,13 +11,13 @@ namespace TrackerLibrary
         public static string user = "postgres";
         public static string pass = "dbpass";
 
-        public static string dbName = "test7";
+        public static string dbName = "test_com3";
         public static string tableName = "hands";
         public static string columnName = "data";
 
 
         public static int minTourney = 500;
-        public static string regList = "reglist.txt";
+        public static string regList = "reglist_small.txt";
         public static string dashBoardList = "dashboard.txt";
         public static string directoryRegFilter = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\settings";
         public static string temp = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\temp";

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,18 +11,26 @@ namespace TrackerLibrary.Models
     {
         public struct FullAction
         {
+            [JsonProperty("Player")]
             public string Player;
+
+            [JsonProperty("Act")]
             public string Act;
+
+            [JsonProperty("Size")]
             public float Size;
-            //public float AmtBefore;
-            //public float ChipsInvested;
+
+            [JsonProperty("Act")]
             public sbyte AI;
 
         }
 
         public List<FullAction> PreflopActions { get; set; }
+
         public List<FullAction> FlopActions { get; set; }
+
         public List<FullAction> TurnActions { get; set; }
+
         public List<FullAction> RiverActions { get; set; }
 
         public StreetAction()

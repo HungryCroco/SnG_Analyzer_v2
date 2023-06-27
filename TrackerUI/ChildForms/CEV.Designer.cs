@@ -192,7 +192,7 @@ namespace TrackerUI.ChildForms
             // 
             this.checkBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(-728, 311);
+            this.checkBox6.Location = new System.Drawing.Point(-1064, 311);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox6.Size = new System.Drawing.Size(180, 36);
@@ -204,7 +204,7 @@ namespace TrackerUI.ChildForms
             // 
             this.checkBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(-700, 269);
+            this.checkBox5.Location = new System.Drawing.Point(-1036, 269);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox5.Size = new System.Drawing.Size(152, 36);
@@ -216,7 +216,7 @@ namespace TrackerUI.ChildForms
             // 
             this.checkBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(-701, 227);
+            this.checkBox4.Location = new System.Drawing.Point(-1037, 227);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox4.Size = new System.Drawing.Size(155, 36);
@@ -228,7 +228,7 @@ namespace TrackerUI.ChildForms
             // 
             this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(-704, 185);
+            this.checkBox3.Location = new System.Drawing.Point(-1040, 185);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox3.Size = new System.Drawing.Size(157, 36);
@@ -239,7 +239,7 @@ namespace TrackerUI.ChildForms
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(-630, 55);
+            this.textBox1.Location = new System.Drawing.Point(-966, 55);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(83, 39);
             this.textBox1.TabIndex = 6;
@@ -250,7 +250,7 @@ namespace TrackerUI.ChildForms
             // 
             this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(-664, 101);
+            this.checkBox2.Location = new System.Drawing.Point(-1000, 101);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox2.Size = new System.Drawing.Size(117, 36);
@@ -262,7 +262,7 @@ namespace TrackerUI.ChildForms
             // 
             this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(-707, 143);
+            this.checkBox1.Location = new System.Drawing.Point(-1043, 143);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox1.Size = new System.Drawing.Size(161, 36);
@@ -273,7 +273,7 @@ namespace TrackerUI.ChildForms
             // txtBor_minTourneys
             // 
             this.txtBor_minTourneys.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBor_minTourneys.Location = new System.Drawing.Point(-630, 9);
+            this.txtBor_minTourneys.Location = new System.Drawing.Point(-966, 9);
             this.txtBor_minTourneys.Name = "txtBor_minTourneys";
             this.txtBor_minTourneys.Size = new System.Drawing.Size(83, 39);
             this.txtBor_minTourneys.TabIndex = 3;
@@ -284,7 +284,7 @@ namespace TrackerUI.ChildForms
             // 
             this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(-724, 59);
+            this.label26.Location = new System.Drawing.Point(-1060, 59);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(88, 32);
             this.label26.TabIndex = 2;
@@ -294,7 +294,7 @@ namespace TrackerUI.ChildForms
             // 
             this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(-750, 16);
+            this.label27.Location = new System.Drawing.Point(-1086, 16);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(114, 32);
             this.label27.TabIndex = 2;
@@ -305,7 +305,7 @@ namespace TrackerUI.ChildForms
             this.lbl_calcTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_calcTime.AutoSize = true;
             this.lbl_calcTime.ForeColor = System.Drawing.Color.Red;
-            this.lbl_calcTime.Location = new System.Drawing.Point(-599, 350);
+            this.lbl_calcTime.Location = new System.Drawing.Point(-935, 350);
             this.lbl_calcTime.Name = "lbl_calcTime";
             this.lbl_calcTime.Size = new System.Drawing.Size(70, 32);
             this.lbl_calcTime.TabIndex = 1;
@@ -315,7 +315,7 @@ namespace TrackerUI.ChildForms
             // 
             this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(-727, 350);
+            this.label25.Location = new System.Drawing.Point(-1063, 350);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(126, 32);
             this.label25.TabIndex = 0;
@@ -515,7 +515,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_3.Tag = "3";
             this.cBox_3_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_3.UseVisualStyleBackColor = true;
-            this.cBox_3_3.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_1
             // 
@@ -531,7 +530,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_1.Tag = "1";
             this.cBox_3_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_1.UseVisualStyleBackColor = true;
-            this.cBox_3_1.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_2
             // 
@@ -547,7 +545,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_2.Tag = "2";
             this.cBox_3_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_2.UseVisualStyleBackColor = true;
-            this.cBox_3_2.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_11
             // 
@@ -563,7 +560,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_11.Tag = "11";
             this.cBox_3_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_11.UseVisualStyleBackColor = true;
-            this.cBox_3_11.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_10
             // 
@@ -579,7 +575,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_10.Tag = "10";
             this.cBox_3_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_10.UseVisualStyleBackColor = true;
-            this.cBox_3_10.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_9
             // 
@@ -595,7 +590,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_9.Tag = "9";
             this.cBox_3_9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_9.UseVisualStyleBackColor = true;
-            this.cBox_3_9.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_13
             // 
@@ -611,7 +605,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_13.Tag = "13";
             this.cBox_3_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_13.UseVisualStyleBackColor = true;
-            this.cBox_3_13.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_6
             // 
@@ -627,7 +620,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_6.Tag = "6";
             this.cBox_3_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_6.UseVisualStyleBackColor = true;
-            this.cBox_3_6.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_8
             // 
@@ -643,7 +635,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_8.Tag = "8";
             this.cBox_3_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_8.UseVisualStyleBackColor = true;
-            this.cBox_3_8.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_7
             // 
@@ -659,7 +650,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_7.Tag = "7";
             this.cBox_3_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_7.UseVisualStyleBackColor = true;
-            this.cBox_3_7.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_18
             // 
@@ -675,7 +665,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_18.Tag = "18";
             this.cBox_3_18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_18.UseVisualStyleBackColor = true;
-            this.cBox_3_18.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_14
             // 
@@ -691,7 +680,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_14.Tag = "14";
             this.cBox_3_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_14.UseVisualStyleBackColor = true;
-            this.cBox_3_14.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_15
             // 
@@ -707,7 +695,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_15.Tag = "15";
             this.cBox_3_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_15.UseVisualStyleBackColor = true;
-            this.cBox_3_15.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_17
             // 
@@ -723,7 +710,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_17.Tag = "17";
             this.cBox_3_17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_17.UseVisualStyleBackColor = true;
-            this.cBox_3_17.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_16
             // 
@@ -739,7 +725,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_16.Tag = "16";
             this.cBox_3_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_16.UseVisualStyleBackColor = true;
-            this.cBox_3_16.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_12
             // 
@@ -755,7 +740,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_12.Tag = "12";
             this.cBox_3_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_12.UseVisualStyleBackColor = true;
-            this.cBox_3_12.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // cBox_3_5
             // 
@@ -771,7 +755,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_5.Tag = "5";
             this.cBox_3_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_5.UseVisualStyleBackColor = true;
-            this.cBox_3_5.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // label24
             // 
@@ -1106,7 +1089,6 @@ namespace TrackerUI.ChildForms
             this.cBox_3_4.Tag = "4";
             this.cBox_3_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cBox_3_4.UseVisualStyleBackColor = true;
-            this.cBox_3_4.CheckedChanged += new System.EventHandler(this.cBox_CheckedChanged);
             // 
             // label30
             // 

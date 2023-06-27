@@ -17,7 +17,7 @@ namespace TrackerLibrary.Models
         public double Cev { get; set; }
 
         [JsonProperty("aBB")]
-        public double aBB { get; set; }
+        public double Abb { get; set; }
 
         [JsonProperty("amt_won")]
         public double Amt_won { get; set; }
@@ -25,21 +25,15 @@ namespace TrackerLibrary.Models
         [JsonProperty("aBI")]
         public double Abi { get; set; }
 
-        [JsonProperty("count_Tourney")]
+        [JsonProperty("count_tourneys")]
         public int Count_tourney { get; set; }
 
         [JsonProperty("situations")]
         public int Situations { get; set; }
 
-        [JsonProperty("min_Date")]
-        public DateTime Min_Date { get; set; }
+        [JsonProperty("t_date")]
+        public DateTime Date { get; set; }
 
-        [JsonProperty("max_Date")]
-        public DateTime Max_Date { get; set; }
-
-        //public string SqlQuery { get; set; }
-
-        //public string Name { get; set; }
 
         public CevModel()
         {

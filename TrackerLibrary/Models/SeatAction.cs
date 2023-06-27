@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,26 +11,46 @@ namespace TrackerLibrary.Models
 
     public class AllActions
     {
-        public List<Action> PreFlop { get; set; }
-        public List<Action> Flop { get; set; }
-        public List<Action> Turn { get; set; }
-        public List<Action> River { get; set; }
+        [JsonProperty("Preflop")]
+        public List<PlayerAction> PreFlop { get; set; }
+
+        [JsonProperty("Flop")]
+        public List<PlayerAction> Flop { get; set; }
+
+        [JsonProperty("Turn")]
+        public List<PlayerAction> Turn { get; set; }
+
+        [JsonProperty("River")]
+        public List<PlayerAction> River { get; set; }
 
         public AllActions()
         {
-            PreFlop = new List<Action>();
-            Flop = new List<Action>();
-            Turn = new List<Action>();
-            River = new List<Action>();       
+            PreFlop = new List<PlayerAction>();
+            Flop = new List<PlayerAction>();
+            Turn = new List<PlayerAction>();
+            River = new List<PlayerAction>();       
         }
     }
-    public struct Action
+
+    public struct PlayerAction
     {
+        [JsonProperty("Act")]
         public string Act;
+
+        [JsonProperty("Size")]
         public float Size;
         //public float AmtBefore;
         //public float ChipsInvested;
+
+        [JsonProperty("AI")]
         public sbyte AI;
+
+        public PlayerAction()
+        {
+            Act = "";
+            Size = 0;
+            AI = 0;
+        }
 
     }
 
@@ -55,7 +76,7 @@ namespace TrackerLibrary.Models
         public float CevWon { get; set; }
         public bool IsWinner { get; set; }
 
-
+        [JsonProperty("Actions")]
         public AllActions Actions { get; set; }
 
         public uint HC1 { get; set; }
