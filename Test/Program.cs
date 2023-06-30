@@ -2,7 +2,6 @@
 using TrackerLibrary;
 using TrackerLibrary.CRUD;
 using TrackerLibrary.Models;
-using TrackerLibrary.UIRequests;
 
 namespace Test
 {
@@ -12,7 +11,7 @@ namespace Test
         private static float[,,,] ea = EVCalculator.ImportDLL.ReadEAFromFileAsFloatArray(pfEA);
 
         static string directoryHH = @"C:\Users\tatsi\source\repos\Poker\HH SpinAndGo";
-        static string hhFileName = "EV_Calcs.txt"; // ps_com.txt";//"EV_Calcs.txt";
+        static string hhFileName = "ps_com.txt"; // ps_com.txt";//"EV_Calcs.txt";
         //static string hhFileName = "EV_Calcs.txt";
         //static List<string> hhAsStringArr = GlobalConfig.FullFilePath(hhFileName, directoryHH).ReadFileReturnListOfString();
         static string entireHH = GlobalConfig.FullFilePath(hhFileName, directoryHH).ReadFileReturnString();
@@ -26,9 +25,8 @@ namespace Test
             watch.Start();
 
 
-            var  test = NoSQL_CalculateDB.RequestCevModel_Total("aspirine911", "3-max");
-            var test1 = NoSQL_CalculateDB.RequestCevModel_3W_BTNvBBvREG("IPray2Buddha", "3-max");
-            var test2 = NoSQL_CalculateDB.RequestCevModel_3W_SBvBBvREG("IPray2Buddha", "3-max");
+            var  test = NoSQL_CalculateDB.RequestDashBoard("IPray2Buddha", "3-max");
+            
 
 
             //HHReader.ReadHands(entireHH);

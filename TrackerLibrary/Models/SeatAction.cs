@@ -79,8 +79,9 @@ namespace TrackerLibrary.Models
         [JsonProperty("Actions")]
         public AllActions Actions { get; set; }
 
-        public uint HC1 { get; set; }
-        public uint HC2 { get; set; }
+        public Card HC1 { get; set; }
+        public Card HC2 { get; set; }
+        public int HCsAsNumber { get; set; }
         public bool saw_flop { get; set; }
         public bool saw_turn { get; set; }
         public bool saw_river { get; set; }

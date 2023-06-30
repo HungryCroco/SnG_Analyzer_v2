@@ -286,6 +286,27 @@ namespace TrackerLibrary
             }
         }
 
+        private static void Calculate_pf_agressors(this Hand myHand)
+        {
+            for (int i = 0; i < myHand.StreetActions.PreflopActions.Count; i++)
+            {
+                if (myHand.StreetActions.PreflopActions[i].Act == "raises" || myHand.StreetActions.PreflopActions[i].Act == "bets")
+                {
+                    myHand.Info.pf_aggressors += myHand.SeatActions[myHand.StreetActions.PreflopActions[i].Player].SeatPosition.ToString();
+                }   
+            }
+        }
+
+        private static void Calculate_pf_actors(this Hand myHand)
+        {
+            for (int i = 0; i < myHand.StreetActions.PreflopActions.Count; i++)
+            {
+                if (myHand.StreetActions.PreflopActions[i].Act == "raises" || myHand.StreetActions.PreflopActions[i].Act == "bets" || myHand.StreetActions.PreflopActions[i].Act == "calls" || myHand.StreetActions.PreflopActions[i].Act == "checks")
+                {
+                    myHand.Info.pf_actors += myHand.SeatActions[myHand.StreetActions.PreflopActions[i].Player].SeatPosition.ToString();
+                }
+            }
+        }
 
         public static void CalculateProperties(this List<Hand> myHandsList)
         {
@@ -300,6 +321,9 @@ namespace TrackerLibrary
                 myHandsList[i].CalculateCev();
                 myHandsList[i].CalculateChipsWon();
                 myHandsList[i].Calculate_pf_open_opp();
+                myHandsList[i].Calculate_pf_agressors();
+                myHandsList[i].Calculate_pf_actors();
+
             }
         }
     }

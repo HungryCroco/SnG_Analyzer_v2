@@ -11,7 +11,7 @@ namespace TrackerLibrary
         public static string user = "postgres";
         public static string pass = "dbpass";
 
-        public static string dbName = "test_com3";
+        public static string dbName = "test_com8";
         public static string tableName = "hands";
         public static string columnName = "data";
 
@@ -19,6 +19,10 @@ namespace TrackerLibrary
         public static int minTourney = 500;
         public static string regList = "reglist_small.txt";
         public static string dashBoardList = "dashboard.txt";
+        //public static string hhFileName = "EV_Calcs.txt";
+        public static string hhFileName = "ps_com.txt";
+        public static string pfEA = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\eaPF_a.txt";
+        public static string directoryHH = @"C:\Users\tatsi\source\repos\Poker\HH SpinAndGo";
         public static string directoryRegFilter = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\settings";
         public static string temp = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\temp";
 

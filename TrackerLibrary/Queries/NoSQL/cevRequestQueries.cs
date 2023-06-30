@@ -25,7 +25,7 @@ namespace TrackerLibrary.Queries.NoSQL
         public static string sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths =
             @"SELECT array_to_json(array_agg(row_to_json(t3)))
 				FROM (
-					SELECT COUNT(t2.cev_won)::numeric AS situations, SUM(t2.cev_won) AS cev, SUM(t2.chips_won) as amt_won, SUM(t2.cev_won / t2.amt_bb) AS aBB, MAX(t2.t_date) AS t_date 
+					SELECT COUNT(DISTINCT t2.tourney_id)::numeric AS count_tourneys, COUNT(t2.cev_won)::numeric AS situations, SUM(t2.cev_won) AS cev, SUM(t2.chips_won) as amt_won, SUM(t2.cev_won / t2.amt_bb) AS aBB, MAX(t2.t_date) AS t_date 
 						FROM (
 							SELECT ha->'Info'->>'TournamentIdBySite' AS tourney_id, (ha->'SeatActions'->'@hero'->'CevWon')::numeric AS cev_won, (ha->'SeatActions'->'@hero'->'ChipsWon')::numeric AS chips_won,
 									(ha->'Info'->'Amt_bb')::numeric AS amt_bb, TO_DATE((ha->'Info'->>'Date')::text, 'YYYY-MM-DD') AS t_date	
@@ -34,8 +34,24 @@ namespace TrackerLibrary.Queries.NoSQL
 												FROM hands h
 												CROSS JOIN LATERAL jsonb_each(h.data->'SeatActions') AS t(k,v)
 												WHERE t.k @regList AND t.v->'SeatPosition' = '@posVillain')  t1
-							WHERE ha->'SeatActions'->'@hero'->'SeatPosition' = '@posHero'
+							WHERE ha->'SeatActions'->'@hero'->'SeatPosition' = '@posHero' AND ha->'Info'->> 'CntPlayers' = '@cntPlayers' @whereClause
 							GROUP BY tourney_id, t1.ha
+							ORDER BY tourney_id 
+							) t2
+						GROUP BY DATE_TRUNC('month',t2.t_date)
+						ORDER BY DATE_TRUNC('month',t2.t_date) DESC 
+					) t3";
+
+		public static string sql_ExportTlpOverviewAsJSON_CevTotal_GroupByMonths =
+            @"SELECT array_to_json(array_agg(row_to_json(t3)))
+				FROM (
+					SELECT COUNT(DISTINCT t2.tourney_id)::numeric AS count_tourneys, COUNT(t2.cev_won)::numeric AS situations, SUM(t2.cev_won) AS cev, SUM(t2.chips_won) as amt_won, SUM(t2.cev_won / t2.amt_bb) AS aBB, MAX(t2.t_date) AS t_date 
+						FROM (
+							SELECT data->'Info'->>'TournamentIdBySite' AS tourney_id, (data->'SeatActions'->'@hero'->'CevWon')::numeric AS cev_won, (data->'SeatActions'->'@hero'->'ChipsWon')::numeric AS chips_won,
+									(data->'Info'->'Amt_bb')::numeric AS amt_bb, TO_DATE((data->'Info'->>'Date')::text, 'YYYY-MM-DD') AS t_date	
+										FROM hands
+							WHERE data->'Info'->>'TournamentType' = '@tourneyType' @whereClause
+							GROUP BY tourney_id, hands.data
 							ORDER BY tourney_id 
 							) t2
 						GROUP BY DATE_TRUNC('month',t2.t_date)

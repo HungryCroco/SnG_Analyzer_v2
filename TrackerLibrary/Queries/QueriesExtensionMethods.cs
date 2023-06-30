@@ -8,7 +8,7 @@ namespace TrackerLibrary.Queries
 {
     public static class QueriesExtensionMethods
     {
-        public static string ConcatQueries(this string mainQuery, string whereClause = "", string hero = "", string tourneyType = "", int posHero = 0, int posVillain = 0, string regList = "")
+        public static string ConcatQueries(this string mainQuery, string whereClause = "", string hero = "", int cntPlayers = 0, string tourneyType = "", int posHero = 0, int posVillain = 0, string regList = "")
         {
 
             string output = mainQuery;
@@ -20,6 +20,11 @@ namespace TrackerLibrary.Queries
             if (mainQuery.Contains("@hero"))
             {
                 output = output.Replace("@hero", hero);
+            }
+
+            if (mainQuery.Contains("@cntPlayers"))
+            {
+                output = output.Replace("@cntPlayers", cntPlayers.ToString());
             }
 
             if (mainQuery.Contains("@tourneyType"))

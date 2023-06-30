@@ -31,18 +31,18 @@ namespace TrackerUI.ChildForms
 
         private void PrintConsole()
         {
-            const string pfEA = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\eaPF_a.txt";
-            float[,,,] ea = EVCalculator.ImportDLL.ReadEAFromFileAsFloatArray(pfEA);
+            
+            float[,,,] ea = EVCalculator.ImportDLL.ReadEAFromFileAsFloatArray(GlobalConfig.pfEA);
 
-            string directoryHH = @"C:\Users\tatsi\source\repos\Poker\HH SpinAndGo";
-            string hhFileName = "ps_com.txt"; // ps_com.txt";//"EV_Calcs.txt";
-            string entireHH = GlobalConfig.FullFilePath(hhFileName, directoryHH).ReadFileReturnString();
+            
+
+            string entireHH = GlobalConfig.FullFilePath(GlobalConfig.hhFileName, GlobalConfig.directoryHH).ReadFileReturnString();
 
             string[] splitString = entireHH.SplitStringBySize(60000);
 
             foreach (string hh in splitString)
             {
-                NoSQL_Connector.InsertToNoSqlDb(GlobalConfig.dbName, GlobalConfig.tableName, GlobalConfig.columnName, HHReader.ReadHands(hh));
+                NoSQL_Connector.InsertHandsToNoSqlDb(GlobalConfig.dbName, GlobalConfig.tableName, GlobalConfig.columnName, HHReader.ReadHands(hh));
             }
         }
 

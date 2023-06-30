@@ -26,7 +26,7 @@ namespace TrackerLibrary.Models
         public double Abi { get; set; }
 
         [JsonProperty("count_tourneys")]
-        public int Count_tourney { get; set; }
+        public int Count_tourneys { get; set; }
 
         [JsonProperty("situations")]
         public int Situations { get; set; }

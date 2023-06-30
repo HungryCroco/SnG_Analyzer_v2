@@ -35,7 +35,7 @@ namespace TrackerLibrary
             return CardEnum._UC;
         }
 
-        public static uint ConvertCardstringToUint(this string card)
+        public static uint ConvertCardStringToUint(this string card)
         {
             try
             {
@@ -109,13 +109,50 @@ namespace TrackerLibrary
                     return 0;
             }       
         }
+
+        public static string CalculateHoleCardsSimple(string hc1, string hc2)
+        {
+            string output = "";
+            string temp = "";
+            if (hc1[0].ConvertCardFacestringToUint(0) > hc2[0].ConvertCardFacestringToUint(0))
+            {
+                temp = hc1;
+                hc1 = hc2;
+                hc2 = temp;
+            }
+            if (hc1 != "")
+            {
+                output += hc1[0];
+                output += hc2[0];
+                if (hc1[0] != hc2[0])
+                {
+                    if (hc1[1] == hc2[1])
+                    {
+                        output += "s";
+                    }
+                    else
+                    {
+                        output += "o";
+                    }
+                } 
+            }
+            
+            return output;     
+        }
+
+
+
+        public static int ConvertHoleCardsSimpleToEnum(string hcsSimple)
+        {
+            int output = 0;
+            if (hcsSimple != "XX")
+            {
+                output = (int)Enum.Parse<CardAllSimple>("_" + hcsSimple);
+            }
+            return output;
+        }
     }
 
-    public enum DatabaseType
-    {
-        MicrosoftSqlServer,
-        PostgreSQL
-    }
     public enum Position
     {
         Empty = 0,
@@ -194,6 +231,7 @@ namespace TrackerLibrary
 
     public enum CardAllSimple
     {
+        [Description("")] _ = 0,
         [Description("AA")] _AA = 1,
         [Description("AKo")] _AKo = 2,
         [Description("AKs")] _AKs = 3,

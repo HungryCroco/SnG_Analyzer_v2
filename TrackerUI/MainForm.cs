@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackerUI.ChildForms;
 
 namespace TrackerUI
 {
@@ -40,17 +41,30 @@ namespace TrackerUI
 
         }
 
-        private void btnDashBoard_Click(object sender, EventArgs e)
+        private async void btnDashBoard_Click(object sender, EventArgs e)
         {
-            Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Dashboard(), sender); });
-
-            //OpenChildForm(new ChildForms.Dashboard(), sender);
+            OpenChildForm(new ChildForms.Loading(), sender);
+            Task openDashboardForm = Task.Run(() => { OpenChildForm(new ChildForms.Dashboard(), sender); });
         }
 
-        private void btnCEV_Click(object sender, EventArgs e)
+        private async void btnCEV_Click(object sender, EventArgs e)
         {
-
+            Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Loading(), sender); });
         }
+
+        //private async void btnDashBoard_Click(object sender, EventArgs e)
+        //{
+        //    //OpenChildForm(new ChildForms.Loading(), sender);
+        //    Task loadingTask = Task.Run(() => { OpenChildForm(new ChildForms.Loading(), sender); });
+        //    Task dashboardTask = Task.Run(() => { OpenChildForm(new ChildForms.Dashboard(), sender); });
+
+        //    await Task.WhenAll(loadingTask, dashboardTask);
+        //}
+
+        //private void btnCEV_Click(object sender, EventArgs e)
+        //{
+        //    Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Loading(), sender); });
+        //}
 
         private void btnBoard_Click(object sender, EventArgs e)
         {
@@ -66,48 +80,154 @@ namespace TrackerUI
         private void btnImport_Click(object sender, EventArgs e)
         {
             Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Import(), sender); });
-            //OpenChildForm(new ChildForms.Import(), sender);
         }
+
+        
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
 
         }
 
-        
+        //private void OpenChildForm(Type childFormType, object sender)
+        //{
+        //    if (activeForm != null && !activeForm.IsDisposed)
+        //    {
+        //        if (activeForm.IsHandleCreated)
+        //        {
+        //            activeForm.Invoke((MethodInvoker)(() =>
+        //            {
+        //                activeForm.Close();
+        //                activeForm.Dispose();
+        //            }));
+        //        }
+        //        else
+        //        {
+        //            activeForm.Close();
+        //            activeForm.Dispose();
+        //        }
+        //    }
+
+        //    Form childForm = (Form)Activator.CreateInstance(childFormType);
+        //    activeForm = childForm;
+        //    childForm.TopLevel = false;
+        //    childForm.FormBorderStyle = FormBorderStyle.None;
+        //    childForm.Dock = DockStyle.Fill;
+
+        //    panelDesktop.Invoke((MethodInvoker)(() =>
+        //    {
+        //        panelDesktop.Controls.Add(childForm);
+        //        panelDesktop.Tag = childForm;
+        //        childForm.Show();
+        //        childForm.BringToFront();
+        //        panel_ArrowShow.BringToFront();
+        //    }));
+        //}
 
 
-
-
-
-
-        private void OpenChildForm(Form _childForm, object sender)
+        private void OpenChildForm(Form childForm, object sender)
         {
-            if (activeForm != null)
+            if (activeForm != null && !activeForm.IsDisposed)
             {
-                this.activeForm.Invoke((MethodInvoker)(() => activeForm.Close()));
-                //activeForm.Close();
+                if (activeForm.IsHandleCreated)
+                {
+                    activeForm.Invoke((MethodInvoker)(() =>
+                    {
+                        activeForm.Close();
+                        activeForm.Dispose();
+                    }));
+                }
+                else
+                {
+                    activeForm.Close();
+                    activeForm.Dispose();
+                }
             }
-            activeForm = _childForm;
-            _childForm.TopLevel = false;
-            _childForm.FormBorderStyle = FormBorderStyle.None;
-            _childForm.Dock = DockStyle.Fill;
-            //this.panelDesktop.Controls.Add(_childForm);
-            //this.panelDesktop.Tag = _childForm;
-            //_childForm.Show();
-            //_childForm.BringToFront();
-            //panel_ArrowShow.BringToFront();
 
-            this.panelDesktop.Invoke((MethodInvoker)(() => this.panelDesktop.Controls.Add(_childForm)));
-            this.panelDesktop.Invoke((MethodInvoker)(() => this.panelDesktop.Tag = _childForm));
-            this.panelDesktop.Invoke((MethodInvoker)(() => _childForm.Show()));
-            this.panelDesktop.Invoke((MethodInvoker)(() => _childForm.BringToFront()));
-            this.panelDesktop.Invoke((MethodInvoker)(() => panel_ArrowShow.BringToFront()));
-            //label1.Invoke((MethodInvoker)(() => label1.Text = " "));
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
 
-            
-
+            panelDesktop.Invoke((MethodInvoker)(() =>
+            {
+                panelDesktop.Controls.Add(childForm);
+                panelDesktop.Tag = childForm;
+                childForm.Show();
+                childForm.BringToFront();
+                panel_ArrowShow.BringToFront();
+            }));
         }
+
+        //private async Task OpenChildForm(Type childFormType, object sender)
+        //{
+        //    if (activeForm != null && !activeForm.IsDisposed)
+        //    {
+        //        if (activeForm.IsHandleCreated)
+        //        {
+        //            await Task.Factory.FromAsync(activeForm.BeginInvoke(new MethodInvoker(() =>
+        //            {
+        //                activeForm.Close();
+        //                activeForm.Dispose();
+        //            })), activeForm.EndInvoke);
+        //        }
+        //        else
+        //        {
+        //            activeForm.Close();
+        //            activeForm.Dispose();
+        //        }
+        //    }
+
+        //    Form childForm = (Form)Activator.CreateInstance(childFormType);
+        //    activeForm = childForm;
+        //    childForm.TopLevel = false;
+        //    childForm.FormBorderStyle = FormBorderStyle.None;
+        //    childForm.Dock = DockStyle.Fill;
+
+        //    await Task.Factory.FromAsync(panelDesktop.BeginInvoke(new MethodInvoker(() =>
+        //    {
+        //        panelDesktop.Controls.Add(childForm);
+        //        panelDesktop.Tag = childForm;
+        //        childForm.Show();
+        //        childForm.BringToFront();
+        //        panel_ArrowShow.BringToFront();
+        //    })), panelDesktop.EndInvoke);
+        //}
+
+
+        //private async void OpenChildForm(Form childForm, object sender)
+        //{
+        //    if (activeForm != null)
+        //    {
+        //        activeForm.Close();
+        //        activeForm.Dispose();
+        //    }
+
+        //    // Show the loading form
+        //    Loading loadingForm = new Loading();
+        //    loadingForm.Show();
+
+        //    // Run the task asynchronously
+        //    //await Task.Run(() =>
+        //    //{
+        //    //    Form form = childForm;
+        //    //    Thread.Sleep(3000);
+        //    //});
+
+        //    // Hide the loading form
+        //    loadingForm.Close();
+        //    loadingForm.Dispose();
+
+        //    // Show the child form
+        //    activeForm = childForm;
+        //    childForm.TopLevel = false;
+        //    childForm.FormBorderStyle = FormBorderStyle.None;
+        //    childForm.Dock = DockStyle.Fill;
+        //    panelDesktop.Controls.Add(childForm);
+        //    childForm.Show();
+        //    childForm.BringToFront();
+        //}
+
 
 
 

@@ -127,7 +127,7 @@ namespace TrackerLibrary
             List<(string, HoleCards)> sawShowdown_Players = new();
             for (int i = 0; i < regexHand.Groups["ShowDown_Player"].Captures.Count; i++)
             {
-                sawShowdown_Players.Add((regexHand.Groups["ShowDown_Player"].Captures[i].Value, new HoleCards { HC1 = new Card { Id = regexHand.Groups["ShowDown_HC1"].Captures[i].Value.ConvertCardstringToUint(), Name = regexHand.Groups["ShowDown_HC1"].Captures[i].Value }, HC2 = new Card { Id = regexHand.Groups["ShowDown_HC2"].Captures[i].Value.ConvertCardstringToUint(), Name = regexHand.Groups["ShowDown_HC2"].Captures[i].Value } }));
+                sawShowdown_Players.Add((regexHand.Groups["ShowDown_Player"].Captures[i].Value, new HoleCards { HC1 = new Card { Id = regexHand.Groups["ShowDown_HC1"].Captures[i].Value.ConvertCardStringToUint(), Name = regexHand.Groups["ShowDown_HC1"].Captures[i].Value }, HC2 = new Card { Id = regexHand.Groups["ShowDown_HC2"].Captures[i].Value.ConvertCardStringToUint(), Name = regexHand.Groups["ShowDown_HC2"].Captures[i].Value } }));
             }
 
             List<string> players = new();
@@ -160,13 +160,13 @@ namespace TrackerLibrary
                 CntPlayers_River = Convert.ToUInt16(regexHand.Groups["RiverAction_Player"].Captures.Count()),
                 CntPlayers_Showdown = Convert.ToUInt16(regexHand.Groups["RC"].Value != "" ? regexHand.Groups["ShowDown_Player"].Captures.Count() : 0),
                 PfPot = pfPot,
-                HC1 = new Card { Id = regexHand.Groups["HC1"].Value.ConvertCardstringToUint(), Name = regexHand.Groups["HC1"].Value },
-                HC2 = new Card { Id = regexHand.Groups["HC2"].Value.ConvertCardstringToUint(), Name = regexHand.Groups["HC2"].Value },
-                FC1 = new Card { Id = regexHand.Groups["FC1"].Value.ConvertCardstringToUint(), Name = regexHand.Groups["FC1"].Value },
-                FC2 = new Card { Id = regexHand.Groups["FC2"].Value.ConvertCardstringToUint(), Name = regexHand.Groups["FC2"].Value },
-                FC3 = new Card { Id = regexHand.Groups["FC3"].Value.ConvertCardstringToUint(), Name = regexHand.Groups["FC3"].Value },
-                TC = new Card { Id = regexHand.Groups["TC"].Value.ConvertCardstringToUint(), Name = regexHand.Groups["TC"].Value },
-                RC = new Card { Id = regexHand.Groups["RC"].Value.ConvertCardstringToUint(), Name = regexHand.Groups["RC"].Value },
+                HC1 = new Card { Id = regexHand.Groups["HC1"].Value.ConvertCardStringToUint(), Name = regexHand.Groups["HC1"].Value },
+                HC2 = new Card { Id = regexHand.Groups["HC2"].Value.ConvertCardStringToUint(), Name = regexHand.Groups["HC2"].Value },
+                FC1 = new Card { Id = regexHand.Groups["FC1"].Value.ConvertCardStringToUint(), Name = regexHand.Groups["FC1"].Value },
+                FC2 = new Card { Id = regexHand.Groups["FC2"].Value.ConvertCardStringToUint(), Name = regexHand.Groups["FC2"].Value },
+                FC3 = new Card { Id = regexHand.Groups["FC3"].Value.ConvertCardStringToUint(), Name = regexHand.Groups["FC3"].Value },
+                TC = new Card { Id = regexHand.Groups["TC"].Value.ConvertCardStringToUint(), Name = regexHand.Groups["TC"].Value },
+                RC = new Card { Id = regexHand.Groups["RC"].Value.ConvertCardStringToUint(), Name = regexHand.Groups["RC"].Value },
                 TotalPot = (regexHand.Groups["TotalPot"].Value != "" ? float.Parse(regexHand.Groups["TotalPot"].Value) : 0),
                 SidePots = sidePots,
                 SawShowdown_Players = sawShowdown_Players,
@@ -248,8 +248,9 @@ namespace TrackerLibrary
                 currPlayer = regexHand.Groups["Summary_Player"].Captures[i].ToString();
                 if (regexHand.Groups["Summary_HC1"].Captures.Count > 0)
                 {
-                    actions.Item2[currPlayer].HC1 = regexHand.Groups["Summary_HC1"].Captures[i].Value.ConvertCardstringToUint();
-                    actions.Item2[currPlayer].HC2 = regexHand.Groups["Summary_HC2"].Captures[i].Value.ConvertCardstringToUint();
+                    actions.Item2[currPlayer].HC1 = new Card { Id = regexHand.Groups["Summary_HC1"].Captures[i].Value.ConvertCardStringToUint(), Name = regexHand.Groups["Summary_HC1"].Captures[i].Value };
+                    actions.Item2[currPlayer].HC2 = new Card { Id = regexHand.Groups["Summary_HC2"].Captures[i].Value.ConvertCardStringToUint(), Name = regexHand.Groups["Summary_HC2"].Captures[i].Value };
+                    actions.Item2[currPlayer].HCsAsNumber = EnumExtensionMethods.ConvertHoleCardsSimpleToEnum(EnumExtensionMethods.CalculateHoleCardsSimple(regexHand.Groups["Summary_HC1"].Captures[i].Value, regexHand.Groups["Summary_HC2"].Captures[i].Value ));
 
                     actions.Item2[currPlayer].ChipsWon = float.Parse(regexHand.Groups["Summary_AmountCollected"].Captures[i].ToString());
                     if (float.Parse(regexHand.Groups["Summary_AmountCollected"].Captures[i].ToString()) > 0)

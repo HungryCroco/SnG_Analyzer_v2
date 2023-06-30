@@ -63,6 +63,8 @@ namespace TrackerLibrary.Models
         public UInt16 CntPlayers_River { get; set; }
         public UInt16 CntPlayers_Showdown { get; set; }
         public List<string> Players { get; set; }
+        public string pf_aggressors { get; set; }
+        public string pf_actors { get; set; }
 
 
         public List<(string, HoleCards)> SawShowdown_Players { get; set; }

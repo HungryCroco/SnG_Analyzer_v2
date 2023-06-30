@@ -46,6 +46,7 @@ namespace TrackerLibrary.CRUD
             catch (Exception)
             {
             }
+
             try
             {
                 connection = new NpgsqlConnection(GetConnectionString(dbName));
@@ -56,10 +57,40 @@ namespace TrackerLibrary.CRUD
             catch (Exception)
             {
             }
+
+
+            try
+            {
+                connection = new NpgsqlConnection(GetConnectionString(dbName));
+                var cmd_updateDB = new NpgsqlCommand($"ALTER TABLE {tableName} ADD COLUMN {columnName} jsonb;", connection);
+                connection.Open();
+                cmd_updateDB.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+            }
             connection.Close();
         }
 
-        public static void InsertToNoSqlDb(string dbName, string tableName, string columnName , List<Hand> hands)
+        public static void CreateDashBoardTable(string dbName, string tableName)
+        {
+            NpgsqlConnection connection = new();
+
+            try
+            {
+                connection = new NpgsqlConnection(GetConnectionString(dbName));
+                var cmd_updateDB = new NpgsqlCommand($"CREATE TABLE {tableName}(player text, tourneyType text, data jsonb)TABLESPACE pg_default;", connection);
+                connection.Open();
+                cmd_updateDB.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+            }
+
+            connection.Close();
+        }
+
+        public static void InsertHandsToNoSqlDb(string dbName, string tableName, string columnName , List<Hand> hands)
         {
             Stopwatch watch = new Stopwatch();
             watch.Start();
@@ -84,6 +115,37 @@ namespace TrackerLibrary.CRUD
 
             Console.WriteLine("-----");
             Console.WriteLine("Import Time: " + watch.ElapsedMilliseconds / 1000.0 + "s");
+        }
+
+        public static void InsertDashBoardModelToNoSqlDb(string dbName, string tableName, string activePlayer, string tourneyType, DashBoardModel dashboardModel)
+        {
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+            CreateDashBoardTable(dbName, tableName);
+
+            var serializedDashBoardModel = System.Text.Json.JsonSerializer.Serialize(dashboardModel);
+            using (NpgsqlConnection connection = new NpgsqlConnection(GetConnectionString(dbName)))
+            {
+                connection.Open();
+                //using (var importer = connection.BeginBinaryImport($"COPY {tableName} ( player, tourneyType, data ) FROM STDIN (FORMAT BINARY)"))
+                //{
+                //    importer.StartRow();
+                //    importer.Write((activePlayer, tourneyType, serializedDashBoardModel), NpgsqlTypes.NpgsqlDbType.Jsonb);
+
+                //    importer.Complete();
+                //}
+
+                using (var importer = connection.BeginBinaryImport($"COPY {tableName} (player, tourneyType, data) FROM STDIN (FORMAT BINARY)"))
+                {
+                    importer.StartRow();
+                    importer.Write(activePlayer, NpgsqlTypes.NpgsqlDbType.Text);
+                    importer.Write(tourneyType, NpgsqlTypes.NpgsqlDbType.Text);
+                    importer.Write(serializedDashBoardModel, NpgsqlTypes.NpgsqlDbType.Jsonb);
+
+                    importer.Complete();
+                }
+                connection.Close();
+            }
         }
 
         public static HashSet<Hand> ReturnHashSetWithUniqueHands(this List<Hand> handsToImport, string dbName)
@@ -188,6 +250,30 @@ namespace TrackerLibrary.CRUD
             }
 
             return JsonConvert.DeserializeObject<List<CevModel>>(output);
+        }
+
+        public static DashBoardModel GetDashBoardModel(string activePlayer, string tourneyType)
+        {
+            string output;
+            try
+            {
+                using (var _conn = new NpgsqlConnection(GetConnectionString(GlobalConfig.dbName)))
+                {
+                    _conn.Open();
+                    using (var _cmd = new NpgsqlCommand($"SELECT data FROM dashboard WHERE player = '{activePlayer}' AND tourneytype = '{tourneyType}';", _conn))
+                    {
+                        output = _cmd.ExecuteScalar().ToString();
+                    }
+                    _conn.Close();
+                }
+
+                return JsonConvert.DeserializeObject<DashBoardModel>(output);
+            }
+            catch (Exception)
+            {
+            }
+
+            return new DashBoardModel();
         }
     }
 }
