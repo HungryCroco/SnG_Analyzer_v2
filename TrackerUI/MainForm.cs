@@ -74,7 +74,7 @@ namespace TrackerUI
         private void btnVillian_Click(object sender, EventArgs e)
         {
 
-            //OpenChildForm(new ChildForms.HeatMap(), sender);
+            Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.HeatMap(), sender); });
         }
 
         private void btnImport_Click(object sender, EventArgs e)

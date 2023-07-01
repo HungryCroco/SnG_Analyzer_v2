@@ -13,26 +13,26 @@ namespace TrackerLibrary.Models
         //[JsonProperty("num")]
         //public int CardId { get; set; }
 
-        [JsonProperty("cev")]
+        [JsonProperty("Cev")]
         public double Cev { get; set; }
 
-        [JsonProperty("aBB")]
+        [JsonProperty("Abb")]
         public double Abb { get; set; }
 
-        [JsonProperty("amt_won")]
+        [JsonProperty("Amt_won")]
         public double Amt_won { get; set; }
 
-        [JsonProperty("aBI")]
+        [JsonProperty("Abi")]
         public double Abi { get; set; }
 
-        [JsonProperty("count_tourneys")]
+        [JsonProperty("Count_tourneys")]
         public int Count_tourneys { get; set; }
 
-        [JsonProperty("situations")]
+        [JsonProperty("Situations")]
         public int Situations { get; set; }
 
-        [JsonProperty("t_date")]
-        public DateTime Date { get; set; }
+        [JsonProperty("T_Date")]
+        public DateTime T_Date { get; set; }
 
 
         public CevModel()

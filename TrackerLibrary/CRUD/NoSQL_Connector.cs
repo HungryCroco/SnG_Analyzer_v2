@@ -127,13 +127,7 @@ namespace TrackerLibrary.CRUD
             using (NpgsqlConnection connection = new NpgsqlConnection(GetConnectionString(dbName)))
             {
                 connection.Open();
-                //using (var importer = connection.BeginBinaryImport($"COPY {tableName} ( player, tourneyType, data ) FROM STDIN (FORMAT BINARY)"))
-                //{
-                //    importer.StartRow();
-                //    importer.Write((activePlayer, tourneyType, serializedDashBoardModel), NpgsqlTypes.NpgsqlDbType.Jsonb);
 
-                //    importer.Complete();
-                //}
 
                 using (var importer = connection.BeginBinaryImport($"COPY {tableName} (player, tourneyType, data) FROM STDIN (FORMAT BINARY)"))
                 {
@@ -235,21 +229,23 @@ namespace TrackerLibrary.CRUD
             return JsonConvert.DeserializeObject<List<CevModel>>(output);
         }
 
-        public static List<CevModel> GetCevChartParallel(this string sqlQuery)
+        public static List<T> GetCevChartParallel<T>(this string sqlQuery)
         {
             string output;
 
-            using (var _conn = new NpgsqlConnection(GetConnectionString(GlobalConfig.dbName)))
+            using (var conn = new NpgsqlConnection(GetConnectionString(GlobalConfig.dbName)))
             {
-                _conn.Open();
-                using (var _cmd = new NpgsqlCommand(sqlQuery, _conn))
-                { 
-                    output = _cmd.ExecuteScalar().ToString();
+                conn.Open();
+                using (var cmd = new NpgsqlCommand(sqlQuery, conn))
+                {
+                    cmd.CommandTimeout = 1000;
+                    output = cmd.ExecuteScalar().ToString();
+                    
                 }
-                _conn.Close();
+                conn.Close();
             }
 
-            return JsonConvert.DeserializeObject<List<CevModel>>(output);
+            return JsonConvert.DeserializeObject<List<T>>(output);
         }
 
         public static DashBoardModel GetDashBoardModel(string activePlayer, string tourneyType)

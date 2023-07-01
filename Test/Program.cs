@@ -25,7 +25,7 @@ namespace Test
             watch.Start();
 
 
-            var  test = NoSQL_CalculateDB.RequestDashBoard("IPray2Buddha", "3-max");
+            var  test = NoSQL_CalculateDashBoard.RequestDashBoard("IPray2Buddha", "3-max");
             
 
 

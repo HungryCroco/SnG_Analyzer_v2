@@ -28,7 +28,7 @@ namespace TrackerUI.ChildForms
             
             chb_3_3.Checked = true;
 
-            DashBoardModel dashboard = NoSQL_CalculateDB.RequestDashBoard("IPray2Buddha", "3-max");
+            DashBoardModel dashboard = NoSQL_CalculateDashBoard.RequestDashBoard("IPray2Buddha", "3-max");
 
             LoadChart(PlotDataFromCevModelList(dashboard.CevModel_Total_ByTournament, 200, "CEV/t", 3), PlotDataFromCevModelList(dashboard.CevModel_Total_ByTournament, 200, "Chips/t", 2));
             tlp_overview_Calculate(dashboard, 0);
@@ -129,14 +129,14 @@ namespace TrackerUI.ChildForms
             for (int i = 0; i < dashBoardModel.CevModel_Total_ByMonth.Count; i++)
             {
 
-                string currPeriod = dashBoardModel.CevModel_Total_ByMonth[i].Date.ToString("MMMM.yy");
+                string currPeriod = dashBoardModel.CevModel_Total_ByMonth[i].T_Date.ToString("MMMM.yy");
 
                 if (dashBoardModel.CevModel_Total_ByMonth[i].Count_tourneys > _minTourneys)
                 {
                     AddNewRowToTlpOverview(ref currRow);
 
                     //tlpOverview_Month
-                    tlp_overview.GetControlFromPosition(0, currRow).Text = dashBoardModel.CevModel_Total_ByMonth[i].Date.ToString("yy-MMM").ToUpper();
+                    tlp_overview.GetControlFromPosition(0, currRow).Text = dashBoardModel.CevModel_Total_ByMonth[i].T_Date.ToString("yy-MMM").ToUpper();
 
                     //tlpOverview_TourneysPlayed
                     tlp_overview.GetControlFromPosition(1, currRow).Text = dashBoardModel.CevModel_Total_ByMonth[i].Count_tourneys.ToString();
@@ -299,7 +299,7 @@ namespace TrackerUI.ChildForms
         {
             foreach (var month in cevModels)
             {
-                if (currPeriod == month.Date.ToString("MMMM.yy"))
+                if (currPeriod == month.T_Date.ToString("MMMM.yy"))
                 {
                     tlp_overview.GetControlFromPosition(currCol, currRow).Text = Double.Parse((month.Abb / month.Situations).ToString()).ToString("F2");
                     tlp_overview.GetControlFromPosition(currCol, currRow).MouseEnter += new System.EventHandler(this.tlp_MouseEnter);
@@ -312,12 +312,12 @@ namespace TrackerUI.ChildForms
         {
             foreach (var month_L1 in dashBoardModel.CevModel_HU_SBvFISH)
             {
-                if (currPeriod == month_L1.Date.ToString("MMMM.yy"))
+                if (currPeriod == month_L1.T_Date.ToString("MMMM.yy"))
                 {
 
                     foreach (var month_L2 in dashBoardModel.CevModel_HU_SBvREG)
                     {
-                        if (currPeriod == month_L2.Date.ToString("MMMM.yy"))
+                        if (currPeriod == month_L2.T_Date.ToString("MMMM.yy"))
                         {
                             tlp_overview.GetControlFromPosition(18, currRow).Text = Double.Parse((month_L1.Situations * 100 / (month_L1.Situations + month_L2.Situations)).ToString()).ToString("F0");
                             break;
