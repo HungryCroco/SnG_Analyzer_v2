@@ -96,9 +96,14 @@ namespace TrackerUI.ChildForms
         {
             DateTime startTime = DateTime.Now;
 
+
             var request = NoSQL_CalculateHeatMap.RequestStatsModel_BvbIso(hero, tourneyType, sinceDate, ai, size, vs);
 
             int statsMaxValue = 0;
+            if (request != null)
+            {
+
+            
             foreach (var stats in request)
             {
                 if (stats.Situations > statsMaxValue)
@@ -122,12 +127,19 @@ namespace TrackerUI.ChildForms
                 catch { }
             }
 
+            }
+
             // calculate time:
             var calculatingTime = (DateTime.Now - startTime).TotalSeconds;
             labelCalculatingTime.Text = "Calculating Time: " + calculatingTime.ToString("0.00");
         }
 
-        private void btn_Request_MouseClick(object sender, MouseEventArgs e)
+        private void labelCalculatingTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Request_Click(object sender, EventArgs e)
         {
             LoadHeatMap(txtBoxPlayer.Text, txtBoxTourneyType.Text, txtBoxDate.Text, comboBoxAI.SelectedValue.ToString(), txtBoxSize.Text, comboBoxVs.SelectedValue.ToString());
         }

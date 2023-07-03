@@ -17,7 +17,7 @@ namespace TrackerLibrary.CRUD
 
         public static List<StatsModel> RequestStatsModel_BvbIso(string hero, string tourneyType, string sinceDate, string ai, string size, string vs)
         {
-            return QueriesExtensionMethods.ConcatQueries(HeatMapQueries.sql_ExportHeatMapAsJSON_BvB_Iso, hero: hero, tourneyType: tourneyType, date: sinceDate, AI: ai, size: size, regList: GlobalConfig.regList.ReadRegList(vs == "REGs" ? true : false)).GetCevChartParallel<StatsModel>();
+            return QueriesExtensionMethods.ConcatQueries(HeatMapQueries.sql_ExportHeatMapAsJSON_BvB_Iso, hero: hero, tourneyType: tourneyType, date: sinceDate, AI: ai, size: size, regList: GlobalConfig.regList.ReadRegList(vs == "regs" ? true : false)).GetCevChartParallel<StatsModel>();
         }
 
         

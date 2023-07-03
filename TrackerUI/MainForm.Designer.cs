@@ -60,7 +60,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(450, 1009);
+            this.panelMenu.Size = new System.Drawing.Size(450, 1631);
             this.panelMenu.TabIndex = 1;
             // 
             // btnSettings
@@ -227,7 +227,7 @@
             this.panelDesktop.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelDesktop.Location = new System.Drawing.Point(450, 0);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1444, 1009);
+            this.panelDesktop.Size = new System.Drawing.Size(2402, 1631);
             this.panelDesktop.TabIndex = 3;
             // 
             // panel_ArrowShow
@@ -261,10 +261,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1894, 1009);
+            this.ClientSize = new System.Drawing.Size(2852, 1631);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelMenu);
-            this.MinimumSize = new System.Drawing.Size(960, 540);
+            this.MinimumSize = new System.Drawing.Size(2878, 1702);
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
