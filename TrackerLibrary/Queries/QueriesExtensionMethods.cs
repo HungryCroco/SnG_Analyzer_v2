@@ -8,58 +8,78 @@ namespace TrackerLibrary.Queries
 {
     public static class QueriesExtensionMethods
     {
-        public static string ConcatQueries(this string mainQuery, string whereClause = "", string hero = "", int cntPlayers = 0, string tourneyType = "", int posHero = 0, int posVillain = 0, string regList = "", string date ="", string AI ="", string size ="")
+        public static string ConcatQueries(this string mainQuery, string whereClauseQuery = "", string whereClauseHero = "", string whereClauseVillain = "", string hero = "", int cntPlayers = 0, string tourneyType = "", int posHero = 0, int posVillain = 0, string regList = "", string date ="", string AI ="", string size ="", string effStack = "0",string hcsId = "")
         {
 
             string output = mainQuery;
-            if (mainQuery.Contains("@whereClause"))
+            if (output.Contains("@whereClauseQuery"))
             {
-                output = output.Replace("@whereClause", whereClause);
+                output = output.Replace("@whereClauseQuery", whereClauseQuery);
             }
 
-            if (mainQuery.Contains("@hero"))
+            if (output.Contains("@whereClauseHero"))
+            {
+                output = output.Replace("@whereClauseHero", whereClauseHero);
+            }
+
+            if (output.Contains("@whereClauseVillain"))
+            {
+                output = output.Replace("@whereClauseVillain", whereClauseVillain);
+            }
+
+            if (output.Contains("@hero"))
             {
                 output = output.Replace("@hero", hero);
             }
 
-            if (mainQuery.Contains("@cntPlayers"))
+            if (output.Contains("@cntPlayers"))
             {
                 output = output.Replace("@cntPlayers", cntPlayers.ToString());
             }
 
-            if (mainQuery.Contains("@tourneyType"))
+            if (output.Contains("@tourneyType"))
             {
                 output = output.Replace("@tourneyType", tourneyType);
             }
 
-            if (mainQuery.Contains("@posHero"))
+            if (output.Contains("@posHero"))
             {
                 output = output.Replace("@posHero", posHero.ToString());
             }
 
-            if (mainQuery.Contains("@posVillain"))
+            if (output.Contains("@posVillain"))
             {
                 output = output.Replace("@posVillain", posVillain.ToString());
             }
 
-            if (mainQuery.Contains("@regList"))
+            if (output.Contains("@regList"))
             {
                 output = output.Replace("@regList", regList);
             }
 
-            if (mainQuery.Contains("@date"))
+            if (output.Contains("@date"))
             {
                 output = output.Replace("@date", date);
             }
 
-            if (mainQuery.Contains("@AI"))
+            if (output.Contains("@AI"))
             {
                 output = output.Replace("@AI", AI);
             }
 
-            if (mainQuery.Contains("@size"))
+            if (output.Contains("@size"))
             {
                 output = output.Replace("@size", size);
+            }
+
+            if (output.Contains("@es"))
+            {
+                output = output.Replace("@es", effStack);
+            }
+
+            if (output.Contains("@HCsId"))
+            {
+                output = output.Replace("@HCsId", hcsId);
             }
 
             return output;

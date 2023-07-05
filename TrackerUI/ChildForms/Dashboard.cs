@@ -76,10 +76,15 @@ namespace TrackerUI.ChildForms
             this.splitCnt_Chart.Panel1.Controls.Add(pv);
             pv.Model = new PlotModel { Title = "DashBoard" };
             pv.Model.Legends.Add(new Legend() { LegendTitle = "Stats:", LegendPosition = LegendPosition.TopLeft });
+
             pv.ActualModel.Series.Add(lineSeries1);
             pv.ActualModel.Series.Add(lineSeries2);
-            //CategoryAxis months = PlotDataFromCevModelList_CA(dashBoardData[1]);
-            //pv.ActualModel.Axes.Add(months);
+
+
+            //CategoryAxis tourneys = new CategoryAxis();
+            //pv.ActualModel.Axes.Add(tourneys);
+            //tourneys.MajorStep = 5;
+
             pv.Refresh();
             pv.Invalidate();
             pv.ActualModel.InvalidatePlot(true);

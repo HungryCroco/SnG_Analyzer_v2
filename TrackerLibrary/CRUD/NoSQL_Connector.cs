@@ -12,6 +12,7 @@ using System.Xml.Linq;
 using TrackerLibrary.Queries.NoSQL;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Data;
 
 namespace TrackerLibrary.CRUD
 {
@@ -246,6 +247,36 @@ namespace TrackerLibrary.CRUD
             }
 
             return JsonConvert.DeserializeObject<List<T>>(output);
+        }
+
+        public static DataTable GetView(this string mySqlQuery)
+        {
+            DataTable dt = new DataTable();
+
+            using (var conn = new NpgsqlConnection(GetConnectionString(GlobalConfig.dbName)))
+            {
+                conn.Open();
+                var cmd = new NpgsqlCommand(mySqlQuery, conn); ;
+                NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
+
+
+                try
+                {
+                    da = new NpgsqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    da.Fill(dt);
+
+                    return dt;
+                }
+                catch (Exception ex)
+                {
+
+                    //MessageBox.Show("An error occured: " + ex.Message, "Perform CRUD Operations failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dt = null;
+                }
+                conn.Close();
+            }
+            return dt;
         }
 
         public static DashBoardModel GetDashBoardModel(string activePlayer, string tourneyType)

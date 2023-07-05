@@ -43,8 +43,10 @@ namespace TrackerUI
 
         private async void btnDashBoard_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ChildForms.Loading(), sender);
-            Task openDashboardForm = Task.Run(() => { OpenChildForm(new ChildForms.Dashboard(), sender); });
+            OpenChildForm(new ChildForms.Dashboard(), sender);
+
+            //OpenChildForm(new ChildForms.Loading(), sender);
+            //Task openDashboardForm = Task.Run(() => { OpenChildForm(new ChildForms.Dashboard(), sender); });
         }
 
         private async void btnCEV_Click(object sender, EventArgs e)
@@ -86,7 +88,7 @@ namespace TrackerUI
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-
+            Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Setings(), sender); });
         }
 
         //private void OpenChildForm(Type childFormType, object sender)
@@ -125,6 +127,8 @@ namespace TrackerUI
         //}
 
 
+
+
         private void OpenChildForm(Form childForm, object sender)
         {
             if (activeForm != null && !activeForm.IsDisposed)
@@ -151,6 +155,8 @@ namespace TrackerUI
 
             panelDesktop.Invoke((MethodInvoker)(() =>
             {
+                panelDesktop.Controls.Clear();
+
                 panelDesktop.Controls.Add(childForm);
                 panelDesktop.Tag = childForm;
                 childForm.Show();

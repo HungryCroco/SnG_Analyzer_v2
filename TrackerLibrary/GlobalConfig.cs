@@ -1,6 +1,8 @@
 ﻿
 //using TrackerLibrary.DataAccess;
 using System.Configuration;
+using System.Reflection;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TrackerLibrary
 {
@@ -11,10 +13,13 @@ namespace TrackerLibrary
         public static string user = "postgres";
         public static string pass = "dbpass";
 
-        public static string dbName = "july_50s"; // july_50s";
+        public static string dbName = "test1113"; // july_50s";
         public static string tableName = "hands";
         public static string columnName = "data";
 
+        private static string fullPath =  AppDomain.CurrentDomain.BaseDirectory;
+        private static string projectName = "SnG_Analyzer_v2";
+        public static string projectDirectory = fullPath.Substring(0, fullPath.IndexOf(projectName) + projectName.Length);
 
         public static int minTourney = 500;
         public static string regList = "reglist_small.txt";

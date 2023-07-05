@@ -27,52 +27,52 @@ namespace TrackerLibrary.CRUD
 
         private static List<CevModel> RequestCevModel_3W_BTNvBBvREG(string hero, string tourneyType)
         {
-            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,whereClause: "AND ha->'Info'->> 'pf_actors' LIKE '09%'", hero: hero, cntPlayers:3 , tourneyType: tourneyType, posHero:0 , posVillain:8, regList:GlobalConfig.regList.ReadRegList(true)).GetCevChartParallel<CevModel>();
+            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClauseQuery: "AND ha->'Info'->> 'pf_actors' LIKE '09%'", hero: hero, cntPlayers:3 , tourneyType: tourneyType, posHero:0 , posVillain:8, regList:GlobalConfig.regList.ReadRegList(true)).GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_BTNvBBvFISH(string hero, string tourneyType)
         {
-            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClause: "AND ha->'Info'->> 'pf_actors' LIKE '09%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 0, posVillain: 8, regList: GlobalConfig.regList.ReadRegList(false)).GetCevChartParallel<CevModel>();
+            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClauseQuery: "AND ha->'Info'->> 'pf_actors' LIKE '09%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 0, posVillain: 8, regList: GlobalConfig.regList.ReadRegList(false)).GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_SBvBTNvREG(string hero, string tourneyType)
         {
-            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClause: "AND ha->'Info'->> 'pf_actors' LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 0, regList: GlobalConfig.regList.ReadRegList(true)).GetCevChartParallel<CevModel>();
+            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClauseQuery: "AND ha->'Info'->> 'pf_actors' LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 0, regList: GlobalConfig.regList.ReadRegList(true)).GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_SBvBTNvFISH(string hero, string tourneyType)
         {
-            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClause: "AND ha->'Info'->> 'pf_actors' LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 0, regList: GlobalConfig.regList.ReadRegList(false)).GetCevChartParallel<CevModel>();
+            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClauseQuery: "AND ha->'Info'->> 'pf_actors' LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 0, regList: GlobalConfig.regList.ReadRegList(false)).GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_BBvBTNvREG(string hero, string tourneyType)
         {
-            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClause: "AND ha->'Info'->> 'pf_actors' LIKE '09%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 0, regList: GlobalConfig.regList.ReadRegList(true)).GetCevChartParallel<CevModel>();
+            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClauseQuery: "AND ha->'Info'->> 'pf_actors' LIKE '09%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 0, regList: GlobalConfig.regList.ReadRegList(true)).GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_BBvBTNvFISH(string hero, string tourneyType)
         {
-            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClause: "AND ha->'Info'->> 'pf_actors' LIKE '09%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 0, regList: GlobalConfig.regList.ReadRegList(false)).GetCevChartParallel<CevModel>();
+            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClauseQuery: "AND ha->'Info'->> 'pf_actors' LIKE '09%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 0, regList: GlobalConfig.regList.ReadRegList(false)).GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_SBvBBvREG(string hero, string tourneyType)
         {
-            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClause: "AND ha->'Info'->> 'pf_actors' NOT LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 9, regList: GlobalConfig.regList.ReadRegList(true)).GetCevChartParallel<CevModel>();
+            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClauseQuery: "AND ha->'Info'->> 'pf_actors' NOT LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 9, regList: GlobalConfig.regList.ReadRegList(true)).GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_SBvBBvFISH(string hero, string tourneyType)
         {
-            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClause: "AND ha->'Info'->> 'pf_actors' NOT LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 9, regList: GlobalConfig.regList.ReadRegList(false)).GetCevChartParallel<CevModel>();
+            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClauseQuery: "AND ha->'Info'->> 'pf_actors' NOT LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 9, regList: GlobalConfig.regList.ReadRegList(false)).GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_BBvSBvREG(string hero, string tourneyType)
         {
-            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClause: "AND ha->'Info'->> 'pf_actors' NOT LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 8, regList: GlobalConfig.regList.ReadRegList(true)).GetCevChartParallel<CevModel>();
+            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClauseQuery: "AND ha->'Info'->> 'pf_actors' NOT LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 8, regList: GlobalConfig.regList.ReadRegList(true)).GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_BBvSBvFISH(string hero, string tourneyType)
         {
-            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClause: "AND ha->'Info'->> 'pf_actors' NOT LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 8, regList: GlobalConfig.regList.ReadRegList(false)).GetCevChartParallel<CevModel>();
+            return QueriesExtensionMethods.ConcatQueries(cevRequestQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, whereClauseQuery: "AND ha->'Info'->> 'pf_actors' NOT LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 8, regList: GlobalConfig.regList.ReadRegList(false)).GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_HU_SBvREG(string hero, string tourneyType)

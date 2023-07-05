@@ -59,20 +59,20 @@ namespace TrackerUI
             return output;
         }
 
-        public static string ReadRegList(string _listName, bool _isReg)
-        {
+        //public static string ReadRegList(string _listName, bool _isReg)
+        //{
 
-            var regList = GlobalConfig.FullFilePath(_listName, GlobalConfig.directoryRegFilter).ReadFileReturnString();
-            if (_isReg)
-            {
-                return "in ( " + regList + " )";
-            }
-            else
-            {
-                return "not in ( " + regList + " )";
-            }
+        //    var regList = GlobalConfig.FullFilePath(_listName, GlobalConfig.directoryRegFilter).ReadFileReturnString();
+        //    if (_isReg)
+        //    {
+        //        return "in ( " + regList + " )";
+        //    }
+        //    else
+        //    {
+        //        return "not in ( " + regList + " )";
+        //    }
             
-        }
+        //}
 
     }
 }

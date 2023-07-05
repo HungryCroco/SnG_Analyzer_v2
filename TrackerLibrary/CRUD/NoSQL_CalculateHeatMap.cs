@@ -9,17 +9,22 @@ using TrackerLibrary.Queries;
 using Microsoft.VisualBasic;
 using System.Numerics;
 using Npgsql;
+using System.Data;
 
 namespace TrackerLibrary.CRUD
 {
-    public class NoSQL_CalculateHeatMap
+    public static class NoSQL_CalculateHeatMap
     {
 
-        public static List<StatsModel> RequestStatsModel_BvbIso(string hero, string tourneyType, string sinceDate, string ai, string size, string vs)
+        public static List<StatsModel> RequestStatsModel_Heatmap(this QueryModel.Query query, string hero, string tourneyType, string sinceDate, string ai, string size, string vs, string es)
         {
-            return QueriesExtensionMethods.ConcatQueries(HeatMapQueries.sql_ExportHeatMapAsJSON_BvB_Iso, hero: hero, tourneyType: tourneyType, date: sinceDate, AI: ai, size: size, regList: GlobalConfig.regList.ReadRegList(vs == "regs" ? true : false)).GetCevChartParallel<StatsModel>();
+            return QueriesExtensionMethods.ConcatQueries(query.MainQuery, whereClauseHero:query.WhereClauseHero, whereClauseVillain:query.WhereClauseVillain, hero: hero, tourneyType: tourneyType, date: sinceDate, AI: ai, size: size, effStack: es,  regList: GlobalConfig.regList.ReadRegList(vs == "regs" ? true : false)).GetCevChartParallel<StatsModel>();
         }
 
-        
+        public static DataTable RequestStatsModel_Heatmap_DataGridViewByHCs(this QueryModel.Query query, string hero, string tourneyType, string sinceDate, string ai, string size, string vs, string es, string hcsId)
+        {
+            return QueriesExtensionMethods.ConcatQueries(query.DataViewQuery, whereClauseHero: query.WhereClauseHero, whereClauseVillain: query.WhereClauseVillain, hero: hero, tourneyType: tourneyType, date: sinceDate, AI: ai, size: size, effStack: es, hcsId: hcsId, regList: GlobalConfig.regList.ReadRegList(vs == "regs" ? true : false)).GetView();
+        }
+
     }
 }
