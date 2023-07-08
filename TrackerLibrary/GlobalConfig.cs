@@ -8,21 +8,29 @@ namespace TrackerLibrary
 {
     public partial class GlobalConfig
     {
-        public static string server = "localhost";
-        public static string port = "5434";
-        public static string user = "postgres";
-        public static string pass = "dbpass";
+        public static string defaultServer = "localhost";
+        public static string defaultPort = "5434";
+        public static string defaultUser = "postgres";
+        public static string defaultPass = "dbpass";
 
         public static string dbName = "test1113"; // july_50s";
         public static string tableName = "hands";
         public static string columnName = "data";
 
+        public static string settingsFolder = "Settings";
+        public static string settingsfileName = "Settings.txt";
+
         private static string fullPath =  AppDomain.CurrentDomain.BaseDirectory;
         private static string projectName = "SnG_Analyzer_v2";
         public static string projectDirectory = fullPath.Substring(0, fullPath.IndexOf(projectName) + projectName.Length);
+        public static string settingsDirectory = projectDirectory + "\\Settings";
+        public static string settingsPath = settingsDirectory + "\\" + settingsfileName;
 
-        public static int minTourney = 500;
-        public static string regList = "reglist_small.txt";
+        public static int defaultMinTourney = 500;
+        public static string defaultRegList = "reglist_small.txt";
+        private static string regListDirectory = projectDirectory + "\\RegList";
+        public static string regListPath = regListDirectory + "\\" + defaultRegList;
+
         public static string dashBoardList = "dashboard.txt";
         //public static string hhFileName = "EV_Calcs.txt";
         public static string hhFileName = "ps_50s.txt";
@@ -45,6 +53,19 @@ namespace TrackerLibrary
         {
             // TODO: REFACTORE: Maybe define path in app settings: return $"{ConfigurationManager.AppSettings["filePath"]}\\{fileName}";
             return $"{_directory}\\{_fileName}";
+        }
+
+        public static string GetConnectionString()
+        {
+            string connString = string.Format(@"Host={0};Port={1};User Id={2};Password={3}", GlobalConfig.defaultServer, GlobalConfig.defaultPort, GlobalConfig.defaultUser, GlobalConfig.defaultPass);
+
+            return connString;
+        }
+        public static string GetConnectionString(string db)
+        {
+            string connString = string.Format(@"Host={0};Port={1};User Id={2};Password={3};Database={4}", GlobalConfig.defaultServer, GlobalConfig.defaultPort, GlobalConfig.defaultUser, GlobalConfig.defaultPass, db);
+
+            return connString;
         }
     }
 }

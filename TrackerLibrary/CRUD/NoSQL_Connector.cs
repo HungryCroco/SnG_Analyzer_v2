@@ -18,18 +18,18 @@ namespace TrackerLibrary.CRUD
 {
     public static class NoSQL_Connector
     {
-        private static string GetConnectionString()
-        {
-            string connString = string.Format(@"Host={0};Port={1};User Id={2};Password={3}", GlobalConfig.server, GlobalConfig.port, GlobalConfig.user, GlobalConfig.pass);
+        //public static string GetConnectionString()
+        //{
+        //    string connString = string.Format(@"Host={0};Port={1};User Id={2};Password={3}", GlobalConfig.defaultServer, GlobalConfig.defaultPort, GlobalConfig.defaultUser, GlobalConfig.defaultPass);
 
-            return connString;
-        }
-        private static string GetConnectionString(string db)
-        {
-            string connString = string.Format(@"Host={0};Port={1};User Id={2};Password={3};Database={4}", GlobalConfig.server, GlobalConfig.port, GlobalConfig.user, GlobalConfig.pass, db);
+        //    return connString;
+        //}
+        //public static string GetConnectionString(string db)
+        //{
+        //    string connString = string.Format(@"Host={0};Port={1};User Id={2};Password={3};Database={4}", GlobalConfig.defaultServer, GlobalConfig.defaultPort, GlobalConfig.defaultUser, GlobalConfig.defaultPass, db);
 
-            return connString;
-        }
+        //    return connString;
+        //}
 
         public static void CreateDatabase(string dbName, string tableName, string columnName)
         {
@@ -38,7 +38,7 @@ namespace TrackerLibrary.CRUD
             
             try
             {
-                connection = new NpgsqlConnection(GetConnectionString());
+                connection = new NpgsqlConnection(GlobalConfig.GetConnectionString());
                 var cmd_createDB = new NpgsqlCommand($"CREATE DATABASE {dbName}; ", connection);
                 connection.Open();
                 cmd_createDB.ExecuteNonQuery();
@@ -50,7 +50,7 @@ namespace TrackerLibrary.CRUD
 
             try
             {
-                connection = new NpgsqlConnection(GetConnectionString(dbName));
+                connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
                 var cmd_updateDB = new NpgsqlCommand($"CREATE TABLE {tableName}({columnName} jsonb)TABLESPACE pg_default;", connection);
                 connection.Open();
                 cmd_updateDB.ExecuteNonQuery();
@@ -62,7 +62,7 @@ namespace TrackerLibrary.CRUD
 
             try
             {
-                connection = new NpgsqlConnection(GetConnectionString(dbName));
+                connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
                 var cmd_updateDB = new NpgsqlCommand($"ALTER TABLE {tableName} ADD COLUMN {columnName} jsonb;", connection);
                 connection.Open();
                 cmd_updateDB.ExecuteNonQuery();
@@ -79,7 +79,7 @@ namespace TrackerLibrary.CRUD
 
             try
             {
-                connection = new NpgsqlConnection(GetConnectionString(dbName));
+                connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
                 var cmd_updateDB = new NpgsqlCommand($"CREATE TABLE {tableName}(player text, tourneyType text, data jsonb)TABLESPACE pg_default;", connection);
                 connection.Open();
                 cmd_updateDB.ExecuteNonQuery();
@@ -98,7 +98,7 @@ namespace TrackerLibrary.CRUD
             CreateDatabase(dbName, tableName, columnName);
             List<string> serializedHandsAsJson = SerializeHands(hands.ReturnHashSetWithUniqueHands(dbName).ToList());
             
-            using (NpgsqlConnection connection = new NpgsqlConnection(GetConnectionString(dbName)))
+            using (NpgsqlConnection connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
             {
                 connection.Open();
                 using (var importer = connection.BeginBinaryImport($"COPY {tableName} ({columnName}) FROM STDIN (FORMAT BINARY)"))
@@ -125,7 +125,7 @@ namespace TrackerLibrary.CRUD
             CreateDashBoardTable(dbName, tableName);
 
             var serializedDashBoardModel = System.Text.Json.JsonSerializer.Serialize(dashboardModel);
-            using (NpgsqlConnection connection = new NpgsqlConnection(GetConnectionString(dbName)))
+            using (NpgsqlConnection connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
             {
                 connection.Open();
 
@@ -149,7 +149,7 @@ namespace TrackerLibrary.CRUD
             var importedHandSet = new HashSet<(string Room, long HandId)> ();
             var handsToImportDistinctSet = new HashSet<Hand>();
 
-            using (NpgsqlConnection connection = new NpgsqlConnection(GetConnectionString(dbName)))
+            using (NpgsqlConnection connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
             {
                 connection.Open();
                 using (NpgsqlCommand command = new NpgsqlCommand(NoSQL_Queries.query_GetIdAndRoomFromNoSqlDb, connection))
@@ -212,7 +212,7 @@ namespace TrackerLibrary.CRUD
         {
             string output;
 
-            using (var _conn = new NpgsqlConnection(GetConnectionString(GlobalConfig.dbName)))
+            using (var _conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(GlobalConfig.dbName)))
             {
                 _conn.Open();
                 using (var _cmd = new NpgsqlCommand(sqlQuery, _conn))
@@ -234,7 +234,7 @@ namespace TrackerLibrary.CRUD
         {
             string output;
 
-            using (var conn = new NpgsqlConnection(GetConnectionString(GlobalConfig.dbName)))
+            using (var conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(GlobalConfig.dbName)))
             {
                 conn.Open();
                 using (var cmd = new NpgsqlCommand(sqlQuery, conn))
@@ -253,7 +253,7 @@ namespace TrackerLibrary.CRUD
         {
             DataTable dt = new DataTable();
 
-            using (var conn = new NpgsqlConnection(GetConnectionString(GlobalConfig.dbName)))
+            using (var conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(GlobalConfig.dbName)))
             {
                 conn.Open();
                 var cmd = new NpgsqlCommand(mySqlQuery, conn); ;
@@ -284,7 +284,7 @@ namespace TrackerLibrary.CRUD
             string output;
             try
             {
-                using (var _conn = new NpgsqlConnection(GetConnectionString(GlobalConfig.dbName)))
+                using (var _conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(GlobalConfig.dbName)))
                 {
                     _conn.Open();
                     using (var _cmd = new NpgsqlCommand($"SELECT data FROM dashboard WHERE player = '{activePlayer}' AND tourneytype = '{tourneyType}';", _conn))

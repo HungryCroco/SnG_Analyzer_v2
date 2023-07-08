@@ -47,32 +47,32 @@ namespace TrackerUI.ChildForms
         }
 
 
-        private string GetFullFilePath()
-        {
-            string filePath ="";
+        //private string GetFullFilePath()
+        //{
+        //    string filePath ="";
 
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
+        //    using (OpenFileDialog openFileDialog = new OpenFileDialog())
+        //    {
                 
-                // Set the initial directory and filter for the file dialog
-                openFileDialog.InitialDirectory = GlobalConfig.projectDirectory;
-                openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+        //        // Set the initial directory and filter for the file dialog
+        //        openFileDialog.InitialDirectory = GlobalConfig.projectDirectory;
+        //        openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
 
-                // Show the file dialog and check if the user selected a file
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    // Get the selected file path
-                    filePath = openFileDialog.FileName;
+        //        // Show the file dialog and check if the user selected a file
+        //        if (openFileDialog.ShowDialog() == DialogResult.OK)
+        //        {
+        //            // Get the selected file path
+        //            filePath = openFileDialog.FileName;
 
-                }
-            }
+        //        }
+        //    }
 
-            return filePath;
-        }
+        //    return filePath;
+        //}
 
         private void btn_Import_Click(object sender, MouseEventArgs e)
         {
-            string filePath = GetFullFilePath();
+            string filePath = File_Connector.GetFullFilePath();
 
             Task t1 = Task.Run(() => { PrintConsole(filePath); });
         }
@@ -116,9 +116,10 @@ namespace TrackerUI.ChildForms
             outputControl.Invoke(new Action(() =>
             {
                 outputControl.Text += value;
-                ((RichTextBox)outputControl).ScrollToCaret();
+                
             }));
             consoleOutput.Append(value);
+            ((RichTextBox)outputControl).ScrollToCaret();
         }
 
         public override Encoding Encoding => Encoding.UTF8;

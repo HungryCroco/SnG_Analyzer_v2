@@ -88,7 +88,7 @@ namespace TrackerUI
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Setings(), sender); });
+            Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Settings(), sender); });
         }
 
         //private void OpenChildForm(Type childFormType, object sender)

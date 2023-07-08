@@ -2,6 +2,8 @@
 using TrackerLibrary;
 using TrackerLibrary.CRUD;
 using TrackerLibrary.Models;
+using TrackerLibrary.CRUD;
+
 
 namespace Test
 {
@@ -25,8 +27,8 @@ namespace Test
             watch.Start();
 
 
-            var  test = NoSQL_CalculateDashBoard.RequestDashBoard("IPray2Buddha", "3-max");
-            
+            //var  test = NoSQL_CalculateDashBoard.RequestDashBoard("IPray2Buddha", "3-max");
+
 
 
             //HHReader.ReadHands(entireHH);
@@ -42,6 +44,12 @@ namespace Test
             //EVCalculator.ImportDLL.CalculateOdds_2Hands_PF(52, 51, 50, 49, ref res1, ref res2, ref res3, ea);
 
             //var bb = DashBoardRequest.CalculateCevRequested();
+
+
+            //File_CRUD_Settings.WriteSettings("postgres", "5332", "iP2B", "!232@@@f", "500", @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\settings");
+            //var settings = File_CRUD_Settings.ReadSettings();   
+
+            SQL_Connector.CreateDatabase("sql_test10");
 
 
             Console.WriteLine("Total Time: " + watch.ElapsedMilliseconds/1000 + "s");

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary.Queries.NoSQL
 {
-    public static class cevRequestQueries
+    public static class DashBoardQueries
     {
         public static string sql_ExportCevPerTournamentAsJSON =
             @"SELECT array_to_json(array_agg(row_to_json(t2)))
@@ -34,7 +34,7 @@ namespace TrackerLibrary.Queries.NoSQL
 												FROM hands h
 												CROSS JOIN LATERAL jsonb_each(h.data->'SeatActions') AS t(k,v)
 												WHERE t.k @regList AND t.v->'SeatPosition' = '@posVillain')  t1
-							WHERE ha->'SeatActions'->'@hero'->'SeatPosition' = '@posHero' AND ha->'Info'->> 'CntPlayers' = '@cntPlayers' @whereClause
+							WHERE ha->'SeatActions'->'@hero'->'SeatPosition' = '@posHero' AND ha->'Info'->> 'CntPlayers' = '@cntPlayers' @whereClauseQuery
 							GROUP BY tourney_id, t1.ha
 							ORDER BY tourney_id 
 							) t2
@@ -50,7 +50,7 @@ namespace TrackerLibrary.Queries.NoSQL
 							SELECT data->'Info'->>'TournamentIdBySite' AS tourney_id, (data->'SeatActions'->'@hero'->'CevWon')::numeric AS cev_won, (data->'SeatActions'->'@hero'->'ChipsWon')::numeric AS chips_won,
 									(data->'Info'->'Amt_bb')::numeric AS amt_bb, TO_DATE((data->'Info'->>'Date')::text, 'YYYY-MM-DD') AS t_date	
 										FROM hands
-							WHERE data->'Info'->>'TournamentType' = '@tourneyType' @whereClause
+							WHERE data->'Info'->>'TournamentType' = '@tourneyType' @whereClauseQuery
 							GROUP BY tourney_id, hands.data
 							ORDER BY tourney_id 
 							) t2
