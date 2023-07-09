@@ -192,7 +192,7 @@ namespace TrackerLibrary.CRUD
             return handsToImportDistinctSet;
         }
 
-        private static List<string> SerializeHands(List<Hand> hands)
+        public static List<string> SerializeHands(List<Hand> hands)
         {
             List<string> serializedHandsAsJson = new();
 

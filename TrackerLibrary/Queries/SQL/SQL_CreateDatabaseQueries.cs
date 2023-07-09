@@ -29,12 +29,12 @@ namespace TrackerLibrary.Queries.SQL
 	            OWNER to postgres;";
 
         public static string sql_CreateTable_Hands =
-            @"CREATE SEQUENCE IF NOT EXISTS public.hands_id_seq
-                INCREMENT 1
-                START 1
-                MINVALUE 1
-                MAXVALUE 2147483647
-                CACHE 1;
+            @"--CREATE SEQUENCE IF NOT EXISTS public.hands_id_seq
+                --INCREMENT 1
+                --START 1
+                --MINVALUE 1
+                --MAXVALUE 2147483647
+                --CACHE 1;
 
 
 
@@ -54,6 +54,13 @@ namespace TrackerLibrary.Queries.SQL
                 seat1actionid integer,
                 seat2actionid integer,
                 seat3actionid integer,
+                seat4actionid integer,
+                seat5actionid integer,
+                seat6actionid integer,
+                seat7actionid integer,
+                seat8actionid integer,
+                seat9actionid integer,
+                seat10actionid integer,
                 flopcard1 character varying(2) COLLATE pg_catalog.""default"",
                 flopcard2 character varying(2) COLLATE pg_catalog.""default"",
                 flopcard3 character varying(2) COLLATE pg_catalog.""default"",
@@ -331,9 +338,13 @@ namespace TrackerLibrary.Queries.SQL
                 seat1playerid integer,
                 seat2playerid integer,
                 seat3playerid integer,
-                seat1ev numeric,
-                seat2ev numeric,
-                seat3ev numeric,
+                seat4playerid integer,
+                seat5playerid integer,
+                seat6playerid integer,
+                seat7playerid integer,
+                seat8playerid integer,
+                seat9playerid integer,
+                seat10playerid integer,
                 tournamentwinnerid integer,
                 CONSTRAINT tournament_pkey PRIMARY KEY (id),
                 CONSTRAINT fk_tournament_player_seat1playerid FOREIGN KEY (seat1playerid)
@@ -378,6 +389,8 @@ namespace TrackerLibrary.Queries.SQL
                 ON public.tournament USING btree
                 (tournamentwinnerid ASC NULLS LAST)
                 TABLESPACE pg_default;";
+
+
 
     }
 }

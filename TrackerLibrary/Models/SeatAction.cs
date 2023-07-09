@@ -8,27 +8,64 @@ using TrackerLibrary;
 
 namespace TrackerLibrary.Models
 {
+    public class PlayerActionList : List<PlayerAction>
+    {
+        public override string ToString()
+        {
+            // Implement your custom logic here to convert the list to a string representation
+            // You can iterate over the list and concatenate the string representation of each item
+
+            // Example implementation:
+            // Assuming PlayerAction has properties 'PlayerName' and 'ActionType'
+            string result = "";
+            foreach (PlayerAction playerAction in this)
+            {
+                if (playerAction.Act == "checks")
+                {
+                    result = "X";
+                }
+                else if (playerAction.Act == "calls")
+                {
+                    result = "C" + playerAction.Size;
+                }
+                else if (playerAction.Act == "bets")
+                {
+                    result = "B" + playerAction.Size;
+                }
+                else if (playerAction.Act == "raises")
+                {
+                    result = "R" + playerAction.Size;
+                }
+
+                if (playerAction.AI == 1)
+                {
+                    result += "ai";
+                }
+            }
+            return result;
+        }
+    }
 
     public class AllActions
     {
         [JsonProperty("Preflop")]
-        public List<PlayerAction> PreFlop { get; set; }
+        public PlayerActionList PreFlop { get; set; }
 
         [JsonProperty("Flop")]
-        public List<PlayerAction> Flop { get; set; }
+        public PlayerActionList Flop { get; set; }
 
         [JsonProperty("Turn")]
-        public List<PlayerAction> Turn { get; set; }
+        public PlayerActionList Turn { get; set; }
 
         [JsonProperty("River")]
-        public List<PlayerAction> River { get; set; }
+        public PlayerActionList River { get; set; }
 
         public AllActions()
         {
-            PreFlop = new List<PlayerAction>();
-            Flop = new List<PlayerAction>();
-            Turn = new List<PlayerAction>();
-            River = new List<PlayerAction>();       
+            PreFlop = new ();
+            Flop = new ();
+            Turn = new ();
+            River = new ();       
         }
     }
 
@@ -61,7 +98,7 @@ namespace TrackerLibrary.Models
         public float StartingStack { get; set; }
         public float Ante { get; set; }
         public float Blind { get; set; }
-        public UInt16 SeatPosition { get; set; }
+        public uint SeatPosition { get; set; }
 
         public string StreetAI { get; set; }
 

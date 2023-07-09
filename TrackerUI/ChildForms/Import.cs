@@ -42,7 +42,8 @@ namespace TrackerUI.ChildForms
 
             foreach (string hh in splitString)
             {
-                NoSQL_Connector.InsertHandsToNoSqlDb(GlobalConfig.dbName, GlobalConfig.tableName, GlobalConfig.columnName, HHReader.ReadHands(hh));
+                //NoSQL_Connector.InsertHandsToNoSqlDb(GlobalConfig.dbName, GlobalConfig.tableName, GlobalConfig.columnName, HHReader.ReadHands(hh));
+                SQL_Connector.ImportHandsToSqlDb("test7", HHReader.ReadHands(hh));
             }
         }
 
@@ -119,7 +120,7 @@ namespace TrackerUI.ChildForms
                 
             }));
             consoleOutput.Append(value);
-            ((RichTextBox)outputControl).ScrollToCaret();
+            //((RichTextBox)outputControl).ScrollToCaret();
         }
 
         public override Encoding Encoding => Encoding.UTF8;

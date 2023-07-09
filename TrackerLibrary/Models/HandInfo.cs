@@ -57,11 +57,11 @@ namespace TrackerLibrary.Models
 
         public sbyte SeatBtn { get; set; }
 
-        public UInt16 CntPlayers { get; set; }
-        public UInt16 CntPlayers_Flop { get; set; }
-        public UInt16 CntPlayers_Turn { get; set; }
-        public UInt16 CntPlayers_River { get; set; }
-        public UInt16 CntPlayers_Showdown { get; set; }
+        public uint CntPlayers { get; set; }
+        public uint CntPlayers_Flop { get; set; }
+        public uint CntPlayers_Turn { get; set; }
+        public uint CntPlayers_River { get; set; }
+        public uint CntPlayers_Showdown { get; set; }
         public List<string> Players { get; set; }
         public string pf_aggressors { get; set; }
         public string pf_actors { get; set; }
