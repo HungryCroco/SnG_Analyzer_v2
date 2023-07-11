@@ -43,7 +43,7 @@ namespace TrackerUI.ChildForms
             foreach (string hh in splitString)
             {
                 //NoSQL_Connector.InsertHandsToNoSqlDb(GlobalConfig.dbName, GlobalConfig.tableName, GlobalConfig.columnName, HHReader.ReadHands(hh));
-                SQL_Connector.ImportHandsToSqlDb("test7", HHReader.ReadHands(hh));
+                SQL_Connector.ImportHandsToSqlDb("test18", HHReader.ReadHands(hh));
             }
         }
 

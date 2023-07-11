@@ -10,6 +10,7 @@ using System.Xml.Linq;
 using System.Reflection;
 using System.Diagnostics;
 using System.Data;
+using System.Buffers;
 
 namespace TrackerLibrary.CRUD
 {
@@ -26,7 +27,7 @@ namespace TrackerLibrary.CRUD
 
             foreach (var hand in hands)
             {
-            ExportEntireHand(hand, ref dbName);
+                ExportEntireHand(hand, ref dbName);
             }
 
 
@@ -38,29 +39,29 @@ namespace TrackerLibrary.CRUD
 
         public static void CreateDatabase(string dbName)
         {
-            NpgsqlConnection connection = new();
+            NpgsqlConnection conn = new();
 
             try
             {
-                connection = new NpgsqlConnection(GlobalConfig.GetConnectionString());
-                var cmd_createDB = new NpgsqlCommand($"CREATE DATABASE {dbName}; ", connection);
-                
+                conn = new NpgsqlConnection(GlobalConfig.GetConnectionString());
+                var cmd_createDB = new NpgsqlCommand($"CREATE DATABASE {dbName}; ", conn);
 
-                connection.Open();
+
+                conn.Open();
                 cmd_createDB.ExecuteNonQuery();
-                connection.Close();
+                conn.Close();
 
-                connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
+                conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
 
-                var cmd_CreateTable_HandAsString = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_HandAsString, connection);
-                var cmd_CreateTable_HoleCardsSimple = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_HoleCardsSimple, connection);
-                var cmd_CreateTable_Room = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_Room, connection);
-                var cmd_CreateTable_Player = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_Player, connection);
-                var cmd_CreateTable_Tournament = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_Tournament, connection);
-                var cmd_CreateTable_SeatAction = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_SeatAction, connection);
-                var cmd_CreateTable_Hands = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_Hands, connection);
+                var cmd_CreateTable_HandAsString = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_HandAsString, conn);
+                var cmd_CreateTable_HoleCardsSimple = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_HoleCardsSimple, conn);
+                var cmd_CreateTable_Room = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_Room, conn);
+                var cmd_CreateTable_Player = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_Player, conn);
+                var cmd_CreateTable_Tournament = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_Tournament, conn);
+                var cmd_CreateTable_SeatAction = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_SeatAction, conn);
+                var cmd_CreateTable_Hands = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_Hands, conn);
 
-                connection.Open();
+                conn.Open();
 
                 cmd_CreateTable_HandAsString.ExecuteNonQuery();
                 cmd_CreateTable_HoleCardsSimple.ExecuteNonQuery();
@@ -68,12 +69,14 @@ namespace TrackerLibrary.CRUD
                 cmd_CreateTable_Player.ExecuteNonQuery();
                 cmd_CreateTable_Tournament.ExecuteNonQuery();
                 cmd_CreateTable_SeatAction.ExecuteNonQuery();
-                cmd_CreateTable_Hands.ExecuteNonQuery();  
+                cmd_CreateTable_Hands.ExecuteNonQuery();
+
+                ImportToHoleCardsSimple(ref conn);
             }
             catch (Exception)
             {
             }
-            connection.Close();
+            conn.Close();
         }
 
         public static void ExportEntireHand(Hand hand, ref string dbName)
@@ -86,7 +89,7 @@ namespace TrackerLibrary.CRUD
             ImportToRoom(ref hand, ref currImportIds, ref conn);
             ImportToPlayer(ref hand, ref currImportIds, ref conn);
             ImportToTournament(ref hand, ref currImportIds, ref conn);
-            
+
             ImportToHandAsString(ref hand, ref currImportIds, ref conn);
 
             ImportToHand(ref hand, ref currImportIds, ref conn);
@@ -94,7 +97,7 @@ namespace TrackerLibrary.CRUD
             conn.Close();
 
 
-             
+
         }
 
         private static int ImportToRoom(ref Hand hand, ref SQL_ImportIds currHandImportIds, ref NpgsqlConnection conn)
@@ -141,8 +144,8 @@ namespace TrackerLibrary.CRUD
             return heroId;
         }
 
-        private static  int ImportToTournament(ref Hand hand, ref SQL_ImportIds currHandImportIds, ref NpgsqlConnection conn)
-        {  
+        private static int ImportToTournament(ref Hand hand, ref SQL_ImportIds currHandImportIds, ref NpgsqlConnection conn)
+        {
 
             var cmd = new NpgsqlCommand(SQL_ImportQueries.sql_ImportTournament, conn);
 
@@ -190,12 +193,12 @@ namespace TrackerLibrary.CRUD
             return outputId;
         }
 
-        public static void ImportToSeatAction(SeatAction seatAction, ref SQL_ImportIds importIds , int seatActionIndex , ref NpgsqlConnection conn)
+        public static void ImportToSeatAction(SeatAction seatAction, ref SQL_ImportIds importIds, ref NpgsqlConnection conn)
         {
             var cmd = new NpgsqlCommand(SQL_ImportQueries.sql_ImportSeatAction, conn);
 
             cmd.Parameters.Clear();
-            cmd.Parameters.Add(new NpgsqlParameter("PlayerId", importIds.PlayerIds[seatActionIndex]));
+            cmd.Parameters.Add(new NpgsqlParameter("PlayerId", importIds.PlayerIds[seatAction.SeatNumber]));
             cmd.Parameters.Add(new NpgsqlParameter("SeatNumber", Convert.ToInt32(seatAction.SeatNumber)));
             cmd.Parameters.Add(new NpgsqlParameter("Position", Convert.ToInt32(seatAction.SeatPosition)));
             cmd.Parameters.Add(new NpgsqlParameter("StartingStack", seatAction.StartingStack));
@@ -228,7 +231,7 @@ namespace TrackerLibrary.CRUD
             var outputId = cmd.ExecuteScalar();
             int seatId = int.Parse(outputId.ToString());
 
-            importIds.SeatActionIds.Add(seatId);
+            importIds.SeatActionIds[seatAction.SeatNumber] = seatId;
             if (seatAction.SeatPosition == 0)
             {
                 importIds.SeatActionId_BTN = seatId;
@@ -241,7 +244,7 @@ namespace TrackerLibrary.CRUD
             {
                 importIds.SeatActionId_BB = seatId;
             }
-            if (importIds.PlayerIds[seatActionIndex] == importIds.PlayerId_Hero)
+            if (importIds.PlayerIds[seatAction.SeatNumber] == importIds.PlayerId_Hero)
             {
                 importIds.SeatActionId_Hero = seatId;
             }
@@ -280,31 +283,49 @@ namespace TrackerLibrary.CRUD
 
             for (int i = 0; i < hand.Info.Players.Count; i++)
             {
-                ImportToSeatAction(hand.SeatActions[hand.Info.Players[i]], ref importIds, i, ref conn);
+                ImportToSeatAction(hand.SeatActions[hand.Info.Players[i]], ref importIds, ref conn);
             }
 
 
-            
-            cmd.Parameters.Add(new NpgsqlParameter("seat1ActionId", DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat2ActionId", DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat3ActionId", DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat4ActionId", DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat5ActionId", DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat6ActionId", DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat7ActionId", DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat8ActionId", DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat9ActionId", DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat10ActionId", DBNull.Value));
 
-            cmd.Parameters.Add(new NpgsqlParameter("btnSeatActionId", DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("sbSeatActionId", DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("bbSeatActionId", DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("heroSeatActionId", DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat1ActionId", importIds.PlayerIds[1] != 0 ? importIds.PlayerIds[1] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat2ActionId", importIds.PlayerIds[2] != 0 ? importIds.PlayerIds[2] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat3ActionId", importIds.PlayerIds[3] != 0 ? importIds.PlayerIds[3] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat4ActionId", importIds.PlayerIds[4] != 0 ? importIds.PlayerIds[4] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat5ActionId", importIds.PlayerIds[5] != 0 ? importIds.PlayerIds[5] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat6ActionId", importIds.PlayerIds[6] != 0 ? importIds.PlayerIds[6] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat7ActionId", importIds.PlayerIds[7] != 0 ? importIds.PlayerIds[7] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat8ActionId", importIds.PlayerIds[8] != 0 ? importIds.PlayerIds[8] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat9ActionId", importIds.PlayerIds[9] != 0 ? importIds.PlayerIds[9] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat10ActionId", importIds.PlayerIds[10] != 0 ? importIds.PlayerIds[10] : DBNull.Value));
+
+            cmd.Parameters.Add(new NpgsqlParameter("btnSeatActionId", importIds.SeatActionId_BTN != 0 ? importIds.SeatActionId_BTN : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("sbSeatActionId", importIds.SeatActionId_SB != 0 ? importIds.SeatActionId_SB : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("bbSeatActionId", importIds.SeatActionId_BB != 0 ? importIds.SeatActionId_BB : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("heroSeatActionId", importIds.SeatActionId_Hero != 0 ? importIds.SeatActionId_Hero : DBNull.Value));
 
             cmd.Parameters.Add(new NpgsqlParameter("heroid", importIds.PlayerId_Hero));
 
             cmd.ExecuteNonQuery();
         }
 
-    } 
+        private static void ImportToHoleCardsSimple(ref NpgsqlConnection conn)
+        {
+            //Card currCard = new ();
+            for (uint i = 0; i < 170; i++)
+            {
+                //currCard.Id = i;
+                //currCard.Name = EnumExtensionMethods.GetDescription((CardAllSimple)i);
+
+                var cmd = new NpgsqlCommand(SQL_ImportQueries.sql_ImportHoleCardsSimpleIds, conn);
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.Add(new NpgsqlParameter("hcId", Convert.ToInt32(i)));
+                cmd.Parameters.Add(new NpgsqlParameter("hcAsString", EnumExtensionMethods.GetDescription((CardAllSimple)i)));
+
+                cmd.ExecuteNonQuery();
+            }
+            
+        }
+    }
 }

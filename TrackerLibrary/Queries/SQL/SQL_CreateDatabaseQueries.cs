@@ -184,11 +184,18 @@ namespace TrackerLibrary.Queries.SQL
                 TABLESPACE pg_default;";
 
         public static string sql_CreateTable_HoleCardsSimple =
-            @"CREATE TABLE IF NOT EXISTS public.holecardssimple
+            @"--CREATE SEQUENCE IF NOT EXISTS public.holecardssimple_id_seq
+              --  INCREMENT 1
+              --  START 1
+              --  MINVALUE 1
+              --  MAXVALUE 2147483647
+              --  CACHE 1;
+
+            CREATE TABLE IF NOT EXISTS public.holecardssimple
             (
                 id integer NOT NULL,
                 holecardsidbycs integer,
-                holecardsasstring character varying(4) COLLATE pg_catalog.""default"",
+                holecardsasstring character varying(10) COLLATE pg_catalog.""default"",
                 CONSTRAINT holecardssimple_pkey PRIMARY KEY (id)
             )
 

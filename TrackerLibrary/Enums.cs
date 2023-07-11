@@ -231,7 +231,7 @@ namespace TrackerLibrary
 
     public enum CardAllSimple
     {
-        [Description("")] _ = 0,
+        [Description("UNKNOWN")] _UC = 0,
         [Description("AA")] _AA = 1,
         [Description("AKo")] _AKo = 2,
         [Description("AKs")] _AKs = 3,

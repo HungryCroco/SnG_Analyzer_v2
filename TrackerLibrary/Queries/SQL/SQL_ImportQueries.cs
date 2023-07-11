@@ -86,6 +86,13 @@ namespace TrackerLibrary.Queries.SQL
 					@totalpot::int, @seat1actionid::int, @seat2actionid::int, @seat3actionid::int, @seat4actionid::int, @seat5actionid::int,
 					@seat6actionid::int, @seat7actionid::int, @seat8actionid::int, @seat9actionid::int, @seat10actionid::int,
 					@heroseatactionid::int, @btnseatactionid::int, @sbseatactionid::int, @bbseatactionid::int;";
+
+        public static string sql_ImportHoleCardsSimpleIds =
+            @"INSERT INTO public.holecardssimple
+				(id, holecardsasstring) 
+				 
+					select @hcId::int, @hcAsString::text
+					where @hcAsString::text not in (select holecardsasstring from public.holecardssimple);";
     }
 
   
