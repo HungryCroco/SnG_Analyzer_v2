@@ -42,8 +42,19 @@ namespace TrackerUI.ChildForms
 
             foreach (string hh in splitString)
             {
-                //NoSQL_Connector.InsertHandsToNoSqlDb(GlobalConfig.dbName, GlobalConfig.tableName, GlobalConfig.columnName, HHReader.ReadHands(hh));
-                SQL_Connector.ImportHandsToSqlDb("test18", HHReader.ReadHands(hh));
+                if (GlobalConfig.dbType == DataBaseType.NoSQL)
+                {
+                    NoSQL_Connector.InsertHandsToNoSqlDb(GlobalConfig.dbName, GlobalConfig.tableName, GlobalConfig.columnName, HHReader.ReadHands(hh));
+                }
+                else if (GlobalConfig.dbType == DataBaseType.SQL)
+                {
+                    SQL_Connector.ImportHandsToSqlDb(GlobalConfig.dbName, HHReader.ReadHands(hh));
+                }
+                else
+                {
+
+                }
+                
             }
         }
 

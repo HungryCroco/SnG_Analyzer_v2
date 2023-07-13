@@ -22,19 +22,23 @@ namespace TrackerLibrary.Models
             {
                 if (playerAction.Act == "checks")
                 {
-                    result = "X";
+                    result += "X";
                 }
                 else if (playerAction.Act == "calls")
                 {
-                    result = "C" + playerAction.Size;
+                    result += "C" + playerAction.Size;
                 }
                 else if (playerAction.Act == "bets")
                 {
-                    result = "B" + playerAction.Size;
+                    result += "B" + playerAction.Size;
                 }
                 else if (playerAction.Act == "raises")
                 {
-                    result = "R" + playerAction.Size;
+                    result += "R" + playerAction.Size;
+                }
+                else if (playerAction.Act == "folds")
+                {
+                    result += "F";
                 }
 
                 if (playerAction.AI == 1)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary.Queries.NoSQL
 {
-    public static  class HeatMapQueries
+    public static  class NoSQL_HeatMapQueries
     {
 		public static string NoSQL_ExportHeatMapAsJSON =
             @"SELECT array_to_json(array_agg(row_to_json(t2)))
@@ -23,7 +23,7 @@ namespace TrackerLibrary.Queries.NoSQL
 				ORDER BY (ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric 
 				) t2";
 
-		public static string NoSQL_ExportHeatMapByHoleCardsSimple =
+		public static string NoSQL_ExportDataGridViewByHoleCardsSimple =
             @"	SELECT ha->'Info'->>'Room' AS Room,
 					ha->'Info'->>'HandIdBySite' AS handId,
 					(ha->'Info'->>'BuyIn') || (ha->'Info'->>'Currency') || '+' || (ha->'Info'->>'Fee') || (ha->'Info'->>'Currency') AS BuyIn,

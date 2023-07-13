@@ -48,9 +48,9 @@ namespace TrackerLibrary.Queries.SQL
                 datetimehand timestamp without time zone NOT NULL,
                 tableidbysite character varying(20) COLLATE pg_catalog.""default"" NOT NULL,
                 tournamenttype character(10) COLLATE pg_catalog.""default"",
-                heroid integer NOT NULL,
-                holecard1 character varying(2) COLLATE pg_catalog.""default"",
-                holecard2 character varying(2) COLLATE pg_catalog.""default"",
+                heroid integer,
+                holecard1 integer,
+                holecard2 integer,
                 seat1actionid integer,
                 seat2actionid integer,
                 seat3actionid integer,
@@ -61,17 +61,24 @@ namespace TrackerLibrary.Queries.SQL
                 seat8actionid integer,
                 seat9actionid integer,
                 seat10actionid integer,
-                flopcard1 character varying(2) COLLATE pg_catalog.""default"",
-                flopcard2 character varying(2) COLLATE pg_catalog.""default"",
-                flopcard3 character varying(2) COLLATE pg_catalog.""default"",
-                turncard character varying(2) COLLATE pg_catalog.""default"",
-                rivercard character varying(2) COLLATE pg_catalog.""default"",
+                flopcard1 integer,
+                flopcard2 integer,
+                flopcard3 integer,
+                turncard integer,
+                rivercard integer,
                 totalpot integer NOT NULL,
-                timeimported timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
                 heroseatactionid integer,
                 btnseatactionid integer,
                 sbseatactionid integer,
                 bbseatactionid integer,
+                pf_aggressors character varying(15),
+                pf_actors character varying(15),
+                cnt_players integer,
+                cnt_players_flop integer,
+                cnt_players_turn integer,
+                cnt_players_river integer,
+                cnt_players_showdown integer,
+                timeimported timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
                 CONSTRAINT ""fk_hands_handasstring_handId"" FOREIGN KEY (handid)
                     REFERENCES public.handasstring (id) MATCH SIMPLE
                     ON UPDATE NO ACTION
@@ -202,6 +209,19 @@ namespace TrackerLibrary.Queries.SQL
             TABLESPACE pg_default;
 
             ALTER TABLE IF EXISTS public.holecardssimple
+                OWNER to postgres;";
+
+        public static string sql_CreateTable_Card =
+            @"CREATE TABLE IF NOT EXISTS public.card
+            (
+                id integer NOT NULL,
+                card character varying(15) COLLATE pg_catalog.""default"",
+                CONSTRAINT card_pkey PRIMARY KEY (id)
+            )
+
+            TABLESPACE pg_default;
+
+            ALTER TABLE IF EXISTS public.card
                 OWNER to postgres;";
 
         public static string sql_CreateTable_Player =

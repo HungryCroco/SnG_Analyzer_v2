@@ -8,12 +8,13 @@ namespace TrackerLibrary
 {
     public partial class GlobalConfig
     {
+        public static DataBaseType dbType = DataBaseType.SQL;
         public static string defaultServer = "localhost";
         public static string defaultPort = "5434";
         public static string defaultUser = "postgres";
         public static string defaultPass = "dbpass";
 
-        public static string dbName = "test1113"; // july_50s";
+        public static string dbName = "sql_50s_5"; // sql_50s_2";
         public static string tableName = "hands";
         public static string columnName = "data";
 

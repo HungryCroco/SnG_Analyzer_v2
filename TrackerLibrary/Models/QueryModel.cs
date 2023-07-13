@@ -14,6 +14,8 @@ namespace TrackerLibrary.Models
             public string DataViewQuery;
             public string WhereClauseHero;
             public string WhereClauseVillain;
+            public string SeatActionHero;
+            public string SeatActionVillain;
 
             public Query(string mainQuery, string dataViewQuery, string whereClauseHero, string whereClauseVillain)
             {
@@ -21,8 +23,19 @@ namespace TrackerLibrary.Models
                 DataViewQuery = dataViewQuery;
                 WhereClauseHero = whereClauseHero;
                 WhereClauseVillain = whereClauseVillain;
+                SeatActionHero = "";
+                SeatActionVillain = "";
             }
 
+            public Query(string mainQuery, string dataViewQuery, string whereClauseHero, string whereClauseVillain, string seatActionHero, string seatActionVillain)
+            {
+                MainQuery = mainQuery;
+                DataViewQuery = dataViewQuery;
+                WhereClauseHero = whereClauseHero;
+                WhereClauseVillain = whereClauseVillain;
+                SeatActionHero = seatActionHero;
+                SeatActionVillain = seatActionVillain;
+            }
         }
     }
 }

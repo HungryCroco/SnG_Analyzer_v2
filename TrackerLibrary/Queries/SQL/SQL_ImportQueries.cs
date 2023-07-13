@@ -76,16 +76,18 @@ namespace TrackerLibrary.Queries.SQL
 				(handId, handidbysite, tournamentId, levelhand, amt_bb,
 				datetimehand, tableidbysite, tournamenttype, heroid,
 				holecard1, holecard2, flopcard1, flopcard2, flopcard3, turncard, rivercard,
-				totalpot, seat1actionid, seat2actionid, seat3actionid, seat4actionid, seat5actionid,
+				totalpot, pf_aggressors, pf_actors, seat1actionid, seat2actionid, seat3actionid, seat4actionid, seat5actionid,
 				seat6actionid, seat7actionid, seat8actionid, seat9actionid, seat10actionid,
-				heroseatactionid, btnseatactionid, sbseatactionid, bbseatactionid) 
+				heroseatactionid, btnseatactionid, sbseatactionid, bbseatactionid, 
+				cnt_players, cnt_players_flop, cnt_players_turn, cnt_players_river, cnt_players_showdown) 
 					select @handId::int, @handidbysite::bigint, @tournamentId::int, @levelhand::varchar,@amt_bb::int, 
 					@datetimehand::timestamp, @tableidbysite::varchar, @tournamenttype::varchar,
-					@heroid::int, @holecard1::varchar, @holecard2::varchar, 
-					@flopcard1::varchar, @flopcard2::varchar, @flopcard3::varchar, @turncard::varchar, @rivercard::varchar,
-					@totalpot::int, @seat1actionid::int, @seat2actionid::int, @seat3actionid::int, @seat4actionid::int, @seat5actionid::int,
+					@heroid::int, @holecard1::int, @holecard2::int, 
+					@flopcard1::int, @flopcard2::int, @flopcard3::int, @turncard::int, @rivercard::int,
+					@totalpot::int, @pf_aggressors::varchar, @pf_actors::varchar, @seat1actionid::int, @seat2actionid::int, @seat3actionid::int, @seat4actionid::int, @seat5actionid::int,
 					@seat6actionid::int, @seat7actionid::int, @seat8actionid::int, @seat9actionid::int, @seat10actionid::int,
-					@heroseatactionid::int, @btnseatactionid::int, @sbseatactionid::int, @bbseatactionid::int;";
+					@heroseatactionid::int, @btnseatactionid::int, @sbseatactionid::int, @bbseatactionid::int,
+					@cnt_players::int, @cnt_players_flop::int, @cnt_players_turn::int, @cnt_players_river::int, @cnt_players_showdown::int;";
 
         public static string sql_ImportHoleCardsSimpleIds =
             @"INSERT INTO public.holecardssimple
@@ -93,6 +95,14 @@ namespace TrackerLibrary.Queries.SQL
 				 
 					select @hcId::int, @hcAsString::text
 					where @hcAsString::text not in (select holecardsasstring from public.holecardssimple);";
+
+        public static string sql_ImportToCard =
+            @"INSERT INTO public.card
+				(id, card) 
+				 
+					select @hcId::int, @hcAsString::text
+					where @hcAsString::text not in (select card from public.card);";
+
     }
 
   

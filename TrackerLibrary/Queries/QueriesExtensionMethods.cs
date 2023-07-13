@@ -8,7 +8,7 @@ namespace TrackerLibrary.Queries
 {
     public static class QueriesExtensionMethods
     {
-        public static string ConcatQueries(this string mainQuery, string whereClauseQuery = "", string whereClauseHero = "", string whereClauseVillain = "", string hero = "", int cntPlayers = 0, string tourneyType = "", int posHero = 0, int posVillain = 0, string regList = "", string date ="", string AI ="", string size ="", string effStack = "0",string hcsId = "")
+        public static string ConcatQueries(this string mainQuery, string whereClauseQuery = "", string whereClauseHero = "", string whereClauseVillain = "", string hero = "", int cntPlayers = 0, string tourneyType = "", int posHero = 0, int posVillain = 0, string regList = "", string date ="", string AI ="", string size ="", string effStack = "0",string hcsId = "", string btnNULL= "", string seatActionHero = "" , string seatActionVillain = "")
         {
 
             string output = mainQuery;
@@ -82,6 +82,21 @@ namespace TrackerLibrary.Queries
                 output = output.Replace("@HCsId", hcsId);
             }
 
+            if (output.Contains("@btnNULL"))
+            {
+                output = output.Replace("@btnNULL", btnNULL);
+            }
+
+            if (output.Contains("@seatActionHero"))
+            {
+                output = output.Replace("@seatActionHero", seatActionHero);
+            }
+
+            if (output.Contains("@seatActionVillain"))
+            {
+                output = output.Replace("@seatActionVillain", seatActionVillain);
+            }
+
             return output;
 
         }
@@ -98,8 +113,6 @@ namespace TrackerLibrary.Queries
             {
                 return "not in ( " + regList + " )";
             }
-
         }
-
     }
 }

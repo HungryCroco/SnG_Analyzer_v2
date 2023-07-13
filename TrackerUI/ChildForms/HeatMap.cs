@@ -12,6 +12,8 @@ using TrackerLibrary;
 using TrackerLibrary.Models;
 using TrackerLibrary.CRUD;
 using TrackerLibrary.Queries.NoSQL;
+using TrackerLibrary.Queries.SQL;
+using TrackerLibrary.Queries;
 
 namespace TrackerUI.ChildForms
 {
@@ -80,9 +82,12 @@ namespace TrackerUI.ChildForms
             cmbBoxAI.DisplayMember = "Key";
             cmbBoxAI.ValueMember = "Value";
 
-            Dictionary<string, QueryModel.Query> mapComboBoxQuery = new() { { "BvB ISO", new QueryModel.Query(HeatMapQueries.NoSQL_ExportHeatMapAsJSON, HeatMapQueries.NoSQL_ExportHeatMapByHoleCardsSimple, HeatMapQueries.NoSQL_WhereClauseHero_BvB_Iso , HeatMapQueries.NoSQL_WhereClauseVillain_BvB_Iso)} , 
-                                                                                { "BvB oL", new QueryModel.Query(HeatMapQueries.NoSQL_ExportHeatMapAsJSON, HeatMapQueries.NoSQL_ExportHeatMapByHoleCardsSimple, HeatMapQueries.NoSQL_WhereClauseHero_BvB_oL , HeatMapQueries.NoSQL_WhereClauseVillain_BvB_oL)} , 
-                                                                                { "BvB oR", new QueryModel.Query(HeatMapQueries.NoSQL_ExportHeatMapAsJSON, HeatMapQueries.NoSQL_ExportHeatMapByHoleCardsSimple, HeatMapQueries.NoSQL_WhereClauseHero_BvB_oR , HeatMapQueries.NoSQL_WhereClauseVillain_BvB_oR)} };
+            Dictionary<string, QueryModel.Query> mapComboBoxQuery = new() { { "BvB ISO", GlobalConfig.dbType == DataBaseType.NoSQL ? new QueryModel.Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_Iso , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_Iso) :
+                                                                                                                                     new QueryModel.Query("","", "" , "")   } , 
+                                                                                { "BvB oL", GlobalConfig.dbType == DataBaseType.NoSQL ? new QueryModel.Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_oL , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_oL) :
+                                                                                                                                        new QueryModel.Query(SQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON ,SQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, SQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_oL , "", "sbSeatActionId", "bbSeatActionId")   } ,
+                                                                                { "BvB oR", GlobalConfig.dbType == DataBaseType.NoSQL ? new QueryModel.Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_oR , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_oR) :
+                                                                                                                                        new QueryModel.Query("","", "" , "")   } , };
             cmbBoxQuery.DataSource = new BindingSource(mapComboBoxQuery, null);
             cmbBoxQuery.DisplayMember = "Key";
             cmbBoxQuery.ValueMember = "Value";

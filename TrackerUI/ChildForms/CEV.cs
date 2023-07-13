@@ -26,7 +26,7 @@ namespace TrackerUI.ChildForms
         private List<CevModel> CalculateCevRequested()
         {
             List<CevModel> cevRequested = new List<CevModel>();
-            cevRequested = NoSQL_Connector.GetCevByPosParallel("IPray2Buddha", "3-max", QueriesExtensionMethods.ConcatQueries(DashBoardQueries.sql_ExportCevPerTournamentAsJSON, DashBoardQueries.sql_cevRequestGeneral_test));
+            cevRequested = NoSQL_Connector.GetCevByPosParallel("IPray2Buddha", "3-max", QueriesExtensionMethods.ConcatQueries(NoSQL_DashBoardQueries.sql_ExportCevPerTournamentAsJSON, NoSQL_DashBoardQueries.sql_cevRequestGeneral_test));
             return cevRequested;
         }
 

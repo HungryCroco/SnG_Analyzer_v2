@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary.Queries.NoSQL
 {
-    public static class DashBoardQueries
+    public static class NoSQL_DashBoardQueries
     {
         public static string sql_ExportCevPerTournamentAsJSON =
             @"SELECT array_to_json(array_agg(row_to_json(t2)))
@@ -58,52 +58,52 @@ namespace TrackerLibrary.Queries.NoSQL
 						ORDER BY DATE_TRUNC('month',t2.t_date) DESC 
 					) t3";
 
-        public static string sql_ExportTlpOverviewAsJSON_GeneralInfo_GroupByBlocks =
-            @"	
-set join_collapse_limit = 1;
-SELECT array_to_json(array_agg(row_to_json(t2)))
-				FROM (
- 						SELECT sum (t1.cev) as CEV , sum(t1.Chips_Won) as Amt_Won, avg(t1.aBI) as aBI, to_char(min(t1.t_date),'YYYY-MM-DD') as min_Date, to_char(max(t1.t_date),'YYYY-MM-DD') as max_Date
-							FROM ( 
-									SELECT sum (sa.cev_won) as CEV , sum(sa.chips_won) as Chips_Won , ta.amt_buyin as aBI , ta.tournamentdate as t_date, ROW_NUMBER() OVER(ORDER BY ta.id) rn
-  									FROM public.tournament ta
-										inner join public.hands ha on ha.tournamentid=ta.id
-										inner join public.seataction sa on (sa.Id=ha.seat1ActionId OR sa.Id=ha.seat2ActionId OR sa.Id=ha.seat3ActionId)
-										inner join public.player pa on (sa.playerId = pa.id)
+//        public static string sql_ExportTlpOverviewAsJSON_GeneralInfo_GroupByBlocks =
+//            @"	
+//set join_collapse_limit = 1;
+//SELECT array_to_json(array_agg(row_to_json(t2)))
+//				FROM (
+// 						SELECT sum (t1.cev) as CEV , sum(t1.Chips_Won) as Amt_Won, avg(t1.aBI) as aBI, to_char(min(t1.t_date),'YYYY-MM-DD') as min_Date, to_char(max(t1.t_date),'YYYY-MM-DD') as max_Date
+//							FROM ( 
+//									SELECT sum (sa.cev_won) as CEV , sum(sa.chips_won) as Chips_Won , ta.amt_buyin as aBI , ta.tournamentdate as t_date, ROW_NUMBER() OVER(ORDER BY ta.id) rn
+//  									FROM public.tournament ta
+//										inner join public.hands ha on ha.tournamentid=ta.id
+//										inner join public.seataction sa on (sa.Id=ha.seat1ActionId OR sa.Id=ha.seat2ActionId OR sa.Id=ha.seat3ActionId)
+//										inner join public.player pa on (sa.playerId = pa.id)
 										
-									WHERE pa.playernickname = 'IPray2Buddha' and ha.tournamenttype = '3-max' 
-									GROUP BY ta.id
-									ORDER BY ta.id
-								) t1
-						GROUP BY (rn - 1)/200
-						ORDER BY (rn - 1)/200
-					) t2";
+//									WHERE pa.playernickname = 'IPray2Buddha' and ha.tournamenttype = '3-max' 
+//									GROUP BY ta.id
+//									ORDER BY ta.id
+//								) t1
+//						GROUP BY (rn - 1)/200
+//						ORDER BY (rn - 1)/200
+//					) t2";
 
-        public static string sql_ExportTlpOverviewAsJSON_GeneralInfo_GroupByMonths =
-            @"	
-set join_collapse_limit = 1;
-SELECT array_to_json(array_agg(row_to_json(t2)))
-				FROM (
- 						SELECT sum (t1.cev) as CEV , sum(t1.Chips_Won) as Amt_Won, avg(t1.aBI) as aBI, count(t1.cev) as Count_Tourney, to_char(min(t1.t_date),'YYYY-MM-DD') as min_Date, to_char(max(t1.t_date),'YYYY-MM-DD') as max_Date
-							FROM ( 
-									SELECT sum (sa.cev_won) as CEV , sum(sa.chips_won) as Chips_Won , ta.amt_buyin as aBI , ta.tournamentdate as t_date
-  									FROM public.tournament ta
-										inner join public.hands ha on ha.tournamentid=ta.id
-										inner join public.seataction sa on sa.Id=ha.heroseatactionid
-										inner join public.player pa on (sa.playerId = pa.id)
+//        public static string sql_ExportTlpOverviewAsJSON_GeneralInfo_GroupByMonths =
+//            @"	
+//set join_collapse_limit = 1;
+//SELECT array_to_json(array_agg(row_to_json(t2)))
+//				FROM (
+// 						SELECT sum (t1.cev) as CEV , sum(t1.Chips_Won) as Amt_Won, avg(t1.aBI) as aBI, count(t1.cev) as Count_Tourney, to_char(min(t1.t_date),'YYYY-MM-DD') as min_Date, to_char(max(t1.t_date),'YYYY-MM-DD') as max_Date
+//							FROM ( 
+//									SELECT sum (sa.cev_won) as CEV , sum(sa.chips_won) as Chips_Won , ta.amt_buyin as aBI , ta.tournamentdate as t_date
+//  									FROM public.tournament ta
+//										inner join public.hands ha on ha.tournamentid=ta.id
+//										inner join public.seataction sa on sa.Id=ha.heroseatactionid
+//										inner join public.player pa on (sa.playerId = pa.id)
 										
-									WHERE pa.playernickname = 'IPray2Buddha' and ha.tournamenttype = '3-max' 
-									GROUP BY ta.id
-									ORDER BY ta.id
-								) t1
-				GROUP BY DATE_TRUNC('month',t_date)
-				ORDER BY DATE_TRUNC('month',t_date) DESC
-					) t2";
+//									WHERE pa.playernickname = 'IPray2Buddha' and ha.tournamenttype = '3-max' 
+//									GROUP BY ta.id
+//									ORDER BY ta.id
+//								) t1
+//				GROUP BY DATE_TRUNC('month',t_date)
+//				ORDER BY DATE_TRUNC('month',t_date) DESC
+//					) t2";
 
 
-        public static string sql_cevRequestGeneral=
-            @"where (pl.PlayerNickName = @activePlayer::varchar AND ha.tournamenttype = @tourneyType::Varchar 
-					AND ta.amt_buyin = @amtBI::numeric)";
+     //   public static string sql_cevRequestGeneral=
+     //       @"where (pl.PlayerNickName = @activePlayer::varchar AND ha.tournamenttype = @tourneyType::Varchar 
+					//AND ta.amt_buyin = @amtBI::numeric)";
 
         public static string sql_cevRequestGeneral_test =
             @"where (pl.PlayerNickName = @activePlayer::varchar AND ha.tournamenttype = @tourneyType::Varchar)";

@@ -474,4 +474,11 @@ namespace TrackerLibrary
         [Description("Summary")] Summary = 9,
         [Description("Unknown")] Unknown = 10
     }
+
+    public enum DataBaseType
+    {
+        [Description("NoSQL")] NoSQL = 1,
+        [Description("SQL")] SQL = 2,
+
+    }
 }
