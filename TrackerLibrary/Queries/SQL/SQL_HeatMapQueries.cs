@@ -33,6 +33,8 @@ namespace TrackerLibrary.Queries.SQL
 
 		public static string NoSQL_ExportDataGridViewByHoleCardsSimple =
             @"SELECT  
+			r.room as room,
+			ha.HandIdBySite as handId,
 			tr.amt_BuyIn, 
 			tr.Currency as Currency, 
 
@@ -49,12 +51,13 @@ namespace TrackerLibrary.Queries.SQL
 			sa_hero.RiverAction as RiverA
 
 			FROM public.Hands ha
-				INNER JOIN public.seataction sa_hero ON (sa_hero.Id=ha.sbSeatActionId)
+				INNER JOIN public.seataction sa_hero ON (sa_hero.Id=@seatActionHero)
 				INNER JOIN public.holecardssimple hc ON hc.Id=sa_hero.hcssimpleid
 				INNER JOIN public.Player hero ON hero.Id=sa_hero.PlayerId
-				INNER JOIN public.seataction sa_villain ON (sa_villain.Id=ha.bbSeatActionId)
+				INNER JOIN public.seataction sa_villain ON (sa_villain.Id=ha.@seatActionVillain)
 				INNER JOIN public.Player villain ON villain.Id=sa_villain.PlayerId
 				INNER JOIN public.Tournament tr on tr.Id=ha.TournamentId
+				INNER JOIN public.Room r on r.Id=tr.roomid
 				INNER JOIN public.Card hc1 ON hc1.Id=sa_hero.holecard1::integer
 				INNER JOIN public.Card hc2 ON hc2.Id=sa_hero.holecard2::integer
 				INNER JOIN public.Card fc1 ON fc1.Id=ha.flopcard1::integer
@@ -78,16 +81,33 @@ namespace TrackerLibrary.Queries.SQL
 			AND ha.TournamentType = '@tourneyType'
 			AND ha.datetimehand::date > DATE '@date'";
 
-        public static string NoSQL_WhereClauseHero_BvB_Iso =
-            @"hero.PlayerNickName = '@hero'::varchar 
+        public static string NoSQL_WhereClauseHero_BvB_oR =
+           @"hero.PlayerNickName = '@hero'::varchar 
 			AND sa_hero.flg_open_opp 
 			AND villain.PlayerNickName @regList 
-			AND ha.pf_actors LIKE '89%'
-			AND ha.pf_aggressors LIKE '89%'
+			AND ha.pf_actors LIKE '89%' 
+			AND ha.pf_aggressors LIKE '8%'
 			AND ha.cnt_players = 3 
 			AND sa_hero.PreFlopAction LIKE 'R%' 
 			AND (sa_hero.StartingStack / ha.Amt_bb) @es
 			AND (sa_villain.StartingStack / ha.Amt_bb) @es
+			AND (regexp_replace(substring(sa_hero.PreFlopAction, 'R([0-9]+)'), '[^0-9]', '', 'g')::numeric / ha.Amt_bb::numeric) @size
+			AND sa_hero.PreFlopAction ~ '@AI' 
+			AND ha.TournamentType = '@tourneyType'
+			AND ha.datetimehand::date > DATE '@date'";
+
+        public static string NoSQL_WhereClauseHero_BvB_Iso =
+            @"hero.PlayerNickName = '@hero'::varchar 
+			AND sa_hero.flg_open_opp 
+			AND villain.PlayerNickName @regList
+			AND ha.pf_aggressors LIKE '9%'
+			AND ha.pf_actors LIKE '89%' 
+			AND ha.cnt_players = 3 
+			AND sa_hero.PreFlopAction LIKE 'R%' 
+			AND (sa_hero.StartingStack / ha.Amt_bb) @es
+			AND (sa_villain.StartingStack / ha.Amt_bb) @es
+			AND (regexp_replace(substring(sa_hero.PreFlopAction, 'R([0-9]+)'), '[^0-9]', '', 'g')::numeric / ha.Amt_bb::numeric) @size
+			AND sa_hero.PreFlopAction ~ '@AI' 
 			AND ha.TournamentType = '@tourneyType'
 			AND ha.datetimehand::date > DATE '@date'";
     }

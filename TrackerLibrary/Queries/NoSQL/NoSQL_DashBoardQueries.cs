@@ -34,7 +34,9 @@ namespace TrackerLibrary.Queries.NoSQL
 												FROM hands h
 												CROSS JOIN LATERAL jsonb_each(h.data->'SeatActions') AS t(k,v)
 												WHERE t.k @regList AND t.v->'SeatPosition' = '@posVillain')  t1
-							WHERE ha->'SeatActions'->'@hero'->'SeatPosition' = '@posHero' AND ha->'Info'->> 'CntPlayers' = '@cntPlayers' @whereClauseQuery
+							WHERE ha->'SeatActions'->'@hero'->'SeatPosition' = '@posHero' AND 
+								ha->'Info'->> 'CntPlayers' = '@cntPlayers' AND
+								ha->'Info'->> 'pf_actors' @pfActors
 							GROUP BY tourney_id, t1.ha
 							ORDER BY tourney_id 
 							) t2

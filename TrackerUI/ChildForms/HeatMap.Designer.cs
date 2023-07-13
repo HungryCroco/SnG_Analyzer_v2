@@ -815,7 +815,7 @@ namespace TrackerUI.ChildForms
             this.label_62o.Name = "label_62o";
             this.label_62o.Size = new System.Drawing.Size(161, 93);
             this.label_62o.TabIndex = 151;
-            this.label_62o.Tag = "152";
+            this.label_62o.Tag = "153";
             this.label_62o.Text = "62o";
             this.label_62o.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_62o.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label_Click);
@@ -3361,7 +3361,7 @@ namespace TrackerUI.ChildForms
             this.label_62s.Name = "label_62s";
             this.label_62s.Size = new System.Drawing.Size(166, 88);
             this.label_62s.TabIndex = 165;
-            this.label_62s.Tag = "153";
+            this.label_62s.Tag = "152";
             this.label_62s.Text = "62s";
             this.label_62s.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_62s.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label_Click);

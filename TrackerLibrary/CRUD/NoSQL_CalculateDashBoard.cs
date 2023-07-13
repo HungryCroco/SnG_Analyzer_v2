@@ -30,99 +30,99 @@ namespace TrackerLibrary.CRUD
         private static List<CevModel> RequestCevModel_3W_BTNvBBvREG(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                whereClauseQuery: "AND ha->'Info'->> 'pf_actors' LIKE '09%'", hero: hero, cntPlayers:3 , tourneyType: tourneyType, posHero:0 , posVillain:8, regList:GlobalConfig.defaultRegList.ReadRegList(true), 
-                btnNULL: "IS NOT NULL", seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers:3 , tourneyType: tourneyType, posHero:0 , posVillain:9, pfActors: "LIKE '09%'", regList:GlobalConfig.defaultRegList.ReadRegList(true), 
+                seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_BTNvBBvFISH(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                whereClauseQuery: "AND ha->'Info'->> 'pf_actors' LIKE '09%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 0, posVillain: 8, regList: GlobalConfig.defaultRegList.ReadRegList(false), 
-                btnNULL: "IS NOT NULL", seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 0, posVillain: 9, pfActors: "LIKE '09%'", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+                seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_SBvBTNvREG(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                whereClauseQuery: "AND ha->'Info'->> 'pf_actors' LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 0, regList: GlobalConfig.defaultRegList.ReadRegList(true), 
-                btnNULL: "IS NOT NULL", seatActionVillain: "btnSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 0, pfActors: "LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(true), 
+                seatActionVillain: "btnSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_SBvBTNvFISH(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                whereClauseQuery: "AND ha->'Info'->> 'pf_actors' LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 0, regList: GlobalConfig.defaultRegList.ReadRegList(false), 
-                btnNULL: "IS NOT NULL", seatActionVillain: "btnSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 0, pfActors: "LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+                seatActionVillain: "btnSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_BBvBTNvREG(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                whereClauseQuery: "AND ha->'Info'->> 'pf_actors' LIKE '09%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 0, regList: GlobalConfig.defaultRegList.ReadRegList(true), 
-                btnNULL: "IS NOT NULL", seatActionVillain: "btnSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 0, pfActors: "LIKE '09%'", regList: GlobalConfig.defaultRegList.ReadRegList(true), 
+                seatActionVillain: "btnSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_BBvBTNvFISH(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                whereClauseQuery: "AND ha->'Info'->> 'pf_actors' LIKE '09%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 0, regList: GlobalConfig.defaultRegList.ReadRegList(false), 
-                btnNULL: "IS NOT NULL", seatActionVillain: "btnSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 0, pfActors: "LIKE '09%'", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+                seatActionVillain: "btnSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_SBvBBvREG(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                whereClauseQuery: "AND ha->'Info'->> 'pf_actors' NOT LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 9, regList: GlobalConfig.defaultRegList.ReadRegList(true), 
-                btnNULL: "IS NULL", seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 9, pfActors: "NOT LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(true), 
+                seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_SBvBBvFISH(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                whereClauseQuery: "AND ha->'Info'->> 'pf_actors' NOT LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 9, regList: GlobalConfig.defaultRegList.ReadRegList(false), 
-                btnNULL: "IS NULL", seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 8, posVillain: 9, pfActors: "NOT LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+                seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_BBvSBvREG(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                whereClauseQuery: "AND ha->'Info'->> 'pf_actors' NOT LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 8, regList: GlobalConfig.defaultRegList.ReadRegList(true), 
-                btnNULL: "IS NULL", seatActionVillain: "sbSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 8, pfActors: "NOT LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(true), 
+                seatActionVillain: "sbSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_3W_BBvSBvFISH(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                whereClauseQuery: "AND ha->'Info'->> 'pf_actors' NOT LIKE '0%'", hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 8, regList: GlobalConfig.defaultRegList.ReadRegList(false), 
-                btnNULL: "IS NULL", seatActionVillain: "sbSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers: 3, tourneyType: tourneyType, posHero: 9, posVillain: 8, pfActors: "NOT LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+                seatActionVillain: "sbSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_HU_SBvREG(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 2, tourneyType: tourneyType, posHero: 8, posVillain: 9, regList: GlobalConfig.defaultRegList.ReadRegList(true), 
-                btnNULL: "IS NULL", seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers: 2, tourneyType: tourneyType, posHero: 8, posVillain: 9, pfActors: "LIKE '%' OR h.pf_actors IS NULL", regList: GlobalConfig.defaultRegList.ReadRegList(true), 
+                seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_HU_SBvFISH(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 2, tourneyType: tourneyType, posHero: 8, posVillain: 9, regList: GlobalConfig.defaultRegList.ReadRegList(false), 
-                btnNULL: "IS NULL", seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers: 2, tourneyType: tourneyType, posHero: 8, posVillain: 9, pfActors: "LIKE '%' OR h.pf_actors IS NULL", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+                seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_HU_BBvREG(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 2, tourneyType: tourneyType, posHero: 9, posVillain: 8, regList: GlobalConfig.defaultRegList.ReadRegList(true), 
-                btnNULL: "IS NULL", seatActionVillain: "sbSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers: 2, tourneyType: tourneyType, posHero: 9, posVillain: 8, pfActors: "LIKE '%' OR h.pf_actors IS NULL", regList: GlobalConfig.defaultRegList.ReadRegList(true), 
+                seatActionVillain: "sbSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         private static List<CevModel> RequestCevModel_HU_BBvFISH(string hero, string tourneyType, DataBaseType dbType)
         {
             return QueriesExtensionMethods.ConcatQueries(dbType == DataBaseType.NoSQL ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 2, tourneyType: tourneyType, posHero: 9, posVillain: 8, regList: GlobalConfig.defaultRegList.ReadRegList(false), 
-                btnNULL: "IS NULL", seatActionVillain: "sbSeatActionId").GetCevChartParallel<CevModel>();
+                hero: hero, cntPlayers: 2, tourneyType: tourneyType, posHero: 9, posVillain: 8, pfActors: "LIKE '%' OR h.pf_actors IS NULL", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+                seatActionVillain: "sbSeatActionId").GetCevChartParallel<CevModel>();
         }
 
         public static DashBoardModel RequestDashBoard(string hero, string tourneyType, DataBaseType dbType)
