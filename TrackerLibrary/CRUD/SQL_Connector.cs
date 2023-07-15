@@ -11,6 +11,7 @@ using System.Reflection;
 using System.Diagnostics;
 using System.Data;
 using System.Buffers;
+using TrackerLibrary.Queries.NoSQL;
 
 namespace TrackerLibrary.CRUD
 {
@@ -24,8 +25,8 @@ namespace TrackerLibrary.CRUD
 
             NpgsqlConnection conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
             conn.Open();
-
-            foreach (var hand in hands)
+            List<Hand> uniqueHands = hands.ReturnHashSetWithUniqueHands(dbName, SQL_Queries.query_GetIdAndRoomFromSqlDb, ref conn).ToList();
+            foreach (var hand in uniqueHands)
             {
                 ExportEntireHand(hand, ref dbName, ref conn);
             }

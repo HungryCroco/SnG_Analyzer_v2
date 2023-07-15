@@ -14,9 +14,13 @@ namespace TrackerLibrary
         public static string defaultUser = "postgres";
         public static string defaultPass = "dbpass";
 
-        public static string dbName = "sql_50s_5"; // sql_50s_2";
+        public static string defaultDbTypeRead = "SQL";
+        public static string defaultDbTypeWrite = "ALL";
+        public static string defaultNosqlDb = "sng_analyzer_json"; // sql_50s_2";
+        public static string defaultSqlDb = "sng_analyzer_sql"; // sql_50s_2";
         public static string tableName = "hands";
         public static string columnName = "data";
+        public static string dashboardTableName = "dashboard";
 
         public static string settingsFolder = "Settings";
         public static string settingsfileName = "Settings.txt";
@@ -27,18 +31,19 @@ namespace TrackerLibrary
         public static string settingsDirectory = projectDirectory + "\\Settings";
         public static string settingsPath = settingsDirectory + "\\" + settingsfileName;
 
+        public static int defaultHhSplitSize = 60000;
         public static int defaultMinTourney = 500;
         public static string defaultRegList = "reglist_small.txt";
         private static string regListDirectory = projectDirectory + "\\RegList";
         public static string regListPath = regListDirectory + "\\" + defaultRegList;
 
-        public static string dashBoardList = "dashboard.txt";
-        //public static string hhFileName = "EV_Calcs.txt";
-        public static string hhFileName = "ps_50s.txt";
+        //public static string dashBoardList = "dashboard.txt";
+        
+        //public static string hhFileName = "ps_50s.txt";
         public static string pfEA = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\eaPF_a.txt";
-        public static string directoryHH = @"C:\Users\tatsi\source\repos\Poker\HH SpinAndGo";
+        //public static string directoryHH = @"C:\Users\tatsi\source\repos\Poker\HH SpinAndGo";
         public static string directoryRegFilter = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\settings";
-        public static string temp = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\temp";
+        //public static string temp = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\temp";
 
         //public static void InitializeConnections()
         //{

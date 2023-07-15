@@ -27,8 +27,8 @@ namespace TrackerUI.ChildForms
             InitializeComponent();
             
             chb_3_3.Checked = true;
-
-            DashBoardModel dashboard = NoSQL_CalculateDashBoard.RequestDashBoard("IPray2Buddha", "3-max", GlobalConfig.dbType);
+            SettingsModel.Settings currSettings = DataManager_Settings.ReadSettings();
+            DashBoardModel dashboard = DataManager_DashBoard.RequestDashBoard("IPray2Buddha", "3-max", currSettings);
 
             LoadChart(PlotDataFromCevModelList(dashboard.CevModel_Total_ByTournament, 200, "CEV/t", 3), PlotDataFromCevModelList(dashboard.CevModel_Total_ByTournament, 200, "Chips/t", 2));
             tlp_overview_Calculate(dashboard, 0);

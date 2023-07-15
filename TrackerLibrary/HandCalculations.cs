@@ -15,8 +15,8 @@ namespace TrackerLibrary
 {
     internal static class HandCalculations
     {
-        public const string pfEA = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\eaPF_a.txt";
-        private static float[,,,] ea = EVCalculator.ImportDLL.ReadEAFromFileAsFloatArray(pfEA);
+        //public const string pfEA = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\eaPF_a.txt";
+        private static float[,,,] ea = EVCalculator.ImportDLL.ReadEAFromFileAsFloatArray(GlobalConfig.pfEA);
 
         private static void CalculateCev(this Hand myHand)
         {

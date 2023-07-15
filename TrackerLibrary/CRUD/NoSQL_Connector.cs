@@ -96,23 +96,26 @@ namespace TrackerLibrary.CRUD
             Stopwatch watch = new Stopwatch();
             watch.Start();
             CreateDatabase(dbName, tableName, columnName);
-            List<string> serializedHandsAsJson = SerializeHands(hands.ReturnHashSetWithUniqueHands(dbName).ToList());
-            
-            using (NpgsqlConnection connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
-            {
-                connection.Open();
-                using (var importer = connection.BeginBinaryImport($"COPY {tableName} ({columnName}) FROM STDIN (FORMAT BINARY)"))
-                {
-                    foreach (var hand in serializedHandsAsJson)
-                    {
-                        importer.StartRow();
-                        importer.Write(hand, NpgsqlTypes.NpgsqlDbType.Jsonb);
-                    }
 
-                    importer.Complete();
+
+            NpgsqlConnection conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
+            
+            conn.Open();
+
+            List<string> serializedHandsAsJson = SerializeHands(hands.ReturnHashSetWithUniqueHands(dbName, NoSQL_Queries.query_GetIdAndRoomFromNoSqlDb, ref conn).ToList());
+
+            using (var importer = conn.BeginBinaryImport($"COPY {tableName} ({columnName}) FROM STDIN (FORMAT BINARY)"))
+            {
+                foreach (var hand in serializedHandsAsJson)
+                {
+                    importer.StartRow();
+                    importer.Write(hand, NpgsqlTypes.NpgsqlDbType.Jsonb);
                 }
-                connection.Close();
+
+                importer.Complete();
             }
+            conn.Close();
+            
 
             Console.WriteLine("-----");
             Console.WriteLine("Import Time: " + watch.ElapsedMilliseconds / 1000.0 + "s");
@@ -143,54 +146,54 @@ namespace TrackerLibrary.CRUD
             }
         }
 
-        public static HashSet<Hand> ReturnHashSetWithUniqueHands(this List<Hand> handsToImport, string dbName)
-        {
-            //List<(string, long)> oldData = new();
-            var importedHandSet = new HashSet<(string Room, long HandId)> ();
-            var handsToImportDistinctSet = new HashSet<Hand>();
+        //public static HashSet<Hand> ReturnHashSetWithUniqueHands(this List<Hand> handsToImport, string dbName)
+        //{
+        //    //List<(string, long)> oldData = new();
+        //    var importedHandSet = new HashSet<(string Room, long HandId)>();
+        //    var handsToImportDistinctSet = new HashSet<Hand>();
 
-            using (NpgsqlConnection connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
-            {
-                connection.Open();
-                using (NpgsqlCommand command = new NpgsqlCommand(NoSQL_Queries.query_GetIdAndRoomFromNoSqlDb, connection))
-                {
-                    using (NpgsqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            if (!reader.IsDBNull(0))
-                            {
-                                string handIdBySite = reader.GetString(0);
-                                string room = reader.GetString(1);
+        //    using (NpgsqlConnection connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
+        //    {
+        //        connection.Open();
+        //        using (NpgsqlCommand command = new NpgsqlCommand(NoSQL_Queries.query_GetIdAndRoomFromNoSqlDb, connection))
+        //        {
+        //            using (NpgsqlDataReader reader = command.ExecuteReader())
+        //            {
+        //                while (reader.Read())
+        //                {
+        //                    if (!reader.IsDBNull(0))
+        //                    {
+        //                        string handIdBySite = reader.GetString(0);
+        //                        string room = reader.GetString(1);
 
-                                //oldData.Add((room ,long.Parse(handIdBySite)));
-                                importedHandSet.Add((room, long.Parse(handIdBySite)));
-                            }
-                        }
-                    }
-                }
-                connection.Close();      
-            }
+        //                        //oldData.Add((room ,long.Parse(handIdBySite)));
+        //                        importedHandSet.Add((room, long.Parse(handIdBySite)));
+        //                    }
+        //                }
+        //            }
+        //        }
+        //        connection.Close();
+        //    }
 
-            //var importedHandSet = new HashSet<(string Room, int HandId)>(importedHands
-            //.Select(h => (h.Item1, h.Item2)));
+        //    //var importedHandSet = new HashSet<(string Room, int HandId)>(importedHands
+        //    //.Select(h => (h.Item1, h.Item2)));
 
 
-            foreach (var hand in handsToImport)
-            {
-                if (!importedHandSet.Contains((hand.Info.Room, hand.Info.HandIdBySite)))
-                {
-                    handsToImportDistinctSet.Add(hand);
-                }
-            }
+        //    foreach (var hand in handsToImport)
+        //    {
+        //        if (!importedHandSet.Contains((hand.Info.Room, hand.Info.HandIdBySite)))
+        //        {
+        //            handsToImportDistinctSet.Add(hand);
+        //        }
+        //    }
 
-            //if (true)
-            //{
-            //    int ii = 1;
-            //}
+        //    //if (true)
+        //    //{
+        //    //    int ii = 1;
+        //    //}
 
-            return handsToImportDistinctSet;
-        }
+        //    return handsToImportDistinctSet;
+        //}
 
         public static List<string> SerializeHands(List<Hand> hands)
         {
@@ -208,11 +211,11 @@ namespace TrackerLibrary.CRUD
             return serializedHandsAsJson; 
         }
 
-        public static List<CevModel> GetCevByPosParallel(string tournamentType, string pos, string sqlQuery)
+        public static List<CevModel> GetCevByPosParallel(string tournamentType, string pos, string sqlQuery, string dbName)
         {
             string output;
 
-            using (var _conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(GlobalConfig.dbName)))
+            using (var _conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
             {
                 _conn.Open();
                 using (var _cmd = new NpgsqlCommand(sqlQuery, _conn))
@@ -230,11 +233,11 @@ namespace TrackerLibrary.CRUD
             return JsonConvert.DeserializeObject<List<CevModel>>(output);
         }
 
-        public static List<T> GetCevChartParallel<T>(this string sqlQuery)
+        public static List<T> GetCevChartParallel<T>(this string sqlQuery, string dbName)
         {
             string output;
 
-            using (var conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(GlobalConfig.dbName)))
+            using (var conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
             {
                 conn.Open();
                 using (var cmd = new NpgsqlCommand(sqlQuery, conn))
@@ -249,42 +252,48 @@ namespace TrackerLibrary.CRUD
             return JsonConvert.DeserializeObject<List<T>>(output);
         }
 
-        public static DataTable GetView(this string mySqlQuery)
+        public static DataTable GetView(this string mySqlQuery, string dbName)
         {
             DataTable dt = new DataTable();
-
-            using (var conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(GlobalConfig.dbName)))
+            try
             {
-                conn.Open();
-                var cmd = new NpgsqlCommand(mySqlQuery, conn); ;
-                NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
-
-
-                try
+                using (var conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
                 {
-                    da = new NpgsqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    da.Fill(dt);
+                    conn.Open();
+                    var cmd = new NpgsqlCommand(mySqlQuery, conn); ;
+                    NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
 
-                    return dt;
-                }
-                catch (Exception ex)
-                {
 
-                    //MessageBox.Show("An error occured: " + ex.Message, "Perform CRUD Operations failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    dt = null;
+                    try
+                    {
+                        da = new NpgsqlDataAdapter();
+                        da.SelectCommand = cmd;
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        //MessageBox.Show("An error occured: " + ex.Message, "Perform CRUD Operations failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        dt = null;
+                    }
+                    conn.Close();
                 }
-                conn.Close();
             }
+            catch (Exception)
+            {
+            }
+            
             return dt;
         }
 
-        public static DashBoardModel GetDashBoardModel(string activePlayer, string tourneyType)
+        public static DashBoardModel GetDashBoardModel(string activePlayer, string tourneyType, string dbName)
         {
             string output;
             try
             {
-                using (var _conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(GlobalConfig.dbName)))
+                using (var _conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
                 {
                     _conn.Open();
                     using (var _cmd = new NpgsqlCommand($"SELECT data FROM dashboard WHERE player = '{activePlayer}' AND tourneytype = '{tourneyType}';", _conn))

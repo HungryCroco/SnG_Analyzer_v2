@@ -3432,6 +3432,8 @@ namespace TrackerUI.ChildForms
             // 
             // dataGridView_HeatMap
             // 
+            this.dataGridView_HeatMap.AllowUserToAddRows = false;
+            this.dataGridView_HeatMap.AllowUserToDeleteRows = false;
             this.dataGridView_HeatMap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView_HeatMap.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView_HeatMap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -3439,10 +3441,12 @@ namespace TrackerUI.ChildForms
             this.dataGridView_HeatMap.Location = new System.Drawing.Point(0, 0);
             this.dataGridView_HeatMap.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView_HeatMap.Name = "dataGridView_HeatMap";
+            this.dataGridView_HeatMap.ReadOnly = true;
             this.dataGridView_HeatMap.RowHeadersWidth = 82;
             this.dataGridView_HeatMap.RowTemplate.Height = 25;
             this.dataGridView_HeatMap.Size = new System.Drawing.Size(2254, 393);
             this.dataGridView_HeatMap.TabIndex = 3;
+            this.dataGridView_HeatMap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_HeatMap_CellContentClick);
             // 
             // HeatMap
             // 

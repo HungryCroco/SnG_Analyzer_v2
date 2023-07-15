@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static TrackerLibrary.Models.SettingsModel;
 
 namespace TrackerLibrary.Models
 {
@@ -24,21 +25,49 @@ namespace TrackerLibrary.Models
             [JsonProperty("Password")]
             public string Password;
 
-            [JsonProperty("MinTorney")]
-            public string MinTorney;
+            [JsonProperty("SqlDatabase")]
+            public string SqlDatabase;
+
+            [JsonProperty("NosqlDatabase")]
+            public string NosqlDatabase;
+
+            [JsonProperty("DbTypeWrite")]
+            public string DbTypeWrite;
+
+            [JsonProperty("DbTypeRead")]
+            public string DbTypeRead;
+
+            [JsonProperty("MinTourney")]
+            public string MinTourney;
 
             [JsonProperty("RegFile")]
             public string RegFile;
 
+            [JsonProperty("HhSplitSize")]
+            public string HhSplitSize;
 
-            public Settings(string server, string port, string user, string pass, string minTorney, string regFile)
+            [JsonProperty("CurrentDbRead")]
+            public string CurrentDbRead;
+
+
+            public Settings(string server, string port, string user, string pass, string nosqlDatabase, string sqlDatabase, string dbTypeWrite, string dbTypeRead, string minTourney, string regFile, string hhSplitSize)
             {
                 Server = server;
                 Port = port;
                 User = user;
                 Password = pass;
-                MinTorney = minTorney;
+                
+
+                SqlDatabase = sqlDatabase;
+                NosqlDatabase = nosqlDatabase;
+                DbTypeWrite = dbTypeWrite;
+                DbTypeRead = dbTypeRead;
+
+                MinTourney = minTourney;
                 RegFile = regFile;
+                HhSplitSize = hhSplitSize;
+
+                CurrentDbRead = DbTypeRead == "SQL" ? sqlDatabase : nosqlDatabase;
             }
         }
     }

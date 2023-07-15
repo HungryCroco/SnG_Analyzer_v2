@@ -87,7 +87,9 @@ namespace TrackerLibrary.Queries.SQL
 					@totalpot::int, @pf_aggressors::varchar, @pf_actors::varchar, @seat1actionid::int, @seat2actionid::int, @seat3actionid::int, @seat4actionid::int, @seat5actionid::int,
 					@seat6actionid::int, @seat7actionid::int, @seat8actionid::int, @seat9actionid::int, @seat10actionid::int,
 					@heroseatactionid::int, @btnseatactionid::int, @sbseatactionid::int, @bbseatactionid::int,
-					@cnt_players::int, @cnt_players_flop::int, @cnt_players_turn::int, @cnt_players_river::int, @cnt_players_showdown::int;";
+					@cnt_players::int, @cnt_players_flop::int, @cnt_players_turn::int, @cnt_players_river::int, @cnt_players_showdown::int
+
+					--where @handidbysite::bigint not in (select handidbysite from hands);";
 
         public static string sql_ImportHoleCardsSimpleIds =
             @"INSERT INTO public.holecardssimple

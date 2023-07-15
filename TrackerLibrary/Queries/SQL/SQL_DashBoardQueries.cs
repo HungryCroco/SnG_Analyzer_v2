@@ -40,7 +40,8 @@ namespace TrackerLibrary.Queries.SQL
 											INNER JOIN public.player villian ON villian.id = sa.playerid 
 							WHERE --h.btnSeatActionId @btnNULL AND
 								h.cnt_players = @cntPlayers
-								AND (h.pf_actors @pfActors )
+								--AND (h.pf_actors @pfActors )
+								AND (COALESCE(h.pf_actors, '') @pfActors)
 				 				AND villian.playernickname @regList
 							) 
 					GROUP BY hid, aBB, t_date, cev_won, chips_won, tourney_id

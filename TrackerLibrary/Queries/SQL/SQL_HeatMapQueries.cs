@@ -8,7 +8,7 @@ namespace TrackerLibrary.Queries.SQL
 {
     public class SQL_HeatMapQueries
     {
-        public static string NoSQL_ExportHeatMapAsJSON =
+        public static string SQL_ExportHeatMapAsJSON =
             @"SELECT array_to_json(array_agg(row_to_json(t)))
 			FROM (
 				SELECT 
@@ -31,7 +31,7 @@ namespace TrackerLibrary.Queries.SQL
 				) t
 			";
 
-		public static string NoSQL_ExportDataGridViewByHoleCardsSimple =
+		public static string SQL_ExportDataGridViewByHoleCardsSimple =
             @"SELECT  
 			r.room as room,
 			ha.HandIdBySite as handId,
@@ -69,7 +69,7 @@ namespace TrackerLibrary.Queries.SQL
 			WHERE @whereClauseHero
 				AND sa_hero.HCsSimpleId= @HCsId::smallint";
 
-        public static string NoSQL_WhereClauseHero_BvB_oL =
+        public static string SQL_WhereClauseHero_BvB_oL =
 			@"hero.PlayerNickName = '@hero'::varchar 
 			AND sa_hero.flg_open_opp 
 			AND villain.PlayerNickName @regList 
@@ -81,7 +81,7 @@ namespace TrackerLibrary.Queries.SQL
 			AND ha.TournamentType = '@tourneyType'
 			AND ha.datetimehand::date > DATE '@date'";
 
-        public static string NoSQL_WhereClauseHero_BvB_oR =
+        public static string SQL_WhereClauseHero_BvB_oR =
            @"hero.PlayerNickName = '@hero'::varchar 
 			AND sa_hero.flg_open_opp 
 			AND villain.PlayerNickName @regList 
@@ -96,7 +96,7 @@ namespace TrackerLibrary.Queries.SQL
 			AND ha.TournamentType = '@tourneyType'
 			AND ha.datetimehand::date > DATE '@date'";
 
-        public static string NoSQL_WhereClauseHero_BvB_Iso =
+        public static string SQL_WhereClauseHero_BvB_Iso =
             @"hero.PlayerNickName = '@hero'::varchar 
 			AND sa_hero.flg_open_opp 
 			AND villain.PlayerNickName @regList

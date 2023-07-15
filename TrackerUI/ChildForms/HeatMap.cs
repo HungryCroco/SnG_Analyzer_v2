@@ -31,31 +31,31 @@ namespace TrackerUI.ChildForms
 
 
 
-        private void AutoResizeDataGridView(DataGridView dgv)
-        {
-            //autoresize columns but buggish
-            //TO DO: search foir better autoresize method
+        //private void AutoResizeDataGridView(DataGridView dgv)
+        //{
+        //    //autoresize columns but buggish
+        //    //TO DO: search foir better autoresize method
 
-            int nLastColumn = dgv.Columns.Count - 1;
-            for (int i = 0; i < dgv.Columns.Count; i++)
-            {
-                if (nLastColumn == i)
-                {
-                    dgv.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                }
-                else
-                {
-                    dgv.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                }
-            }
+        //    int nLastColumn = dgv.Columns.Count - 1;
+        //    for (int i = 0; i < dgv.Columns.Count; i++)
+        //    {
+        //        if (nLastColumn == i)
+        //        {
+        //            dgv.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        //        }
+        //        else
+        //        {
+        //            dgv.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+        //        }
+        //    }
 
-            for (int i = 0; i < dgv.Columns.Count; i++)
-            {
-                int colw = dgv.Columns[i].Width;
-                dgv.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                dgv.Columns[i].Width = colw;
-            }
-        }
+        //    for (int i = 0; i < dgv.Columns.Count; i++)
+        //    {
+        //        int colw = dgv.Columns[i].Width;
+        //        dgv.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+        //        dgv.Columns[i].Width = colw;
+        //    }
+        //}
 
         private void HeatMap_Load(object sender, EventArgs e)
         {
@@ -65,6 +65,8 @@ namespace TrackerUI.ChildForms
             txtBoxTourneyType.Text = "3-max";
             txtBoxSize.Text = "BETWEEN 2 AND 4";
             txtBoxES.Text = "BETWEEN 20 AND 25";
+
+            var settings = DataManager_Settings.ReadSettings();
 
             //List<StatsModel> allStats = CallStats.CallAllStats();
             //cmbBoxQuery.DataSource = allStats;
@@ -82,12 +84,12 @@ namespace TrackerUI.ChildForms
             cmbBoxAI.DisplayMember = "Key";
             cmbBoxAI.ValueMember = "Value";
 
-            Dictionary<string, QueryModel.Query> mapComboBoxQuery = new() { { "BvB ISO", GlobalConfig.dbType == DataBaseType.NoSQL ? new QueryModel.Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_Iso , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_Iso) :
-                                                                                                                                     new QueryModel.Query(SQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON,SQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, SQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_Iso , "", "bbSeatActionId", "sbSeatActionId" )   } , 
-                                                                                { "BvB oL", GlobalConfig.dbType == DataBaseType.NoSQL ? new QueryModel.Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_oL , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_oL) :
-                                                                                                                                        new QueryModel.Query(SQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON ,SQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, SQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_oL , "", "sbSeatActionId", "bbSeatActionId")   } ,
-                                                                                { "BvB oR", GlobalConfig.dbType == DataBaseType.NoSQL ? new QueryModel.Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_oR , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_oR) :
-                                                                                                                                        new QueryModel.Query(SQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON ,SQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, SQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_oR, "", "sbSeatActionId", "bbSeatActionId")   } , };
+            Dictionary<string, Query> mapComboBoxQuery = new() { { "BvB ISO", settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? new Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_Iso , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_Iso) :
+                                                                                                                                     new Query(SQL_HeatMapQueries.SQL_ExportHeatMapAsJSON,SQL_HeatMapQueries.SQL_ExportDataGridViewByHoleCardsSimple, SQL_HeatMapQueries.SQL_WhereClauseHero_BvB_Iso , "", "bbSeatActionId", "sbSeatActionId" )   } , 
+                                                                                { "BvB oL", settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? new Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_oL , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_oL) :
+                                                                                                                                        new Query(SQL_HeatMapQueries.SQL_ExportHeatMapAsJSON ,SQL_HeatMapQueries.SQL_ExportDataGridViewByHoleCardsSimple, SQL_HeatMapQueries.SQL_WhereClauseHero_BvB_oL , "", "sbSeatActionId", "bbSeatActionId")   } ,
+                                                                                { "BvB oR", settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? new Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_oR , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_oR) :
+                                                                                                                                        new Query(SQL_HeatMapQueries.SQL_ExportHeatMapAsJSON ,SQL_HeatMapQueries.SQL_ExportDataGridViewByHoleCardsSimple, SQL_HeatMapQueries.SQL_WhereClauseHero_BvB_oR, "", "sbSeatActionId", "bbSeatActionId")   } , };
             cmbBoxQuery.DataSource = new BindingSource(mapComboBoxQuery, null);
             cmbBoxQuery.DisplayMember = "Key";
             cmbBoxQuery.ValueMember = "Value";
@@ -95,12 +97,12 @@ namespace TrackerUI.ChildForms
 
         }
 
-        private void LoadHeatMap(QueryModel.Query query,  string hero, string tourneyType, string sinceDate, string ai, string size, string vs, string es)
+        private void LoadHeatMap(Query query,  string hero, string tourneyType, string sinceDate, string ai, string size, string vs, string es, SettingsModel.Settings settings)
         {
             DateTime startTime = DateTime.Now;
 
 
-            var request = query.RequestStatsModel_Heatmap(hero, tourneyType, sinceDate, ai, size, vs, es);
+            var request = query.RequestStatsModel_Heatmap(hero, tourneyType, sinceDate, ai, size, vs, es, settings);
 
             int statsMaxValue = 0;
             if (request != null)
@@ -170,20 +172,27 @@ namespace TrackerUI.ChildForms
 
         private void btn_Request_Click(object sender, EventArgs e)
         {
-            LoadHeatMap( (QueryModel.Query)cmbBoxQuery.SelectedValue, txtBoxPlayer.Text, txtBoxTourneyType.Text, txtBoxDate.Text, cmbBoxAI.SelectedValue.ToString(), txtBoxSize.Text, cmbBoxVs.SelectedValue.ToString(), txtBoxES.Text);
+            SettingsModel.Settings currSettings = DataManager_Settings.ReadSettings();
+            LoadHeatMap( (Query)cmbBoxQuery.SelectedValue, txtBoxPlayer.Text, txtBoxTourneyType.Text, txtBoxDate.Text, cmbBoxAI.SelectedValue.ToString(), txtBoxSize.Text, cmbBoxVs.SelectedValue.ToString(), txtBoxES.Text, currSettings);
         }
 
         private void label_Click(object sender, MouseEventArgs e)
         {
-            QueryModel.Query query = (QueryModel.Query)cmbBoxQuery.SelectedValue;
-            //StatsModel myStats = (StatsModel)cmbBoxStats.SelectedItem;
+            Query query = (Query)cmbBoxQuery.SelectedValue;
+            SettingsModel.Settings currSettings = DataManager_Settings.ReadSettings();
             Label l = (Label)sender;
 
             dataGridView_HeatMap.DataSource = null;
-            dataGridView_HeatMap.DataSource = query.RequestStatsModel_Heatmap_DataGridViewByHCs(txtBoxPlayer.Text, txtBoxTourneyType.Text, txtBoxDate.Text, cmbBoxAI.SelectedValue.ToString(), txtBoxSize.Text, cmbBoxVs.SelectedValue.ToString(), txtBoxES.Text, l.Tag.ToString());
+            dataGridView_HeatMap.DataSource = query.RequestStatsModel_Heatmap_DataGridViewByHCs(txtBoxPlayer.Text, txtBoxTourneyType.Text, txtBoxDate.Text, cmbBoxAI.SelectedValue.ToString(), txtBoxSize.Text, cmbBoxVs.SelectedValue.ToString(), txtBoxES.Text, l.Tag.ToString(), currSettings);
 
             dataGridView_HeatMap.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            AutoResizeDataGridView(dataGridView_HeatMap);
+            dataGridView_HeatMap.BackgroundColor = Color.White;
+            dataGridView_HeatMap.AutoResizeDataGridView();
+        }
+
+        private void dataGridView_HeatMap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -6,22 +6,25 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary.Models
 {
-    public class Tournament
-    {
-        public TournamentInfo Info { get; set; }
+    //public class Tournament
+    //{
+    //    /// <summary>
+    //    /// 
+    //    /// </summary>
+    //    public TournamentInfo Info { get; set; }
 
-        public List<Hand> Hands { get; set; }
-
-
-
-        public Tournament()
-        {
-            Info = new TournamentInfo();
-            Hands = new List<Hand>();
-        }
+    //    public List<Hand> Hands { get; set; }
 
 
-    }
+
+    //    public Tournament()
+    //    {
+    //        Info = new TournamentInfo();
+    //        Hands = new List<Hand>();
+    //    }
+
+
+    //}
 
     
 }

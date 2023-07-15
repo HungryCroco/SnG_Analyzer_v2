@@ -12,6 +12,7 @@ using System.Text;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TrackerLibrary;
 using TrackerLibrary.CRUD;
+using TrackerLibrary.Models;
 
 namespace TrackerUI.ChildForms
 {
@@ -31,31 +32,41 @@ namespace TrackerUI.ChildForms
 
         private void PrintConsole(string filePath)
         {
-            
-            float[,,,] ea = EVCalculator.ImportDLL.ReadEAFromFileAsFloatArray(GlobalConfig.pfEA);
-
-            
-
-            string entireHH = filePath.ReadFileReturnString();
-
-            string[] splitString = entireHH.SplitStringBySize(60000);
-
-            foreach (string hh in splitString)
+            SettingsModel.Settings settings = DataManager_Settings.ReadSettings();
+            try
             {
-                if (GlobalConfig.dbType == DataBaseType.NoSQL)
-                {
-                    NoSQL_Connector.InsertHandsToNoSqlDb(GlobalConfig.dbName, GlobalConfig.tableName, GlobalConfig.columnName, HHReader.ReadHands(hh));
-                }
-                else if (GlobalConfig.dbType == DataBaseType.SQL)
-                {
-                    SQL_Connector.ImportHandsToSqlDb(GlobalConfig.dbName, HHReader.ReadHands(hh));
-                }
-                else
-                {
-
-                }
-                
+                DataManager_Import.RequestImport(filePath, settings, progressBarImport);
             }
+            catch (Exception)
+            {
+                Console.WriteLine("Import Failed! Please choose a correct .txt file!");
+            }
+            
+
+           // float[,,,] ea = EVCalculator.ImportDLL.ReadEAFromFileAsFloatArray(GlobalConfig.pfEA);
+
+            
+
+            //string entireHH = filePath.ReadFileReturnString();
+
+            //string[] splitString = entireHH.SplitStringBySize(60000);
+
+            //foreach (string hh in splitString)
+            //{
+            //    if (GlobalConfig.dbType == DataBaseType.NoSQL)
+            //    {
+            //        NoSQL_Connector.InsertHandsToNoSqlDb(GlobalConfig.dbName, GlobalConfig.tableName, GlobalConfig.columnName, HHReader.ReadHands(hh));
+            //    }
+            //    else if (GlobalConfig.dbType == DataBaseType.SQL)
+            //    {
+            //        SQL_Connector.ImportHandsToSqlDb(GlobalConfig.dbName, HHReader.ReadHands(hh));
+            //    }
+            //    else
+            //    {
+
+            //    }
+                
+            //}
         }
 
 
@@ -87,6 +98,11 @@ namespace TrackerUI.ChildForms
             string filePath = File_Connector.GetFullFilePath();
 
             Task t1 = Task.Run(() => { PrintConsole(filePath); });
+        }
+
+        private void btn_Import_Click(object sender, EventArgs e)
+        {
+
         }
         //private void openFile()
         //{

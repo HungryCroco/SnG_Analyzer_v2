@@ -270,10 +270,28 @@ namespace TrackerLibrary.CRUD
                             settings.Password = reader.GetString();
                             break;
                         case "MinTorney":
-                            settings.MinTorney = reader.GetString();
+                            settings.MinTourney = reader.GetString();
                             break;
                         case "RegFile":
                             settings.RegFile = reader.GetString();
+                            break;
+                        case "HhSplitSize":
+                            settings.HhSplitSize = reader.GetString();
+                            break;
+                        case "CurrentDbRead":
+                            settings.CurrentDbRead = reader.GetString();
+                            break;
+                        case "SqlDatabase":
+                            settings.SqlDatabase = reader.GetString();
+                            break;
+                        case "NosqlDatabase":
+                            settings.NosqlDatabase = reader.GetString();
+                            break;
+                        case "DbTypeWrite":
+                            settings.DbTypeWrite = reader.GetString();
+                            break;
+                        case "DbTypeRead":
+                            settings.DbTypeRead = reader.GetString();
                             break;
 
                     }
@@ -295,8 +313,16 @@ namespace TrackerLibrary.CRUD
             writer.WriteString("Port", value.Port);
             writer.WriteString("User", value.User);
             writer.WriteString("Password", value.Password);
-            writer.WriteString("MinTorney", value.MinTorney);
+
+            writer.WriteString("SqlDatabase", value.SqlDatabase);
+            writer.WriteString("NosqlDatabase", value.NosqlDatabase);
+            writer.WriteString("DbTypeWrite", value.DbTypeWrite);
+            writer.WriteString("DbTypeRead", value.DbTypeRead);
+
+            writer.WriteString("MinTorney", value.MinTourney);
             writer.WriteString("RegFile", value.RegFile);
+            writer.WriteString("HhSplitSize", value.HhSplitSize);
+            writer.WriteString("CurrentDbRead", value.CurrentDbRead);
 
             // Write other properties if necessary
 

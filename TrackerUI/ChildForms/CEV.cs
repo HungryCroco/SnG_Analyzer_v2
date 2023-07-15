@@ -23,10 +23,10 @@ namespace TrackerUI.ChildForms
 
 
 
-        private List<CevModel> CalculateCevRequested()
+        private List<CevModel> CalculateCevRequested(string dbName)
         {
             List<CevModel> cevRequested = new List<CevModel>();
-            cevRequested = NoSQL_Connector.GetCevByPosParallel("IPray2Buddha", "3-max", QueriesExtensionMethods.ConcatQueries(NoSQL_DashBoardQueries.sql_ExportCevPerTournamentAsJSON, NoSQL_DashBoardQueries.sql_cevRequestGeneral_test));
+            cevRequested = NoSQL_Connector.GetCevByPosParallel("IPray2Buddha", "3-max", QueriesExtensionMethods.ConcatQueries(NoSQL_DashBoardQueries.sql_ExportCevPerTournamentAsJSON, NoSQL_DashBoardQueries.sql_cevRequestGeneral_test), dbName);
             return cevRequested;
         }
 
@@ -34,12 +34,12 @@ namespace TrackerUI.ChildForms
         {
 
             ////w. Tasks:
-            Task t1 = Task.Run(CalculateCevRequested);
+            //Task t1 = Task.Run(CalculateCevRequested());
             
 
 
             InitializeComponent();
-            t1.Wait();
+            //t1.Wait();
 
             cBox_3_3.Checked = true;
 

@@ -8,7 +8,7 @@ using TrackerLibrary.Models;
 
 namespace TrackerLibrary.CRUD
 {
-    public class File_CRUD_Settings
+    public class DataManager_Settings
     {
         public static SettingsModel.Settings ReadSettings()
         {
@@ -21,10 +21,10 @@ namespace TrackerLibrary.CRUD
 
         }
 
-        public static void WriteSettings(string server, string port, string user, string pass, string minTourney, string regFile)
+        public static void WriteSettings(string server, string port, string user, string pass, string nosqlDb, string sqlDb, string dbWrite, string dbRead, string minTourney, string regFile, string hhSplitSize)
         {
 
-            SettingsModel.Settings settings = new(server, port, user, pass, minTourney, regFile);
+            SettingsModel.Settings settings = new(server, port, user, pass, nosqlDb, sqlDb, dbWrite, dbRead, minTourney, regFile, hhSplitSize);
 
             try
             {

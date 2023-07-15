@@ -36,7 +36,8 @@ namespace TrackerLibrary.Queries.NoSQL
 												WHERE t.k @regList AND t.v->'SeatPosition' = '@posVillain')  t1
 							WHERE ha->'SeatActions'->'@hero'->'SeatPosition' = '@posHero' AND 
 								ha->'Info'->> 'CntPlayers' = '@cntPlayers' AND
-								ha->'Info'->> 'pf_actors' @pfActors
+								--ha->'Info'->> 'pf_actors' @pfActors
+								(COALESCE(ha->'Info'->> 'pf_actors', '') @pfActors)
 							GROUP BY tourney_id, t1.ha
 							ORDER BY tourney_id 
 							) t2
@@ -47,10 +48,10 @@ namespace TrackerLibrary.Queries.NoSQL
 		public static string sql_ExportTlpOverviewAsJSON_CevTotal_GroupByMonths =
             @"SELECT array_to_json(array_agg(row_to_json(t3)))
 				FROM (
-					SELECT COUNT(DISTINCT t2.tourney_id)::numeric AS Count_tourneys, COUNT(t2.cev_won)::numeric AS Situations, SUM(t2.cev_won) AS Cev, SUM(t2.chips_won) as Amt_won, SUM(t2.cev_won / t2.amt_bb) AS Abb, MAX(t2.t_date) AS T_Date 
+					SELECT COUNT(DISTINCT t2.tourney_id)::numeric AS Count_tourneys, COUNT(t2.cev_won)::numeric AS Situations, SUM(t2.cev_won) AS Cev, SUM(t2.chips_won) as Amt_won, avg(t2.aBI) as Abi, SUM(t2.cev_won / t2.amt_bb) AS Abb, MAX(t2.t_date) AS T_Date 
 						FROM (
 							SELECT data->'Info'->>'TournamentIdBySite' AS tourney_id, (data->'SeatActions'->'@hero'->'CevWon')::numeric AS cev_won, (data->'SeatActions'->'@hero'->'ChipsWon')::numeric AS chips_won,
-									(data->'Info'->'Amt_bb')::numeric AS amt_bb, TO_DATE((data->'Info'->>'Date')::text, 'YYYY-MM-DD') AS t_date	
+								(data->'Info'->>'BuyIn')::numeric AS aBI, (data->'Info'->'Amt_bb')::numeric AS amt_bb, TO_DATE((data->'Info'->>'Date')::text, 'YYYY-MM-DD') AS t_date	
 										FROM hands
 							WHERE data->'Info'->>'TournamentType' = '@tourneyType' @whereClauseQuery
 							GROUP BY tourney_id, hands.data
