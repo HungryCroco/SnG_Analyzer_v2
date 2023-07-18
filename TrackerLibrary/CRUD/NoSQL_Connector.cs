@@ -16,26 +16,22 @@ using System.Data;
 
 namespace TrackerLibrary.CRUD
 {
+    /// <summary>
+    /// Class containing all Methods, necessary to perform NoSQL CRUD operations;
+    /// </summary>
     public static class NoSQL_Connector
     {
-        //public static string GetConnectionString()
-        //{
-        //    string connString = string.Format(@"Host={0};Port={1};User Id={2};Password={3}", GlobalConfig.defaultServer, GlobalConfig.defaultPort, GlobalConfig.defaultUser, GlobalConfig.defaultPass);
-
-        //    return connString;
-        //}
-        //public static string GetConnectionString(string db)
-        //{
-        //    string connString = string.Format(@"Host={0};Port={1};User Id={2};Password={3};Database={4}", GlobalConfig.defaultServer, GlobalConfig.defaultPort, GlobalConfig.defaultUser, GlobalConfig.defaultPass, db);
-
-        //    return connString;
-        //}
-
+        /// <summary>
+        /// Creates a DataBase if not existing;
+        /// </summary>
+        /// <param name="dbName">DataBase's Name;</param>
+        /// <param name="tableName">Name of the Table;</param>
+        /// <param name="columnName">Name of the Column(jsonb);</param>
         public static void CreateDatabase(string dbName, string tableName, string columnName)
         {
             NpgsqlConnection connection = new();
             
-            
+            // Try to Create the DB; If already existing will raise an exception;
             try
             {
                 connection = new NpgsqlConnection(GlobalConfig.GetConnectionString());
@@ -48,6 +44,7 @@ namespace TrackerLibrary.CRUD
             {
             }
 
+            // Try to Create the Table; If already existing will raise an exception;
             try
             {
                 connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
@@ -59,7 +56,7 @@ namespace TrackerLibrary.CRUD
             {
             }
 
-
+            // Try to Create the Column; If already existing will raise an exception;
             try
             {
                 connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
@@ -73,10 +70,16 @@ namespace TrackerLibrary.CRUD
             connection.Close();
         }
 
+        /// <summary>
+        /// Creates a DashBoard Table if not existing(used for saving DashBoard Models);
+        /// </summary>
+        /// <param name="dbName">DataBase's Name;</param>
+        /// <param name="tableName">Name of the Table;</param>
         public static void CreateDashBoardTable(string dbName, string tableName)
         {
             NpgsqlConnection connection = new();
 
+            // Try to Create the DB; If already existing will raise an exception;
             try
             {
                 connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
@@ -91,10 +94,18 @@ namespace TrackerLibrary.CRUD
             connection.Close();
         }
 
+        /// <summary>
+        /// Run an insert query to NoSQL DB;
+        /// </summary>
+        /// <param name="dbName">DataBase's Name;</param>
+        /// <param name="tableName">Name of the Table;</param>
+        /// <param name="columnName">Name of the Column(jsonb);</param>
+        /// <param name="hands">List of Hands to be inserted;</param>
         public static void InsertHandsToNoSqlDb(string dbName, string tableName, string columnName , List<Hand> hands)
         {
             Stopwatch watch = new Stopwatch();
             watch.Start();
+            //Creating DB if not existing;
             CreateDatabase(dbName, tableName, columnName);
 
 
@@ -102,8 +113,10 @@ namespace TrackerLibrary.CRUD
             
             conn.Open();
 
+            // Serializing the Hands and deleting the NON-unique Hands;
             List<string> serializedHandsAsJson = SerializeHands(hands.ReturnHashSetWithUniqueHands(dbName, NoSQL_Queries.query_GetIdAndRoomFromNoSqlDb, ref conn).ToList());
 
+            // Importing the Hands;
             using (var importer = conn.BeginBinaryImport($"COPY {tableName} ({columnName}) FROM STDIN (FORMAT BINARY)"))
             {
                 foreach (var hand in serializedHandsAsJson)
@@ -117,22 +130,33 @@ namespace TrackerLibrary.CRUD
             conn.Close();
             
 
-            Console.WriteLine("-----");
-            Console.WriteLine("Import Time: " + watch.ElapsedMilliseconds / 1000.0 + "s");
+            Console.WriteLine("---");
+            Console.WriteLine($"Import to NoSQL {dbName}: " + watch.ElapsedMilliseconds / 1000.0 + "s");
         }
 
+        /// <summary>
+        /// Inserting a DashBoardModel as JSON to the DB;
+        /// </summary>
+        /// <param name="dbName">DataBase's Name;</param>
+        /// <param name="tableName">Name of the Table;</param>
+        /// <param name="activePlayer">Active Player;</param>
+        /// <param name="tourneyType">Tournament Type;</param>
+        /// <param name="dashboardModel">DashBoardModel;</param>
         public static void InsertDashBoardModelToNoSqlDb(string dbName, string tableName, string activePlayer, string tourneyType, DashBoardModel dashboardModel)
         {
             Stopwatch watch = new Stopwatch();
             watch.Start();
+            // Creating the DashBoard table if not existing;
             CreateDashBoardTable(dbName, tableName);
 
+            // Serializing the DashBoardModel to JSON;
             var serializedDashBoardModel = System.Text.Json.JsonSerializer.Serialize(dashboardModel);
+
             using (NpgsqlConnection connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
             {
                 connection.Open();
 
-
+                // Importing to the DB;
                 using (var importer = connection.BeginBinaryImport($"COPY {tableName} (player, tourneyType, data) FROM STDIN (FORMAT BINARY)"))
                 {
                     importer.StartRow();
@@ -146,63 +170,22 @@ namespace TrackerLibrary.CRUD
             }
         }
 
-        //public static HashSet<Hand> ReturnHashSetWithUniqueHands(this List<Hand> handsToImport, string dbName)
-        //{
-        //    //List<(string, long)> oldData = new();
-        //    var importedHandSet = new HashSet<(string Room, long HandId)>();
-        //    var handsToImportDistinctSet = new HashSet<Hand>();
-
-        //    using (NpgsqlConnection connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
-        //    {
-        //        connection.Open();
-        //        using (NpgsqlCommand command = new NpgsqlCommand(NoSQL_Queries.query_GetIdAndRoomFromNoSqlDb, connection))
-        //        {
-        //            using (NpgsqlDataReader reader = command.ExecuteReader())
-        //            {
-        //                while (reader.Read())
-        //                {
-        //                    if (!reader.IsDBNull(0))
-        //                    {
-        //                        string handIdBySite = reader.GetString(0);
-        //                        string room = reader.GetString(1);
-
-        //                        //oldData.Add((room ,long.Parse(handIdBySite)));
-        //                        importedHandSet.Add((room, long.Parse(handIdBySite)));
-        //                    }
-        //                }
-        //            }
-        //        }
-        //        connection.Close();
-        //    }
-
-        //    //var importedHandSet = new HashSet<(string Room, int HandId)>(importedHands
-        //    //.Select(h => (h.Item1, h.Item2)));
-
-
-        //    foreach (var hand in handsToImport)
-        //    {
-        //        if (!importedHandSet.Contains((hand.Info.Room, hand.Info.HandIdBySite)))
-        //        {
-        //            handsToImportDistinctSet.Add(hand);
-        //        }
-        //    }
-
-        //    //if (true)
-        //    //{
-        //    //    int ii = 1;
-        //    //}
-
-        //    return handsToImportDistinctSet;
-        //}
-
+        /// <summary>
+        /// Serializing Hands to JSON;
+        /// </summary>
+        /// <param name="hands">List of Hands to be serialized;</param>
+        /// <returns></returns>
         public static List<string> SerializeHands(List<Hand> hands)
         {
+            // List of string of serialized Hands;
             List<string> serializedHandsAsJson = new();
 
+            // Adding the JSON-Converter-Options, needed to serialize the non standart objects;
             var options = new JsonSerializerOptions();
             options.Converters.Add(new PlayerActionListConverter());
             options.Converters.Add(new FullActionListConverter());
 
+            //Serializing the Hands one by one and adding to the List of serialized Hands;
             foreach (Hand hand in hands)
             {
                 serializedHandsAsJson.Add(System.Text.Json.JsonSerializer.Serialize(hand, options));
@@ -211,28 +194,43 @@ namespace TrackerLibrary.CRUD
             return serializedHandsAsJson; 
         }
 
-        public static List<CevModel> GetCevByPosParallel(string tournamentType, string pos, string sqlQuery, string dbName)
-        {
-            string output;
+        ///// <summary>
+        ///// Quering a JSON of CevModel and deserializing it to List of CevModel;
+        ///// </summary>
+        ///// <param name="tournamentType">Tournament Type;</param>
+        ///// <param name="pos"></param>
+        ///// <param name="sqlQuery"></param>
+        ///// <param name="dbName"></param>
+        ///// <returns>Deserialized List of CevModel</returns>
+        //public static List<CevModel> GetCevByPosParallel(string tournamentType, string pos, string sqlQuery, string dbName)
+        //{
+        //    string output;
 
-            using (var _conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
-            {
-                _conn.Open();
-                using (var _cmd = new NpgsqlCommand(sqlQuery, _conn))
-                {
-                    _cmd.Parameters.Clear();
-                    //_cmd.Parameters.Add(new NpgsqlParameter("activePlayer", playerNickName));
-                    _cmd.Parameters.Add(new NpgsqlParameter("tourneyType", tournamentType));
-                    _cmd.Parameters.Add(new NpgsqlParameter("pos", pos));
+        //    using (var conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
+        //    {
+        //        conn.Open();
+        //        using (var cmd = new NpgsqlCommand(sqlQuery, conn))
+        //        {
+        //            cmd.Parameters.Clear();
+        //            //_cmd.Parameters.Add(new NpgsqlParameter("activePlayer", playerNickName));
+        //            cmd.Parameters.Add(new NpgsqlParameter("tourneyType", tournamentType));
+        //            cmd.Parameters.Add(new NpgsqlParameter("pos", pos));
 
-                    output = _cmd.ExecuteScalar().ToString();
-                }
-                _conn.Close();
-            }
+        //            output = cmd.ExecuteScalar().ToString();
+        //        }
+        //        conn.Close();
+        //    }
 
-            return JsonConvert.DeserializeObject<List<CevModel>>(output);
-        }
+        //    return JsonConvert.DeserializeObject<List<CevModel>>(output);
+        //}
 
+        /// <summary>
+        /// Quering a JSON of generic Type and deserializing it to List of the generic Type;
+        /// </summary>
+        /// <typeparam name="T">generic Type;</typeparam>
+        /// <param name="sqlQuery">SQL Query;</param>
+        /// <param name="dbName">DataBase Name;</param>
+        /// <returns></returns>
         public static List<T> GetCevChartParallel<T>(this string sqlQuery, string dbName)
         {
             string output;
@@ -252,7 +250,13 @@ namespace TrackerLibrary.CRUD
             return JsonConvert.DeserializeObject<List<T>>(output);
         }
 
-        public static DataTable GetView(this string mySqlQuery, string dbName)
+        /// <summary>
+        /// Run a query to get a PostgreSQL View;
+        /// </summary>
+        /// <param name="sqlQuery">SQL Query;</param>
+        /// <param name="dbName">DataBase Name;</param>
+        /// <returns>DataTable, containing the PostgreSQL View;</returns>
+        public static DataTable GetView(this string sqlQuery, string dbName)
         {
             DataTable dt = new DataTable();
             try
@@ -260,7 +264,7 @@ namespace TrackerLibrary.CRUD
                 using (var conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
                 {
                     conn.Open();
-                    var cmd = new NpgsqlCommand(mySqlQuery, conn); ;
+                    var cmd = new NpgsqlCommand(sqlQuery, conn); ;
                     NpgsqlDataAdapter da = default(NpgsqlDataAdapter);
 
 
@@ -274,7 +278,6 @@ namespace TrackerLibrary.CRUD
                     }
                     catch (Exception ex)
                     {
-
                         //MessageBox.Show("An error occured: " + ex.Message, "Perform CRUD Operations failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         dt = null;
                     }
@@ -288,9 +291,17 @@ namespace TrackerLibrary.CRUD
             return dt;
         }
 
+        /// <summary>
+        /// Run a query to get a DashBoardModel from PostgreSQL;
+        /// </summary>
+        /// <param name="activePlayer">Active Player;</param>
+        /// <param name="tourneyType">Tournament Type;</param>
+        /// <param name="dbName">DataBase Name;</param>
+        /// <returns>A DashBoardModel filtered by the given params;</returns>
         public static DashBoardModel GetDashBoardModel(string activePlayer, string tourneyType, string dbName)
         {
             string output;
+            //Try to run the query, if the DashBoardModel with the given params or Table is not existing will return an empty DashBoardModel;
             try
             {
                 using (var _conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))

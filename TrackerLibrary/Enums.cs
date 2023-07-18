@@ -6,8 +6,16 @@ using System.Reflection;
 
 namespace TrackerLibrary
 {
+    /// <summary>
+    /// This Class contains extension Methods helping to convert Enums or get Descriptions etc;
+    /// </summary>
     public static class EnumExtensionMethods
     {
+        /// <summary>
+        /// Get the Description of Enum;
+        /// </summary>
+        /// <param name="GenericEnum">Enum</param>
+        /// <returns>Description as String;</returns>
         public static string GetDescription(this Enum GenericEnum)
         {
             Type genericEnumType = GenericEnum.GetType();
@@ -23,18 +31,23 @@ namespace TrackerLibrary
             return GenericEnum.ToString();
         }
 
-        public static CardEnum ToCard(this string card)
-        {
-            for (int i = 0; i < 52; i++)
-            {
-                if (card == ((CardEnum)i).GetDescription())
-                {
-                    return (CardEnum)i;
-                }
-            }
-            return CardEnum._UC;
-        }
+        //public static CardEnum ToCard(this string card)
+        //{
+        //    for (int i = 0; i < 52; i++)
+        //    {
+        //        if (card == ((CardEnum)i).GetDescription())
+        //        {
+        //            return (CardEnum)i;
+        //        }
+        //    }
+        //    return CardEnum._UC;
+        //}
 
+        /// <summary>
+        /// Converts a string describing Card (like "Jh", "8d") to Uint(Id)
+        /// </summary>
+        /// <param name="card"></param>
+        /// <returns>ID related to the Card;</returns>
         public static uint ConvertCardStringToUint(this string card)
         {
             try
@@ -75,6 +88,16 @@ namespace TrackerLibrary
             
         }
 
+        /// <summary>
+        /// Converts a string describing CardFace (like "J", "8") to Uint(Id)
+        /// </summary>
+        /// <param name="cardFace">Card Face as Char</param>
+        /// <param name="colorOffset">Color Offset: 
+        ///                 -Clubs      - 0
+        ///                 - Diamonds  - 1
+        ///                 - Hearts    - 2
+        ///                 - Spades    - 3</param>
+        /// <returns>ID related to the Card;</returns>
         private static uint ConvertCardFacestringToUint(this char cardFace, uint colorOffset)
         {
             switch (cardFace)
@@ -110,10 +133,19 @@ namespace TrackerLibrary
             }       
         }
 
+        /// <summary>
+        /// Converts 2 CardsAsString To (HoleCardsSimple)AllCardsSimple Id;
+        /// </summary>
+        /// <param name="hc1">1. HoleCard as String;</param>
+        /// <param name="hc2">2. HoleCard as String;</param>
+        /// <returns>(HoleCardsSimple)AllCardsSimple Id;</returns>
         public static string CalculateHoleCardsSimple(string hc1, string hc2)
         {
             string output = "";
             string temp = "";
+            //Check which CardFace is higher, as the higher CardFace is always first to reduce the combos;
+            //Switch cardStrings if necessary;
+            //Check if CardFaces are different, Add "o" for offSuit in case the suit is different or "s" for suited otherways;
             if (hc1[0].ConvertCardFacestringToUint(0) > hc2[0].ConvertCardFacestringToUint(0))
             {
                 temp = hc1;
@@ -126,6 +158,7 @@ namespace TrackerLibrary
                 output += hc2[0];
                 if (hc1[0] != hc2[0])
                 {
+
                     if (hc1[1] == hc2[1])
                     {
                         output += "s";
@@ -141,7 +174,11 @@ namespace TrackerLibrary
         }
 
 
-
+        /// <summary>
+        /// Converts a HoleCardsSimple String to Enum-CardAllSimple(id);
+        /// </summary>
+        /// <param name="hcsSimple">HoleCardsSimple as String</param>
+        /// <returns>Id</returns>
         public static int ConvertHoleCardsSimpleToEnum(string hcsSimple)
         {
             int output = 0;
@@ -153,14 +190,19 @@ namespace TrackerLibrary
         }
     }
 
+    /// <summary>
+    /// Positions as Enum, currently not used;
+    /// </summary>
     public enum Position
     {
-        Empty = 0,
-        BTN = 1,
-        SB = 2,
-        BB = 3
+        BTN = 0,
+        SB = 8,
+        BB = 9
     }
 
+    /// <summary>
+    /// Levels as Enum, currently not used;
+    /// </summary>
     public enum Level
     {
         [Description("10/20")] Level_I,
@@ -171,6 +213,9 @@ namespace TrackerLibrary
         [Description("50/100")] Level_VI,
         [Description("60/120")] Level_VII
     }
+    /// <summary>
+    /// CardFaces as Enum, currently not used;
+    /// </summary>
     public enum CardFace
     {
         [Description("E")] Empty = 1,
@@ -189,11 +234,9 @@ namespace TrackerLibrary
         [Description("A")] Ace = 14
     }
 
-    //public enum CardFace
-    //{
-    //    Ace = 1, Two = 2, Three = 3, Four = 4, Five = 5, Six = 6, Seven = 7,
-    //    Eight = 8, Nine = 9, Ten = 10, Jack = 11, Queen = 12, King = 13
-    //};
+    /// <summary>
+    /// CardSuits As Enum, currently not used;
+    /// </summary>
     public enum CardSuit
     {
         [Description("c")] Clubs = 1,
@@ -203,23 +246,10 @@ namespace TrackerLibrary
         [Description("e")] Empty = 5
     };
 
-    public enum CardSuitSimple { OffSuit = 1, Suit = 2 }
 
-    public enum HandStrenght
-    {
-        [Description("E")] Empty = 11,
-        [Description("HC")] HighCard = 1,
-        [Description("1P")] OnePair = 2,
-        [Description("2Ps")] TwoPair = 3,
-        [Description("TRIPS")] ThreeOfAKind = 4,
-        [Description("STR8")] Straight = 5,
-        [Description("FL")] Flush = 6,
-        [Description("FH")] FullHouse = 7,
-        [Description("QUADS")] FourOfAKind = 8,
-        [Description("STR8FL")] StraightFlush = 9,
-        [Description("RF")] RoyalFlush = 10,
-    }
-
+    /// <summary>
+    /// Street as Enum, currently not used;
+    /// </summary>
     public enum Street
     {
         [Description("PF")] PreFlop = 1,
@@ -228,7 +258,9 @@ namespace TrackerLibrary
         [Description("R")] River = 4,
     }
 
-
+    /// <summary>
+    /// Enum - CardAllSimple, used to get Id of HoleCards and to power up HeatMap;
+    /// </summary>
     public enum CardAllSimple
     {
         [Description("UNKNOWN")] _UC = 0,
@@ -461,20 +493,10 @@ namespace TrackerLibrary
         [Description("2h")] _2h = 51,
         [Description("2s")] _2s = 52
     }
-    public enum HHReaderLines
-    {
-        [Description("FirstLine")] FirstLine = 1,
-        [Description("SecondLine")] SecondLine = 2,
-        [Description("ThirdToFifthLine")] ThirdToFifthLine = 3,
-        [Description("Preflop")] Preflop = 4,
-        [Description("Flop")] Flop = 5,
-        [Description("Turn")] Turn = 6,
-        [Description("River")] River = 7,
-        [Description("Showdown")] Showdown = 8,
-        [Description("Summary")] Summary = 9,
-        [Description("Unknown")] Unknown = 10
-    }
 
+    /// <summary>
+    /// DataBase Type as Enum;
+    /// </summary>
     public enum DataBaseType
     {
         [Description("NoSQL")] NoSQL = 1,

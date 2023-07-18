@@ -41,7 +41,7 @@ namespace TrackerUI.ChildForms
         {
             try
             {
-                SettingsModel.Settings currSettings = DataManager_Settings.ReadSettings();
+                TrackerLibrary.Models.Settings currSettings = DataManager_Settings.ReadSettings();
                 txtBoxServer.Text = currSettings.Server;
                 txtBoxPort.Text = currSettings.Port;
                 txtBoxUser.Text = currSettings.User;
@@ -115,7 +115,7 @@ namespace TrackerUI.ChildForms
         {
             try
             {
-                SettingsModel.Settings currSettings = DataManager_Settings.ReadSettings();
+                TrackerLibrary.Models.Settings currSettings = DataManager_Settings.ReadSettings();
                 dataGridView_DataBases.DataSource = null;
                 dataGridView_DataBases.DataSource = DB_InfoQueries.DB_Info_ExportDataGridView_AllDBs.GetView(currSettings.CurrentDbRead);
 

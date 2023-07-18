@@ -32,7 +32,7 @@ namespace TrackerUI.ChildForms
 
         private void PrintConsole(string filePath)
         {
-            SettingsModel.Settings settings = DataManager_Settings.ReadSettings();
+            TrackerLibrary.Models.Settings settings = DataManager_Settings.ReadSettings();
             try
             {
                 DataManager_Import.RequestImport(filePath, settings, progressBarImport);

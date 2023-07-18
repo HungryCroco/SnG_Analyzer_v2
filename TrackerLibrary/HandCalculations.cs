@@ -13,22 +13,30 @@ using System.Runtime.CompilerServices;
 
 namespace TrackerLibrary
 {
-    internal static class HandCalculations
+    /// <summary>
+    /// This Class contains all Methods, necessary to Calculate Properties of fully readed Hands;
+    /// </summary>
+    public static class HandCalculations
     {
-        //public const string pfEA = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\eaPF_a.txt";
+        // An 4 Dimensional Array containing the preFlop equities  for each 2 Hand-combinations;
+        // current RAM ussage ~= 200MB; However, the array could be refactured to jagged Array and use the half RAM;
         private static float[,,,] ea = EVCalculator.ImportDLL.ReadEAFromFileAsFloatArray(GlobalConfig.pfEA);
 
+        /// <summary>
+        /// Calculates the expected Value [Chips] and updated the hand's property;
+        /// </summary>
+        /// <param name="myHand">Hand;</param>
         private static void CalculateCev(this Hand myHand)
         {
             float resP1 = 0;
             float resP2 = 0;
             float resP3 = 0;
 
-            if (myHand.Info.HandIdBySite == 232798552085)
-            {
-                int ff = 1;
-            }
-
+            //Check if there is an ALLIN;
+            //  - If not - Set cEV to ChipsWon - ChipsInvested;
+            //  - If yes - Check on which sreet did happen the ALL IN, how many players were involved, if 3+ players check for side Pots; Call the relevant Equity calculation Method and find the equity of each player;
+            //  Set the cEV to Pot*Equity for each player involved in the ALL IN;
+            //  - Set the cEV of all players that did fold to -chipsInvested;
             if (myHand.Info.StreetAI == null)
             {
                 for (int i = 0; i < myHand.SeatActions.Count; i++)
@@ -104,6 +112,7 @@ namespace TrackerLibrary
                     }
                 }
 
+                //  - Set the cEV of all players that did fold to -chipsInvested;
                 for (int i = 0; i < myHand.SeatActions.Count; i++)
                 {
                     string currPlayer = myHand.Info.Players[i];
@@ -115,9 +124,30 @@ namespace TrackerLibrary
 
             } 
         }
+
+        /// <summary>
+        /// Calculates the cEV(expected Chips) in 3players-AllIns and Updates the related properties of the Hand;
+        /// </summary>
+        /// <param name="myHand">Hand</param>
+        /// <param name="resP1">Equity of the 1.Player</param>
+        /// <param name="resP2">Equity of the 2.Player</param>
+        /// <param name="resP3">Equity of the 3.Player</param>
+        /// <param name="HCs_P1">HoleCards of 1.Player</param>
+        /// <param name="HCs_P2">HoleCards of 2.Player</param>
+        /// <param name="HCs_P3">HoleCards of 3.Player</param>
+        /// <param name="flopTurnRiver">string, containing the common Cards in format: Flop - "Jh8d6c"/Turn - "Jh8d6c3c"/River - "Jh8d6c3c2c" dealth before the last all-in happened</param>
         private static void SetCev_3Players(this Hand myHand, ref float resP1, ref float resP2, ref float resP3, ref string HCs_P1, ref string HCs_P2, ref string HCs_P3, ref string flopTurnRiver)
         {
+            // Calculate the equities of all players:
             EVCalculator.ImportDLL.CalculateOdds_3Hands_ReturnFloat(HCs_P1 + flopTurnRiver, HCs_P2 + flopTurnRiver, HCs_P3 + flopTurnRiver, ref resP1, ref resP2, ref resP3);
+
+
+            // Set cEV to mainPot*Equity - ChipsInvested;
+            // Check for sidePots;
+            //  - If none - calc finished;
+            //  - If yes - calc the new equities of the remaining 2 players using the 3.player's cards as dead cards;
+            //  Calculate the extra cEV from the sidePot and add to the related cEVs from the main pot;
+
             if (myHand.Info.SidePots.Count == 0)
             {
                 myHand.SeatActions[myHand.Info.SawShowdown_Players[0].Item1].CevWon = (myHand.Info.TotalPot * resP1 / 100) - myHand.SeatActions[myHand.Info.SawShowdown_Players[0].Item1].ChipsInvested;
@@ -174,8 +204,17 @@ namespace TrackerLibrary
               
         }
 
+        /// <summary>
+        /// Calculates the cEV(expected Chips) in 2players-AllIns and Updates the related properties of the Hand;
+        /// </summary>
+        /// <param name="myHand">Hand</param>
+        /// <param name="resP1">Equity of the 1.Player</param>
+        /// <param name="resP2">Equity of the 2.Player</param>
         private static void SetCev_2Players(this Hand myHand, ref float resP1, ref float resP2)
         {
+            // Check for side pots; 
+            // - If none, set the cEV of each player = player's Equity * main Pot;
+            // - If any , check which player did win the side pot(side Pots in 2players all in happen when a player goes AI on earlier street and 2+ other players continue; Then all but one folds, so the left player takes 100% of the side pot;
             if (myHand.Info.SidePots.Count == 0)
             {
                 myHand.SeatActions[myHand.Info.SawShowdown_Players[0].Item1].CevWon = (myHand.Info.TotalPot * resP1 / 100) - myHand.SeatActions[myHand.Info.SawShowdown_Players[0].Item1].ChipsInvested;
@@ -196,6 +235,13 @@ namespace TrackerLibrary
             }
         }
 
+        /// <summary>
+        /// 4+ players EquityCalcs are currently not supported; So we just set the cEV to the actual chips won; 
+        /// It could be improved in the future, but cEV queries generally are valuable in cases of all ins with only 2 players; 
+        /// As 3 players all-ins aren't very rare and could affect signiffically the entire EV / period we support them as well;
+        /// 4+ players all ins are very rare and complicated, so just skipping them is totally fine;
+        /// </summary>
+        /// <param name="myHand">Hand</param>
         private static void SetCev_4PlayersPlus(this Hand myHand)
         {
             for (int i = 0; i < myHand.SeatActions.Count; i++)
@@ -208,6 +254,10 @@ namespace TrackerLibrary
             }
         }
 
+        /// <summary>
+        /// Calculates the chips invested from all players in the Hand and updates the related Property;
+        /// </summary>
+        /// <param name="myHand">Hand</param>
         private static void CalculateChipsInvested(this Hand myHand)
         {
             foreach (var seatAction in myHand.SeatActions)
@@ -216,13 +266,17 @@ namespace TrackerLibrary
 
                 myHand.SeatActions[currPlayer].ChipsInvested += seatAction.Value.Ante + seatAction.Value.Blind;
 
-                myHand.SeatActions[currPlayer].ChipsInvested += seatAction.Value.Actions.PreFlop.CalculateChipsInvestedPerStreet(amtBlind: seatAction.Value.Blind);
-                myHand.SeatActions[currPlayer].ChipsInvested += seatAction.Value.Actions.Flop.CalculateChipsInvestedPerStreet();
-                myHand.SeatActions[currPlayer].ChipsInvested += seatAction.Value.Actions.Turn.CalculateChipsInvestedPerStreet();
-                myHand.SeatActions[currPlayer].ChipsInvested += seatAction.Value.Actions.River.CalculateChipsInvestedPerStreet();
+                myHand.SeatActions[currPlayer].ChipsInvested += seatAction.Value.Actions.PreFlop.CalculateChipsInvestedPerStreet(amtBlind: seatAction.Value.Blind); // PreFlop;
+                myHand.SeatActions[currPlayer].ChipsInvested += seatAction.Value.Actions.Flop.CalculateChipsInvestedPerStreet(); // Flop;
+                myHand.SeatActions[currPlayer].ChipsInvested += seatAction.Value.Actions.Turn.CalculateChipsInvestedPerStreet(); // Turn;
+                myHand.SeatActions[currPlayer].ChipsInvested += seatAction.Value.Actions.River.CalculateChipsInvestedPerStreet(); // River;
             }
         }
 
+        /// <summary>
+        /// Calculates the real amount of chips won/lost in the Hand and updates the related Property;
+        /// </summary>
+        /// <param name="myHand">Hand</param>
         private static void CalculateChipsWon(this Hand myHand)
         {
             foreach (var seatAction in myHand.SeatActions)
@@ -233,13 +287,18 @@ namespace TrackerLibrary
             }
         }
 
+        /// <summary>
+        /// Calculates the Amount of Chips invested by a player on 1 Street, defined by the choosen PlayerActionList;
+        /// </summary>
+        /// <param name="actions">All SeatActions done by the player on 1 Street;</param>
+        /// <param name="amtBlind">Blind + Ante payed from the player in the Hand;</param>
+        /// <returns>The Amount of chips that the player did invest on the Street;</returns>
         private static float CalculateChipsInvestedPerStreet(this PlayerActionList  actions, float amtBlind = 0) // Set amtBlinds only if seatAction.Value.Actions.PreFlop !!!
         {
+            // If the player "raises" , we need to substract the amt of Blinds of the Action's size;
+            // All other Actions doesn't include the Blinds, so we just add them to the output's value;
             float output = 0;
-            if (true)
-            {
 
-            }
             foreach (var action in actions)
             {
                 if (action.Act == "raises")
@@ -255,8 +314,14 @@ namespace TrackerLibrary
             return output;
         }
 
+        /// <summary>
+        /// Updates the Street on which the all in did happen;
+        /// </summary>
+        /// <param name="myHand">Hand</param>
         private static void CalculateStreetAI(this Hand myHand)
         {
+            // Check how many players did reach a Showdown, update only if >0;
+            // Check the Amt of players(Actions) on all PostFlop streets; If we have a showdown, but no Action on some street, then it means that ai happened on the previous one;
             if (myHand.Info.CntPlayers_Showdown > 0)
             {
                 if (myHand.Info.CntPlayers_Flop == 0)
@@ -273,8 +338,14 @@ namespace TrackerLibrary
                 }
             }        
         }
+
+        /// <summary>
+        /// Checks if the players could open(Raise First) PreFlop and updates the related property;
+        /// </summary>
+        /// <param name="myHand">Hand</param>
         private static void Calculate_pf_open_opp(this Hand myHand)
         {
+            // Check if any player did raise before the current one, if not => openOpp = true, if yes openOpp = false;
             bool openOpp = true;
             for (int i = 0; i < (myHand.Info.CntPlayers < myHand.StreetActions.PreflopActions.Count ? myHand.Info.CntPlayers : myHand.StreetActions.PreflopActions.Count); i++)
             {
@@ -286,6 +357,10 @@ namespace TrackerLibrary
             }
         }
 
+        /// <summary>
+        /// Calculates a string containing the position of all players that did an aggressive action ( bet, raise) ordered by the Action and updates the related property;
+        /// </summary>
+        /// <param name="myHand">Hand</param>
         private static void Calculate_pf_agressors(this Hand myHand)
         {
             for (int i = 0; i < myHand.StreetActions.PreflopActions.Count; i++)
@@ -297,6 +372,10 @@ namespace TrackerLibrary
             }
         }
 
+        /// <summary>
+        /// Calculates a string containing the position of all players that did an passive action but didn't fold ( bet, raise, checks, calls) ordered by the Action and updates the related property;
+        /// </summary>
+        /// <param name="myHand">Hand</param>
         private static void Calculate_pf_actors(this Hand myHand)
         {
             for (int i = 0; i < myHand.StreetActions.PreflopActions.Count; i++)
@@ -308,14 +387,15 @@ namespace TrackerLibrary
             }
         }
 
+        /// <summary>
+        /// Calculates all Properties and updates them;
+        /// </summary>
+        /// <param name="myHandsList">A List of Hands which properties will be updated;</param>
         public static void CalculateProperties(this List<Hand> myHandsList)
         {
             for (int i = 0; i < myHandsList.Count; i++)
             {
-                if (myHandsList[i].Info.HandIdBySite == 225658452321)
-                {
-                    int debug1 = 0;
-                }
+
                 myHandsList[i].CalculateStreetAI();
                 myHandsList[i].CalculateChipsInvested();
                 myHandsList[i].CalculateCev();
@@ -328,118 +408,3 @@ namespace TrackerLibrary
         }
     }
 }
-
-
-//private static void CalculateCev(this Hand myHand)
-//{
-//    float resP1 = 0;
-//    float resP2 = 0;
-//    float resP3 = 0;
-
-//    if (myHand.Info.HandIdBySite == 225658452321)
-//    {
-//        int ff = 1;
-//    }
-
-//    if (myHand.Info.StreetAI == null)
-//    {
-//        for (int i = 0; i < myHand.SeatActions.Count; i++)
-//        {
-//            string currPlayer = myHand.Info.Players[i];
-//            if (myHand.SeatActions[currPlayer].IsWinner == false)
-//            {
-//                myHand.SeatActions[currPlayer].CevWon = -myHand.SeatActions[currPlayer].ChipsInvested;
-//            }
-//            else
-//            {
-//                myHand.SeatActions[currPlayer].CevWon = myHand.SeatActions[currPlayer].ChipsWon - myHand.SeatActions[currPlayer].ChipsInvested;
-//            }
-//        }
-//    }
-//    else
-//    {
-//        if (myHand.Info.StreetAI == "PF")
-//        {
-//            if (myHand.Info.CntPlayers_Showdown == 2)
-//            {
-//                EVCalculator.ImportDLL.CalculateOdds_2Hands_PF(myHand.Info.SawShowdown_Players[0].Item2.HC1.Id, myHand.Info.SawShowdown_Players[0].Item2.HC2.Id, myHand.Info.SawShowdown_Players[1].Item2.HC1.Id, myHand.Info.SawShowdown_Players[1].Item2.HC2.Id, ref resP1, ref resP2, ref resP3, ea);
-
-//                myHand.SetCev_2Players(ref resP1, ref resP2);
-//            }
-//            else if (myHand.Info.CntPlayers_Showdown == 3)
-//            {
-//                string HCs_P1 = myHand.Info.SawShowdown_Players[0].Item2.HC1.Name + myHand.Info.SawShowdown_Players[0].Item2.HC2.Name;
-//                string HCs_P2 = myHand.Info.SawShowdown_Players[1].Item2.HC1.Name + myHand.Info.SawShowdown_Players[1].Item2.HC2.Name;
-//                string HCs_P3 = myHand.Info.SawShowdown_Players[2].Item2.HC1.Name + myHand.Info.SawShowdown_Players[2].Item2.HC2.Name;
-//                string flopTurnRiver = "";
-//                myHand.SetCev_3Players(ref resP1, ref resP2, ref resP3, ref HCs_P1, ref HCs_P2, ref HCs_P3, ref flopTurnRiver);
-//            }
-//            else
-//            {
-
-//            }
-//        }
-//        else if (myHand.Info.StreetAI == "F")
-//        {
-//            if (myHand.Info.CntPlayers_Showdown == 2)
-//            {
-//                string HCs_P1 = myHand.Info.SawShowdown_Players[0].Item2.HC1.Name + myHand.Info.SawShowdown_Players[0].Item2.HC2.Name;
-//                string HCs_P2 = myHand.Info.SawShowdown_Players[1].Item2.HC1.Name + myHand.Info.SawShowdown_Players[1].Item2.HC2.Name;
-//                string flop = myHand.Info.FC1.Name + myHand.Info.FC2.Name + myHand.Info.FC3.Name;
-//                EVCalculator.ImportDLL.CalculateOdds_2Hands_ReturnFloat(HCs_P1 + flop, HCs_P2 + flop, ref resP1, ref resP2, ref resP3);
-
-//                myHand.SetCev_2Players(ref resP1, ref resP2);
-//            }
-//            else if (myHand.Info.CntPlayers_Showdown == 3)
-//            {
-//                string HCs_P1 = myHand.Info.SawShowdown_Players[0].Item2.HC1.Name + myHand.Info.SawShowdown_Players[0].Item2.HC2.Name;
-//                string HCs_P2 = myHand.Info.SawShowdown_Players[1].Item2.HC1.Name + myHand.Info.SawShowdown_Players[1].Item2.HC2.Name;
-//                string HCs_P3 = myHand.Info.SawShowdown_Players[2].Item2.HC1.Name + myHand.Info.SawShowdown_Players[2].Item2.HC2.Name;
-//                string flopTurnRiver = myHand.Info.FC1.Name + myHand.Info.FC2.Name + myHand.Info.FC3.Name;
-//                myHand.SetCev_3Players(ref resP1, ref resP2, ref resP3, ref HCs_P1, ref HCs_P2, ref HCs_P3, ref flopTurnRiver);
-//            }
-//            else
-//            {
-
-//            }
-//        }
-//        else if (myHand.Info.StreetAI == "T")
-//        {
-//            if (myHand.Info.CntPlayers_Showdown == 2)
-//            {
-//                string HCs_P1 = myHand.Info.SawShowdown_Players[0].Item2.HC1.Name + myHand.Info.SawShowdown_Players[0].Item2.HC2.Name;
-//                string HCs_P2 = myHand.Info.SawShowdown_Players[1].Item2.HC1.Name + myHand.Info.SawShowdown_Players[1].Item2.HC2.Name;
-//                string flopPlusTurn = myHand.Info.FC1.Name + myHand.Info.FC2.Name + myHand.Info.FC3.Name + myHand.Info.TC.Name;
-//                EVCalculator.ImportDLL.CalculateOdds_2Hands_ReturnFloat(HCs_P1 + flopPlusTurn, HCs_P2 + flopPlusTurn, ref resP1, ref resP2, ref resP3);
-//                myHand.SetCev_2Players(ref resP1, ref resP2);
-//            }
-//            else if (myHand.Info.CntPlayers_Showdown == 3)
-//            {
-//                string HCs_P1 = myHand.Info.SawShowdown_Players[0].Item2.HC1.Name + myHand.Info.SawShowdown_Players[0].Item2.HC2.Name;
-//                string HCs_P2 = myHand.Info.SawShowdown_Players[1].Item2.HC1.Name + myHand.Info.SawShowdown_Players[1].Item2.HC2.Name;
-//                string HCs_P3 = myHand.Info.SawShowdown_Players[2].Item2.HC1.Name + myHand.Info.SawShowdown_Players[2].Item2.HC2.Name;
-//                string flopTurnRiver = myHand.Info.FC1.Name + myHand.Info.FC2.Name + myHand.Info.FC3.Name + myHand.Info.TC.Name;
-//                myHand.SetCev_3Players(ref resP1, ref resP2, ref resP3, ref HCs_P1, ref HCs_P2, ref HCs_P3, ref flopTurnRiver);
-//            }
-//            else
-//            {
-
-//            }
-//        }
-
-//        for (int i = 0; i < myHand.SeatActions.Count; i++)
-//        {
-//            string currPlayer = myHand.Info.Players[i];
-//            if (!myHand.Info.SawShowdown_Players.Any(item => item.Item1 == currPlayer))
-//            {
-//                myHand.SeatActions[currPlayer].CevWon = -myHand.SeatActions[currPlayer].ChipsInvested;
-//            }
-//        }
-
-//    }
-
-
-
-
-
-//}

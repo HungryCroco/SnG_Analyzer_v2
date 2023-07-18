@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary.Queries.NoSQL
 {
+    /// <summary>
+    /// Class containing all Queries necessary to request HeatMaps from NoSQL DB;
+    /// </summary>
     public static  class NoSQL_HeatMapQueries
     {
+		/// <summary>
+		/// Get a JSON of StatsModel grouped by HoleCard's Ids;
+		/// </summary>
 		public static string NoSQL_ExportHeatMapAsJSON =
             @"SELECT array_to_json(array_agg(row_to_json(t2)))
 			FROM (
@@ -23,7 +29,10 @@ namespace TrackerLibrary.Queries.NoSQL
 				ORDER BY (ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric 
 				) t2";
 
-		public static string NoSQL_ExportDataGridViewByHoleCardsSimple =
+        /// <summary>
+        /// Get a DataGridView filtered by HoleCard's Id;
+        /// </summary>
+        public static string NoSQL_ExportDataGridViewByHoleCardsSimple =
             @"	SELECT ha->'Info'->>'Room' AS Room,
 					ha->'Info'->>'HandIdBySite' AS handId,
 					(ha->'Info'->>'BuyIn') || (ha->'Info'->>'Currency') || '+' || (ha->'Info'->>'Fee') || (ha->'Info'->>'Currency') AS BuyIn,
@@ -59,62 +68,10 @@ namespace TrackerLibrary.Queries.NoSQL
 					)  t1						
 				WHERE @whereClauseHero AND (ha->'SeatActions'->'IPray2Buddha'->>'HCsAsNumber')::numeric = @HCsId";
 
-   //     public static string NoSQL_ExportHeatMapAsJSON_BvB_oR =
-   //         @"SELECT array_to_json(array_agg(row_to_json(t2)))
-   //FROM (
-   //	SELECT (ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric AS hcs_id , COUNT(ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric AS amt_situations
-   //	FROM (
-   //		SELECT data AS ha
-   //		FROM hands h
-   //		CROSS JOIN LATERAL jsonb_each(h.data->'SeatActions') AS t(k,v)
-   //		WHERE t.k @regList 
-   //			AND t.v->'SeatPosition' = '9' 
-   //			AND ((t.v->>'StartingStack')::numeric / (data->'Info'->>'Amt_bb')::numeric) @es
-   //		)  t1						
-   //	WHERE ha->'Info'->>'TournamentType' = '@tourneyType' 
-   //		AND (ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric > 0 
-   //		AND (ha->'SeatActions'->'@hero'->>'SeatPosition')::numeric = 8  
-   //		AND ((ha->'SeatActions'->'IPray2Buddha'->>'StartingStack')::numeric / (ha->'Info'->>'Amt_bb')::numeric) @es
-   //		AND ha->'SeatActions'->'@hero'->'Actions'->'PreFlop'->0->>'Act' LIKE 'raises' 
-   //		AND ((ha->'SeatActions'->'@hero'->'Actions'->'PreFlop'->0->>'Size')::numeric / (ha->'Info'->>'Amt_bb')::numeric) @size 
-   //		AND (ha->'SeatActions'->'@hero'->'Actions'->'PreFlop'->0->>'AI')::numeric = @AI 
-   //		AND (ha->'Info'->>'CntPlayers')::numeric = 3   
-   //		AND (ha->'Info'->>'Date')::date > DATE '@date' 
-   //		AND ha->'Info'->>'pf_actors' LIKE '89%' 
-   //		AND ha->'Info'->>'pf_aggressors' LIKE '8%'
-   //	GROUP BY (ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric
-   //	ORDER BY (ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric 
-   //) t2";
-
-        //     public static string NoSQL_ExportHeatMapAsJSON_BvB_oL =
-        //         @"SELECT array_to_json(array_agg(row_to_json(t2)))
-        //FROM (
-        //	SELECT (ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric AS hcs_id , COUNT(ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric AS amt_situations
-        //	FROM (
-        //		SELECT data AS ha
-        //		FROM hands h
-        //		CROSS JOIN LATERAL jsonb_each(h.data->'SeatActions') AS t(k,v)
-        //		WHERE t.k @regList 
-        //			AND t.v->'SeatPosition' = '9' 
-        //			AND ((t.v->>'StartingStack')::numeric / (data->'Info'->>'Amt_bb')::numeric) @es
-        //		)  t1						
-        //	WHERE ha->'Info'->>'TournamentType' = '@tourneyType' 
-        //		AND (ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric > 0 
-        //		AND (ha->'SeatActions'->'@hero'->>'SeatPosition')::numeric = 8  
-        //		AND ((ha->'SeatActions'->'IPray2Buddha'->>'StartingStack')::numeric / (ha->'Info'->>'Amt_bb')::numeric) @es
-        //		AND ha->'SeatActions'->'@hero'->'Actions'->'PreFlop'->0->>'Act' LIKE 'calls' 
-        //		AND (ha->'Info'->>'CntPlayers')::numeric = 3   AND (ha->'Info'->>'Date')::date > DATE '@date' 
-        //		AND ha->'Info'->>'pf_actors' LIKE '89%' 
-        //		AND ha->'Info'->>'pf_aggressors' NOT LIKE '8%'
-        //	GROUP BY (ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric
-        //	ORDER BY (ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric 
-        //	) t2";
-
-
-
-
-        //-----
-
+		/// <summary>
+		/// Hero's where conditions for requesting BlindvsBlind Iso Stats;
+		/// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
+		/// </summary>
         public static string NoSQL_WhereClauseHero_BvB_Iso =
             @"ha->'Info'->>'TournamentType' = '@tourneyType' 
 				AND (ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric > 0 
@@ -127,14 +84,21 @@ namespace TrackerLibrary.Queries.NoSQL
 				AND ha->'Info'->>'pf_actors' LIKE '89%' 
 				AND ha->'Info'->>'pf_aggressors' LIKE '9%'";
 
-		public static string NoSQL_WhereClauseVillain_BvB_Iso =
+        /// <summary>
+        /// Villains's where conditions for requesting BlindvsBlind Iso Stats;
+        /// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
+        /// </summary>
+        public static string NoSQL_WhereClauseVillain_BvB_Iso =
             @"t.k @regList 
 				AND t.v->'SeatPosition' = '8' 
 				AND ((t.v->>'StartingStack')::numeric / (data->'Info'->>'Amt_bb')::numeric) @es";
 
-
         //-----
 
+        /// <summary>
+		/// Hero's where conditions for requesting BlindvsBlind openRaise Stats;
+		/// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
+		/// </summary>
         public static string NoSQL_WhereClauseHero_BvB_oR =
             @"ha->'Info'->>'TournamentType' = '@tourneyType' 
 				AND (ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric > 0 
@@ -148,6 +112,10 @@ namespace TrackerLibrary.Queries.NoSQL
 				AND ha->'Info'->>'pf_actors' LIKE '89%' 
 				AND ha->'Info'->>'pf_aggressors' LIKE '8%'";
 
+        /// <summary>
+        /// Villain's where conditions for requesting BlindvsBlind openRaise Stats;
+        /// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
+        /// </summary>
         public static string NoSQL_WhereClauseVillain_BvB_oR =
             @"t.k @regList 
 				AND t.v->'SeatPosition' = '9' 
@@ -155,6 +123,10 @@ namespace TrackerLibrary.Queries.NoSQL
 
         //-----
 
+        /// <summary>
+        /// Hero's where conditions for requesting BlindvsBlind openLimp Stats;
+        /// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
+        /// </summary>
         public static string NoSQL_WhereClauseHero_BvB_oL =
             @"ha->'Info'->>'TournamentType' = '@tourneyType' 
 				AND (ha->'SeatActions'->'@hero'->>'HCsAsNumber')::numeric > 0 
@@ -164,6 +136,10 @@ namespace TrackerLibrary.Queries.NoSQL
 				AND (ha->'Info'->>'CntPlayers')::numeric = 3   AND (ha->'Info'->>'Date')::date > DATE '@date' 
 				AND ha->'Info'->>'pf_actors' LIKE '8%'";
 
+        /// <summary>
+        /// Villain's where conditions for requesting BlindvsBlind openLimp Stats;
+        /// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
+        /// </summary>
         public static string NoSQL_WhereClauseVillain_BvB_oL =
             @"t.k @regList 
 				AND t.v->'SeatPosition' = '9' 

@@ -1,1 +1,1 @@
-{"Server":"localhost","Port":"5434","User":"postgres","Password":"dbpass","SqlDatabase":"sql_50s_5","NosqlDatabase":"json_50s_2","DbTypeWrite":"NoSQL","DbTypeRead":"SQL","MinTorney":"500","RegFile":"reglist_small.txt","HhSplitSize":"3000","CurrentDbRead":"sql_50s_5"}
+{"Server":"localhost","Port":"5434","User":"postgres","Password":"dbpass","SqlDatabase":"sql_50s_5","NosqlDatabase":"json_50s_2","DbTypeWrite":"NoSQL","DbTypeRead":"NoSQL","MinTorney":"500","RegFile":"reglist_small.txt","HhSplitSize":"3000","CurrentDbRead":"json_50s_2"}

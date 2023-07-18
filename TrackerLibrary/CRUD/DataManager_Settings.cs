@@ -8,37 +8,59 @@ using TrackerLibrary.Models;
 
 namespace TrackerLibrary.CRUD
 {
+    /// <summary>
+    /// This class contains all the Methods needed to calculate a Settings UI;
+    /// </summary>
     public class DataManager_Settings
     {
-        public static SettingsModel.Settings ReadSettings()
+        /// <summary>
+        /// Reads all Settings from the .txt File. If .txt File is not available, reads the default Settings from the GlobalConfig;
+        /// </summary>
+        /// <returns>SettingsModel, struct containing all user-defined Settings;</returns>
+        public static Settings ReadSettings()
         {
             var options = new JsonSerializerOptions();
             options.Converters.Add(new SettingsConverter());
 
-            SettingsModel.Settings settings = (SettingsModel.Settings)File_Connector.ReadJsonFromFile<SettingsModel.Settings>(GlobalConfig.settingsPath, options);
+            Settings settings = (Settings)File_Connector.ReadJsonFromFile<Settings>(GlobalConfig.settingsPath, options);
 
             return settings;
 
         }
 
+        /// <summary>
+        /// Writes all Settings from the Setting's UI to .txt File.
+        /// </summary>
+        /// <param name="server">PostgreSQL Server;</param>
+        /// <param name="port">PostgreSQL Port;</param>
+        /// <param name="user">PostgreSQL UserName;</param>
+        /// <param name="pass">PostgreSQL Password;</param>
+        /// <param name="nosqlDb">>Name of the current NoSQL-Database;</param>
+        /// <param name="sqlDb">Name of the current SQL-Database;</param>
+        /// <param name="dbWrite">The choosen type of DataBase used for importing Hands;</param>
+        /// <param name="dbRead">The choosen type of DataBase used for quering;</param>
+        /// <param name="minTourney">Minimum amount of Tournaments/period required to show the period's info in the UI;</param>
+        /// <param name="regFile">Current reg-File used to filter Quieries by REG/FISH;</param>
+        /// <param name="hhSplitSize">Amount of Hands to be Carculated and Imported at the same time;</param>
         public static void WriteSettings(string server, string port, string user, string pass, string nosqlDb, string sqlDb, string dbWrite, string dbRead, string minTourney, string regFile, string hhSplitSize)
         {
-
-            SettingsModel.Settings settings = new(server, port, user, pass, nosqlDb, sqlDb, dbWrite, dbRead, minTourney, regFile, hhSplitSize);
+            // Read the Settings
+            Settings settings = new(server, port, user, pass, nosqlDb, sqlDb, dbWrite, dbRead, minTourney, regFile, hhSplitSize);
 
             try
             {
+                // Creates Directory Settings if not available
                 Directory.CreateDirectory(GlobalConfig.settingsDirectory);
             }
             catch (Exception)
             {
-
-                throw;
             }
 
+            //Serializes Settings as JSON;
             var options = new JsonSerializerOptions();
             options.Converters.Add(new SettingsConverter());
 
+            // Writes Settings to .txt;
             File_Connector.WriteToFileAsJSON(GlobalConfig.settingsPath, settings, options);
 
         }

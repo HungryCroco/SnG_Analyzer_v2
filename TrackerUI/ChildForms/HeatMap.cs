@@ -97,7 +97,7 @@ namespace TrackerUI.ChildForms
 
         }
 
-        private void LoadHeatMap(Query query,  string hero, string tourneyType, string sinceDate, string ai, string size, string vs, string es, SettingsModel.Settings settings)
+        private void LoadHeatMap(Query query,  string hero, string tourneyType, string sinceDate, string ai, string size, string vs, string es, TrackerLibrary.Models.Settings settings)
         {
             DateTime startTime = DateTime.Now;
 
@@ -172,14 +172,14 @@ namespace TrackerUI.ChildForms
 
         private void btn_Request_Click(object sender, EventArgs e)
         {
-            SettingsModel.Settings currSettings = DataManager_Settings.ReadSettings();
+            TrackerLibrary.Models.Settings currSettings = DataManager_Settings.ReadSettings();
             LoadHeatMap( (Query)cmbBoxQuery.SelectedValue, txtBoxPlayer.Text, txtBoxTourneyType.Text, txtBoxDate.Text, cmbBoxAI.SelectedValue.ToString(), txtBoxSize.Text, cmbBoxVs.SelectedValue.ToString(), txtBoxES.Text, currSettings);
         }
 
         private void label_Click(object sender, MouseEventArgs e)
         {
             Query query = (Query)cmbBoxQuery.SelectedValue;
-            SettingsModel.Settings currSettings = DataManager_Settings.ReadSettings();
+            TrackerLibrary.Models.Settings currSettings = DataManager_Settings.ReadSettings();
             Label l = (Label)sender;
 
             dataGridView_HeatMap.DataSource = null;

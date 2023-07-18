@@ -10,19 +10,29 @@ using System.Windows.Forms;
 
 namespace TrackerLibrary.CRUD
 {
+    /// <summary>
+    /// Contains all necessery Methods to read and write from/to .txt files;
+    /// </summary>
     public class File_Connector
     {
+        /// <summary>
+        /// Writes a JSON string to .txt File;
+        /// </summary>
+        /// <param name="fullFilePath"> full path of the .txt File to be written on;</param>
+        /// <param name="data">object, that would be serialized to JSON and written as string to the .txt File;</param>
+        /// <param name="options">[Optional]Options, necessery to convert non standart objects to JSON;</param>
         public static void WriteToFileAsJSON(string fullFilePath, object data, [Optional] JsonSerializerOptions options)
         {
 
-
-            var output = JsonSerializer.Serialize((SettingsModel.Settings)data, options);
+            // Serialize the object to JSON;
+            var output = JsonSerializer.Serialize((Settings)data, options);
 
             try
             {
                 //// Check if file already exists. If yes, delete it.     
                 if (File.Exists(fullFilePath))
                 {
+                    //Delete if the file is existing;
                     File.Delete(fullFilePath);
                 }
 
@@ -32,15 +42,6 @@ namespace TrackerLibrary.CRUD
                     sw.Write(output);
                 }
 
-                // Write file contents on console.     
-                //using (StreamReader sr = File.OpenText(fullFilePath))
-                //{
-                //    string s = "";
-                //    while ((s = sr.ReadLine()) != null)
-                //    {
-                //        Console.WriteLine(s);
-                //    }
-                //}
             }
             catch (Exception Ex)
             {
@@ -50,9 +51,16 @@ namespace TrackerLibrary.CRUD
 
         }
 
-        public static object ReadJsonFromFile<T>(string _fileName, [Optional] JsonSerializerOptions options)
+        /// <summary>
+        /// Reads a JSON string from .txt File;
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="fullFilePath">full path of the .txt File to be written on;</param>
+        /// <param name="options">[Optional]Options, necessery to convert non standart objects to JSON;</param>
+        /// <returns>Deserialized JSON</returns>
+        public static object ReadJsonFromFile<T>(string fullFilePath, [Optional] JsonSerializerOptions options)
         {
-            var data = File.ReadAllText(_fileName);
+            var data = File.ReadAllText(fullFilePath);
 
             //string fileName = @"C:\Users\tatsi\source\repos\NASH_EquilibriumCalculator\EquityArrays\eaPFasJSON.txt";
 
@@ -62,6 +70,10 @@ namespace TrackerLibrary.CRUD
 
         }
 
+        /// <summary>
+        /// Opens window and saves the full Path of the selected file;
+        /// </summary>
+        /// <returns>The full file path as String;</returns>
         public static string GetFullFilePath()
         {
             string filePath = "";

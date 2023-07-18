@@ -11,7 +11,11 @@ namespace TrackerUI
     public static class UIMethods
     {
         
-
+        /// <summary>
+        /// Calculates Color(Darkness) based on input int; Used in HeatMap to highlight the HoleCards with higher occurance;
+        /// </summary>
+        /// <param name="val">current Occurance/(max Occurance-min Occurance); max = 1, min = 0;</param>
+        /// <returns>Color</returns>
         public static Color CalculateColor(double val)
         {
             Color output = new Color();
@@ -59,10 +63,13 @@ namespace TrackerUI
             return output;
         }
 
+        /// <summary>
+        /// Resizes DataGridView to fill in the Panel;
+        /// </summary>
+        /// <param name="dgv">DataGridView, that will be resized;</param>
         public static void AutoResizeDataGridView(this DataGridView dgv)
         {
-            //autoresize columns but buggish
-            //TO DO: search foir better autoresize method
+            // TO DO: This MEthod doesn't work well, for example in the Settings UI; Needs to be rewritten;
 
             int nLastColumn = dgv.Columns.Count - 1;
             for (int i = 0; i < dgv.Columns.Count; i++)

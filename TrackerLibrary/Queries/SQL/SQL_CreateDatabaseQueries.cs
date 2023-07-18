@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary.Queries.SQL
 {
+    /// <summary>
+    /// Class containing all Queries necessary to create SQL-relational DB;
+    /// p.s.: NoSQL Connector doesn't really need such class as NoSQL DB's shema is very simple;
+    /// p.s.2: As these queries are related, it's important to run them in correct order to access the FOREIGN Key's after creating the related Column;
+    /// </summary>
     public static class SQL_CreateDatabaseQueries
     {
+        /// <summary>
+        /// Creates a Table HandAsString;
+        /// </summary>
         public static string sql_CreateTable_HandAsString =
             @"CREATE SEQUENCE IF NOT EXISTS public.handasstring_handid_seq
 	            INCREMENT 1
@@ -28,6 +36,9 @@ namespace TrackerLibrary.Queries.SQL
             ALTER TABLE IF EXISTS public.handasstring
 	            OWNER to postgres;";
 
+        /// <summary>
+        /// Creates the MAIN Table Hands;
+        /// </summary>
         public static string sql_CreateTable_Hands =
             @"--CREATE SEQUENCE IF NOT EXISTS public.hands_id_seq
                 --INCREMENT 1
@@ -190,6 +201,9 @@ namespace TrackerLibrary.Queries.SQL
                 (tournamentid ASC NULLS LAST)
                 TABLESPACE pg_default;";
 
+        /// <summary>
+        /// Creates a Table HoleCardsSimple;
+        /// </summary>
         public static string sql_CreateTable_HoleCardsSimple =
             @"--CREATE SEQUENCE IF NOT EXISTS public.holecardssimple_id_seq
               --  INCREMENT 1
@@ -211,6 +225,9 @@ namespace TrackerLibrary.Queries.SQL
             ALTER TABLE IF EXISTS public.holecardssimple
                 OWNER to postgres;";
 
+        /// <summary>
+        /// Creates a Table Card;
+        /// </summary>
         public static string sql_CreateTable_Card =
             @"CREATE TABLE IF NOT EXISTS public.card
             (
@@ -224,6 +241,9 @@ namespace TrackerLibrary.Queries.SQL
             ALTER TABLE IF EXISTS public.card
                 OWNER to postgres;";
 
+        /// <summary>
+        /// Creates a Table Player;
+        /// </summary>
         public static string sql_CreateTable_Player =
             @"CREATE SEQUENCE IF NOT EXISTS public.player_id_seq
                 INCREMENT 1
@@ -249,6 +269,9 @@ namespace TrackerLibrary.Queries.SQL
             ALTER TABLE IF EXISTS public.player
                 OWNER to postgres;";
 
+        /// <summary>
+        /// Creates a Table Room;
+        /// </summary>
         public static string sql_CreateTable_Room =
             @"CREATE SEQUENCE IF NOT EXISTS public.room_id_seq
                 INCREMENT 1
@@ -269,6 +292,9 @@ namespace TrackerLibrary.Queries.SQL
             ALTER TABLE IF EXISTS public.room
                 OWNER to postgres;";
 
+        /// <summary>
+        /// Creates a Table SeatAction;
+        /// </summary>
         public static string sql_CreateTable_SeatAction =
             @"CREATE SEQUENCE IF NOT EXISTS public.seataction_id_seq
                 INCREMENT 1
@@ -341,6 +367,9 @@ namespace TrackerLibrary.Queries.SQL
                 (playerid ASC NULLS LAST)
                 TABLESPACE pg_default;";
 
+        /// <summary>
+        /// Creates a Table Tournament;
+        /// </summary>
         public static string sql_CreateTable_Tournament =
             @"CREATE SEQUENCE IF NOT EXISTS public.tournament_id_seq
                 INCREMENT 1
@@ -416,8 +445,6 @@ namespace TrackerLibrary.Queries.SQL
                 ON public.tournament USING btree
                 (tournamentwinnerid ASC NULLS LAST)
                 TABLESPACE pg_default;";
-
-
 
     }
 }

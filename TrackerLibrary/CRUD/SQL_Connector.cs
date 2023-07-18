@@ -15,17 +15,30 @@ using TrackerLibrary.Queries.NoSQL;
 
 namespace TrackerLibrary.CRUD
 {
+    /// <summary>
+    /// Class containing all Methods, necessary to perform SQL CRUD operations;
+    /// </summary>
     public static class SQL_Connector
     {
+        /// <summary>
+        /// Runs a query to import Hands to SQL DataBase;
+        /// </summary>
+        /// <param name="dbName">DataBase's Name;</param>
+        /// <param name="hands">List of Hands to be imported;</param>
         public static void ImportHandsToSqlDb(string dbName, List<Hand> hands)
         {
             Stopwatch watch = new Stopwatch();
             watch.Start();
+
+            //Creates DB if not existing;
             CreateDatabase(dbName);
 
             NpgsqlConnection conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
             conn.Open();
+
+            //Filter out the not unique Hands;
             List<Hand> uniqueHands = hands.ReturnHashSetWithUniqueHands(dbName, SQL_Queries.query_GetIdAndRoomFromSqlDb, ref conn).ToList();
+            //Import Hands one by one;
             foreach (var hand in uniqueHands)
             {
                 ExportEntireHand(hand, ref dbName, ref conn);
@@ -34,14 +47,19 @@ namespace TrackerLibrary.CRUD
 
             conn.Close();
 
-            Console.WriteLine("-----");
-            Console.WriteLine("Import Time: " + watch.ElapsedMilliseconds / 1000.0 + "s");
+            Console.WriteLine("---");
+            Console.WriteLine($"Import to SQL {dbName}: " + watch.ElapsedMilliseconds / 1000.0 + "s");
         }
 
+        /// <summary>
+        /// Creates an empty SQL-relational DataBase;
+        /// </summary>
+        /// <param name="dbName"></param>
         public static void CreateDatabase(string dbName)
         {
             NpgsqlConnection conn = new();
-
+            
+            //Try to run multiple queries to Create all Tables and relations one by one, if the DB is already existing will raise Exception;
             try
             {
                 conn = new NpgsqlConnection(GlobalConfig.GetConnectionString());
@@ -54,13 +72,28 @@ namespace TrackerLibrary.CRUD
 
                 conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
 
+                // Creates HandAsString Table(conatining the entire Hand as single string); 
                 var cmd_CreateTable_HandAsString = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_HandAsString, conn);
+
+                // Creates HoleCardsSimple(Enum CardsAllSimple) Table, this table is constant and not updated while importing;
                 var cmd_CreateTable_HoleCardsSimple = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_HoleCardsSimple, conn);
+
+                // Creates Card(Enum Card) Table, this table is constant and not updated while importing;
                 var cmd_CreateTable_Card = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_Card, conn);
+
+                // Creates Room Table, that contains the game's provider for each Hand;
                 var cmd_CreateTable_Room = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_Room, conn);
+
+                // Creates Player Table, that containes the PlayerNickNames of each player;
                 var cmd_CreateTable_Player = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_Player, conn);
+
+                // Creates Tournament Table, containing all the Information unique for a Tournament;
                 var cmd_CreateTable_Tournament = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_Tournament, conn);
+
+                // Creates SeatAction Table, containing all the Information unique for a SeatAction;
                 var cmd_CreateTable_SeatAction = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_SeatAction, conn);
+
+                // Creates the MAIN Hands Table;
                 var cmd_CreateTable_Hands = new NpgsqlCommand(SQL_CreateDatabaseQueries.sql_CreateTable_Hands, conn);
 
                 conn.Open();
@@ -83,17 +116,40 @@ namespace TrackerLibrary.CRUD
             conn.Close();
         }
 
+        /// <summary>
+        /// Exports an entire Hand from C# to PostgreSQL relational DB;
+        /// ps: As it's relational DB import, order of importing(calling the Methods) is important;
+        /// 	Correct order is:
+        ///		1) Import To HoleCardsSimple (only while creating DB);
+        ///		2) Import To Cards (only while creating DB);
+        ///		3) Import To Room;
+        ///		4) Import To Player;
+        ///		5) Import To Tournament;
+        ///		6) Import To HandAsString;
+        ///		7) Import To SeatAction;
+        ///		8) Import To Hand
+        /// </summary>
+        /// <param name="hand"> Hand to be exported;</param>
+        /// <param name="dbName">DataBase Name;</param>
+        /// <param name="conn">NPGSQL Connection;</param>
         public static void ExportEntireHand(Hand hand, ref string dbName, ref NpgsqlConnection conn)
         {
-
+            // Creating SQL_ImportIds empty object;
             SQL_ImportIds currImportIds = new();
 
+            // Importing to Room and Updating RoomId in SQL_ImportIds
             ImportToRoom(ref hand, ref currImportIds, ref conn);
+
+            // Importing to Room and Updating all PlayerId's in SQL_ImportIds
             ImportToPlayer(ref hand, ref currImportIds, ref conn);
+
+            // Importing to Room and Updating Tournament Id in SQL_ImportIds
             ImportToTournament(ref hand, ref currImportIds, ref conn);
 
+            // Importing to Room and Updating Hand Id in SQL_ImportIds
             ImportToHandAsString(ref hand, ref currImportIds, ref conn);
 
+            // Importing to Hand;
             ImportToHand(ref hand, ref currImportIds, ref conn);
 
 
@@ -101,6 +157,13 @@ namespace TrackerLibrary.CRUD
 
         }
 
+        /// <summary>
+        /// Importing to Room and update the roomId;
+        /// </summary>
+        /// <param name="hand">Reference to Hand to be imported;</param>
+        /// <param name="currHandImportIds">Reference to SQL_ImportIds, that will be updated in this Method;</param>
+        /// <param name="conn">Reference to PostgreSQL Connection</param>
+        /// <returns>roomId</returns>
         private static int ImportToRoom(ref Hand hand, ref SQL_ImportIds currHandImportIds, ref NpgsqlConnection conn)
         {
             var cmd = new NpgsqlCommand(SQL_ImportQueries.sql_ImportRoom, conn);
@@ -117,6 +180,13 @@ namespace TrackerLibrary.CRUD
             return outputId;
         }
 
+        /// <summary>
+        /// Importing to Player and update the playerId;
+        /// </summary>
+        /// <param name="hand">Reference to Hand to be imported;</param>
+        /// <param name="currHandImportIds">Reference to SQL_ImportIds, that will be updated in this Method;</param>
+        /// <param name="conn">Reference to PostgreSQL Connection</param>
+        /// <returns>playerId</returns>
         private static int ImportToPlayer(ref Hand hand, ref SQL_ImportIds currHandImportIds, ref NpgsqlConnection conn)
         {
             int heroId = 0;
@@ -145,6 +215,13 @@ namespace TrackerLibrary.CRUD
             return heroId;
         }
 
+        /// <summary>
+        /// Importing to Tournament and update the tournamentId;
+        /// </summary>
+        /// <param name="hand">Reference to Hand to be imported;</param>
+        /// <param name="currHandImportIds">Reference to SQL_ImportIds, that will be updated in this Method;</param>
+        /// <param name="conn">Reference to PostgreSQL Connection</param>
+        /// <returns>tournamentId</returns>
         private static int ImportToTournament(ref Hand hand, ref SQL_ImportIds currHandImportIds, ref NpgsqlConnection conn)
         {
 
@@ -179,7 +256,14 @@ namespace TrackerLibrary.CRUD
             return outputId;
         }
 
-        private static int ImportToHandAsString(ref Hand hand, ref SQL_ImportIds importIds, ref NpgsqlConnection conn)
+        /// <summary>
+        /// Importing to HandAsString and update the handId;
+        /// </summary>
+        /// <param name="hand">Reference to Hand to be imported;</param>
+        /// <param name="currHandImportIds">Reference to SQL_ImportIds, that will be updated in this Method;</param>
+        /// <param name="conn">Reference to PostgreSQL Connection</param>
+        /// <returns>handId</returns>
+        private static int ImportToHandAsString(ref Hand hand, ref SQL_ImportIds currHandImportIds, ref NpgsqlConnection conn)
         {
             var cmd = new NpgsqlCommand(SQL_ImportQueries.sql_ImportHandAsAtring, conn);
 
@@ -189,17 +273,24 @@ namespace TrackerLibrary.CRUD
             var output = cmd.ExecuteScalar();
 
             int outputId = int.Parse(output.ToString());
-            importIds.HandId = outputId;
+            currHandImportIds.HandId = outputId;
 
             return outputId;
         }
 
-        public static void ImportToSeatAction(SeatAction seatAction, ref SQL_ImportIds importIds, ref NpgsqlConnection conn)
+        /// <summary>
+        /// Imports a SeatAction to the SQL SeatAction Table and updates all seatAction's Ids in the SQL_ImportIds;
+        /// </summary>
+        /// <param name="seatAction">SeatAction, that will be imported</param>
+        /// <param name="currHandImportIds">Reference to SQL_ImportIds, that will be updated in this Method;</param>
+        /// <param name="conn">Reference to PostgreSQL Connection</param>
+        public static void ImportToSeatAction(SeatAction seatAction, ref SQL_ImportIds currHandImportIds, ref NpgsqlConnection conn)
         {
             var cmd = new NpgsqlCommand(SQL_ImportQueries.sql_ImportSeatAction, conn);
 
+            //Adding Parameters;
             cmd.Parameters.Clear();
-            cmd.Parameters.Add(new NpgsqlParameter("PlayerId", importIds.PlayerIds[seatAction.SeatNumber]));
+            cmd.Parameters.Add(new NpgsqlParameter("PlayerId", currHandImportIds.PlayerIds[seatAction.SeatNumber]));
             cmd.Parameters.Add(new NpgsqlParameter("SeatNumber", Convert.ToInt32(seatAction.SeatNumber)));
             cmd.Parameters.Add(new NpgsqlParameter("Position", Convert.ToInt32(seatAction.SeatPosition)));
             cmd.Parameters.Add(new NpgsqlParameter("StartingStack", seatAction.StartingStack));
@@ -229,41 +320,49 @@ namespace TrackerLibrary.CRUD
             cmd.Parameters.Add(new NpgsqlParameter("chips_won", seatAction.ChipsWon));
             cmd.Parameters.Add(new NpgsqlParameter("cev_won", seatAction.CevWon));
 
+            //Importing and getting the seatActionID
             var outputId = cmd.ExecuteScalar();
             int seatId = int.Parse(outputId.ToString());
 
-            importIds.SeatActionIds[seatAction.SeatNumber] = seatId;
+            //Updating the seatActionIds in SQL_ImportIds;
+            currHandImportIds.SeatActionIds[seatAction.SeatNumber] = seatId;
             if (seatAction.SeatPosition == 0)
             {
-                importIds.SeatActionId_BTN = seatId;
+                currHandImportIds.SeatActionId_BTN = seatId;
             }
             else if (seatAction.SeatPosition == 8)
             {
-                importIds.SeatActionId_SB = seatId;
+                currHandImportIds.SeatActionId_SB = seatId;
             }
             else if (seatAction.SeatPosition == 9)
             {
-                importIds.SeatActionId_BB = seatId;
+                currHandImportIds.SeatActionId_BB = seatId;
             }
-            if (importIds.PlayerIds[seatAction.SeatNumber] == importIds.PlayerId_Hero)
+            if (currHandImportIds.PlayerIds[seatAction.SeatNumber] == currHandImportIds.PlayerId_Hero)
             {
-                importIds.SeatActionId_Hero = seatId;
+                currHandImportIds.SeatActionId_Hero = seatId;
             }
 
         }
 
-        private static void ImportToHand(ref Hand hand, ref SQL_ImportIds importIds, ref NpgsqlConnection conn)
+        /// <summary>
+        /// Importing to Hands;
+        /// </summary>
+        /// <param name="hand">Reference to Hand to be imported;</param>
+        /// <param name="currHandImportIds">Reference to SQL_ImportIds, that will be updated in this Method;</param>
+        /// <param name="conn">Reference to PostgreSQL Connection;</param>
+        private static void ImportToHand(ref Hand hand, ref SQL_ImportIds currHandImportIds, ref NpgsqlConnection conn)
         {
 
 
             var cmd = new NpgsqlCommand(SQL_ImportQueries.sql_ImportToHand, conn);
 
 
-
+            //Adding Parameters;
             cmd.Parameters.Clear();
-            cmd.Parameters.Add(new NpgsqlParameter("handId", importIds.HandId));
+            cmd.Parameters.Add(new NpgsqlParameter("handId", currHandImportIds.HandId));
             cmd.Parameters.Add(new NpgsqlParameter("handidbysite", hand.Info.HandIdBySite));
-            cmd.Parameters.Add(new NpgsqlParameter("tournamentId", importIds.TournamentId));
+            cmd.Parameters.Add(new NpgsqlParameter("tournamentId", currHandImportIds.TournamentId));
             cmd.Parameters.Add(new NpgsqlParameter("LevelHand", hand.Info.Level));
             cmd.Parameters.Add(new NpgsqlParameter("amt_bb", hand.Info.Amt_bb));
             cmd.Parameters.Add(new NpgsqlParameter("DateTimeHand", hand.Info.Date));
@@ -286,40 +385,44 @@ namespace TrackerLibrary.CRUD
             cmd.Parameters.Add(new NpgsqlParameter("cnt_players_river", Convert.ToInt32(hand.Info.CntPlayers_River)));
             cmd.Parameters.Add(new NpgsqlParameter("cnt_players_showdown", Convert.ToInt32(hand.Info.CntPlayers_Showdown)));
 
+            cmd.Parameters.Add(new NpgsqlParameter("roomId", currHandImportIds.RoomId));
 
-            cmd.Parameters.Add(new NpgsqlParameter("roomId", importIds.RoomId));
-
+            //Importing all SeatAction for the Hand:
             for (int i = 0; i < hand.Info.Players.Count; i++)
             {
-                ImportToSeatAction(hand.SeatActions[hand.Info.Players[i]], ref importIds, ref conn);
+                ImportToSeatAction(hand.SeatActions[hand.Info.Players[i]], ref currHandImportIds, ref conn);
             }
 
 
+            //Updating the Parameters containing SeatActionId's:
+            cmd.Parameters.Add(new NpgsqlParameter("seat1ActionId", currHandImportIds.SeatActionIds[1] != 0 ? currHandImportIds.SeatActionIds[1] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat2ActionId", currHandImportIds.SeatActionIds[2] != 0 ? currHandImportIds.SeatActionIds[2] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat3ActionId", currHandImportIds.SeatActionIds[3] != 0 ? currHandImportIds.SeatActionIds[3] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat4ActionId", currHandImportIds.SeatActionIds[4] != 0 ? currHandImportIds.SeatActionIds[4] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat5ActionId", currHandImportIds.SeatActionIds[5] != 0 ? currHandImportIds.SeatActionIds[5] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat6ActionId", currHandImportIds.SeatActionIds[6] != 0 ? currHandImportIds.SeatActionIds[6] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat7ActionId", currHandImportIds.SeatActionIds[7] != 0 ? currHandImportIds.SeatActionIds[7] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat8ActionId", currHandImportIds.SeatActionIds[8] != 0 ? currHandImportIds.SeatActionIds[8] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat9ActionId", currHandImportIds.SeatActionIds[9] != 0 ? currHandImportIds.SeatActionIds[9] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("seat10ActionId", currHandImportIds.SeatActionIds[10] != 0 ? currHandImportIds.SeatActionIds[10] : DBNull.Value));
 
-            cmd.Parameters.Add(new NpgsqlParameter("seat1ActionId", importIds.SeatActionIds[1] != 0 ? importIds.SeatActionIds[1] : DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat2ActionId", importIds.SeatActionIds[2] != 0 ? importIds.SeatActionIds[2] : DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat3ActionId", importIds.SeatActionIds[3] != 0 ? importIds.SeatActionIds[3] : DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat4ActionId", importIds.SeatActionIds[4] != 0 ? importIds.SeatActionIds[4] : DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat5ActionId", importIds.SeatActionIds[5] != 0 ? importIds.SeatActionIds[5] : DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat6ActionId", importIds.SeatActionIds[6] != 0 ? importIds.SeatActionIds[6] : DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat7ActionId", importIds.SeatActionIds[7] != 0 ? importIds.SeatActionIds[7] : DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat8ActionId", importIds.SeatActionIds[8] != 0 ? importIds.SeatActionIds[8] : DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat9ActionId", importIds.SeatActionIds[9] != 0 ? importIds.SeatActionIds[9] : DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("seat10ActionId", importIds.SeatActionIds[10] != 0 ? importIds.SeatActionIds[10] : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("btnSeatActionId", currHandImportIds.SeatActionId_BTN != 0 ? currHandImportIds.SeatActionId_BTN : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("sbSeatActionId", currHandImportIds.SeatActionId_SB != 0 ? currHandImportIds.SeatActionId_SB : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("bbSeatActionId", currHandImportIds.SeatActionId_BB != 0 ? currHandImportIds.SeatActionId_BB : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("heroSeatActionId", currHandImportIds.SeatActionId_Hero != 0 ? currHandImportIds.SeatActionId_Hero : DBNull.Value));
 
-            cmd.Parameters.Add(new NpgsqlParameter("btnSeatActionId", importIds.SeatActionId_BTN != 0 ? importIds.SeatActionId_BTN : DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("sbSeatActionId", importIds.SeatActionId_SB != 0 ? importIds.SeatActionId_SB : DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("bbSeatActionId", importIds.SeatActionId_BB != 0 ? importIds.SeatActionId_BB : DBNull.Value));
-            cmd.Parameters.Add(new NpgsqlParameter("heroSeatActionId", importIds.SeatActionId_Hero != 0 ? importIds.SeatActionId_Hero : DBNull.Value));
-
-            cmd.Parameters.Add(new NpgsqlParameter("heroid", importIds.PlayerId_Hero != 0 ? importIds.PlayerId_Hero : DBNull.Value));
+            cmd.Parameters.Add(new NpgsqlParameter("heroid", currHandImportIds.PlayerId_Hero != 0 ? currHandImportIds.PlayerId_Hero : DBNull.Value));
 
             cmd.ExecuteNonQuery();
         }
 
+        /// <summary>
+        /// Importing to HoleCardsSimple ( Enum AllCardSimple);
+        /// </summary>
+        /// <param name="conn">Reference to PostgreSQL Connection;</param>
         private static void ImportToHoleCardsSimple(ref NpgsqlConnection conn)
         {
-            //Card currCard = new ();
+            //looping trough AllCardsSimple Enum and importing Id and Description;
             for (uint i = 0; i < 170; i++)
             {
                 //currCard.Id = i;
@@ -335,9 +438,13 @@ namespace TrackerLibrary.CRUD
             }            
         }
 
+        /// <summary>
+        /// Importing to HoleCardsSimple ( Enum CardEnum);
+        /// </summary>
+        /// <param name="conn">Reference to PostgreSQL Connection;</param>
         private static void ImportToCard(ref NpgsqlConnection conn)
         {
-            //Card currCard = new ();
+            // looping trough CardEnum and importing Id and Description;
             for (uint i = 1; i < 53; i++)
             {
                 //currCard.Id = i;

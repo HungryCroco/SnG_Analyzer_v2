@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary.Models
 {
+    /// <summary>
+    /// A CevModel contains all the necessary data for requesting a query from SQL/NoSQL databases;
+    /// </summary>
     [Serializable]
     public class CevModel
     {

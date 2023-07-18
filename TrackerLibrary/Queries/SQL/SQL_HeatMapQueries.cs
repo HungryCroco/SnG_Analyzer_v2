@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary.Queries.SQL
 {
+    /// <summary>
+    /// Class containing all Queries necessary to request HeatMaps from SQL DB;
+    /// </summary>
     public class SQL_HeatMapQueries
     {
+        /// <summary>
+        /// Get a JSON of StatsModel grouped by HoleCard's Ids;
+        /// </summary>
         public static string SQL_ExportHeatMapAsJSON =
             @"SELECT array_to_json(array_agg(row_to_json(t)))
 			FROM (
@@ -31,7 +37,10 @@ namespace TrackerLibrary.Queries.SQL
 				) t
 			";
 
-		public static string SQL_ExportDataGridViewByHoleCardsSimple =
+        /// <summary>
+        /// Get a DataGridView filtered by HoleCard's Id;
+        /// </summary>
+        public static string SQL_ExportDataGridViewByHoleCardsSimple =
             @"SELECT  
 			r.room as room,
 			ha.HandIdBySite as handId,
@@ -69,6 +78,10 @@ namespace TrackerLibrary.Queries.SQL
 			WHERE @whereClauseHero
 				AND sa_hero.HCsSimpleId= @HCsId::smallint";
 
+        /// <summary>
+        /// Where conditions for requesting BlindvsBlind openLimp Stats;
+        /// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
+        /// </summary>
         public static string SQL_WhereClauseHero_BvB_oL =
 			@"hero.PlayerNickName = '@hero'::varchar 
 			AND sa_hero.flg_open_opp 
@@ -81,6 +94,10 @@ namespace TrackerLibrary.Queries.SQL
 			AND ha.TournamentType = '@tourneyType'
 			AND ha.datetimehand::date > DATE '@date'";
 
+        /// <summary>
+        /// Where conditions for requesting BlindvsBlind openRaise Stats;
+        /// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
+        /// </summary>
         public static string SQL_WhereClauseHero_BvB_oR =
            @"hero.PlayerNickName = '@hero'::varchar 
 			AND sa_hero.flg_open_opp 
@@ -96,6 +113,10 @@ namespace TrackerLibrary.Queries.SQL
 			AND ha.TournamentType = '@tourneyType'
 			AND ha.datetimehand::date > DATE '@date'";
 
+        /// <summary>
+        /// Where conditions for requesting BlindvsBlind Iso Stats;
+        /// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
+        /// </summary>
         public static string SQL_WhereClauseHero_BvB_Iso =
             @"hero.PlayerNickName = '@hero'::varchar 
 			AND sa_hero.flg_open_opp 

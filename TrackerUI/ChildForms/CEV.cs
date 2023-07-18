@@ -17,33 +17,16 @@ using TrackerLibrary.Queries;
 
 namespace TrackerUI.ChildForms
 {
-
+    /// <summary>
+    /// This UI is in development; Currently not used;
+    /// </summary>
     public partial class CEV : Form
     {
 
 
-
-        private List<CevModel> CalculateCevRequested(string dbName)
-        {
-            List<CevModel> cevRequested = new List<CevModel>();
-            cevRequested = NoSQL_Connector.GetCevByPosParallel("IPray2Buddha", "3-max", QueriesExtensionMethods.ConcatQueries(NoSQL_DashBoardQueries.sql_ExportCevPerTournamentAsJSON, NoSQL_DashBoardQueries.sql_cevRequestGeneral_test), dbName);
-            return cevRequested;
-        }
-
         public CEV()
         {
-
-            ////w. Tasks:
-            //Task t1 = Task.Run(CalculateCevRequested());
-            
-
-
             InitializeComponent();
-            //t1.Wait();
-
-            cBox_3_3.Checked = true;
-
-
         }
 
 

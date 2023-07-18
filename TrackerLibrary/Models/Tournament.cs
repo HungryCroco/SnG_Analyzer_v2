@@ -1,31 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 
-namespace TrackerLibrary.Models
-{
-    //public class Tournament
-    //{
-    //    /// <summary>
-    //    /// 
-    //    /// </summary>
-    //    public TournamentInfo Info { get; set; }
+//namespace TrackerLibrary.Models
+//{
+//    //public class Tournament
+//    //{
+//    //    /// <summary>
+//    //    /// 
+//    //    /// </summary>
+//    //    public TournamentInfo Info { get; set; }
 
-    //    public List<Hand> Hands { get; set; }
-
-
-
-    //    public Tournament()
-    //    {
-    //        Info = new TournamentInfo();
-    //        Hands = new List<Hand>();
-    //    }
+//    //    public List<Hand> Hands { get; set; }
 
 
-    //}
+
+//    //    public Tournament()
+//    //    {
+//    //        Info = new TournamentInfo();
+//    //        Hands = new List<Hand>();
+//    //    }
+
+
+//    //}
 
     
-}
+//}
 
