@@ -1,65 +1,32 @@
-﻿using System;
-using System.Globalization;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TrackerLibrary;
+﻿using TrackerLibrary;
 using TrackerLibrary.Models;
 using TrackerLibrary.CRUD;
 using TrackerLibrary.Queries.NoSQL;
 using TrackerLibrary.Queries.SQL;
-using TrackerLibrary.Queries;
+
 
 namespace TrackerUI.ChildForms
 {
     public partial class HeatMap : Form
     {
-
+        /// <summary>
+        /// Load HeatMap Form;
+        /// </summary>
         public HeatMap()
         {
             InitializeComponent();
 
-
+       
         }
 
-
-
-
-
-        //private void AutoResizeDataGridView(DataGridView dgv)
-        //{
-        //    //autoresize columns but buggish
-        //    //TO DO: search foir better autoresize method
-
-        //    int nLastColumn = dgv.Columns.Count - 1;
-        //    for (int i = 0; i < dgv.Columns.Count; i++)
-        //    {
-        //        if (nLastColumn == i)
-        //        {
-        //            dgv.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //        }
-        //        else
-        //        {
-        //            dgv.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-        //        }
-        //    }
-
-        //    for (int i = 0; i < dgv.Columns.Count; i++)
-        //    {
-        //        int colw = dgv.Columns[i].Width;
-        //        dgv.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-        //        dgv.Columns[i].Width = colw;
-        //    }
-        //}
-
+        /// <summary>
+        /// Displays default HeatMap;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HeatMap_Load(object sender, EventArgs e)
         {
-
+            // deault Filters;
             txtBoxPlayer.Text = "IPray2Buddha";
             txtBoxDate.Text = "1999-01-01";
             txtBoxTourneyType.Text = "3-max";
@@ -68,22 +35,19 @@ namespace TrackerUI.ChildForms
 
             var settings = DataManager_Settings.ReadSettings();
 
-            //List<StatsModel> allStats = CallStats.CallAllStats();
-            //cmbBoxQuery.DataSource = allStats;
-            //cmbBoxQuery.ValueMember = "SqlQuery";
-            //cmbBoxQuery.DisplayMember = "Name";
-
+            // comboBox for choosing vs REG/FISH;
             Dictionary<string, string> mapComboBoxVs = new() { { "vs FISHes", "fishes" } , { "vs REGs", "regs" } };
             cmbBoxVs.DataSource = new BindingSource(mapComboBoxVs, null);
             cmbBoxVs.DisplayMember = "Key";
             cmbBoxVs.ValueMember = "Value";
 
-
+            // ComboBox for choosing ai /nai;
             Dictionary<string, string> mapComboBoxAi = new() { { "NAI", "0" } , { "AI", "1" } };
             cmbBoxAI.DataSource = new BindingSource(mapComboBoxAi, null);
             cmbBoxAI.DisplayMember = "Key";
             cmbBoxAI.ValueMember = "Value";
 
+            // ComboBox with all available queries;
             Dictionary<string, Query> mapComboBoxQuery = new() { { "BvB ISO", settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? new Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_Iso , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_Iso) :
                                                                                                                                      new Query(SQL_HeatMapQueries.SQL_ExportHeatMapAsJSON,SQL_HeatMapQueries.SQL_ExportDataGridViewByHoleCardsSimple, SQL_HeatMapQueries.SQL_WhereClauseHero_BvB_Iso , "", "bbSeatActionId", "sbSeatActionId" )   } , 
                                                                                 { "BvB oL", settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? new Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_oL , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_oL) :
@@ -97,6 +61,18 @@ namespace TrackerUI.ChildForms
 
         }
 
+        /// <summary>
+        /// Loading new HeatMap, used from the Request HeatMap Button;
+        /// </summary>
+        /// <param name="query">Query to be requested;</param>
+        /// <param name="hero">active Player;</param>
+        /// <param name="tourneyType">Tournament Type;</param>
+        /// <param name="sinceDate">Date since when the Hands will be filtered;</param>
+        /// <param name="ai">nai = "0", ia = "1"</param>
+        /// <param name="size">size of the bet; Accepting >,<,=, BETWEEN etc;</param>
+        /// <param name="vs">vsFISHes = "fishes, vs REGS = "regs"</param>
+        /// <param name="es">Effective Stack; ; Accepting >,<,=, BETWEEN etc;</param>
+        /// <param name="settings">Settings</param>
         private void LoadHeatMap(Query query,  string hero, string tourneyType, string sinceDate, string ai, string size, string vs, string es, TrackerLibrary.Models.Settings settings)
         {
             DateTime startTime = DateTime.Now;
@@ -117,25 +93,7 @@ namespace TrackerUI.ChildForms
                     }
                 }
 
-                //foreach (var c in tableLayoutPanel_HeatMap.Controls)
-                //{
-                //    try
-                //    {
-                //        Label l = (Label)c;
-
-
-                //        l.BackColor = Color.WhiteSmoke;
-                //        l.Text = ((CardAllSimple)int.Parse(l.Tag.ToString())).GetDescription();
-
-                //        int statsCurrVal = request[int.Parse(l.Tag.ToString()) - 1].Situations;
-                //        l.Text = l.Text + "\n" + request[int.Parse(l.Tag.ToString()) - 1].Situations;
-                //        l.BackColor = UIMethods.CalculateColor((double)statsCurrVal / statsMaxValue);
-
-                //    }
-                //    catch { }
-                //}
-
-
+                // Looping all Controls and changing their text based on the query's data;
                 foreach (var c in tableLayoutPanel_HeatMap.Controls)
                 {
                     try
@@ -170,12 +128,22 @@ namespace TrackerUI.ChildForms
             labelCalculatingTime.Text = "Calculating Time: " + calculatingTime.ToString("0.00");
         }
 
+        /// <summary>
+        /// Load a new HeatMap based on the filters;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Request_Click(object sender, EventArgs e)
         {
             TrackerLibrary.Models.Settings currSettings = DataManager_Settings.ReadSettings();
             LoadHeatMap( (Query)cmbBoxQuery.SelectedValue, txtBoxPlayer.Text, txtBoxTourneyType.Text, txtBoxDate.Text, cmbBoxAI.SelectedValue.ToString(), txtBoxSize.Text, cmbBoxVs.SelectedValue.ToString(), txtBoxES.Text, currSettings);
         }
 
+        /// <summary>
+        /// Loads a new DataGridView based on the pushed label;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void label_Click(object sender, MouseEventArgs e)
         {
             Query query = (Query)cmbBoxQuery.SelectedValue;
@@ -190,6 +158,11 @@ namespace TrackerUI.ChildForms
             dataGridView_HeatMap.AutoResizeDataGridView();
         }
 
+        /// <summary>
+        /// Loading a HandDisplayer; Not Implemented;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView_HeatMap_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

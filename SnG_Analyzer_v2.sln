@@ -9,16 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", 
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerLibrary", "TrackerLibrary\TrackerLibrary.csproj", "{92EA6A36-3FF1-452C-96BE-971AE6A62AC4}"
-	ProjectSection(ProjectDependencies) = postProject
-		{32E1A2A8-F447-423C-BFFD-9E5AB65BA041} = {32E1A2A8-F447-423C-BFFD-9E5AB65BA041}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerUI", "TrackerUI\TrackerUI.csproj", "{D8E0E58C-16F3-4B95-96D5-0B153211DE14}"
 	ProjectSection(ProjectDependencies) = postProject
 		{92EA6A36-3FF1-452C-96BE-971AE6A62AC4} = {92EA6A36-3FF1-452C-96BE-971AE6A62AC4}
 	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EVCalculator", "EvCalculator\EVCalculator.csproj", "{32E1A2A8-F447-423C-BFFD-9E5AB65BA041}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,18 +61,6 @@ Global
 		{D8E0E58C-16F3-4B95-96D5-0B153211DE14}.Release|ARM32.Build.0 = Release|Any CPU
 		{D8E0E58C-16F3-4B95-96D5-0B153211DE14}.Release|x64.ActiveCfg = Release|Any CPU
 		{D8E0E58C-16F3-4B95-96D5-0B153211DE14}.Release|x64.Build.0 = Release|Any CPU
-		{32E1A2A8-F447-423C-BFFD-9E5AB65BA041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32E1A2A8-F447-423C-BFFD-9E5AB65BA041}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32E1A2A8-F447-423C-BFFD-9E5AB65BA041}.Debug|ARM32.ActiveCfg = Debug|ARM32
-		{32E1A2A8-F447-423C-BFFD-9E5AB65BA041}.Debug|ARM32.Build.0 = Debug|ARM32
-		{32E1A2A8-F447-423C-BFFD-9E5AB65BA041}.Debug|x64.ActiveCfg = Debug|x64
-		{32E1A2A8-F447-423C-BFFD-9E5AB65BA041}.Debug|x64.Build.0 = Debug|x64
-		{32E1A2A8-F447-423C-BFFD-9E5AB65BA041}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32E1A2A8-F447-423C-BFFD-9E5AB65BA041}.Release|Any CPU.Build.0 = Release|Any CPU
-		{32E1A2A8-F447-423C-BFFD-9E5AB65BA041}.Release|ARM32.ActiveCfg = Release|ARM32
-		{32E1A2A8-F447-423C-BFFD-9E5AB65BA041}.Release|ARM32.Build.0 = Release|ARM32
-		{32E1A2A8-F447-423C-BFFD-9E5AB65BA041}.Release|x64.ActiveCfg = Release|x64
-		{32E1A2A8-F447-423C-BFFD-9E5AB65BA041}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

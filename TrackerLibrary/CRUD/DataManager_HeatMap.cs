@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using TrackerLibrary.Models;
-using TrackerLibrary.Queries.NoSQL;
 using TrackerLibrary.Queries;
-using Microsoft.VisualBasic;
-using System.Numerics;
-using Npgsql;
-using System.Data;
-//using static TrackerLibrary.Models.SettingsModel;
+
 
 namespace TrackerLibrary.CRUD
 {

@@ -1,14 +1,6 @@
 ﻿using System.Text.Json;
 using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using TrackerLibrary.Models;
-using TrackerLibrary;
-using System.Xml.Linq;
 using TrackerLibrary.Queries.NoSQL;
 using Newtonsoft.Json;
 using System.Diagnostics;
@@ -170,6 +162,8 @@ namespace TrackerLibrary.CRUD
             }
         }
 
+        
+
         /// <summary>
         /// Serializing Hands to JSON;
         /// </summary>
@@ -256,12 +250,22 @@ namespace TrackerLibrary.CRUD
         /// <param name="sqlQuery">SQL Query;</param>
         /// <param name="dbName">DataBase Name;</param>
         /// <returns>DataTable, containing the PostgreSQL View;</returns>
-        public static DataTable GetView(this string sqlQuery, string dbName)
+        public static DataTable GetView(this string sqlQuery, string dbName ="")
         {
             DataTable dt = new DataTable();
             try
             {
-                using (var conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
+                var conn = new NpgsqlConnection();
+
+                if (dbName == "")
+                {
+                    conn = new NpgsqlConnection(GlobalConfig.GetConnectionString());
+                }
+                else
+                {
+                    conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
+                }
+                using (conn)
                 {
                     conn.Open();
                     var cmd = new NpgsqlCommand(sqlQuery, conn); ;

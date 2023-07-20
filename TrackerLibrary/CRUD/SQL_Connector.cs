@@ -1,17 +1,7 @@
 ﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TrackerLibrary.Queries.SQL;
 using TrackerLibrary.Models;
-using System.Xml.Linq;
-using System.Reflection;
 using System.Diagnostics;
-using System.Data;
-using System.Buffers;
-using TrackerLibrary.Queries.NoSQL;
 
 namespace TrackerLibrary.CRUD
 {

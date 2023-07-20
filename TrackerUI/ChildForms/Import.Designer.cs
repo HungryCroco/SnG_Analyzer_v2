@@ -64,7 +64,6 @@
             this.btn_Import.TabIndex = 2;
             this.btn_Import.Text = "IMPORT";
             this.btn_Import.UseVisualStyleBackColor = true;
-            this.btn_Import.Click += new System.EventHandler(this.btn_Import_Click);
             this.btn_Import.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_Import_Click);
             // 
             // richTextBox

@@ -1,18 +1,4 @@
-﻿using OxyPlot;
-using OxyPlot.Axes;
-using OxyPlot.Legends;
-using OxyPlot.Series;
-using OxyPlot.WindowsForms;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TrackerLibrary;
-using TrackerLibrary.CRUD;
-using TrackerLibrary.Models;
-using TrackerLibrary.Queries.NoSQL;
-using TrackerLibrary.Queries;
+﻿
 
 
 namespace TrackerUI.ChildForms

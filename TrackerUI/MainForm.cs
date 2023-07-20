@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TrackerUI.ChildForms;
+﻿
+
+using TrackerLibrary;
 
 namespace TrackerUI
 {
@@ -17,23 +9,23 @@ namespace TrackerUI
 
         private Form activeForm;
 
-        //[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        //private extern static void ReleaseCapture();
-        //[DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        //private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
 
         public MainForm()
         {
             object sender = new(); 
             EventArgs e = new();
             InitializeComponent();
-            //Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Dashboard(), sender); });
-            //this.Text = string.Empty;
-            //this.ControlBox = false;
-            //this.FormBorderStyle = FormBorderStyle.None;
-            //this.Bounds = GetSecondaryScreen().Bounds;
-            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            lblArrow_Show.Visible = false;
+            btnDashBoard.BackColor = GlobalConfig.btnDefault;
+            btnCEV.BackColor = GlobalConfig.btnDefault;
+            btnBoard.BackColor = GlobalConfig.btnDefault;
+            btnVillain.BackColor = GlobalConfig.btnDefault;
+            btnImport.BackColor = GlobalConfig.btnDefault;
+            btnSettings.BackColor = GlobalConfig.btnDefault;
+            
+
+            btnSettings_Click(sender, e);  
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -41,58 +33,88 @@ namespace TrackerUI
 
         }
 
+        /// <summary>
+        /// Running DashBoard ChildForm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void btnDashBoard_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ChildForms.Dashboard(), sender);
+            try
+            {
+                Task t1 = Task.Run(() =>
+                {
+                    OpenChildForm(new ChildForms.Dashboard(), sender);
+                });
+            }
+            catch (Exception)
+            {
+            }
+            
+            
 
-            //OpenChildForm(new ChildForms.Loading(), sender);
-            //Task openDashboardForm = Task.Run(() => { OpenChildForm(new ChildForms.Dashboard(), sender); });
         }
 
+        /// <summary>
+        /// Running CEV ChildForm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void btnCEV_Click(object sender, EventArgs e)
         {
-            Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Loading(), sender); });
+            Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.CEV(), sender); });
         }
 
-        //private async void btnDashBoard_Click(object sender, EventArgs e)
-        //{
-        //    //OpenChildForm(new ChildForms.Loading(), sender);
-        //    Task loadingTask = Task.Run(() => { OpenChildForm(new ChildForms.Loading(), sender); });
-        //    Task dashboardTask = Task.Run(() => { OpenChildForm(new ChildForms.Dashboard(), sender); });
-
-        //    await Task.WhenAll(loadingTask, dashboardTask);
-        //}
-
-        //private void btnCEV_Click(object sender, EventArgs e)
-        //{
-        //    Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Loading(), sender); });
-        //}
-
+        /// <summary>
+        /// Running Board ChildForm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBoard_Click(object sender, EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// Running Villain ChildForm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnVillian_Click(object sender, EventArgs e)
         {
 
             Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.HeatMap(), sender); });
         }
 
+        /// <summary>
+        /// Running Import ChildForm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnImport_Click(object sender, EventArgs e)
         {
             Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Import(), sender); });
         }
 
-        
 
+        /// <summary>
+        /// Running Settings ChildForm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSettings_Click(object sender, EventArgs e)
         {
             Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Settings(), sender); });
         }
 
-        //private void OpenChildForm(Type childFormType, object sender)
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="childForm">A Form that will be displayed as ChildForm in the MainForm;</param>
+        ///// <param name="sender">The object Calling the Form;</param>
+        //private void OpenChildForm(Form childForm, object sender)
         //{
+        //    //Closing the active Form if any;
         //    if (activeForm != null && !activeForm.IsDisposed)
         //    {
         //        if (activeForm.IsHandleCreated)
@@ -110,163 +132,106 @@ namespace TrackerUI
         //        }
         //    }
 
-        //    Form childForm = (Form)Activator.CreateInstance(childFormType);
         //    activeForm = childForm;
         //    childForm.TopLevel = false;
         //    childForm.FormBorderStyle = FormBorderStyle.None;
         //    childForm.Dock = DockStyle.Fill;
 
+        //    // Calling the new ChildForm;
         //    panelDesktop.Invoke((MethodInvoker)(() =>
         //    {
+        //        panelDesktop.Controls.Clear();
+
         //        panelDesktop.Controls.Add(childForm);
         //        panelDesktop.Tag = childForm;
         //        childForm.Show();
-        //        childForm.BringToFront();
+        //        //childForm.BringToFront();
         //        panel_ArrowShow.BringToFront();
+        //        lblArrow_Show.BringToFront();
         //    }));
+
+        //    panelMenu.BringToFront();
+
         //}
 
-
-
-
-        private void OpenChildForm(Form childForm, object sender)
+        private void OpenChildForm(Form _childForm, object sender)
         {
-            if (activeForm != null && !activeForm.IsDisposed)
+            if (activeForm != null)
             {
-                if (activeForm.IsHandleCreated)
-                {
-                    activeForm.Invoke((MethodInvoker)(() =>
-                    {
-                        activeForm.Close();
-                        activeForm.Dispose();
-                    }));
-                }
-                else
-                {
-                    activeForm.Close();
-                    activeForm.Dispose();
-                }
+                this.activeForm.Invoke((MethodInvoker)(() => activeForm.Close()));
+                //activeForm.Close();
             }
+            activeForm = _childForm;
+            _childForm.TopLevel = false;
+            _childForm.FormBorderStyle = FormBorderStyle.None;
+            _childForm.Dock = DockStyle.Fill;
+            //this.panelDesktop.Controls.Add(_childForm);
+            //this.panelDesktop.Tag = _childForm;
+            //_childForm.Show();
+            //_childForm.BringToFront();
+            //panel_ArrowShow.BringToFront();
 
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
+            this.panelDesktop.Invoke((MethodInvoker)(() => this.panelDesktop.Controls.Add(_childForm)));
+            this.panelDesktop.Invoke((MethodInvoker)(() => this.panelDesktop.Tag = _childForm));
+            this.panelDesktop.Invoke((MethodInvoker)(() => _childForm.Show()));
+            this.panelDesktop.Invoke((MethodInvoker)(() => _childForm.BringToFront()));
+            //this.panelDesktop.Invoke((MethodInvoker)(() => lblArrow_Show.BringToFront()));
+            //label1.Invoke((MethodInvoker)(() => label1.Text = " "));
 
-            panelDesktop.Invoke((MethodInvoker)(() =>
-            {
-                panelDesktop.Controls.Clear();
 
-                panelDesktop.Controls.Add(childForm);
-                panelDesktop.Tag = childForm;
-                childForm.Show();
-                childForm.BringToFront();
-                panel_ArrowShow.BringToFront();
-            }));
+
         }
 
-        //private async Task OpenChildForm(Type childFormType, object sender)
-        //{
-        //    if (activeForm != null && !activeForm.IsDisposed)
-        //    {
-        //        if (activeForm.IsHandleCreated)
-        //        {
-        //            await Task.Factory.FromAsync(activeForm.BeginInvoke(new MethodInvoker(() =>
-        //            {
-        //                activeForm.Close();
-        //                activeForm.Dispose();
-        //            })), activeForm.EndInvoke);
-        //        }
-        //        else
-        //        {
-        //            activeForm.Close();
-        //            activeForm.Dispose();
-        //        }
-        //    }
-
-        //    Form childForm = (Form)Activator.CreateInstance(childFormType);
-        //    activeForm = childForm;
-        //    childForm.TopLevel = false;
-        //    childForm.FormBorderStyle = FormBorderStyle.None;
-        //    childForm.Dock = DockStyle.Fill;
-
-        //    await Task.Factory.FromAsync(panelDesktop.BeginInvoke(new MethodInvoker(() =>
-        //    {
-        //        panelDesktop.Controls.Add(childForm);
-        //        panelDesktop.Tag = childForm;
-        //        childForm.Show();
-        //        childForm.BringToFront();
-        //        panel_ArrowShow.BringToFront();
-        //    })), panelDesktop.EndInvoke);
-        //}
-
-
-        //private async void OpenChildForm(Form childForm, object sender)
-        //{
-        //    if (activeForm != null)
-        //    {
-        //        activeForm.Close();
-        //        activeForm.Dispose();
-        //    }
-
-        //    // Show the loading form
-        //    Loading loadingForm = new Loading();
-        //    loadingForm.Show();
-
-        //    // Run the task asynchronously
-        //    //await Task.Run(() =>
-        //    //{
-        //    //    Form form = childForm;
-        //    //    Thread.Sleep(3000);
-        //    //});
-
-        //    // Hide the loading form
-        //    loadingForm.Close();
-        //    loadingForm.Dispose();
-
-        //    // Show the child form
-        //    activeForm = childForm;
-        //    childForm.TopLevel = false;
-        //    childForm.FormBorderStyle = FormBorderStyle.None;
-        //    childForm.Dock = DockStyle.Fill;
-        //    panelDesktop.Controls.Add(childForm);
-        //    childForm.Show();
-        //    childForm.BringToFront();
-        //}
-
-
-
-
+        /// <summary>
+        /// Hiding the Menu;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lblArrow_Hide_Click(object sender, EventArgs e)
         {
             panelMenu.Width = 0;
-            panel_ArrowShow.Visible = true;
+            //panel_ArrowShow.Visible = true;
             lblArrow_Show.Visible = true;
+            //panel_ArrowShow.BringToFront();
+            lblArrow_Show.BringToFront();
+            //panel_ArrowShow.BringToFront();
 
 
         }
 
 
-
+        /// <summary>
+        /// Showing the Menu;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lblArrow_Show_Click(object sender, EventArgs e)
         {
-            panelMenu.Width = 450;
-            panel_ArrowShow.Visible = false;
+            panelMenu.Width = 350;
+            //panel_ArrowShow.Visible = false;
             lblArrow_Show.Visible = false;
         }
 
+        /// <summary>
+        /// Changing the Color if mouse is over the BTN;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_MouseHover(object sender, EventArgs e)
         {
             Button currBtn = (Button)sender;
-            currBtn.BackColor = Color.FromArgb(253, 218, 13);
+            currBtn.BackColor = GlobalConfig.btnMouseOver;
         }
 
+        /// <summary>
+        /// Returning to old Color if mouse is leaving the BTN;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_MouseLeave(object sender, EventArgs e)
         {
             Button currBtn = (Button)sender;
-            currBtn.BackColor = Color.FromArgb(255, 255, 192);
+            currBtn.BackColor = GlobalConfig.btnDefault;
         }
-
-
     }
 }

@@ -1,13 +1,10 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-//using static TrackerLibrary.Models;
+
 
 namespace TrackerLibrary.Models
 {
+    
+
     /// <summary>
     /// Contains all user-defined Settings powering up the Application;
     /// </summary>
@@ -87,10 +84,23 @@ namespace TrackerLibrary.Models
         public string HhSplitSize;
 
         /// <summary>
-        /// The choosen DateBase to be quered from;
+        /// Choosen DateBase to be quered from;
         /// </summary>
         [JsonProperty("CurrentDbRead")]
         public string CurrentDbRead;
+
+        /// <summary>
+        /// Active Player;
+        /// </summary>
+        [JsonProperty("ActivePlayer")]
+        public string ActivePlayer;
+
+        /// <summary>
+        /// TournamentType;
+        /// </summary>
+        [JsonProperty("TourneyType1")]
+        public string TourneyType;
+
 
         /// <summary>
         /// Contains all user-defined Settings powering up the Application;
@@ -106,7 +116,8 @@ namespace TrackerLibrary.Models
         /// <param name="minTourney">Minimum amount of Tournaments/period required to show the period's info in the UI;</param>
         /// <param name="regFile">Current reg-File used to filter Quieries by REG/FISH;</param>
         /// <param name="hhSplitSize">Amount of Hands to be Carculated and Imported at the same time;</param>
-        public Settings(string server, string port, string user, string pass, string nosqlDatabase, string sqlDatabase, string dbTypeWrite, string dbTypeRead, string minTourney, string regFile, string hhSplitSize)
+        /// <param name="ActivePlayer">active Player</param>
+        public Settings(string server, string port, string user, string pass, string nosqlDatabase, string sqlDatabase, string dbTypeWrite, string dbTypeRead, string minTourney, string regFile, string hhSplitSize, string activePlayer, string tourneyType)
         {
             Server = server;
             Port = port;
@@ -124,6 +135,11 @@ namespace TrackerLibrary.Models
             HhSplitSize = hhSplitSize;
 
             CurrentDbRead = DbTypeRead == "SQL" ? sqlDatabase : nosqlDatabase;
+
+            ActivePlayer = activePlayer;
+            TourneyType = tourneyType;  
         }
+
+        
     }
 }

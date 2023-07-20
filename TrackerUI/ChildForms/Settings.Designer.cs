@@ -31,9 +31,12 @@
             this.splitContainerSettingsMain = new System.Windows.Forms.SplitContainer();
             this.splitContainerSettingsSmall = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanelSettings = new System.Windows.Forms.TableLayoutPanel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtBoxTourneyType = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtBoxHero = new System.Windows.Forms.TextBox();
             this.txtBoxDbTypeRead = new System.Windows.Forms.TextBox();
             this.txtBoxDbTypeWrite = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.txtBoxHhSplitSize = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtBoxNosqlDb = new System.Windows.Forms.TextBox();
@@ -47,7 +50,6 @@
             this.txtBoxPass = new System.Windows.Forms.TextBox();
             this.txtBoxUser = new System.Windows.Forms.TextBox();
             this.txtBoxPort = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,7 +59,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxServer = new System.Windows.Forms.TextBox();
             this.btnChooseRegFile = new System.Windows.Forms.Button();
-            this.labelRegFile = new System.Windows.Forms.Label();
             this.labelChooseRegFile = new System.Windows.Forms.Label();
             this.dataGridView_DataBases = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerSettingsMain)).BeginInit();
@@ -108,11 +109,14 @@
             this.tableLayoutPanelSettings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
             this.tableLayoutPanelSettings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
             this.tableLayoutPanelSettings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
+            this.tableLayoutPanelSettings.Controls.Add(this.label9, 0, 16);
+            this.tableLayoutPanelSettings.Controls.Add(this.txtBoxTourneyType, 1, 16);
+            this.tableLayoutPanelSettings.Controls.Add(this.label12, 0, 15);
+            this.tableLayoutPanelSettings.Controls.Add(this.txtBoxHero, 1, 15);
             this.tableLayoutPanelSettings.Controls.Add(this.txtBoxDbTypeRead, 1, 10);
-            this.tableLayoutPanelSettings.Controls.Add(this.txtBoxDbTypeWrite, 0, 9);
-            this.tableLayoutPanelSettings.Controls.Add(this.label13, 3, 11);
-            this.tableLayoutPanelSettings.Controls.Add(this.txtBoxHhSplitSize, 1, 15);
-            this.tableLayoutPanelSettings.Controls.Add(this.label11, 0, 15);
+            this.tableLayoutPanelSettings.Controls.Add(this.txtBoxDbTypeWrite, 1, 9);
+            this.tableLayoutPanelSettings.Controls.Add(this.txtBoxHhSplitSize, 1, 17);
+            this.tableLayoutPanelSettings.Controls.Add(this.label11, 0, 17);
             this.tableLayoutPanelSettings.Controls.Add(this.txtBoxNosqlDb, 1, 8);
             this.tableLayoutPanelSettings.Controls.Add(this.txtBoxSqlDb, 1, 7);
             this.tableLayoutPanelSettings.Controls.Add(this.label25, 0, 10);
@@ -124,7 +128,6 @@
             this.tableLayoutPanelSettings.Controls.Add(this.txtBoxPass, 1, 4);
             this.tableLayoutPanelSettings.Controls.Add(this.txtBoxUser, 1, 3);
             this.tableLayoutPanelSettings.Controls.Add(this.txtBoxPort, 1, 2);
-            this.tableLayoutPanelSettings.Controls.Add(this.label9, 0, 5);
             this.tableLayoutPanelSettings.Controls.Add(this.label7, 0, 13);
             this.tableLayoutPanelSettings.Controls.Add(this.label6, 0, 12);
             this.tableLayoutPanelSettings.Controls.Add(this.label5, 0, 4);
@@ -134,12 +137,11 @@
             this.tableLayoutPanelSettings.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanelSettings.Controls.Add(this.txtBoxServer, 1, 1);
             this.tableLayoutPanelSettings.Controls.Add(this.btnChooseRegFile, 0, 14);
-            this.tableLayoutPanelSettings.Controls.Add(this.labelRegFile, 1, 15);
             this.tableLayoutPanelSettings.Controls.Add(this.labelChooseRegFile, 1, 14);
             this.tableLayoutPanelSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelSettings.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanelSettings.Name = "tableLayoutPanelSettings";
-            this.tableLayoutPanelSettings.RowCount = 18;
+            this.tableLayoutPanelSettings.RowCount = 19;
             this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
@@ -153,13 +155,59 @@
             this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelSettings.Size = new System.Drawing.Size(1333, 1529);
             this.tableLayoutPanelSettings.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(3, 1310);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(447, 50);
+            this.label9.TabIndex = 47;
+            this.label9.Text = "tourney Type:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtBoxTourneyType
+            // 
+            this.tableLayoutPanelSettings.SetColumnSpan(this.txtBoxTourneyType, 3);
+            this.txtBoxTourneyType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBoxTourneyType.Location = new System.Drawing.Point(456, 1313);
+            this.txtBoxTourneyType.Name = "txtBoxTourneyType";
+            this.txtBoxTourneyType.Size = new System.Drawing.Size(874, 39);
+            this.txtBoxTourneyType.TabIndex = 46;
+            this.txtBoxTourneyType.TextChanged += new System.EventHandler(this.SaveSettings);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(3, 1260);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(447, 50);
+            this.label12.TabIndex = 45;
+            this.label12.Text = "Hero:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtBoxHero
+            // 
+            this.tableLayoutPanelSettings.SetColumnSpan(this.txtBoxHero, 3);
+            this.txtBoxHero.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBoxHero.Location = new System.Drawing.Point(456, 1263);
+            this.txtBoxHero.Name = "txtBoxHero";
+            this.txtBoxHero.Size = new System.Drawing.Size(874, 39);
+            this.txtBoxHero.TabIndex = 44;
+            this.txtBoxHero.TextChanged += new System.EventHandler(this.SaveSettings);
             // 
             // txtBoxDbTypeRead
             // 
@@ -181,20 +229,11 @@
             this.txtBoxDbTypeWrite.TabIndex = 41;
             this.txtBoxDbTypeWrite.TextChanged += new System.EventHandler(this.SaveSettings);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(1042, 840);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(288, 200);
-            this.label13.TabIndex = 40;
-            // 
             // txtBoxHhSplitSize
             // 
             this.tableLayoutPanelSettings.SetColumnSpan(this.txtBoxHhSplitSize, 3);
             this.txtBoxHhSplitSize.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBoxHhSplitSize.Location = new System.Drawing.Point(456, 1263);
+            this.txtBoxHhSplitSize.Location = new System.Drawing.Point(456, 1363);
             this.txtBoxHhSplitSize.Name = "txtBoxHhSplitSize";
             this.txtBoxHhSplitSize.Size = new System.Drawing.Size(874, 39);
             this.txtBoxHhSplitSize.TabIndex = 33;
@@ -205,7 +244,7 @@
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(3, 1260);
+            this.label11.Location = new System.Drawing.Point(3, 1360);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(447, 50);
             this.label11.TabIndex = 32;
@@ -333,18 +372,6 @@
             this.txtBoxPort.TabIndex = 15;
             this.txtBoxPort.TextChanged += new System.EventHandler(this.SaveSettings);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.tableLayoutPanelSettings.SetColumnSpan(this.label9, 4);
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(3, 320);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(1327, 200);
-            this.label9.TabIndex = 12;
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -454,14 +481,6 @@
             this.btnChooseRegFile.UseVisualStyleBackColor = true;
             this.btnChooseRegFile.Click += new System.EventHandler(this.btnChooseRegFile_Click);
             // 
-            // labelRegFile
-            // 
-            this.labelRegFile.AutoSize = true;
-            this.labelRegFile.Location = new System.Drawing.Point(3, 1310);
-            this.labelRegFile.Name = "labelRegFile";
-            this.labelRegFile.Size = new System.Drawing.Size(0, 32);
-            this.labelRegFile.TabIndex = 19;
-            // 
             // labelChooseRegFile
             // 
             this.labelChooseRegFile.AutoSize = true;
@@ -519,7 +538,6 @@
         private SplitContainer splitContainerSettingsSmall;
         private DataGridView dataGridView_DataBases;
         private TableLayoutPanel tableLayoutPanelSettings;
-        private Label label13;
         private TextBox txtBoxHhSplitSize;
         private Label label11;
         private TextBox txtBoxNosqlDb;
@@ -533,7 +551,6 @@
         private TextBox txtBoxPass;
         private TextBox txtBoxUser;
         private TextBox txtBoxPort;
-        private Label label9;
         private Label label7;
         private Label label6;
         private Label label5;
@@ -547,5 +564,9 @@
         private Label labelChooseRegFile;
         private TextBox txtBoxDbTypeWrite;
         private TextBox txtBoxDbTypeRead;
+        private TextBox txtBoxHero;
+        private TextBox txtBoxTourneyType;
+        private Label label12;
+        private Label label9;
     }
 }

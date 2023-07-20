@@ -1,134 +1,68 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-using System.Text;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using TrackerLibrary;
+﻿using System.Text;
 using TrackerLibrary.CRUD;
-using TrackerLibrary.Models;
+
 
 namespace TrackerUI.ChildForms
 {
     public partial class Import : Form
     {
+        /// <summary>
+        /// Initialize new Import-Form;
+        /// </summary>
         public Import()
         {
             InitializeComponent();
             
         }
 
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            Console.SetOut(new TextBoxWriter(richTextBox));
-        }
-
-        private void PrintConsole(string filePath)
+        /// <summary>
+        /// Executes an Import Query based on the Settings;
+        /// </summary>
+        /// <param name="filePath">full Path of the .txt file that will be imported; </param>
+        private void RunNewImport(string filePath)
         {
             TrackerLibrary.Models.Settings settings = DataManager_Settings.ReadSettings();
+            Console.SetOut(new TextBoxWriter(richTextBox));
+
             try
             {
                 DataManager_Import.RequestImport(filePath, settings, progressBarImport);
+
+                
             }
             catch (Exception)
             {
                 Console.WriteLine("Import Failed! Please choose a correct .txt file!");
             }
             
-
-           // float[,,,] ea = EVCalculator.ImportDLL.ReadEAFromFileAsFloatArray(GlobalConfig.pfEA);
-
-            
-
-            //string entireHH = filePath.ReadFileReturnString();
-
-            //string[] splitString = entireHH.SplitStringBySize(60000);
-
-            //foreach (string hh in splitString)
-            //{
-            //    if (GlobalConfig.dbType == DataBaseType.NoSQL)
-            //    {
-            //        NoSQL_Connector.InsertHandsToNoSqlDb(GlobalConfig.dbName, GlobalConfig.tableName, GlobalConfig.columnName, HHReader.ReadHands(hh));
-            //    }
-            //    else if (GlobalConfig.dbType == DataBaseType.SQL)
-            //    {
-            //        SQL_Connector.ImportHandsToSqlDb(GlobalConfig.dbName, HHReader.ReadHands(hh));
-            //    }
-            //    else
-            //    {
-
-            //    }
-                
-            //}
         }
 
 
-        //private string GetFullFilePath()
-        //{
-        //    string filePath ="";
-
-        //    using (OpenFileDialog openFileDialog = new OpenFileDialog())
-        //    {
-                
-        //        // Set the initial directory and filter for the file dialog
-        //        openFileDialog.InitialDirectory = GlobalConfig.projectDirectory;
-        //        openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-
-        //        // Show the file dialog and check if the user selected a file
-        //        if (openFileDialog.ShowDialog() == DialogResult.OK)
-        //        {
-        //            // Get the selected file path
-        //            filePath = openFileDialog.FileName;
-
-        //        }
-        //    }
-
-        //    return filePath;
-        //}
-
+       /// <summary>
+       /// Clicking on the IMPORT Button;
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         private void btn_Import_Click(object sender, MouseEventArgs e)
         {
             string filePath = File_Connector.GetFullFilePath();
+            btn_Import.Text = "Importing ...";
+            btn_Import.Enabled = false;
+            Task t1 = Task.Run(() => { RunNewImport(filePath); });
 
-            Task t1 = Task.Run(() => { PrintConsole(filePath); });
+            if (t1.IsCompleted)
+            {
+                btn_Import.Text = "IMPORT";
+                btn_Import.Enabled = false;
+            }
         }
 
-        private void btn_Import_Click(object sender, EventArgs e)
-        {
-
-        }
-        //private void openFile()
-        //{
-        //    using (OpenFileDialog openFileDialog = new OpenFileDialog())
-        //    {
-        //        // Set the initial directory and filter for the file dialog
-        //        openFileDialog.InitialDirectory = GlobalConfig.projectDirectory;
-        //        openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-
-        //        // Show the file dialog and check if the user selected a file
-        //        if (openFileDialog.ShowDialog() == DialogResult.OK)
-        //        {
-        //            // Get the selected file path
-        //            string filePath = openFileDialog.FileName;
-
-        //            // TODO: Process the file or perform desired operations
-        //            // You can use the filePath variable to access the selected file
-        //        }
-        //    }
-        //}
     }
 
 
-
-
-
+    /// <summary>
+    /// Prints Console to the TextBox;
+    /// </summary>
     public class TextBoxWriter : TextWriter
     {
         private Control outputControl;

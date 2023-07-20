@@ -1,11 +1,5 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
+﻿using System.Text.Json;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 using TrackerLibrary.Models;
 using static TrackerLibrary.Models.StreetAction;
 
@@ -232,6 +226,12 @@ namespace TrackerLibrary.CRUD
                         case "DbTypeRead":
                             settings.DbTypeRead = reader.GetString();
                             break;
+                        case "ActivePlayer":
+                            settings.ActivePlayer = reader.GetString();
+                            break;
+                        case "TourneyType":
+                            settings.TourneyType = reader.GetString();
+                            break;
 
                     }
                 }
@@ -262,6 +262,8 @@ namespace TrackerLibrary.CRUD
             writer.WriteString("RegFile", value.RegFile);
             writer.WriteString("HhSplitSize", value.HhSplitSize);
             writer.WriteString("CurrentDbRead", value.CurrentDbRead);
+            writer.WriteString("ActivePlayer", value.ActivePlayer);
+            writer.WriteString("TourneyType", value.TourneyType);
 
             // Write other properties if necessary
 

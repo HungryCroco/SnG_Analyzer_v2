@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using TrackerLibrary.Models;
 
 namespace TrackerLibrary.CRUD
@@ -30,7 +26,7 @@ namespace TrackerLibrary.CRUD
 
             Console.WriteLine("Amount of HandSets to be imported: " + splitString.Count());
 
-            int pbValue = 0; // ProgressBar's updater;
+            int pbValue = 1; // ProgressBar's updater;
 
             foreach (string hh in splitString) 
             {
@@ -40,8 +36,8 @@ namespace TrackerLibrary.CRUD
                 {
                     pb.Invoke(new Action(() =>
                     {
-                        pb.Minimum = 1;
-                        pb.Maximum = splitString.Length;
+                        pb.Minimum = 0;
+                        pb.Maximum = splitString.Length+1;
                         pb.Value = pbValue;
                     }));
                 }
@@ -49,10 +45,12 @@ namespace TrackerLibrary.CRUD
                 // Read the Hands
                 List<Hand> hands = HHReader.ReadHands(hh);
 
+
                 // Run the needed SQL/ NoSQL queries depending on the DBTypeWrite;
                 if (settings.DbTypeWrite == "ALL")
                 {
                     NoSQL_Connector.InsertHandsToNoSqlDb(settings.NosqlDatabase, GlobalConfig.tableName, GlobalConfig.columnName, hands);
+
                     SQL_Connector.ImportHandsToSqlDb(settings.SqlDatabase, hands);
                 }
                 else if (settings.DbTypeWrite == "SQL")
@@ -68,10 +66,74 @@ namespace TrackerLibrary.CRUD
 
                 }
 
+
                 // update the ProgressBar;
                 ++pbValue;
             }
 
+            Stopwatch watch = new();
+            watch.Start();
+            Console.WriteLine();
+            Console.WriteLine("---");
+
+            // Calculate default DashBoards; This Part could be refactured;
+            if (settings.DbTypeWrite == "ALL")
+            {
+                
+                string tempCurrDbRead = settings.CurrentDbRead;
+                string tempDbTypeRead = settings.DbTypeRead;
+
+                settings.CurrentDbRead = settings.SqlDatabase;
+                settings.DbTypeRead = "SQL";
+                settings.CurrentDbRead.DeleteTable(GlobalConfig.dashboardTableName);
+                DataManager_DashBoard.RequestDashBoard(GlobalConfig.defaultHero, settings);
+                Console.WriteLine($"{settings.CurrentDbRead} DashBoard-Page Calculated: " + watch.ElapsedMilliseconds / 1000.0 + "s");
+
+                settings.CurrentDbRead = settings.NosqlDatabase;
+                settings.DbTypeRead = "NoSQL";
+                settings.CurrentDbRead.DeleteTable(GlobalConfig.dashboardTableName);
+                DataManager_DashBoard.RequestDashBoard(GlobalConfig.defaultHero, settings);
+                Console.WriteLine($"{settings.CurrentDbRead} DashBoard-Page Calculated: " + watch.ElapsedMilliseconds / 1000.0 + "s");
+                settings.CurrentDbRead = tempCurrDbRead;
+                settings.DbTypeRead = tempDbTypeRead;
+            }
+            else if (settings.DbTypeWrite == "SQL")
+            {
+                string temp = settings.CurrentDbRead;
+                string tempDbTypeRead = settings.DbTypeRead;
+
+                settings.CurrentDbRead = settings.SqlDatabase;
+                settings.DbTypeRead = "SQL";
+                settings.CurrentDbRead.DeleteTable(GlobalConfig.dashboardTableName);
+                DataManager_DashBoard.RequestDashBoard(GlobalConfig.defaultHero, settings);
+                Console.WriteLine($"{settings.CurrentDbRead} DashBoard-Page Calculated: " + watch.ElapsedMilliseconds / 1000.0 + "s");
+
+                settings.CurrentDbRead = temp;
+                settings.DbTypeRead = tempDbTypeRead;
+            }
+            else if (settings.DbTypeWrite == "NoSQL")
+            {
+                string temp = settings.CurrentDbRead;
+                string tempDbTypeRead = settings.DbTypeRead;
+
+                settings.CurrentDbRead = settings.NosqlDatabase;
+                settings.DbTypeRead = "NoSQL";
+                settings.CurrentDbRead.DeleteTable(GlobalConfig.dashboardTableName);
+                DataManager_DashBoard.RequestDashBoard(GlobalConfig.defaultHero, settings);
+                Console.WriteLine($"{settings.CurrentDbRead} DashBoard-Page Calculated: " + watch.ElapsedMilliseconds / 1000.0 + "s");
+
+                settings.CurrentDbRead = temp;
+                settings.DbTypeRead = tempDbTypeRead;
+            }
+            else
+            {
+
+            }
+            
+
+            Console.WriteLine("-----");
+            Console.WriteLine("-----");
+            Console.WriteLine("-----");
             Console.WriteLine("Import Finished!");
         }
     }

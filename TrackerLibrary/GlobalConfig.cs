@@ -1,8 +1,4 @@
 ﻿
-//using TrackerLibrary.DataAccess;
-using System.Configuration;
-using System.Reflection;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace TrackerLibrary
 {
@@ -137,9 +133,39 @@ namespace TrackerLibrary
         public static string pfEA = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\eaPF_a.txt";
 
         /// <summary>
-        /// 
+        /// Path of the .dll calculating th Hand Equities;
         /// </summary>
-        //public static string directoryRegFilter = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\settings";
+        public const string cppPokerOddsCalculatorDLL = @"C:\Users\tatsi\source\repos\Poker\PokerOddsCalculator\x64\Release\PokerOddsCalculator_v4.dll";
+
+        /// <summary>
+        /// Active Player;
+        /// </summary>
+        public const string defaultHero = "IPray2Buddha";
+
+        /// <summary>
+        /// Tournament Type;
+        /// </summary>
+        public static string defaultTourneyType = "3-max";
+
+        /// <summary>
+        /// TextColor of UI-mainForm's Text;
+        /// </summary>
+        public static Color menuText = Color.FromArgb(94, 125, 95);
+
+        /// <summary>
+        /// BackGroundColor of UI-mainForm's buttons;
+        /// </summary>
+        public static Color btnDefault = Color.FromArgb(245, 249, 199);
+
+        /// <summary>
+        /// BackGroundColor of UI-mainForm's buttons while MouseHover event;
+        /// </summary>
+        public static Color btnMouseOver = Color.FromArgb(245, 249, 160);
+
+        /// <summary>
+        /// BackGroundColor of UI-mainForm's menu;
+        /// </summary>
+        public static Color menuBackGround = Color.FromArgb(233, 242, 225);
 
         /// <summary>
         /// Concatenates a directory and fileName;

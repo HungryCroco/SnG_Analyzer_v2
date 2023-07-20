@@ -1,11 +1,6 @@
 ﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TrackerLibrary.Models;
-using TrackerLibrary.Queries.NoSQL;
+
 
 namespace TrackerLibrary.CRUD
 {
@@ -59,5 +54,25 @@ namespace TrackerLibrary.CRUD
 
             return handsToImportDistinctSet;
         }
+
+        /// <summary>
+        /// Deletes all entries from a table;
+        /// </summary>
+        /// <param name="dbName">DataBase Name;</param>
+        /// <param name="tableName">Table's Name;</param>
+        public static void DeleteTable(this string dbName, string tableName)
+        {
+
+            using (NpgsqlConnection connection = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName)))
+            {
+                connection.Open();
+
+
+                var cmd_updateDB = new NpgsqlCommand($"DROP TABLE IF EXISTS {tableName};", connection);
+                cmd_updateDB.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
     }
 }

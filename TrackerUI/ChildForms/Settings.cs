@@ -1,21 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TrackerLibrary;
+﻿using TrackerLibrary;
 using TrackerLibrary.CRUD;
-using TrackerLibrary.Models;
 using TrackerLibrary.Queries;
-//using static TrackerLibrary.Models;
 
 
 namespace TrackerUI.ChildForms
 {
+    /// <summary>
+    /// Settings-ChildForm;
+    /// </summary>
     public partial class Settings : Form
     {
         public Settings()
@@ -23,8 +15,6 @@ namespace TrackerUI.ChildForms
             InitializeComponent();
             
             
-            
-
             ReadCurrentSettings();
             LoadDataBases();
 
@@ -32,11 +22,21 @@ namespace TrackerUI.ChildForms
             //LoadComboBoxes();
         }
 
+        /// <summary>
+        /// Button for opening new window and choosing a .txt File with REG's list;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnChooseRegFile_Click(object sender, EventArgs e)
         {
             labelChooseRegFile.Text = File_Connector.GetFullFilePath();
         }
 
+        /// <summary>
+        /// Reading the current Settings;
+        ///     - Opening the .txt File Settings, Reading and deserializing the String;
+        ///     - If there is no Settings File, reading the default Settings from GlobalConfig;
+        /// </summary>
         private void ReadCurrentSettings()
         {
             try
@@ -55,6 +55,11 @@ namespace TrackerUI.ChildForms
                 txtBoxMinTourneys.Text = currSettings.MinTourney;
                 labelChooseRegFile.Text = currSettings.RegFile;
                 txtBoxHhSplitSize.Text = currSettings.HhSplitSize;
+                txtBoxTourneyType.Text = currSettings.TourneyType;
+                txtBoxHero.Text = currSettings.ActivePlayer;
+                
+                
+
             }
             catch (Exception)
             {
@@ -72,22 +77,20 @@ namespace TrackerUI.ChildForms
                 txtBoxMinTourneys.Text = GlobalConfig.defaultMinTourney.ToString();
                 labelChooseRegFile.Text = GlobalConfig.defaultRegList;
                 txtBoxHhSplitSize.Text = GlobalConfig.defaultHhSplitSize.ToString();
+                txtBoxTourneyType.Text = GlobalConfig.defaultTourneyType.ToString();
+                txtBoxHero.Text = GlobalConfig.defaultHero;
+                
 
             }
 
         }
-        //private void LoadComboBoxes()
-        //{
-        //    Dictionary<string, string> mapComboBoxDataBaseWrite = new() { { "ALL", "ALL" } , { "SQL", "SQL" }, { "NoSQL", "NoSQL" } };
-        //    cmbBox_DataBaseWrite.DataSource = new BindingSource(mapComboBoxDataBaseWrite, null);
-        //    cmbBox_DataBaseWrite.DisplayMember = "Key";
-        //    cmbBox_DataBaseWrite.ValueMember = "Value";
-
-        //    Dictionary<string, string> mapComboBoxDataBaseRead = new() { { "SQL", "SQL" }, { "NoSQL", "NoSQL" } };
-        //    cmbBox_DataBaseRead.DataSource = new BindingSource(mapComboBoxDataBaseRead, null);
-        //    cmbBox_DataBaseRead.DisplayMember = "Key";
-        //    cmbBox_DataBaseRead.ValueMember = "Value";
-        //}
+        
+        /// <summary>
+        /// Saving the current Settings to a new Settigns.txt file;
+        /// This Method is executed by any change of any Settings;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveSettings(object sender, EventArgs e)
         {
 
@@ -105,19 +108,25 @@ namespace TrackerUI.ChildForms
             string currMinTourneys = txtBoxMinTourneys.Text;
             string currRegFile = labelChooseRegFile.Text;
             string currHhSplitSize = txtBoxHhSplitSize.Text;
+            string currTourneyType = txtBoxTourneyType.Text;
+            string currHero = txtBoxHero.Text;
+            
 
 
 
-            DataManager_Settings.WriteSettings(currServer, currPort, currUser, currPass, currNosqlDb, currSqlDb, currDbWrite, currDbRead ,currMinTourneys, currRegFile, currHhSplitSize);
+            DataManager_Settings.WriteSettings(currServer, currPort, currUser, currPass, currNosqlDb, currSqlDb, currDbWrite, currDbRead ,currMinTourneys, currRegFile, currHhSplitSize, currHero, currTourneyType);
         }
 
+        /// <summary>
+        /// Loading all available Databases in the current Server in a DataView;
+        /// </summary>
         private void LoadDataBases()
         {
             try
             {
                 TrackerLibrary.Models.Settings currSettings = DataManager_Settings.ReadSettings();
                 dataGridView_DataBases.DataSource = null;
-                dataGridView_DataBases.DataSource = DB_InfoQueries.DB_Info_ExportDataGridView_AllDBs.GetView(currSettings.CurrentDbRead);
+                dataGridView_DataBases.DataSource = DB_InfoQueries.DB_Info_ExportDataGridView_AllDBs.GetView();
 
                 dataGridView_DataBases.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 dataGridView_DataBases.BackgroundColor = Color.White;
@@ -129,26 +138,5 @@ namespace TrackerUI.ChildForms
            
         }
 
-        //private void SaveSettings(object sender, MouseEventArgs e)
-        //{
-        //    string currServer = txtBoxServer.Text;
-        //    string currPort = txtBoxPort.Text;
-        //    string currUser = txtBoxUser.Text;
-        //    string currPass = txtBoxPass.Text;
-
-        //    string currNosqlDb = txtBoxNosqlDb.Text;
-        //    string currSqlDb = txtBoxSqlDb.Text;
-        //    string currDbWrite = cmbBox_DataBaseWrite.SelectedValue != null ? cmbBox_DataBaseWrite.SelectedValue.ToString() : "ALL";
-        //    string currDbRead = cmbBox_DataBaseRead.SelectedValue != null ? cmbBox_DataBaseRead.SelectedValue.ToString() : "SQL";
-
-        //    string currMinTourneys = txtBoxMinTourneys.Text;
-        //    string currRegFile = labelChooseRegFile.Text;
-        //    string currHhSplitSize = txtBoxHhSplitSize.Text;
-
-        //    DataManager_Settings.WriteSettings(currServer, currPort, currUser, currPass, currNosqlDb, currSqlDb, currDbWrite, currDbRead, currMinTourneys, currRegFile, currHhSplitSize);
-        //}
-
-
-        
     }
 }

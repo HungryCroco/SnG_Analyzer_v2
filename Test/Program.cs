@@ -7,10 +7,13 @@ using TrackerLibrary.CRUD;
 
 namespace Test
 {
+    /// <summary>
+    /// This Class is used just for backend testing purposes;
+    /// </summary>
     internal class Program
     {
         public const string pfEA = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\eaPF_a.txt";
-        private static float[,,,] ea = EVCalculator.ImportDLL.ReadEAFromFileAsFloatArray(pfEA);
+        //private static float[,,,] ea = EVCalculator.ImportDLL.ReadEAFromFileAsFloatArray(pfEA);
 
         static string directoryHH = @"C:\Users\tatsi\source\repos\Poker\HH SpinAndGo";
         static string hhFileName = "ps_com.txt"; // ps_com.txt";//"EV_Calcs.txt";

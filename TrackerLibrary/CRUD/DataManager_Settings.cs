@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 using TrackerLibrary.Models;
 
 namespace TrackerLibrary.CRUD
@@ -42,10 +37,12 @@ namespace TrackerLibrary.CRUD
         /// <param name="minTourney">Minimum amount of Tournaments/period required to show the period's info in the UI;</param>
         /// <param name="regFile">Current reg-File used to filter Quieries by REG/FISH;</param>
         /// <param name="hhSplitSize">Amount of Hands to be Carculated and Imported at the same time;</param>
-        public static void WriteSettings(string server, string port, string user, string pass, string nosqlDb, string sqlDb, string dbWrite, string dbRead, string minTourney, string regFile, string hhSplitSize)
+        /// <param name="hero">Active Player;</param>
+        /// <param name="tourneyType">Tournament Type;</param>
+        public static void WriteSettings(string server, string port, string user, string pass, string nosqlDb, string sqlDb, string dbWrite, string dbRead, string minTourney, string regFile, string hhSplitSize, string hero, string tourneyType)
         {
             // Read the Settings
-            Settings settings = new(server, port, user, pass, nosqlDb, sqlDb, dbWrite, dbRead, minTourney, regFile, hhSplitSize);
+            Settings settings = new(server, port, user, pass, nosqlDb, sqlDb, dbWrite, dbRead, minTourney, regFile, hhSplitSize, hero, tourneyType);
 
             try
             {

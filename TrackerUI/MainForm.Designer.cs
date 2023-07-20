@@ -1,4 +1,6 @@
-﻿namespace TrackerUI
+﻿using TrackerLibrary;
+
+namespace TrackerUI
 {
     partial class MainForm
     {
@@ -31,28 +33,24 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
-            this.btnVillian = new System.Windows.Forms.Button();
+            this.btnVillain = new System.Windows.Forms.Button();
             this.btnBoard = new System.Windows.Forms.Button();
             this.btnCEV = new System.Windows.Forms.Button();
             this.btnDashBoard = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblArrow_Hide = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.panel_ArrowShow = new System.Windows.Forms.Panel();
             this.lblArrow_Show = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelDesktop.SuspendLayout();
-            this.panel_ArrowShow.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(223)))));
             this.panelMenu.Controls.Add(this.btnSettings);
             this.panelMenu.Controls.Add(this.btnImport);
-            this.panelMenu.Controls.Add(this.btnVillian);
+            this.panelMenu.Controls.Add(this.btnVillain);
             this.panelMenu.Controls.Add(this.btnBoard);
             this.panelMenu.Controls.Add(this.btnCEV);
             this.panelMenu.Controls.Add(this.btnDashBoard);
@@ -60,22 +58,22 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(450, 1631);
+            this.panelMenu.Size = new System.Drawing.Size(350, 1631);
             this.panelMenu.TabIndex = 1;
             // 
             // btnSettings
             // 
-            this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(249)))), ((int)(((byte)(199)))));
             this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
             this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnSettings.Font = new System.Drawing.Font("MV Boli", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSettings.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(125)))), ((int)(((byte)(95)))));
-            this.btnSettings.Location = new System.Drawing.Point(0, 575);
+            this.btnSettings.Location = new System.Drawing.Point(0, 550);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(450, 100);
+            this.btnSettings.Size = new System.Drawing.Size(350, 100);
             this.btnSettings.TabIndex = 6;
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = false;
@@ -85,17 +83,16 @@
             // 
             // btnImport
             // 
-            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnImport.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnImport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnImport.FlatAppearance.BorderSize = 0;
             this.btnImport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
             this.btnImport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnImport.Font = new System.Drawing.Font("MV Boli", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnImport.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(125)))), ((int)(((byte)(95)))));
-            this.btnImport.Location = new System.Drawing.Point(0, 475);
+            this.btnImport.Location = new System.Drawing.Point(0, 450);
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(450, 100);
+            this.btnImport.Size = new System.Drawing.Size(350, 100);
             this.btnImport.TabIndex = 5;
             this.btnImport.Text = "ImportHH";
             this.btnImport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -104,39 +101,37 @@
             this.btnImport.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             this.btnImport.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
-            // btnVillian
+            // btnVillain
             // 
-            this.btnVillian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnVillian.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVillian.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnVillian.FlatAppearance.BorderSize = 0;
-            this.btnVillian.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.btnVillian.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnVillian.Font = new System.Drawing.Font("MV Boli", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnVillian.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(125)))), ((int)(((byte)(95)))));
-            this.btnVillian.Location = new System.Drawing.Point(0, 375);
-            this.btnVillian.Name = "btnVillian";
-            this.btnVillian.Size = new System.Drawing.Size(450, 100);
-            this.btnVillian.TabIndex = 4;
-            this.btnVillian.Text = "Villian Analyze";
-            this.btnVillian.UseVisualStyleBackColor = false;
-            this.btnVillian.Click += new System.EventHandler(this.btnVillian_Click);
-            this.btnVillian.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
-            this.btnVillian.MouseHover += new System.EventHandler(this.btn_MouseHover);
+            this.btnVillain.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVillain.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnVillain.FlatAppearance.BorderSize = 0;
+            this.btnVillain.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.btnVillain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnVillain.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnVillain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(125)))), ((int)(((byte)(95)))));
+            this.btnVillain.Location = new System.Drawing.Point(0, 350);
+            this.btnVillain.Name = "btnVillain";
+            this.btnVillain.Size = new System.Drawing.Size(350, 100);
+            this.btnVillain.TabIndex = 4;
+            this.btnVillain.Text = "Villian Analyze";
+            this.btnVillain.UseVisualStyleBackColor = false;
+            this.btnVillain.Click += new System.EventHandler(this.btnVillian_Click);
+            this.btnVillain.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
+            this.btnVillain.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // btnBoard
             // 
-            this.btnBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnBoard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBoard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnBoard.FlatAppearance.BorderSize = 0;
             this.btnBoard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
             this.btnBoard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnBoard.Font = new System.Drawing.Font("MV Boli", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBoard.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBoard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(125)))), ((int)(((byte)(95)))));
-            this.btnBoard.Location = new System.Drawing.Point(0, 275);
+            this.btnBoard.Location = new System.Drawing.Point(0, 250);
             this.btnBoard.Name = "btnBoard";
-            this.btnBoard.Size = new System.Drawing.Size(450, 100);
+            this.btnBoard.Size = new System.Drawing.Size(350, 100);
             this.btnBoard.TabIndex = 3;
             this.btnBoard.Text = "Board Analyze";
             this.btnBoard.UseVisualStyleBackColor = false;
@@ -146,17 +141,16 @@
             // 
             // btnCEV
             // 
-            this.btnCEV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCEV.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCEV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCEV.FlatAppearance.BorderSize = 0;
             this.btnCEV.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
             this.btnCEV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnCEV.Font = new System.Drawing.Font("MV Boli", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCEV.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCEV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(125)))), ((int)(((byte)(95)))));
-            this.btnCEV.Location = new System.Drawing.Point(0, 175);
+            this.btnCEV.Location = new System.Drawing.Point(0, 150);
             this.btnCEV.Name = "btnCEV";
-            this.btnCEV.Size = new System.Drawing.Size(450, 100);
+            this.btnCEV.Size = new System.Drawing.Size(350, 100);
             this.btnCEV.TabIndex = 2;
             this.btnCEV.Text = "CEV Analyze";
             this.btnCEV.UseVisualStyleBackColor = false;
@@ -166,17 +160,16 @@
             // 
             // btnDashBoard
             // 
-            this.btnDashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnDashBoard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDashBoard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnDashBoard.FlatAppearance.BorderSize = 0;
             this.btnDashBoard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
             this.btnDashBoard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnDashBoard.Font = new System.Drawing.Font("MV Boli", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDashBoard.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDashBoard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(125)))), ((int)(((byte)(95)))));
-            this.btnDashBoard.Location = new System.Drawing.Point(0, 75);
+            this.btnDashBoard.Location = new System.Drawing.Point(0, 50);
             this.btnDashBoard.Name = "btnDashBoard";
-            this.btnDashBoard.Size = new System.Drawing.Size(450, 100);
+            this.btnDashBoard.Size = new System.Drawing.Size(350, 100);
             this.btnDashBoard.TabIndex = 1;
             this.btnDashBoard.Text = "DahsBoard";
             this.btnDashBoard.UseVisualStyleBackColor = false;
@@ -186,73 +179,50 @@
             // 
             // panelLogo
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(125)))), ((int)(((byte)(95)))));
-            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(242)))), ((int)(((byte)(225)))));
             this.panelLogo.Controls.Add(this.lblArrow_Hide);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(450, 75);
+            this.panelLogo.Size = new System.Drawing.Size(350, 50);
             this.panelLogo.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("STCaiyun", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(15, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 45);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "SpinAnalyzer";
             // 
             // lblArrow_Hide
             // 
             this.lblArrow_Hide.AutoSize = true;
+            this.lblArrow_Hide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(242)))), ((int)(((byte)(225)))));
             this.lblArrow_Hide.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblArrow_Hide.Font = new System.Drawing.Font("STCaiyun", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblArrow_Hide.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblArrow_Hide.Location = new System.Drawing.Point(325, 0);
+            this.lblArrow_Hide.Font = new System.Drawing.Font("STCaiyun", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblArrow_Hide.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(125)))), ((int)(((byte)(95)))));
+            this.lblArrow_Hide.Location = new System.Drawing.Point(291, 0);
             this.lblArrow_Hide.Name = "lblArrow_Hide";
-            this.lblArrow_Hide.Size = new System.Drawing.Size(125, 66);
+            this.lblArrow_Hide.Size = new System.Drawing.Size(59, 50);
             this.lblArrow_Hide.TabIndex = 1;
-            this.lblArrow_Hide.Text = "< - -";
+            this.lblArrow_Hide.Text = "- -";
             this.lblArrow_Hide.Click += new System.EventHandler(this.lblArrow_Hide_Click);
             // 
             // panelDesktop
             // 
             this.panelDesktop.AutoScroll = true;
-            this.panelDesktop.Controls.Add(this.panel_ArrowShow);
+            this.panelDesktop.Controls.Add(this.lblArrow_Show);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelDesktop.Location = new System.Drawing.Point(450, 0);
+            this.panelDesktop.Location = new System.Drawing.Point(350, 0);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(2402, 1631);
+            this.panelDesktop.Size = new System.Drawing.Size(2502, 1631);
             this.panelDesktop.TabIndex = 3;
-            // 
-            // panel_ArrowShow
-            // 
-            this.panel_ArrowShow.Controls.Add(this.lblArrow_Show);
-            this.panel_ArrowShow.Location = new System.Drawing.Point(0, 0);
-            this.panel_ArrowShow.Name = "panel_ArrowShow";
-            this.panel_ArrowShow.Size = new System.Drawing.Size(125, 70);
-            this.panel_ArrowShow.TabIndex = 2;
-            this.panel_ArrowShow.Visible = false;
-            this.panel_ArrowShow.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblArrow_Show_Click);
             // 
             // lblArrow_Show
             // 
             this.lblArrow_Show.BackColor = System.Drawing.SystemColors.Control;
-            this.lblArrow_Show.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblArrow_Show.Font = new System.Drawing.Font("STCaiyun", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblArrow_Show.Font = new System.Drawing.Font("STCaiyun", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblArrow_Show.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(125)))), ((int)(((byte)(95)))));
             this.lblArrow_Show.Location = new System.Drawing.Point(0, 0);
             this.lblArrow_Show.Name = "lblArrow_Show";
-            this.lblArrow_Show.Size = new System.Drawing.Size(125, 70);
-            this.lblArrow_Show.TabIndex = 4;
-            this.lblArrow_Show.Text = "- - >";
+            this.lblArrow_Show.Size = new System.Drawing.Size(70, 50);
+            this.lblArrow_Show.TabIndex = 7;
+            this.lblArrow_Show.Text = "- -";
             this.lblArrow_Show.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblArrow_Show.Visible = false;
             this.lblArrow_Show.Click += new System.EventHandler(this.lblArrow_Show_Click);
             // 
             // MainForm
@@ -274,7 +244,6 @@
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.panelDesktop.ResumeLayout(false);
-            this.panel_ArrowShow.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -283,7 +252,7 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.Button btnVillian;
+        private System.Windows.Forms.Button btnVillain;
         private System.Windows.Forms.Button btnBoard;
         private System.Windows.Forms.Button btnCEV;
         private System.Windows.Forms.Button btnDashBoard;
@@ -291,8 +260,6 @@
         private System.Windows.Forms.Label lblArrow_Hide;
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel_ArrowShow;
-        private System.Windows.Forms.Label lblArrow_Show;
+        private Label lblArrow_Show;
     }
 }

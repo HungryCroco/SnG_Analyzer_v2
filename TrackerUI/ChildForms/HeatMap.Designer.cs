@@ -31,6 +31,7 @@ namespace TrackerUI.ChildForms
         {
             this.splitCnt_Heatmap = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel_Controls = new System.Windows.Forms.TableLayoutPanel();
+            this.labelMenu = new System.Windows.Forms.Label();
             this.txtBoxES = new System.Windows.Forms.TextBox();
             this.txtBoxSize = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -253,7 +254,8 @@ namespace TrackerUI.ChildForms
             // 
             // tableLayoutPanel_Controls
             // 
-            this.tableLayoutPanel_Controls.ColumnCount = 10;
+            this.tableLayoutPanel_Controls.ColumnCount = 11;
+            this.tableLayoutPanel_Controls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel_Controls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel_Controls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel_Controls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -264,42 +266,53 @@ namespace TrackerUI.ChildForms
             this.tableLayoutPanel_Controls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel_Controls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel_Controls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel_Controls.Controls.Add(this.txtBoxES, 4, 0);
-            this.tableLayoutPanel_Controls.Controls.Add(this.txtBoxSize, 8, 1);
-            this.tableLayoutPanel_Controls.Controls.Add(this.label3, 7, 1);
-            this.tableLayoutPanel_Controls.Controls.Add(this.cmbBoxAI, 6, 1);
-            this.tableLayoutPanel_Controls.Controls.Add(this.label2, 5, 1);
-            this.tableLayoutPanel_Controls.Controls.Add(this.cmbBoxVs, 4, 1);
-            this.tableLayoutPanel_Controls.Controls.Add(this.label6, 3, 1);
-            this.tableLayoutPanel_Controls.Controls.Add(this.txtBoxDate, 2, 1);
-            this.tableLayoutPanel_Controls.Controls.Add(this.label1, 1, 1);
-            this.tableLayoutPanel_Controls.Controls.Add(this.txtBoxPlayer, 6, 0);
-            this.tableLayoutPanel_Controls.Controls.Add(this.label_player, 5, 0);
-            this.tableLayoutPanel_Controls.Controls.Add(this.txtBoxTourneyType, 2, 0);
-            this.tableLayoutPanel_Controls.Controls.Add(this.label4, 1, 0);
-            this.tableLayoutPanel_Controls.Controls.Add(this.labelCalculatingTime, 8, 0);
-            this.tableLayoutPanel_Controls.Controls.Add(this.btn_Request, 0, 1);
-            this.tableLayoutPanel_Controls.Controls.Add(this.cmbBoxQuery, 0, 0);
-            this.tableLayoutPanel_Controls.Controls.Add(this.label5, 3, 0);
+            this.tableLayoutPanel_Controls.Controls.Add(this.labelMenu, 0, 1);
+            this.tableLayoutPanel_Controls.Controls.Add(this.txtBoxES, 5, 0);
+            this.tableLayoutPanel_Controls.Controls.Add(this.txtBoxSize, 9, 1);
+            this.tableLayoutPanel_Controls.Controls.Add(this.label3, 8, 1);
+            this.tableLayoutPanel_Controls.Controls.Add(this.cmbBoxAI, 7, 1);
+            this.tableLayoutPanel_Controls.Controls.Add(this.label2, 6, 1);
+            this.tableLayoutPanel_Controls.Controls.Add(this.cmbBoxVs, 5, 1);
+            this.tableLayoutPanel_Controls.Controls.Add(this.label6, 4, 1);
+            this.tableLayoutPanel_Controls.Controls.Add(this.txtBoxDate, 3, 1);
+            this.tableLayoutPanel_Controls.Controls.Add(this.label1, 2, 1);
+            this.tableLayoutPanel_Controls.Controls.Add(this.txtBoxPlayer, 7, 0);
+            this.tableLayoutPanel_Controls.Controls.Add(this.label_player, 6, 0);
+            this.tableLayoutPanel_Controls.Controls.Add(this.txtBoxTourneyType, 3, 0);
+            this.tableLayoutPanel_Controls.Controls.Add(this.label4, 2, 0);
+            this.tableLayoutPanel_Controls.Controls.Add(this.labelCalculatingTime, 9, 0);
+            this.tableLayoutPanel_Controls.Controls.Add(this.btn_Request, 1, 1);
+            this.tableLayoutPanel_Controls.Controls.Add(this.cmbBoxQuery, 1, 0);
+            this.tableLayoutPanel_Controls.Controls.Add(this.label5, 4, 0);
             this.tableLayoutPanel_Controls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_Controls.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel_Controls.Name = "tableLayoutPanel_Controls";
             this.tableLayoutPanel_Controls.RowCount = 2;
-            this.tableLayoutPanel_Controls.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.36496F));
-            this.tableLayoutPanel_Controls.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.63504F));
+            this.tableLayoutPanel_Controls.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.15254F));
+            this.tableLayoutPanel_Controls.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.84746F));
             this.tableLayoutPanel_Controls.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel_Controls.Size = new System.Drawing.Size(2254, 118);
             this.tableLayoutPanel_Controls.TabIndex = 0;
+            // 
+            // labelMenu
+            // 
+            this.labelMenu.AutoSize = true;
+            this.labelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelMenu.Location = new System.Drawing.Point(3, 57);
+            this.labelMenu.Name = "labelMenu";
+            this.labelMenu.Size = new System.Drawing.Size(77, 61);
+            this.labelMenu.TabIndex = 29;
+            this.labelMenu.Text = "         ";
             // 
             // txtBoxES
             // 
             this.txtBoxES.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxES.Location = new System.Drawing.Point(906, 6);
+            this.txtBoxES.Location = new System.Drawing.Point(957, 6);
             this.txtBoxES.Margin = new System.Windows.Forms.Padding(6);
             this.txtBoxES.Name = "txtBoxES";
-            this.txtBoxES.Size = new System.Drawing.Size(213, 39);
+            this.txtBoxES.Size = new System.Drawing.Size(205, 39);
             this.txtBoxES.TabIndex = 27;
             // 
             // txtBoxSize
@@ -308,10 +321,10 @@ namespace TrackerUI.ChildForms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel_Controls.SetColumnSpan(this.txtBoxSize, 2);
-            this.txtBoxSize.Location = new System.Drawing.Point(1806, 65);
+            this.txtBoxSize.Location = new System.Drawing.Point(1825, 63);
             this.txtBoxSize.Margin = new System.Windows.Forms.Padding(6);
             this.txtBoxSize.Name = "txtBoxSize";
-            this.txtBoxSize.Size = new System.Drawing.Size(442, 39);
+            this.txtBoxSize.Size = new System.Drawing.Size(423, 39);
             this.txtBoxSize.TabIndex = 25;
             // 
             // label3
@@ -319,10 +332,10 @@ namespace TrackerUI.ChildForms
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1629, 59);
+            this.label3.Location = new System.Drawing.Point(1648, 57);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 59);
+            this.label3.Size = new System.Drawing.Size(165, 61);
             this.label3.TabIndex = 24;
             this.label3.Text = "size Between: ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -333,10 +346,10 @@ namespace TrackerUI.ChildForms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbBoxAI.FormattingEnabled = true;
-            this.cmbBoxAI.Location = new System.Drawing.Point(1356, 65);
+            this.cmbBoxAI.Location = new System.Drawing.Point(1391, 63);
             this.cmbBoxAI.Margin = new System.Windows.Forms.Padding(6);
             this.cmbBoxAI.Name = "cmbBoxAI";
-            this.cmbBoxAI.Size = new System.Drawing.Size(213, 40);
+            this.cmbBoxAI.Size = new System.Drawing.Size(205, 40);
             this.cmbBoxAI.TabIndex = 23;
             // 
             // label2
@@ -344,10 +357,10 @@ namespace TrackerUI.ChildForms
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1297, 59);
+            this.label2.Location = new System.Drawing.Point(1332, 57);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 59);
+            this.label2.Size = new System.Drawing.Size(47, 61);
             this.label2.TabIndex = 22;
             this.label2.Text = "AI: ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -358,20 +371,20 @@ namespace TrackerUI.ChildForms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbBoxVs.FormattingEnabled = true;
-            this.cmbBoxVs.Location = new System.Drawing.Point(906, 65);
+            this.cmbBoxVs.Location = new System.Drawing.Point(957, 63);
             this.cmbBoxVs.Margin = new System.Windows.Forms.Padding(6);
             this.cmbBoxVs.Name = "cmbBoxVs";
-            this.cmbBoxVs.Size = new System.Drawing.Size(213, 40);
+            this.cmbBoxVs.Size = new System.Drawing.Size(205, 40);
             this.cmbBoxVs.TabIndex = 21;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label6.Location = new System.Drawing.Point(846, 59);
+            this.label6.Location = new System.Drawing.Point(897, 57);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 59);
+            this.label6.Size = new System.Drawing.Size(48, 61);
             this.label6.TabIndex = 20;
             this.label6.Text = "vs: ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -381,10 +394,10 @@ namespace TrackerUI.ChildForms
             this.txtBoxDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxDate.Location = new System.Drawing.Point(456, 65);
+            this.txtBoxDate.Location = new System.Drawing.Point(523, 63);
             this.txtBoxDate.Margin = new System.Windows.Forms.Padding(6);
             this.txtBoxDate.Name = "txtBoxDate";
-            this.txtBoxDate.Size = new System.Drawing.Size(213, 39);
+            this.txtBoxDate.Size = new System.Drawing.Size(205, 39);
             this.txtBoxDate.TabIndex = 19;
             // 
             // label1
@@ -392,10 +405,10 @@ namespace TrackerUI.ChildForms
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(364, 59);
+            this.label1.Location = new System.Drawing.Point(431, 57);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 59);
+            this.label1.Size = new System.Drawing.Size(80, 61);
             this.label1.TabIndex = 18;
             this.label1.Text = "since: ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -406,10 +419,10 @@ namespace TrackerUI.ChildForms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel_Controls.SetColumnSpan(this.txtBoxPlayer, 2);
-            this.txtBoxPlayer.Location = new System.Drawing.Point(1356, 6);
+            this.txtBoxPlayer.Location = new System.Drawing.Point(1391, 6);
             this.txtBoxPlayer.Margin = new System.Windows.Forms.Padding(6);
             this.txtBoxPlayer.Name = "txtBoxPlayer";
-            this.txtBoxPlayer.Size = new System.Drawing.Size(438, 39);
+            this.txtBoxPlayer.Size = new System.Drawing.Size(422, 39);
             this.txtBoxPlayer.TabIndex = 17;
             // 
             // label_player
@@ -417,10 +430,10 @@ namespace TrackerUI.ChildForms
             this.label_player.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label_player.AutoSize = true;
-            this.label_player.Location = new System.Drawing.Point(1253, 0);
+            this.label_player.Location = new System.Drawing.Point(1288, 0);
             this.label_player.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label_player.Name = "label_player";
-            this.label_player.Size = new System.Drawing.Size(91, 59);
+            this.label_player.Size = new System.Drawing.Size(91, 57);
             this.label_player.TabIndex = 16;
             this.label_player.Text = "player: ";
             this.label_player.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -430,10 +443,10 @@ namespace TrackerUI.ChildForms
             this.txtBoxTourneyType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxTourneyType.Location = new System.Drawing.Point(456, 6);
+            this.txtBoxTourneyType.Location = new System.Drawing.Point(523, 6);
             this.txtBoxTourneyType.Margin = new System.Windows.Forms.Padding(6);
             this.txtBoxTourneyType.Name = "txtBoxTourneyType";
-            this.txtBoxTourneyType.Size = new System.Drawing.Size(213, 39);
+            this.txtBoxTourneyType.Size = new System.Drawing.Size(205, 39);
             this.txtBoxTourneyType.TabIndex = 15;
             // 
             // label4
@@ -441,10 +454,10 @@ namespace TrackerUI.ChildForms
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(291, 0);
+            this.label4.Location = new System.Drawing.Point(358, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 59);
+            this.label4.Size = new System.Drawing.Size(153, 57);
             this.label4.TabIndex = 14;
             this.label4.Text = "turney Type: ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -454,10 +467,10 @@ namespace TrackerUI.ChildForms
             this.labelCalculatingTime.AutoSize = true;
             this.tableLayoutPanel_Controls.SetColumnSpan(this.labelCalculatingTime, 2);
             this.labelCalculatingTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCalculatingTime.Location = new System.Drawing.Point(1806, 0);
+            this.labelCalculatingTime.Location = new System.Drawing.Point(1825, 0);
             this.labelCalculatingTime.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelCalculatingTime.Name = "labelCalculatingTime";
-            this.labelCalculatingTime.Size = new System.Drawing.Size(442, 59);
+            this.labelCalculatingTime.Size = new System.Drawing.Size(423, 57);
             this.labelCalculatingTime.TabIndex = 7;
             this.labelCalculatingTime.Text = "            Calculating Time:    ";
             this.labelCalculatingTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -465,10 +478,10 @@ namespace TrackerUI.ChildForms
             // btn_Request
             // 
             this.btn_Request.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Request.Location = new System.Drawing.Point(6, 65);
+            this.btn_Request.Location = new System.Drawing.Point(89, 63);
             this.btn_Request.Margin = new System.Windows.Forms.Padding(6);
             this.btn_Request.Name = "btn_Request";
-            this.btn_Request.Size = new System.Drawing.Size(213, 47);
+            this.btn_Request.Size = new System.Drawing.Size(205, 49);
             this.btn_Request.TabIndex = 6;
             this.btn_Request.Text = "Request";
             this.btn_Request.UseVisualStyleBackColor = true;
@@ -480,20 +493,20 @@ namespace TrackerUI.ChildForms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbBoxQuery.FormattingEnabled = true;
-            this.cmbBoxQuery.Location = new System.Drawing.Point(6, 6);
+            this.cmbBoxQuery.Location = new System.Drawing.Point(89, 6);
             this.cmbBoxQuery.Margin = new System.Windows.Forms.Padding(6);
             this.cmbBoxQuery.Name = "cmbBoxQuery";
-            this.cmbBoxQuery.Size = new System.Drawing.Size(213, 40);
+            this.cmbBoxQuery.Size = new System.Drawing.Size(205, 40);
             this.cmbBoxQuery.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label5.Location = new System.Drawing.Point(843, 0);
+            this.label5.Location = new System.Drawing.Point(894, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 59);
+            this.label5.Size = new System.Drawing.Size(51, 57);
             this.label5.TabIndex = 26;
             this.label5.Text = "ES: ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3436,6 +3449,7 @@ namespace TrackerUI.ChildForms
             this.dataGridView_HeatMap.AllowUserToDeleteRows = false;
             this.dataGridView_HeatMap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView_HeatMap.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView_HeatMap.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_HeatMap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_HeatMap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_HeatMap.Location = new System.Drawing.Point(0, 0);
@@ -3669,5 +3683,6 @@ namespace TrackerUI.ChildForms
         private ComboBox cmbBoxQuery;
         public TextBox txtBoxES;
         private Label label5;
+        private Label labelMenu;
     }
 }

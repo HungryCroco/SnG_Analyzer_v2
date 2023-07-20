@@ -1,6 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Reflection;
 
 
@@ -30,18 +28,6 @@ namespace TrackerLibrary
             }
             return GenericEnum.ToString();
         }
-
-        //public static CardEnum ToCard(this string card)
-        //{
-        //    for (int i = 0; i < 52; i++)
-        //    {
-        //        if (card == ((CardEnum)i).GetDescription())
-        //        {
-        //            return (CardEnum)i;
-        //        }
-        //    }
-        //    return CardEnum._UC;
-        //}
 
         /// <summary>
         /// Converts a string describing Card (like "Jh", "8d") to Uint(Id)

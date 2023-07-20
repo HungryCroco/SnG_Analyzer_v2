@@ -1,61 +1,80 @@
 ﻿using OxyPlot;
-using OxyPlot.Axes;
 using OxyPlot.Legends;
 using OxyPlot.Series;
 using OxyPlot.WindowsForms;
-using OxyPlot.Annotations;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using TrackerLibrary;
 using TrackerLibrary.Models;
 using TrackerLibrary.CRUD;
 
 namespace TrackerUI.ChildForms
 {
+    /// <summary>
+    /// This UI shows a cEV/ real winnings Graph and the adjustedBB winnings/period for most Pos v Pos plays 3way-;
+    /// All the necessary data is delivered trough the DashBoardModel Class;
+    /// </summary>
     public partial class Dashboard : Form
     {
-
+        /// <summary>
+        /// Loading the Page;
+        /// </summary>
         public Dashboard()
         {
             InitializeComponent();
             
             chb_3_3.Checked = true;
             TrackerLibrary.Models.Settings currSettings = DataManager_Settings.ReadSettings();
-            DashBoardModel dashboard = DataManager_DashBoard.RequestDashBoard("IPray2Buddha", "3-max", currSettings);
+            DashBoardModel dashboard = DataManager_DashBoard.RequestDashBoard("IPray2Buddha", currSettings);
 
-            LoadChart(PlotDataFromCevModelList(dashboard.CevModel_Total_ByTournament, 200, "CEV/t", 3), PlotDataFromCevModelList(dashboard.CevModel_Total_ByTournament, 200, "Chips/t", 2));
+            LoadChart(PlotDataFromCevModelList(dashboard.CevModel_Total_ByTournament, Convert.ToInt32(currSettings.MinTourney), "CEV/t", 3), PlotDataFromCevModelList(dashboard.CevModel_Total_ByTournament, Convert.ToInt32(currSettings.MinTourney), "Chips/t", 2));
             tlp_overview_Calculate(dashboard, 0);
 
 
         }
 
+        /// <summary>
+        /// In development; Should show the cases for each Situation;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tlp_MouseEnter(object sender, EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// In development; Should show the cases for each Situation;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tlp_MouseLeave(object sender, EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// In development; Should display the current Info to the Graph;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cBox_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// Resizing the Oxyplot Garph;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CEV_Resize(object sender, EventArgs e)
         {
             splitCnt_Chart_Panel1_Resize(sender, e);
         }
 
+        /// <summary>
+        /// Resizing the Panel1;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void splitCnt_Chart_Panel1_Resize(object sender, EventArgs e)
         {
             foreach (var item in this.splitCnt_Chart.Panel1.Controls)
@@ -64,8 +83,13 @@ namespace TrackerUI.ChildForms
                 c.Height = splitCnt_Chart.Panel1.Height;
                 c.Width = splitCnt_Chart.Panel1.Width;
             }
-
         }
+
+        /// <summary>
+        /// Loading the Graph;
+        /// </summary>
+        /// <param name="lineSeries1">1. Oxyplot LineSeries to be displayed;</param>
+        /// <param name="lineSeries2">2. Oxyplot LineSeries to be displayed;</param>
         private void LoadChart(LineSeries lineSeries1, LineSeries lineSeries2)
         {
             this.splitCnt_Chart.Panel1.Controls.Clear();
@@ -91,6 +115,14 @@ namespace TrackerUI.ChildForms
 
         }
 
+        /// <summary>
+        /// LineSeries plotting Data to the Oxyplot Graph;
+        /// </summary>
+        /// <param name="cevList">A List containing cEV / Tournament</param>
+        /// <param name="minTourneys"> Minimum Tournaments/Period that will be shown; Not implemented;</param>
+        /// <param name="title">Title, shown in the Legend</param>
+        /// <param name="tag">1 - Tournament Number, 2 - Chips Won, 3 - cEV, default - aBB/ Situation</param>
+        /// <returns>LineSeries to be plotted in OxyPlot Graph;</returns>
         private LineSeries PlotDataFromCevModelList(List<CevModel> cevList, int minTourneys, string title, int tag)
         {
             LineSeries lineSeries = new LineSeries();
@@ -123,13 +155,18 @@ namespace TrackerUI.ChildForms
             return lineSeries;
         }
 
-
+        /// <summary>
+        /// Calculates the Table Layout Panel;
+        /// </summary>
+        /// <param name="dashBoardModel">DashBoard, that will be diplayed;</param>
+        /// <param name="_minTourneys">Minimum Tournaments/Period that will be shown; Not implemented;</param>
         private void tlp_overview_Calculate(DashBoardModel dashBoardModel, int _minTourneys)
         {
             tlp_overview.SuspendLayout();
 
             tlp_overview_CalculateAverage(dashBoardModel, 4);
 
+            // Looping trough Period in the TOTAL SQL Query and create new Row filling in every column with the data from the related query;
             int currRow = 5;
             for (int i = 0; i < dashBoardModel.CevModel_Total_ByMonth.Count; i++)
             {
@@ -199,10 +236,12 @@ namespace TrackerUI.ChildForms
                     currRow++;
                 }
             }
-            tlp_overview.RowCount += 1;
+            tlp_overview.RowCount += 1; //Creating new row;
 
             TableLayoutRowStyleCollection rowStyles = tlp_overview.RowStyles;
             TableLayoutColumnStyleCollection columnStyles = tlp_overview.ColumnStyles;
+
+            // Resize Rows;
             foreach (RowStyle style in rowStyles)
             {
                 style.SizeType = SizeType.Absolute;
@@ -212,6 +251,11 @@ namespace TrackerUI.ChildForms
             tlp_overview.ResumeLayout();
         }
 
+        /// <summary>
+        /// Calculating the average Data of all Periods and all Columns;
+        /// </summary>
+        /// <param name="dashBoardModel">DashBoard, that will be diplayed;</param>
+        /// <param name="averageRow">Number of the Row, where the info will e shown;</param>
         private void tlp_overview_CalculateAverage(DashBoardModel dashBoardModel, int averageRow)
         {
 
@@ -271,6 +315,13 @@ namespace TrackerUI.ChildForms
             CalculateTlpOverviewFishRegRatioAverage(ref dashBoardModel, ref averageRow, 18);
   
         }
+
+        /// <summary>
+        /// Calculating the average Data of all Periods for Columns showing aBB;
+        /// </summary>
+        /// <param name="cevModels">List of CevModel, that will be displayed;</param>
+        /// <param name="averageRow">Row, where the Info will be displayed</param>
+        /// <param name="currCol">Column, where the Info will be displayed</param>
         private void CalculateTlpOverviewAbbAverage(List<CevModel> cevModels, ref int averageRow, int currCol)
         { 
             tlp_overview.GetControlFromPosition(currCol, averageRow).Text = Double.Parse((cevModels.Sum(model => model.Abb) / cevModels.Sum(model => model.Situations)).ToString()).ToString("F2");
@@ -278,6 +329,12 @@ namespace TrackerUI.ChildForms
             tlp_overview.GetControlFromPosition(currCol, averageRow).MouseLeave += new System.EventHandler(this.tlp_MouseLeave);
         }
 
+        /// <summary>
+        /// Calculating the average Fish/Reg Ratio;
+        /// </summary>
+        /// <param name="dashBoardModel">DashBoard, that will be diplayed;</param>
+        /// <param name="averageRow">Row, where the Info will be displayed</param>
+        /// <param name="currCol">Column, where the Info will be displayed</param>
         private void CalculateTlpOverviewFishRegRatioAverage(ref DashBoardModel dashBoardModel, ref int averageRow, int currCol)
         {
             tlp_overview.GetControlFromPosition(currCol, averageRow).Text = (dashBoardModel.CevModel_HU_SBvFISH.Sum(model => model.Situations)*100 / (dashBoardModel.CevModel_HU_SBvFISH.Sum(model => model.Situations) + dashBoardModel.CevModel_HU_SBvREG.Sum(model => model.Situations))).ToString("F0");
@@ -285,7 +342,10 @@ namespace TrackerUI.ChildForms
             tlp_overview.GetControlFromPosition(currCol, averageRow).MouseLeave += new System.EventHandler(this.tlp_MouseLeave);
         }
 
-
+        /// <summary>
+        /// Adds a new Row to the TableLayOut Panel;
+        /// </summary>
+        /// <param name="currRow">Number of last created Row;</param>
         private void AddNewRowToTlpOverview(ref int currRow)
         {
             tlp_overview.RowCount += 1;
@@ -300,6 +360,14 @@ namespace TrackerUI.ChildForms
                 tlp_overview.GetControlFromPosition(j, currRow).Dock = System.Windows.Forms.DockStyle.Fill;
             }
         }
+
+        /// <summary>
+        /// Calculating and displaying aBB for a single Period;
+        /// </summary>
+        /// <param name="cevModels">CevModel, that will be diplayed;</param>
+        /// <param name="currPeriod">Period, that will be displayed;</param>
+        /// <param name="currRow">Row, where the Info will be displayed</param>
+        /// <param name="currCol">Column, where the Info will be displayed</param>
         private void CalculateTlpOverviewAbbPerMonth(List<CevModel> cevModels, ref string currPeriod, ref int currRow, int currCol)
         {
             foreach (var month in cevModels)
@@ -313,6 +381,14 @@ namespace TrackerUI.ChildForms
                 }
             }
         }
+
+        /// <summary>
+        /// Calculating and displaying FISH/REG Ratio for a single Period;
+        /// </summary>
+        /// <param name="dashBoardModel">DashBoard, that will be diplayed;</param>
+        /// <param name="currPeriod">Period, that will be displayed;</param>
+        /// <param name="currRow">Row, where the Info will be displayed</param>
+        /// <param name="currCol">Column, where the Info will be displayed</param>
         private void CalculateTlpOverviewFishRegRatioPerMonth(ref DashBoardModel dashBoardModel, ref string currPeriod, ref int currRow, int currCol)
         {
             foreach (var month_L1 in dashBoardModel.CevModel_HU_SBvFISH)

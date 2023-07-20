@@ -1,9 +1,4 @@
-﻿
-using Newtonsoft.Json.Linq;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Numerics;
+﻿using System.Diagnostics;
 using System.Text.RegularExpressions;
 using TrackerLibrary.Models;
 
@@ -470,6 +465,8 @@ namespace TrackerLibrary
             // Read Regex;
             MatchCollection matches = Regex.Matches(cleanHH, pattern, RegexOptions.Multiline);
 
+            Console.WriteLine("");
+            Console.WriteLine("------------------");
             Console.WriteLine($"{matches.Count()} Hands readed for: " + watch.ElapsedMilliseconds / 1000 + "s");
 
             watch.Restart();
