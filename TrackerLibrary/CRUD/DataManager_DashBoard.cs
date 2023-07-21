@@ -9,7 +9,7 @@ namespace TrackerLibrary.CRUD
     /// <summary>
     /// This class contains all the Methods needed to calculate a DashBoard UI;
     /// </summary>
-    public class DataManager_DashBoard
+    public static class DataManager_DashBoard
     {
         /// <summary>
         /// Run a SQL OR NoSQL Query(depending on choosen DBType) that groups Hands by Tournament and returns a JSON of CevModel;

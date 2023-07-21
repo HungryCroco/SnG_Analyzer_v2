@@ -129,7 +129,17 @@ namespace TrackerLibrary.CRUD
             {
 
             }
-            
+
+            // Update the ProgressBar
+            if (pb != null)
+            {
+                pb.Invoke(new Action(() =>
+                {
+                    pb.Minimum = 0;
+                    pb.Maximum = splitString.Length + 1;
+                    pb.Value = pb.Maximum;
+                }));
+            }
 
             Console.WriteLine("-----");
             Console.WriteLine("-----");
