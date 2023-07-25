@@ -137,7 +137,7 @@ namespace TrackerLibrary.Queries
         public static string ReadRegList(this string listName, bool isReg)
         {
             //Get the RegList as string;
-            string regList = GlobalConfig.FullFilePath(listName, GlobalConfig.regListDirectory).ReadFileReturnString();
+            string regList = GlobalConfig.FullFilePath(listName, GlobalConfig.GetMainFolderPath() + "\\RegList").ReadFileReturnString();
 
             // Creates SQL-string for REGs or FISHes depending on bool isReg; 
             if (isReg)

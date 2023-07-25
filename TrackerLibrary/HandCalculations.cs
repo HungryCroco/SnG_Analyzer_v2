@@ -10,7 +10,7 @@ namespace TrackerLibrary
     {
         // An 4 Dimensional Array containing the preFlop equities  for each 2 Hand-combinations;
         // current RAM ussage ~= 200MB; However, the array could be refactured to jagged Array and use the half RAM;
-        private static float[,,,] ea = EVCalculator.ReadEAFromFileAsFloatArray(GlobalConfig.pfEA);
+        private static float[,,,] ea = EVCalculator.ReadEAFromFileAsFloatArray(GlobalConfig.GetMainFolderPath() + GlobalConfig.pfEA);
 
         /// <summary>
         /// Calculates the expected Value [Chips] and updated the hand's property;

@@ -1,5 +1,8 @@
 ﻿
 
+using System.Diagnostics;
+using System.Reflection;
+
 namespace TrackerLibrary
 {
     /// <summary>
@@ -68,39 +71,11 @@ namespace TrackerLibrary
         public static string dashboardTableName = "dashboard";
 
         /// <summary>
-        /// Name of the Settigns Folder;
-        /// </summary>
-        public static string settingsFolder = "Settings";
-
-        /// <summary>
-        /// Name of the Settigns File;
-        /// </summary>
-        public static string settingsfileName = "Settings.txt";
-
-        /// <summary>
-        /// Base Directory of the Application
-        /// </summary>
-        private static string fullPath =  AppDomain.CurrentDomain.BaseDirectory;
-
-        /// <summary>
         /// Application's Name;
         /// </summary>
-        private static string projectName = "SnG_Analyzer_v2";
+        public static string projectName = "SnG_Analyzer_v2";
 
-        /// <summary>
-        /// path of installations Folder;
-        /// </summary>
-        public static string projectDirectory = fullPath.Substring(0, fullPath.IndexOf(projectName) + projectName.Length);
 
-        /// <summary>
-        /// path ot Settings Folder;
-        /// </summary>
-        public static string settingsDirectory = projectDirectory + "\\Settings";
-
-        /// <summary>
-        /// Full path of Settings .txt File;
-        /// </summary>
-        public static string settingsPath = settingsDirectory + "\\" + settingsfileName;
 
         /// <summary>
         /// Deault HandHistory Split Size, to control the RAM ussage;
@@ -117,25 +92,16 @@ namespace TrackerLibrary
         /// </summary>
         public static string defaultRegList = "reglist_small.txt";
 
-        /// <summary>
-        /// Directory of the Reg List
-        /// </summary>
-        public static string regListDirectory = projectDirectory + "\\RegList";
-
-        /// <summary>
-        /// Full Reg List path;
-        /// </summary>
-        public static string regListPath = regListDirectory + "\\" + defaultRegList;
 
         /// <summary>
         /// Path of the PreFlop Equity Array used to run PreFlop equity Calcs in EVCalculator;
         /// </summary>
-        public static string pfEA = @"C:\Users\tatsi\source\repos\Poker\SpinAnalyzer\eaPF_a.txt";
+        public static string pfEA = @"\EquityArray\eaPF_a.txt";
 
         /// <summary>
         /// Path of the .dll calculating th Hand Equities;
         /// </summary>
-        public const string cppPokerOddsCalculatorDLL = @"C:\Users\tatsi\source\repos\Poker\PokerOddsCalculator\x64\Release\PokerOddsCalculator_v4.dll";
+        public const string cppPokerOddsCalculatorDLL = @"PokerOddsCalculator_v4.dll";
 
         /// <summary>
         /// Active Player;
@@ -197,6 +163,22 @@ namespace TrackerLibrary
             string connString = string.Format(@"Host={0};Port={1};User Id={2};Password={3};Database={4}", GlobalConfig.defaultServer, GlobalConfig.defaultPort, GlobalConfig.defaultUser, GlobalConfig.defaultPass, db);
 
             return connString;
+        }
+
+        public static string GetMainFolderPath()
+        {
+            string baseDirectory = "";
+
+            if (Debugger.IsAttached)
+            {
+                baseDirectory = AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf(projectName) + projectName.Length);
+            }
+            else
+            {
+                baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            }
+
+            return baseDirectory;
         }
     }
 }

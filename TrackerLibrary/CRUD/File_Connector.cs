@@ -77,7 +77,7 @@ namespace TrackerLibrary.CRUD
             {
 
                 // Set the initial directory and filter for the file dialog
-                openFileDialog.InitialDirectory = GlobalConfig.projectDirectory;
+                openFileDialog.InitialDirectory = GlobalConfig.GetMainFolderPath();
                 openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
 
                 // Show the file dialog and check if the user selected a file
