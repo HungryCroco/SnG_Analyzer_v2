@@ -8,7 +8,7 @@ namespace TrackerLibrary.CRUD
     /// <summary>
     /// Contains all necessery Methods to read and write from/to .txt files;
     /// </summary>
-    public class File_Connector
+    public static class File_Connector
     {
         /// <summary>
         /// Writes a JSON string to .txt File;

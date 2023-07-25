@@ -43,18 +43,18 @@ namespace TrackerUI.ChildForms
        /// </summary>
        /// <param name="sender"></param>
        /// <param name="e"></param>
-        private void btn_Import_Click(object sender, MouseEventArgs e)
+        private async void btn_Import_Click(object sender, MouseEventArgs e)
         {
             string filePath = File_Connector.GetFullFilePath();
             btn_Import.Text = "Importing ...";
             btn_Import.Enabled = false;
             Task t1 = Task.Run(() => { RunNewImport(filePath); });
 
-            if (t1.IsCompleted)
-            {
-                btn_Import.Text = "IMPORT";
-                btn_Import.Enabled = false;
-            }
+            await t1;
+
+            btn_Import.Text = "IMPORT";
+            btn_Import.Enabled = true;
+
         }
 
     }

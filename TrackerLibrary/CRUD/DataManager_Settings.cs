@@ -6,7 +6,7 @@ namespace TrackerLibrary.CRUD
     /// <summary>
     /// This class contains all the Methods needed to calculate a Settings UI;
     /// </summary>
-    public class DataManager_Settings
+    public static class DataManager_Settings
     {
         /// <summary>
         /// Reads all Settings from the .txt File. If .txt File is not available, reads the default Settings from the GlobalConfig;
