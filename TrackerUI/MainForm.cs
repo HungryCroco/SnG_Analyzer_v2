@@ -12,7 +12,7 @@ namespace TrackerUI
 
         public MainForm()
         {
-            object sender = new(); 
+            object sender = new();
             EventArgs e = new();
             InitializeComponent();
 
@@ -23,9 +23,9 @@ namespace TrackerUI
             btnVillain.BackColor = GlobalConfig.btnDefault;
             btnImport.BackColor = GlobalConfig.btnDefault;
             btnSettings.BackColor = GlobalConfig.btnDefault;
-            
 
-            btnSettings_Click(sender, e);  
+
+            btnSettings_Click(sender, e);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -50,8 +50,8 @@ namespace TrackerUI
             catch (Exception)
             {
             }
-            
-            
+
+
 
         }
 
@@ -107,52 +107,7 @@ namespace TrackerUI
             Task t1 = Task.Run(() => { OpenChildForm(new ChildForms.Settings(), sender); });
         }
 
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <param name="childForm">A Form that will be displayed as ChildForm in the MainForm;</param>
-        ///// <param name="sender">The object Calling the Form;</param>
-        //private void OpenChildForm(Form childForm, object sender)
-        //{
-        //    //Closing the active Form if any;
-        //    if (activeForm != null && !activeForm.IsDisposed)
-        //    {
-        //        if (activeForm.IsHandleCreated)
-        //        {
-        //            activeForm.Invoke((MethodInvoker)(() =>
-        //            {
-        //                activeForm.Close();
-        //                activeForm.Dispose();
-        //            }));
-        //        }
-        //        else
-        //        {
-        //            activeForm.Close();
-        //            activeForm.Dispose();
-        //        }
-        //    }
 
-        //    activeForm = childForm;
-        //    childForm.TopLevel = false;
-        //    childForm.FormBorderStyle = FormBorderStyle.None;
-        //    childForm.Dock = DockStyle.Fill;
-
-        //    // Calling the new ChildForm;
-        //    panelDesktop.Invoke((MethodInvoker)(() =>
-        //    {
-        //        panelDesktop.Controls.Clear();
-
-        //        panelDesktop.Controls.Add(childForm);
-        //        panelDesktop.Tag = childForm;
-        //        childForm.Show();
-        //        //childForm.BringToFront();
-        //        panel_ArrowShow.BringToFront();
-        //        lblArrow_Show.BringToFront();
-        //    }));
-
-        //    panelMenu.BringToFront();
-
-        //}
 
         private void OpenChildForm(Form _childForm, object sender)
         {
@@ -165,20 +120,11 @@ namespace TrackerUI
             _childForm.TopLevel = false;
             _childForm.FormBorderStyle = FormBorderStyle.None;
             _childForm.Dock = DockStyle.Fill;
-            //this.panelDesktop.Controls.Add(_childForm);
-            //this.panelDesktop.Tag = _childForm;
-            //_childForm.Show();
-            //_childForm.BringToFront();
-            //panel_ArrowShow.BringToFront();
 
             this.panelDesktop.Invoke((MethodInvoker)(() => this.panelDesktop.Controls.Add(_childForm)));
             this.panelDesktop.Invoke((MethodInvoker)(() => this.panelDesktop.Tag = _childForm));
             this.panelDesktop.Invoke((MethodInvoker)(() => _childForm.Show()));
             this.panelDesktop.Invoke((MethodInvoker)(() => _childForm.BringToFront()));
-            //this.panelDesktop.Invoke((MethodInvoker)(() => lblArrow_Show.BringToFront()));
-            //label1.Invoke((MethodInvoker)(() => label1.Text = " "));
-
-
 
         }
 

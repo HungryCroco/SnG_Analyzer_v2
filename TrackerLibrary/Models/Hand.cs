@@ -24,7 +24,7 @@ namespace TrackerLibrary.Models
         /// Dict(playerNickName,SeatAction); Contains all player's actions parted by Player;
         /// </summary>
         [JsonProperty("seatAction")]
-        public Dictionary<string,SeatAction> SeatActions { get; set; }
+        public Dictionary<string, SeatAction> SeatActions { get; set; }
 
         /// <summary>
         /// Containes all the information defined by a Hand;
@@ -43,12 +43,12 @@ namespace TrackerLibrary.Models
         /// <param name="handInfo">Contains all Properties, that are defined by the Hand and are the same for all Players;</param>
         /// <param name="streetActions">Contains all player's actions parted by Street;</param>
         /// <param name="seatActions">Dict(playerNickName,SeatAction); Contains all player's actions parted by Player;</param>
-        public Hand( HandInfo handInfo, StreetAction streetActions ,Dictionary<string, SeatAction> seatActions)
+        public Hand(HandInfo handInfo, StreetAction streetActions, Dictionary<string, SeatAction> seatActions)
         {
             Info = handInfo;
             StreetActions = streetActions;
             SeatActions = seatActions;
-            
+
         }
 
 

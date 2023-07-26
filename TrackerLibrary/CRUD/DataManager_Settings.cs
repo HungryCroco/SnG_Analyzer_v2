@@ -17,7 +17,7 @@ namespace TrackerLibrary.CRUD
             var options = new JsonSerializerOptions();
             options.Converters.Add(new SettingsConverter());
 
-            Settings settings = (Settings)File_Connector.ReadJsonFromFile<Settings>(GlobalConfig.settingsPath, options);
+            Settings settings = (Settings)File_Connector.ReadJsonFromFile<Settings>(GlobalConfig.GetMainFolderPath() + "\\Settings\\Settings.txt", options);
 
             return settings;
 
@@ -47,7 +47,7 @@ namespace TrackerLibrary.CRUD
             try
             {
                 // Creates Directory Settings if not available
-                Directory.CreateDirectory(GlobalConfig.settingsDirectory);
+                Directory.CreateDirectory(GlobalConfig.GetMainFolderPath() + "\\Settings");
             }
             catch (Exception)
             {
@@ -58,7 +58,7 @@ namespace TrackerLibrary.CRUD
             options.Converters.Add(new SettingsConverter());
 
             // Writes Settings to .txt;
-            File_Connector.WriteToFileAsJSON(GlobalConfig.settingsPath, settings, options);
+            File_Connector.WriteToFileAsJSON(GlobalConfig.GetMainFolderPath() + "\\Settings\\Settings.txt", settings, options);
 
         }
 

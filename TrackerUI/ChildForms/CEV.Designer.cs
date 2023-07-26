@@ -192,7 +192,7 @@ namespace TrackerUI.ChildForms
             // 
             this.checkBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(-1658, 311);
+            this.checkBox6.Location = new System.Drawing.Point(-1802, 311);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox6.Size = new System.Drawing.Size(180, 36);
@@ -204,7 +204,7 @@ namespace TrackerUI.ChildForms
             // 
             this.checkBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(-1630, 269);
+            this.checkBox5.Location = new System.Drawing.Point(-1774, 269);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox5.Size = new System.Drawing.Size(152, 36);
@@ -216,7 +216,7 @@ namespace TrackerUI.ChildForms
             // 
             this.checkBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(-1631, 227);
+            this.checkBox4.Location = new System.Drawing.Point(-1775, 227);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox4.Size = new System.Drawing.Size(155, 36);
@@ -228,7 +228,7 @@ namespace TrackerUI.ChildForms
             // 
             this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(-1634, 185);
+            this.checkBox3.Location = new System.Drawing.Point(-1778, 185);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox3.Size = new System.Drawing.Size(157, 36);
@@ -239,7 +239,7 @@ namespace TrackerUI.ChildForms
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(-1560, 55);
+            this.textBox1.Location = new System.Drawing.Point(-1704, 55);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(83, 39);
             this.textBox1.TabIndex = 6;
@@ -250,7 +250,7 @@ namespace TrackerUI.ChildForms
             // 
             this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(-1594, 101);
+            this.checkBox2.Location = new System.Drawing.Point(-1738, 101);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox2.Size = new System.Drawing.Size(117, 36);
@@ -262,7 +262,7 @@ namespace TrackerUI.ChildForms
             // 
             this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(-1637, 143);
+            this.checkBox1.Location = new System.Drawing.Point(-1781, 143);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox1.Size = new System.Drawing.Size(161, 36);
@@ -273,7 +273,7 @@ namespace TrackerUI.ChildForms
             // txtBor_minTourneys
             // 
             this.txtBor_minTourneys.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBor_minTourneys.Location = new System.Drawing.Point(-1560, 9);
+            this.txtBor_minTourneys.Location = new System.Drawing.Point(-1704, 9);
             this.txtBor_minTourneys.Name = "txtBor_minTourneys";
             this.txtBor_minTourneys.Size = new System.Drawing.Size(83, 39);
             this.txtBor_minTourneys.TabIndex = 3;
@@ -284,7 +284,7 @@ namespace TrackerUI.ChildForms
             // 
             this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(-1654, 59);
+            this.label26.Location = new System.Drawing.Point(-1798, 59);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(88, 32);
             this.label26.TabIndex = 2;
@@ -294,7 +294,7 @@ namespace TrackerUI.ChildForms
             // 
             this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(-1680, 16);
+            this.label27.Location = new System.Drawing.Point(-1824, 16);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(114, 32);
             this.label27.TabIndex = 2;
@@ -305,7 +305,7 @@ namespace TrackerUI.ChildForms
             this.lbl_calcTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_calcTime.AutoSize = true;
             this.lbl_calcTime.ForeColor = System.Drawing.Color.Red;
-            this.lbl_calcTime.Location = new System.Drawing.Point(-1529, 350);
+            this.lbl_calcTime.Location = new System.Drawing.Point(-1673, 350);
             this.lbl_calcTime.Name = "lbl_calcTime";
             this.lbl_calcTime.Size = new System.Drawing.Size(70, 32);
             this.lbl_calcTime.TabIndex = 1;
@@ -315,7 +315,7 @@ namespace TrackerUI.ChildForms
             // 
             this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(-1657, 350);
+            this.label25.Location = new System.Drawing.Point(-1801, 350);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(126, 32);
             this.label25.TabIndex = 0;

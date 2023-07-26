@@ -2,10 +2,10 @@
 
 namespace TrackerLibrary.Queries.SQL
 {
-    /// <summary>
-    /// Class containing all Queries necessary to import to SQL-relational DB;
-    /// p.s.: NoSQL Connector doesn't really need such class as NoSQL DB's shema is very simple;
-    /// p.s.2: As these queries are related, it's important to run them in correct order to access the FOREIGN Key's after creating the related Column;
+	/// <summary>
+	/// Class containing all Queries necessary to import to SQL-relational DB;
+	/// p.s.: NoSQL Connector doesn't really need such class as NoSQL DB's shema is very simple;
+	/// p.s.2: As these queries are related, it's important to run them in correct order to access the FOREIGN Key's after creating the related Column;
 	/// Correct order is:
 	///		1) Import To HoleCardsSimple (only while creating DB);
 	///		2) Import To Cards (only while creating DB);
@@ -15,14 +15,14 @@ namespace TrackerLibrary.Queries.SQL
 	///		6) Import To HandAsString;
 	///		7) Import To SeatAction;
 	///		8) Import To Hand
-    /// </summary>
-    public static class SQL_ImportQueries
-    {
+	/// </summary>
+	public static class SQL_ImportQueries
+	{
 		/// <summary>
 		/// Import to Table Tournament;
 		/// </summary>
-        public static string sql_ImportTournament =
-            @"INSERT INTO public.Tournament 
+		public static string sql_ImportTournament =
+			@"INSERT INTO public.Tournament 
 				(roomId, tournamentidbysite, tournamenttype, tournamentdate, currency, amt_buyin, amt_fee, amt_prize_pool_real, cnt_players,
 				 seat1playerId, seat2playerId, seat3playerId, seat4playerId, seat5playerId, seat6playerId, seat7playerId, seat8playerId, seat9playerId, seat10playerId) 
 				
@@ -37,11 +37,11 @@ namespace TrackerLibrary.Queries.SQL
 					(select Id from public.Tournament
 						where tournament.tournamentidbysite = @tournamentidbysite::bigint);";
 
-        /// <summary>
-        /// Import to Table Room;
-        /// </summary>
-        public static string sql_ImportRoom =
-            @"INSERT INTO public.room 
+		/// <summary>
+		/// Import to Table Room;
+		/// </summary>
+		public static string sql_ImportRoom =
+			@"INSERT INTO public.room 
             (room) 
                 select @room::varchar
 	            where @room::varchar not in (select room from public.room);   
@@ -49,12 +49,12 @@ namespace TrackerLibrary.Queries.SQL
 	            (select Id from public.room
 	            where room.room = @room::varchar);";
 
-        /// <summary>
-        /// Import to Table Player;
-        /// </summary>
-        public static string sql_ImportPlayer =
-            //params: @activePlayer::varchar, @room::varchar
-            @"INSERT INTO public.Player 
+		/// <summary>
+		/// Import to Table Player;
+		/// </summary>
+		public static string sql_ImportPlayer =
+			//params: @activePlayer::varchar, @room::varchar
+			@"INSERT INTO public.Player 
             (PlayerNickName, roomId) 
                 select @activePlayer::varchar, @roomId::int
 	            where @activePlayer::varchar not in (select PlayerNickName from Player);   
@@ -62,22 +62,22 @@ namespace TrackerLibrary.Queries.SQL
 	            (select Id from public.Player
 	            where player.PlayerNickName = @activePlayer::varchar);";
 
-        /// <summary>
-        /// Import to Table HandAsAtring;
-        /// </summary>
-        public static string sql_ImportHandAsAtring =
-            @"INSERT INTO public.handAsString
+		/// <summary>
+		/// Import to Table HandAsAtring;
+		/// </summary>
+		public static string sql_ImportHandAsAtring =
+			@"INSERT INTO public.handAsString
 				(fullHand) 
 				 
 					select @fullHand::text;
 
 			select currval('handasstring_handid_seq'::regclass)";
 
-        /// <summary>
-        /// Import to Table SeatAction;
-        /// </summary>
-        public static string sql_ImportSeatAction =
-            @"INSERT INTO public.SeatAction 
+		/// <summary>
+		/// Import to Table SeatAction;
+		/// </summary>
+		public static string sql_ImportSeatAction =
+			@"INSERT INTO public.SeatAction 
 				(playerid, seatnumber, position, startingstack,
 				preflopaction, flopaction, turnaction, riveraction,
 				holecard1, holecard2, HCsSimpleId,
@@ -96,11 +96,11 @@ namespace TrackerLibrary.Queries.SQL
 
 					select currval('seataction_id_seq'::regclass);";
 
-        /// <summary>
-        /// Import to MAIN Table Hands;
-        /// </summary>
-        public static string sql_ImportToHand =
-            @"INSERT INTO public.Hands 
+		/// <summary>
+		/// Import to MAIN Table Hands;
+		/// </summary>
+		public static string sql_ImportToHand =
+			@"INSERT INTO public.Hands 
 				(handId, handidbysite, tournamentId, levelhand, amt_bb,
 				datetimehand, tableidbysite, tournamenttype, heroid,
 				holecard1, holecard2, flopcard1, flopcard2, flopcard3, turncard, rivercard,
@@ -119,27 +119,27 @@ namespace TrackerLibrary.Queries.SQL
 
 					--where @handidbysite::bigint not in (select handidbysite from hands);";
 
-        /// <summary>
-        /// Import to Table HoleCardsSimpleIds;
-        /// </summary>
-        public static string sql_ImportHoleCardsSimpleIds =
-            @"INSERT INTO public.holecardssimple
+		/// <summary>
+		/// Import to Table HoleCardsSimpleIds;
+		/// </summary>
+		public static string sql_ImportHoleCardsSimpleIds =
+			@"INSERT INTO public.holecardssimple
 				(id, holecardsasstring) 
 				 
 					select @hcId::int, @hcAsString::text
 					where @hcAsString::text not in (select holecardsasstring from public.holecardssimple);";
 
-        /// <summary>
-        /// Import to Table Card;
-        /// </summary>
-        public static string sql_ImportToCard =
-            @"INSERT INTO public.card
+		/// <summary>
+		/// Import to Table Card;
+		/// </summary>
+		public static string sql_ImportToCard =
+			@"INSERT INTO public.card
 				(id, card) 
 				 
 					select @hcId::int, @hcAsString::text
 					where @hcAsString::text not in (select card from public.card);";
 
-    }
+	}
 
-  
+
 }

@@ -10,7 +10,7 @@ namespace TrackerLibrary
     {
         // An 4 Dimensional Array containing the preFlop equities  for each 2 Hand-combinations;
         // current RAM ussage ~= 200MB; However, the array could be refactured to jagged Array and use the half RAM;
-        private static float[,,,] ea = EVCalculator.ReadEAFromFileAsFloatArray(GlobalConfig.pfEA);
+        private static float[,,,] ea = EVCalculator.ReadEAFromFileAsFloatArray(GlobalConfig.GetMainFolderPath() + GlobalConfig.pfEA);
 
         /// <summary>
         /// Calculates the expected Value [Chips] and updated the hand's property;
@@ -112,7 +112,7 @@ namespace TrackerLibrary
                     }
                 }
 
-            } 
+            }
         }
 
         /// <summary>
@@ -191,7 +191,7 @@ namespace TrackerLibrary
                     }
                 }
             }
-              
+
         }
 
         /// <summary>
@@ -273,7 +273,7 @@ namespace TrackerLibrary
             {
                 string currPlayer = seatAction.Key;
 
-                    myHand.SeatActions[currPlayer].ChipsWon -= myHand.SeatActions[currPlayer].ChipsInvested;
+                myHand.SeatActions[currPlayer].ChipsWon -= myHand.SeatActions[currPlayer].ChipsInvested;
             }
         }
 
@@ -283,7 +283,7 @@ namespace TrackerLibrary
         /// <param name="actions">All SeatActions done by the player on 1 Street;</param>
         /// <param name="amtBlind">Blind + Ante payed from the player in the Hand;</param>
         /// <returns>The Amount of chips that the player did invest on the Street;</returns>
-        private static float CalculateChipsInvestedPerStreet(this PlayerActionList  actions, float amtBlind = 0) // Set amtBlinds only if seatAction.Value.Actions.PreFlop !!!
+        private static float CalculateChipsInvestedPerStreet(this PlayerActionList actions, float amtBlind = 0) // Set amtBlinds only if seatAction.Value.Actions.PreFlop !!!
         {
             // If the player "raises" , we need to substract the amt of Blinds of the Action's size;
             // All other Actions doesn't include the Blinds, so we just add them to the output's value;
@@ -326,7 +326,7 @@ namespace TrackerLibrary
                 {
                     myHand.Info.StreetAI = "T";
                 }
-            }        
+            }
         }
 
         /// <summary>
@@ -358,7 +358,7 @@ namespace TrackerLibrary
                 if (myHand.StreetActions.PreflopActions[i].Act == "raises" || myHand.StreetActions.PreflopActions[i].Act == "bets")
                 {
                     myHand.Info.pf_aggressors += myHand.SeatActions[myHand.StreetActions.PreflopActions[i].Player].SeatPosition.ToString();
-                }   
+                }
             }
         }
 

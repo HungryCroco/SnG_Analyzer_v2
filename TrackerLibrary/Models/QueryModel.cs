@@ -2,7 +2,7 @@
 
 namespace TrackerLibrary.Models
 {
-    
+
     /// <summary>
     /// Composited by strings, that can be concatenated together to build an NoSQL/SQL Query;
     /// </summary>
@@ -82,5 +82,5 @@ namespace TrackerLibrary.Models
             SeatActionVillain = seatActionVillain;
         }
     }
-    
+
 }

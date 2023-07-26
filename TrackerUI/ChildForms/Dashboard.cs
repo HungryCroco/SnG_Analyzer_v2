@@ -2,8 +2,8 @@
 using OxyPlot.Legends;
 using OxyPlot.Series;
 using OxyPlot.WindowsForms;
-using TrackerLibrary.Models;
 using TrackerLibrary.CRUD;
+using TrackerLibrary.Models;
 
 namespace TrackerUI.ChildForms
 {
@@ -19,7 +19,7 @@ namespace TrackerUI.ChildForms
         public Dashboard()
         {
             InitializeComponent();
-            
+
             chb_3_3.Checked = true;
             TrackerLibrary.Models.Settings currSettings = DataManager_Settings.ReadSettings();
             DashBoardModel dashboard = DataManager_DashBoard.RequestDashBoard("IPray2Buddha", currSettings);
@@ -149,7 +149,7 @@ namespace TrackerUI.ChildForms
                         break;
                 }
 
-                lineSeries.Points.Add(new DataPoint(i , currPlot));
+                lineSeries.Points.Add(new DataPoint(i, currPlot));
 
             }
             return lineSeries;
@@ -193,14 +193,14 @@ namespace TrackerUI.ChildForms
                     CalculateTlpOverviewAbbPerMonth(dashBoardModel.CevModel_3W_SBvBTNvREG, ref currPeriod, ref currRow, 4);
 
                     //tlpOverview_3W_BTNvBBvFISH
-                    CalculateTlpOverviewAbbPerMonth(dashBoardModel.CevModel_3W_BTNvBBvFISH,ref currPeriod, ref currRow, 5);
+                    CalculateTlpOverviewAbbPerMonth(dashBoardModel.CevModel_3W_BTNvBBvFISH, ref currPeriod, ref currRow, 5);
 
                     //tlpOverview_3W_SBvBTNvREG
                     CalculateTlpOverviewAbbPerMonth(dashBoardModel.CevModel_3W_SBvBTNvREG, ref currPeriod, ref currRow, 6);
 
                     //tlpOverview_3W_SBvBTNvFISH
                     CalculateTlpOverviewAbbPerMonth(dashBoardModel.CevModel_3W_SBvBTNvFISH, ref currPeriod, ref currRow, 7);
-                    
+
                     //tlpOverview_3W_BBvBTNvREG
                     CalculateTlpOverviewAbbPerMonth(dashBoardModel.CevModel_3W_BBvBTNvREG, ref currPeriod, ref currRow, 8);
 
@@ -209,7 +209,7 @@ namespace TrackerUI.ChildForms
 
                     //tlpOverview_3W_SBvBBvREG
                     CalculateTlpOverviewAbbPerMonth(dashBoardModel.CevModel_3W_SBvBBvREG, ref currPeriod, ref currRow, 10);
-  
+
                     //tlpOverview_3W_SBvBBvFISH
                     CalculateTlpOverviewAbbPerMonth(dashBoardModel.CevModel_3W_SBvBBvFISH, ref currPeriod, ref currRow, 11);
 
@@ -227,7 +227,7 @@ namespace TrackerUI.ChildForms
 
                     //tlpOverview_HU_BBvSBvREG
                     CalculateTlpOverviewAbbPerMonth(dashBoardModel.CevModel_HU_BBvREG, ref currPeriod, ref currRow, 16);
-    
+
                     //tlpOverview_HU_BBvSBvFISH
                     CalculateTlpOverviewAbbPerMonth(dashBoardModel.CevModel_HU_BBvFISH, ref currPeriod, ref currRow, 17);
 
@@ -313,7 +313,7 @@ namespace TrackerUI.ChildForms
 
             //tlpOverview_F/R Ratio
             CalculateTlpOverviewFishRegRatioAverage(ref dashBoardModel, ref averageRow, 18);
-  
+
         }
 
         /// <summary>
@@ -323,7 +323,7 @@ namespace TrackerUI.ChildForms
         /// <param name="averageRow">Row, where the Info will be displayed</param>
         /// <param name="currCol">Column, where the Info will be displayed</param>
         private void CalculateTlpOverviewAbbAverage(List<CevModel> cevModels, ref int averageRow, int currCol)
-        { 
+        {
             tlp_overview.GetControlFromPosition(currCol, averageRow).Text = Double.Parse((cevModels.Sum(model => model.Abb) / cevModels.Sum(model => model.Situations)).ToString()).ToString("F2");
             tlp_overview.GetControlFromPosition(currCol, averageRow).MouseEnter += new System.EventHandler(this.tlp_MouseEnter);
             tlp_overview.GetControlFromPosition(currCol, averageRow).MouseLeave += new System.EventHandler(this.tlp_MouseLeave);
@@ -337,7 +337,7 @@ namespace TrackerUI.ChildForms
         /// <param name="currCol">Column, where the Info will be displayed</param>
         private void CalculateTlpOverviewFishRegRatioAverage(ref DashBoardModel dashBoardModel, ref int averageRow, int currCol)
         {
-            tlp_overview.GetControlFromPosition(currCol, averageRow).Text = (dashBoardModel.CevModel_HU_SBvFISH.Sum(model => model.Situations)*100 / (dashBoardModel.CevModel_HU_SBvFISH.Sum(model => model.Situations) + dashBoardModel.CevModel_HU_SBvREG.Sum(model => model.Situations))).ToString("F0");
+            tlp_overview.GetControlFromPosition(currCol, averageRow).Text = (dashBoardModel.CevModel_HU_SBvFISH.Sum(model => model.Situations) * 100 / (dashBoardModel.CevModel_HU_SBvFISH.Sum(model => model.Situations) + dashBoardModel.CevModel_HU_SBvREG.Sum(model => model.Situations))).ToString("F0");
             tlp_overview.GetControlFromPosition(currCol, averageRow).MouseEnter += new System.EventHandler(this.tlp_MouseEnter);
             tlp_overview.GetControlFromPosition(currCol, averageRow).MouseLeave += new System.EventHandler(this.tlp_MouseLeave);
         }

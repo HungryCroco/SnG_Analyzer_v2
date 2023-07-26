@@ -63,7 +63,7 @@ namespace TrackerLibrary.Models
         public SQL_ImportIds()
         {
             SeatActionIds = new List<int>() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            PlayerIds = new List<int>() { 0,0,0,0,0,0,0,0,0,0,0};
+            PlayerIds = new List<int>() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         }
     }
 }

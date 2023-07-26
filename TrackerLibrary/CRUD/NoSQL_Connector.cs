@@ -1,10 +1,10 @@
-﻿using System.Text.Json;
+﻿using Newtonsoft.Json;
 using Npgsql;
+using System.Data;
+using System.Diagnostics;
+using System.Text.Json;
 using TrackerLibrary.Models;
 using TrackerLibrary.Queries.NoSQL;
-using Newtonsoft.Json;
-using System.Diagnostics;
-using System.Data;
 
 namespace TrackerLibrary.CRUD
 {
@@ -22,7 +22,7 @@ namespace TrackerLibrary.CRUD
         public static void CreateDatabase(string dbName, string tableName, string columnName)
         {
             NpgsqlConnection connection = new();
-            
+
             // Try to Create the DB; If already existing will raise an exception;
             try
             {
@@ -30,7 +30,7 @@ namespace TrackerLibrary.CRUD
                 var cmd_createDB = new NpgsqlCommand($"CREATE DATABASE {dbName}; ", connection);
                 connection.Open();
                 cmd_createDB.ExecuteNonQuery();
-                
+
             }
             catch (Exception)
             {
@@ -93,7 +93,7 @@ namespace TrackerLibrary.CRUD
         /// <param name="tableName">Name of the Table;</param>
         /// <param name="columnName">Name of the Column(jsonb);</param>
         /// <param name="hands">List of Hands to be inserted;</param>
-        public static void InsertHandsToNoSqlDb(string dbName, string tableName, string columnName , List<Hand> hands)
+        public static void InsertHandsToNoSqlDb(string dbName, string tableName, string columnName, List<Hand> hands)
         {
             Stopwatch watch = new Stopwatch();
             watch.Start();
@@ -102,7 +102,7 @@ namespace TrackerLibrary.CRUD
 
 
             NpgsqlConnection conn = new NpgsqlConnection(GlobalConfig.GetConnectionString(dbName));
-            
+
             conn.Open();
 
             // Serializing the Hands and deleting the NON-unique Hands;
@@ -120,7 +120,7 @@ namespace TrackerLibrary.CRUD
                 importer.Complete();
             }
             conn.Close();
-            
+
 
             Console.WriteLine("---");
             Console.WriteLine($"Import to NoSQL {dbName}: " + watch.ElapsedMilliseconds / 1000.0 + "s");
@@ -162,7 +162,7 @@ namespace TrackerLibrary.CRUD
             }
         }
 
-        
+
 
         /// <summary>
         /// Serializing Hands to JSON;
@@ -185,7 +185,7 @@ namespace TrackerLibrary.CRUD
                 serializedHandsAsJson.Add(System.Text.Json.JsonSerializer.Serialize(hand, options));
             }
 
-            return serializedHandsAsJson; 
+            return serializedHandsAsJson;
         }
 
         ///// <summary>
@@ -236,7 +236,7 @@ namespace TrackerLibrary.CRUD
                 {
                     cmd.CommandTimeout = 1000;
                     output = cmd.ExecuteScalar().ToString();
-                    
+
                 }
                 conn.Close();
             }
@@ -250,7 +250,7 @@ namespace TrackerLibrary.CRUD
         /// <param name="sqlQuery">SQL Query;</param>
         /// <param name="dbName">DataBase Name;</param>
         /// <returns>DataTable, containing the PostgreSQL View;</returns>
-        public static DataTable GetView(this string sqlQuery, string dbName ="")
+        public static DataTable GetView(this string sqlQuery, string dbName = "")
         {
             DataTable dt = new DataTable();
             try
@@ -291,7 +291,7 @@ namespace TrackerLibrary.CRUD
             catch (Exception)
             {
             }
-            
+
             return dt;
         }
 

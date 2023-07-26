@@ -4,7 +4,7 @@ namespace TrackerUI
 {
     public static class UIMethods
     {
-        
+
         /// <summary>
         /// Calculates Color(Darkness) based on input int; Used in HeatMap to highlight the HoleCards with higher occurance;
         /// </summary>

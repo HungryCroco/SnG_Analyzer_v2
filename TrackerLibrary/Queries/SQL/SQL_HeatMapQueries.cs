@@ -2,16 +2,16 @@
 
 namespace TrackerLibrary.Queries.SQL
 {
-    /// <summary>
-    /// Class containing all Queries necessary to request HeatMaps from SQL DB;
-    /// </summary>
-    public class SQL_HeatMapQueries
-    {
-        /// <summary>
-        /// Get a JSON of StatsModel grouped by HoleCard's Ids;
-        /// </summary>
-        public static string SQL_ExportHeatMapAsJSON =
-            @"SELECT array_to_json(array_agg(row_to_json(t)))
+	/// <summary>
+	/// Class containing all Queries necessary to request HeatMaps from SQL DB;
+	/// </summary>
+	public class SQL_HeatMapQueries
+	{
+		/// <summary>
+		/// Get a JSON of StatsModel grouped by HoleCard's Ids;
+		/// </summary>
+		public static string SQL_ExportHeatMapAsJSON =
+			@"SELECT array_to_json(array_agg(row_to_json(t)))
 			FROM (
 				SELECT 
 					hc.id AS hcs_id, 
@@ -33,11 +33,11 @@ namespace TrackerLibrary.Queries.SQL
 				) t
 			";
 
-        /// <summary>
-        /// Get a DataGridView filtered by HoleCard's Id;
-        /// </summary>
-        public static string SQL_ExportDataGridViewByHoleCardsSimple =
-            @"SELECT  
+		/// <summary>
+		/// Get a DataGridView filtered by HoleCard's Id;
+		/// </summary>
+		public static string SQL_ExportDataGridViewByHoleCardsSimple =
+			@"SELECT  
 			r.room as room,
 			ha.HandIdBySite as handId,
 			tr.amt_BuyIn, 
@@ -74,11 +74,11 @@ namespace TrackerLibrary.Queries.SQL
 			WHERE @whereClauseHero
 				AND sa_hero.HCsSimpleId= @HCsId::smallint";
 
-        /// <summary>
-        /// Where conditions for requesting BlindvsBlind openLimp Stats;
-        /// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
-        /// </summary>
-        public static string SQL_WhereClauseHero_BvB_oL =
+		/// <summary>
+		/// Where conditions for requesting BlindvsBlind openLimp Stats;
+		/// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
+		/// </summary>
+		public static string SQL_WhereClauseHero_BvB_oL =
 			@"hero.PlayerNickName = '@hero'::varchar 
 			AND sa_hero.flg_open_opp 
 			AND villain.PlayerNickName @regList 
@@ -90,12 +90,12 @@ namespace TrackerLibrary.Queries.SQL
 			AND ha.TournamentType = '@tourneyType'
 			AND ha.datetimehand::date > DATE '@date'";
 
-        /// <summary>
-        /// Where conditions for requesting BlindvsBlind openRaise Stats;
-        /// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
-        /// </summary>
-        public static string SQL_WhereClauseHero_BvB_oR =
-           @"hero.PlayerNickName = '@hero'::varchar 
+		/// <summary>
+		/// Where conditions for requesting BlindvsBlind openRaise Stats;
+		/// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
+		/// </summary>
+		public static string SQL_WhereClauseHero_BvB_oR =
+		   @"hero.PlayerNickName = '@hero'::varchar 
 			AND sa_hero.flg_open_opp 
 			AND villain.PlayerNickName @regList 
 			AND ha.pf_actors LIKE '89%' 
@@ -109,12 +109,12 @@ namespace TrackerLibrary.Queries.SQL
 			AND ha.TournamentType = '@tourneyType'
 			AND ha.datetimehand::date > DATE '@date'";
 
-        /// <summary>
-        /// Where conditions for requesting BlindvsBlind Iso Stats;
-        /// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
-        /// </summary>
-        public static string SQL_WhereClauseHero_BvB_Iso =
-            @"hero.PlayerNickName = '@hero'::varchar 
+		/// <summary>
+		/// Where conditions for requesting BlindvsBlind Iso Stats;
+		/// Needs to be concatenated either to HeatMap-StatsModel or -DataGridView Query;
+		/// </summary>
+		public static string SQL_WhereClauseHero_BvB_Iso =
+			@"hero.PlayerNickName = '@hero'::varchar 
 			AND sa_hero.flg_open_opp 
 			AND villain.PlayerNickName @regList
 			AND ha.pf_aggressors LIKE '9%'
@@ -127,5 +127,5 @@ namespace TrackerLibrary.Queries.SQL
 			AND sa_hero.PreFlopAction ~ '@AI' 
 			AND ha.TournamentType = '@tourneyType'
 			AND ha.datetimehand::date > DATE '@date'";
-    }
+	}
 }

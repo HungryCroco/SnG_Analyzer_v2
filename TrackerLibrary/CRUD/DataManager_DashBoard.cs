@@ -1,7 +1,7 @@
 ﻿using TrackerLibrary.Models;
+using TrackerLibrary.Queries;
 using TrackerLibrary.Queries.NoSQL;
 using TrackerLibrary.Queries.SQL;
-using TrackerLibrary.Queries;
 
 
 namespace TrackerLibrary.CRUD
@@ -48,8 +48,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_3W_BTNvBBvREG(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers:3 , tourneyType: settings.TourneyType, posHero:0 , posVillain:9, pfActors: "LIKE '09%'", regList:GlobalConfig.defaultRegList.ReadRegList(true), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 0, posVillain: 9, pfActors: "LIKE '09%'", regList: GlobalConfig.defaultRegList.ReadRegList(true),
                 seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -67,8 +67,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_3W_BTNvBBvFISH(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 0, posVillain: 9, pfActors: "LIKE '09%'", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 0, posVillain: 9, pfActors: "LIKE '09%'", regList: GlobalConfig.defaultRegList.ReadRegList(false),
                 seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -86,8 +86,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_3W_SBvBTNvREG(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 8, posVillain: 0, pfActors: "LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(true), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 8, posVillain: 0, pfActors: "LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(true),
                 seatActionVillain: "btnSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -105,8 +105,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_3W_SBvBTNvFISH(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 8, posVillain: 0, pfActors: "LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 8, posVillain: 0, pfActors: "LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(false),
                 seatActionVillain: "btnSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -124,8 +124,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_3W_BBvBTNvREG(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 9, posVillain: 0, pfActors: "LIKE '09%'", regList: GlobalConfig.defaultRegList.ReadRegList(true), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 9, posVillain: 0, pfActors: "LIKE '09%'", regList: GlobalConfig.defaultRegList.ReadRegList(true),
                 seatActionVillain: "btnSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -143,8 +143,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_3W_BBvBTNvFISH(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 9, posVillain: 0, pfActors: "LIKE '09%'", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 9, posVillain: 0, pfActors: "LIKE '09%'", regList: GlobalConfig.defaultRegList.ReadRegList(false),
                 seatActionVillain: "btnSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -162,8 +162,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_3W_SBvBBvREG(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 8, posVillain: 9, pfActors: "NOT LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(true), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 8, posVillain: 9, pfActors: "NOT LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(true),
                 seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -181,8 +181,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_3W_SBvBBvFISH(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 8, posVillain: 9, pfActors: "NOT LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 8, posVillain: 9, pfActors: "NOT LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(false),
                 seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -200,8 +200,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_3W_BBvSBvREG(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 9, posVillain: 8, pfActors: "NOT LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(true), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 9, posVillain: 8, pfActors: "NOT LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(true),
                 seatActionVillain: "sbSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -219,8 +219,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_3W_BBvSBvFISH(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 9, posVillain: 8, pfActors: "NOT LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 3, tourneyType: settings.TourneyType, posHero: 9, posVillain: 8, pfActors: "NOT LIKE '0%'", regList: GlobalConfig.defaultRegList.ReadRegList(false),
                 seatActionVillain: "sbSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -237,8 +237,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_HU_SBvREG(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 2, tourneyType: settings.TourneyType, posHero: 8, posVillain: 9, pfActors: "LIKE '%'", regList: GlobalConfig.defaultRegList.ReadRegList(true), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 2, tourneyType: settings.TourneyType, posHero: 8, posVillain: 9, pfActors: "LIKE '%'", regList: GlobalConfig.defaultRegList.ReadRegList(true),
                 seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -255,8 +255,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_HU_SBvFISH(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 2, tourneyType: settings.TourneyType, posHero: 8, posVillain: 9, pfActors: "LIKE '%'", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 2, tourneyType: settings.TourneyType, posHero: 8, posVillain: 9, pfActors: "LIKE '%'", regList: GlobalConfig.defaultRegList.ReadRegList(false),
                 seatActionVillain: "bbSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -273,8 +273,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_HU_BBvREG(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 2, tourneyType: settings.TourneyType, posHero: 9, posVillain: 8, pfActors: "LIKE '%'", regList: GlobalConfig.defaultRegList.ReadRegList(true), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 2, tourneyType: settings.TourneyType, posHero: 9, posVillain: 8, pfActors: "LIKE '%'", regList: GlobalConfig.defaultRegList.ReadRegList(true),
                 seatActionVillain: "sbSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -291,8 +291,8 @@ namespace TrackerLibrary.CRUD
         /// <returns>List of CevModel grouped by Month</returns>
         private static List<CevModel> RequestCevModel_HU_BBvFISH(string hero, Settings settings)
         {
-            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths, 
-                hero: hero, cntPlayers: 2, tourneyType: settings.TourneyType, posHero: 9, posVillain: 8, pfActors: "LIKE '%'", regList: GlobalConfig.defaultRegList.ReadRegList(false), 
+            return QueriesExtensionMethods.ConcatQueries(settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? NoSQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths : SQL_DashBoardQueries.sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths,
+                hero: hero, cntPlayers: 2, tourneyType: settings.TourneyType, posHero: 9, posVillain: 8, pfActors: "LIKE '%'", regList: GlobalConfig.defaultRegList.ReadRegList(false),
                 seatActionVillain: "sbSeatActionId").GetCevChartParallel<CevModel>(settings.CurrentDbRead);
         }
 
@@ -310,7 +310,7 @@ namespace TrackerLibrary.CRUD
         {
             //Request DashBoardModel from the DB;
             var dashBoardModel = NoSQL_Connector.GetDashBoardModel(hero, settings.TourneyType, settings.CurrentDbRead);
-            
+
             //Checks if the DashBoardModel is available( not NULL);
             if (dashBoardModel.CevModel_Total_ByTournament != null)
             {

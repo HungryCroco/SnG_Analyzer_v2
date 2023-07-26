@@ -87,7 +87,7 @@ namespace TrackerLibrary.CRUD
             writer.WriteEndArray();
         }
 
-        
+
     }
 
     /// <summary>
@@ -175,7 +175,7 @@ namespace TrackerLibrary.CRUD
     {
         public override Settings Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            Settings settings = new Settings(); 
+            Settings settings = new Settings();
 
             while (reader.Read())
             {
@@ -238,7 +238,7 @@ namespace TrackerLibrary.CRUD
             }
 
             return settings;
-                       
+
         }
 
         public override void Write(Utf8JsonWriter writer, Settings value, JsonSerializerOptions options)

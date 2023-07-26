@@ -15,7 +15,7 @@ namespace TrackerUI.ChildForms
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.Image = Image.FromFile("C:\\Users\\tatsi\\source\\repos\\SnG_Analyzer_v2\\Images\\Loading.gif");
-            
+
 
             // Add the PictureBox control to your form
             this.Controls.Add(pictureBox1);

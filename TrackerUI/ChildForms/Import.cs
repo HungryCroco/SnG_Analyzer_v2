@@ -12,7 +12,7 @@ namespace TrackerUI.ChildForms
         public Import()
         {
             InitializeComponent();
-            
+
         }
 
         /// <summary>
@@ -28,21 +28,21 @@ namespace TrackerUI.ChildForms
             {
                 DataManager_Import.RequestImport(filePath, settings, progressBarImport);
 
-                
+
             }
             catch (Exception)
             {
                 Console.WriteLine("Import Failed! Please choose a correct .txt file!");
             }
-            
+
         }
 
 
-       /// <summary>
-       /// Clicking on the IMPORT Button;
-       /// </summary>
-       /// <param name="sender"></param>
-       /// <param name="e"></param>
+        /// <summary>
+        /// Clicking on the IMPORT Button;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void btn_Import_Click(object sender, MouseEventArgs e)
         {
             string filePath = File_Connector.GetFullFilePath();
@@ -78,7 +78,7 @@ namespace TrackerUI.ChildForms
             outputControl.Invoke(new Action(() =>
             {
                 outputControl.Text += value;
-                
+
             }));
             consoleOutput.Append(value);
             //((RichTextBox)outputControl).ScrollToCaret();
@@ -87,6 +87,6 @@ namespace TrackerUI.ChildForms
         public override Encoding Encoding => Encoding.UTF8;
     }
 
-    
+
 
 }

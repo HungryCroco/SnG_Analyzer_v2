@@ -1,7 +1,7 @@
 ﻿using Npgsql;
-using TrackerLibrary.Queries.SQL;
-using TrackerLibrary.Models;
 using System.Diagnostics;
+using TrackerLibrary.Models;
+using TrackerLibrary.Queries.SQL;
 
 namespace TrackerLibrary.CRUD
 {
@@ -48,7 +48,7 @@ namespace TrackerLibrary.CRUD
         public static void CreateDatabase(string dbName)
         {
             NpgsqlConnection conn = new();
-            
+
             //Try to run multiple queries to Create all Tables and relations one by one, if the DB is already existing will raise Exception;
             try
             {
@@ -425,7 +425,7 @@ namespace TrackerLibrary.CRUD
                 cmd.Parameters.Add(new NpgsqlParameter("hcAsString", EnumExtensionMethods.GetDescription((CardAllSimple)i)));
 
                 cmd.ExecuteNonQuery();
-            }            
+            }
         }
 
         /// <summary>

@@ -28,7 +28,7 @@ namespace TrackerLibrary.CRUD
 
             int pbValue = 1; // ProgressBar's updater;
 
-            foreach (string hh in splitString) 
+            foreach (string hh in splitString)
             {
 
                 // Update the ProgressBar
@@ -37,7 +37,7 @@ namespace TrackerLibrary.CRUD
                     pb.Invoke(new Action(() =>
                     {
                         pb.Minimum = 0;
-                        pb.Maximum = splitString.Length+1;
+                        pb.Maximum = splitString.Length + 1;
                         pb.Value = pbValue;
                     }));
                 }
@@ -79,7 +79,7 @@ namespace TrackerLibrary.CRUD
             // Calculate default DashBoards; This Part could be refactured;
             if (settings.DbTypeWrite == "ALL")
             {
-                
+
                 string tempCurrDbRead = settings.CurrentDbRead;
                 string tempDbTypeRead = settings.DbTypeRead;
 

@@ -13,8 +13,8 @@ namespace TrackerUI.ChildForms
         public Settings()
         {
             InitializeComponent();
-            
-            
+
+
             ReadCurrentSettings();
             LoadDataBases();
 
@@ -57,8 +57,8 @@ namespace TrackerUI.ChildForms
                 txtBoxHhSplitSize.Text = currSettings.HhSplitSize;
                 txtBoxTourneyType.Text = currSettings.TourneyType;
                 txtBoxHero.Text = currSettings.ActivePlayer;
-                
-                
+
+
 
             }
             catch (Exception)
@@ -79,12 +79,12 @@ namespace TrackerUI.ChildForms
                 txtBoxHhSplitSize.Text = GlobalConfig.defaultHhSplitSize.ToString();
                 txtBoxTourneyType.Text = GlobalConfig.defaultTourneyType.ToString();
                 txtBoxHero.Text = GlobalConfig.defaultHero;
-                
+
 
             }
 
         }
-        
+
         /// <summary>
         /// Saving the current Settings to a new Settigns.txt file;
         /// This Method is executed by any change of any Settings;
@@ -110,11 +110,11 @@ namespace TrackerUI.ChildForms
             string currHhSplitSize = txtBoxHhSplitSize.Text;
             string currTourneyType = txtBoxTourneyType.Text;
             string currHero = txtBoxHero.Text;
-            
 
 
 
-            DataManager_Settings.WriteSettings(currServer, currPort, currUser, currPass, currNosqlDb, currSqlDb, currDbWrite, currDbRead ,currMinTourneys, currRegFile, currHhSplitSize, currHero, currTourneyType);
+
+            DataManager_Settings.WriteSettings(currServer, currPort, currUser, currPass, currNosqlDb, currSqlDb, currDbWrite, currDbRead, currMinTourneys, currRegFile, currHhSplitSize, currHero, currTourneyType);
         }
 
         /// <summary>
@@ -135,7 +135,8 @@ namespace TrackerUI.ChildForms
             catch (Exception)
             {
             }
-           
+
+
         }
 
     }

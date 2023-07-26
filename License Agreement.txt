@@ -1,0 +1,7 @@
+License Agreement:
+
+	- This Application is developed by Hristo Tatsinski ;
+	- The purpose of the application is job seeking, however everzone is free to use it for free;
+	- Copying of the source code and presenting as own work from anzone except the developer ( Hristo Tatsinski ) is forbidden!
+
+	- For any information you can contact the developer on tatsinski.hristo@gmail.com

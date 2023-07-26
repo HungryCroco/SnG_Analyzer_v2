@@ -48,13 +48,13 @@ namespace TrackerLibrary
 
             string[] hands = inputString.Split("\n\r\n");
 
-            for (int i = 0; i < hands.Length; i+=splitSize)
+            for (int i = 0; i < hands.Length; i += splitSize)
             {
                 string splitString = "";
                 if (i + splitSize >= hands.Length)
                 {
                     splitSize = hands.Length - i;
-                } 
+                }
 
                 splitString = string.Join("\n\r\n", hands, i, splitSize);
 
@@ -97,7 +97,7 @@ namespace TrackerLibrary
 
             // Editing Adding Empty Cards to NoShowDown Hands to simplify HoleCards reading;
             string patternSummaryNoShowdown = @"(?:[\s\r\n]+Seat (?:\d+): (?<Summary_Player>(?:(?!\((?:button|small blind|big blind|button\) \(small blind)\)).)+)(?: \((?:button|small blind|big blind|button\) \(small blind)\))? collected \((?<Summary_AmountCollected>\d+)\))";
-            
+
             // Replacing the unneded parts of the pattern with empty string;
             string hhDeletedEndigs = Regex.Replace(handHistory, patternDeleteEnding, match =>
             {
@@ -213,7 +213,7 @@ namespace TrackerLibrary
         /// <param name="regexHand">REGEX-Match</param>
         /// <param name="actions">Reference to a Street- and SeatAction</param>
         /// <param name="street"> Street, on which the Action did happen; Possible: Flop , Turn , River;</param>
-        private static void ReadFlopTurnOrRiverActions(this Match regexHand, ref (StreetAction,Dictionary<string, SeatAction>) actions, string street)
+        private static void ReadFlopTurnOrRiverActions(this Match regexHand, ref (StreetAction, Dictionary<string, SeatAction>) actions, string street)
         {
             string currPlayer; // active Player, that did the Action;
             string currAction; // Action;
@@ -236,7 +236,7 @@ namespace TrackerLibrary
 
                     if (currAI == "1")
                     {
-                        actions.Item2[currPlayer].StreetAI = "F"; 
+                        actions.Item2[currPlayer].StreetAI = "F";
                         actions.Item2[currPlayer].saw_turn = true; // As the player is AI on a previous street he is seeing all later strets;
                         actions.Item2[currPlayer].saw_river = true; // - // -
                         actions.Item2[currPlayer].saw_showdown = true; // - // -
@@ -297,7 +297,7 @@ namespace TrackerLibrary
                 {
                     actions.Item2[currPlayer].HC1 = new Card { Id = regexHand.Groups["Summary_HC1"].Captures[i].Value.ConvertCardStringToUint(), Name = regexHand.Groups["Summary_HC1"].Captures[i].Value };
                     actions.Item2[currPlayer].HC2 = new Card { Id = regexHand.Groups["Summary_HC2"].Captures[i].Value.ConvertCardStringToUint(), Name = regexHand.Groups["Summary_HC2"].Captures[i].Value };
-                    actions.Item2[currPlayer].HCsAsNumber = EnumExtensionMethods.ConvertHoleCardsSimpleToEnum(EnumExtensionMethods.CalculateHoleCardsSimple(regexHand.Groups["Summary_HC1"].Captures[i].Value, regexHand.Groups["Summary_HC2"].Captures[i].Value ));
+                    actions.Item2[currPlayer].HCsAsNumber = EnumExtensionMethods.ConvertHoleCardsSimpleToEnum(EnumExtensionMethods.CalculateHoleCardsSimple(regexHand.Groups["Summary_HC1"].Captures[i].Value, regexHand.Groups["Summary_HC2"].Captures[i].Value));
 
                     actions.Item2[currPlayer].ChipsWon = float.Parse(regexHand.Groups["Summary_AmountCollected"].Captures[i].ToString());
                     if (float.Parse(regexHand.Groups["Summary_AmountCollected"].Captures[i].ToString()) > 0)
@@ -313,7 +313,7 @@ namespace TrackerLibrary
         /// </summary>
         /// <param name="regexHand">REGEX-Match</param>
         /// <returns>Self-Defined struct containing Street- and SeeatAction containing ONLY the PreFlop player-related Information;</returns>
-        private static (StreetAction , Dictionary<string, SeatAction>) CreatePreFlopStreetActionAndActionDictionary(this Match regexHand)
+        private static (StreetAction, Dictionary<string, SeatAction>) CreatePreFlopStreetActionAndActionDictionary(this Match regexHand)
         {
             string currPlayer;
             string currAction;
@@ -326,11 +326,11 @@ namespace TrackerLibrary
             StreetAction streetAction = new();
 
             // Looping trough the "Seat #:" before dealing the Hands, creating all SeatActions and updating SeatNumbers and StartingStacks:
-                //Seat 1: IPray2Buddha (16 in chips) 
-                //Seat 2: Calm Kev(234 in chips) 
-                //Seat 3: FernandoCtz(1250 in chips)
-                //FernandoCtz: posts small blind 15
-                //IPray2Buddha: posts big blind 16 and is all -in
+            //Seat 1: IPray2Buddha (16 in chips) 
+            //Seat 2: Calm Kev(234 in chips) 
+            //Seat 3: FernandoCtz(1250 in chips)
+            //FernandoCtz: posts small blind 15
+            //IPray2Buddha: posts big blind 16 and is all -in
             for (int i = 0; i < regexHand.Groups["Seat_Player"].Captures.Count; i++)
             {
                 SeatAction currSeatAction = new SeatAction();
@@ -340,8 +340,8 @@ namespace TrackerLibrary
             }
 
             // Looping trough the SeatActions before dealing the Hands, updating some blinds, positions, and Chips invested in the Hand by default (antes, small blind, big blind) :
-                //FernandoCtz: posts small blind 15
-                //IPray2Buddha: posts big blind 16 and is all -in
+            //FernandoCtz: posts small blind 15
+            //IPray2Buddha: posts big blind 16 and is all -in
             for (int i = 0; i < regexHand.Groups["PreHCsAction_Player"].Captures.Count; i++)
             {
                 currPlayer = regexHand.Groups["PreHCsAction_Player"].Captures[i].ToString();
@@ -386,10 +386,10 @@ namespace TrackerLibrary
                     actionDict[currPlayer].saw_river = true;
                     actionDict[currPlayer].saw_showdown = true;
                 }
-                
+
             }
 
-            return (streetAction ,actionDict);
+            return (streetAction, actionDict);
         }
 
         /// <summary>
@@ -397,9 +397,9 @@ namespace TrackerLibrary
         /// </summary>
         /// <param name="regexHand">REGEX-Match</param>
         /// <returns>Self-Defined struct containing Street- and SeeatAction containing the full player-related Information;</returns>
-        private static (StreetAction , Dictionary<string, SeatAction>) ReadAllActions (this Match regexHand)
-        {          
-            (StreetAction,Dictionary<string, SeatAction>) actions = regexHand.CreatePreFlopStreetActionAndActionDictionary(); // Create Street- and SeatActions and update PreFlop;
+        private static (StreetAction, Dictionary<string, SeatAction>) ReadAllActions(this Match regexHand)
+        {
+            (StreetAction, Dictionary<string, SeatAction>) actions = regexHand.CreatePreFlopStreetActionAndActionDictionary(); // Create Street- and SeatActions and update PreFlop;
 
             regexHand.ReadFlopTurnOrRiverActions(ref actions, "Flop"); // Update Flop;
             regexHand.ReadFlopTurnOrRiverActions(ref actions, "Turn"); // Update Turn;
@@ -477,7 +477,7 @@ namespace TrackerLibrary
             foreach (Match match in matches)
             {
                 HandInfo handInfo = match.ReadHandInfo();
-                (StreetAction , Dictionary<string, SeatAction>) actions = match.ReadAllActions();
+                (StreetAction, Dictionary<string, SeatAction>) actions = match.ReadAllActions();
 
                 allHands.Add(new Hand(handInfo, actions.Item1, actions.Item2));
 

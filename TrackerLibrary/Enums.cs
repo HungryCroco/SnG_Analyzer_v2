@@ -60,7 +60,7 @@ namespace TrackerLibrary
                     {
                         return 0;
                     }
-                }  
+                }
                 else
                 {
                     return 0;
@@ -71,7 +71,7 @@ namespace TrackerLibrary
 
                 return 0;
             }
-            
+
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace TrackerLibrary
                     return 49 + colorOffset;
                 default:
                     return 0;
-            }       
+            }
         }
 
         /// <summary>
@@ -153,10 +153,10 @@ namespace TrackerLibrary
                     {
                         output += "o";
                     }
-                } 
+                }
             }
-            
-            return output;     
+
+            return output;
         }
 
 

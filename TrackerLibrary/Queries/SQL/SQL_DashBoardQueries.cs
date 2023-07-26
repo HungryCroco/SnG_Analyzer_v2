@@ -2,16 +2,16 @@
 
 namespace TrackerLibrary.Queries.SQL
 {
-    /// <summary>
-    /// Class containing all Queries necessary to load a DashBoardModel from SQL DB;
-    /// </summary>
-    public static class SQL_DashBoardQueries
-    {
-        /// <summary>
-        /// Get a JSON of CevModel grouped by Tournament from SQL DB;  
-        /// </summary>
-        public static string sql_ExportCevPerTournamentAsJSON =
-            @"SELECT array_to_json(array_agg(row_to_json(t)))
+	/// <summary>
+	/// Class containing all Queries necessary to load a DashBoardModel from SQL DB;
+	/// </summary>
+	public static class SQL_DashBoardQueries
+	{
+		/// <summary>
+		/// Get a JSON of CevModel grouped by Tournament from SQL DB;  
+		/// </summary>
+		public static string sql_ExportCevPerTournamentAsJSON =
+			@"SELECT array_to_json(array_agg(row_to_json(t)))
 			FROM (
 				SELECT SUM(sa.cev_won) AS cev, SUM(sa.chips_won) AS amt_won
 				FROM public.tournament ta
@@ -24,10 +24,10 @@ namespace TrackerLibrary.Queries.SQL
 				ORDER BY ta.tournamentidbysite
 				) t";
 
-        /// <summary>
-        ///  Get a JSON of CevModel filtered by Positions grouped by Month from SQL DB;  
-        /// </summary>
-        public static string sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths = 
+		/// <summary>
+		///  Get a JSON of CevModel filtered by Positions grouped by Month from SQL DB;  
+		/// </summary>
+		public static string sql_ExportTlpOverviewAsJSON_CevByPos_GroupByMonths =
 			@"SELECT array_to_json(array_agg(row_to_json(t2)))
 			FROM (
 				SELECT COUNT(DISTINCT t1.tourney_id)::numeric AS Count_tourneys, COUNT(t1.aBB) AS Situations, SUM(t1.cev_won) AS Cev, SUM(t1.chips_won) AS Amt_won, SUM (t1.aBB) AS Abb, to_char(MIN(t1.t_date),'YYYY-MM-DD') AS T_Date
@@ -55,10 +55,10 @@ namespace TrackerLibrary.Queries.SQL
 				ORDER BY DATE_TRUNC('month',t_date) DESC
 				) t2";
 
-        /// <summary>
-        ///  Get a JSON of CevModel grouped by Month from SQL DB;  
-        /// </summary>
-        public static string sql_ExportTlpOverviewAsJSON_CevTotal_GroupByMonths = 
+		/// <summary>
+		///  Get a JSON of CevModel grouped by Month from SQL DB;  
+		/// </summary>
+		public static string sql_ExportTlpOverviewAsJSON_CevTotal_GroupByMonths =
 			@"SELECT array_to_json(array_agg(row_to_json(t2)))
 			FROM (
  					SELECT sum (t1.cev) as Cev , sum(t1.Chips_Won) as Amt_won, avg(t1.aBI) as Abi, count(t1.cev) as Count_Tourneys, to_char(min(t1.t_date),'YYYY-MM-DD') as T_Date
@@ -77,5 +77,5 @@ namespace TrackerLibrary.Queries.SQL
 			ORDER BY DATE_TRUNC('month',t_date) DESC
 				) t2";
 
-    }
+	}
 }

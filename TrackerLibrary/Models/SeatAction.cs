@@ -21,7 +21,7 @@ namespace TrackerLibrary.Models
         /// <returns>String containg all player Actions(shorten) + Sizes;</returns>
         public override string ToString()
         {
-            
+
             string result = "";
             foreach (PlayerAction playerAction in this)
             {
@@ -97,10 +97,10 @@ namespace TrackerLibrary.Models
         /// </summary>
         public AllActions()
         {
-            PreFlop = new ();
-            Flop = new ();
-            Turn = new ();
-            River = new ();       
+            PreFlop = new();
+            Flop = new();
+            Turn = new();
+            River = new();
         }
     }
 

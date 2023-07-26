@@ -30,7 +30,7 @@ namespace TrackerLibrary.Queries
         /// <param name="seatActionHero">seatAction of Hero as position-column in SQL rel DB( like bbSeatActionID)</param>
         /// <param name="seatActionVillain">seatAction of Villain as position-column in SQL rel DB( like bbSeatActionID)</param>
         /// <returns>SQL/NoSQL Query with placed params, ready to be executed in PostgreSQL;</returns>
-        public static string ConcatQueries(this string mainQuery, string whereClauseQuery = "", string whereClauseHero = "", string whereClauseVillain = "", string hero = "", int cntPlayers = 0, string tourneyType = "", int posHero = 0, int posVillain = 0, string pfActors ="", string regList = "", string date ="", string AI ="", string size ="", string effStack = "0",string hcsId = "", string btnNULL= "", string seatActionHero = "" , string seatActionVillain = "")
+        public static string ConcatQueries(this string mainQuery, string whereClauseQuery = "", string whereClauseHero = "", string whereClauseVillain = "", string hero = "", int cntPlayers = 0, string tourneyType = "", int posHero = 0, int posVillain = 0, string pfActors = "", string regList = "", string date = "", string AI = "", string size = "", string effStack = "0", string hcsId = "", string btnNULL = "", string seatActionHero = "", string seatActionVillain = "")
         {
 
             string output = mainQuery;
@@ -137,7 +137,7 @@ namespace TrackerLibrary.Queries
         public static string ReadRegList(this string listName, bool isReg)
         {
             //Get the RegList as string;
-            string regList = GlobalConfig.FullFilePath(listName, GlobalConfig.regListDirectory).ReadFileReturnString();
+            string regList = GlobalConfig.FullFilePath(listName, GlobalConfig.GetMainFolderPath() + "\\RegList").ReadFileReturnString();
 
             // Creates SQL-string for REGs or FISHes depending on bool isReg; 
             if (isReg)

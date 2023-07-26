@@ -3,7 +3,7 @@
 
 namespace TrackerLibrary.Models
 {
-    
+
 
     /// <summary>
     /// Contains all user-defined Settings powering up the Application;
@@ -123,7 +123,7 @@ namespace TrackerLibrary.Models
             Port = port;
             User = user;
             Password = pass;
-                
+
 
             SqlDatabase = sqlDatabase;
             NosqlDatabase = nosqlDatabase;
@@ -137,9 +137,9 @@ namespace TrackerLibrary.Models
             CurrentDbRead = DbTypeRead == "SQL" ? sqlDatabase : nosqlDatabase;
 
             ActivePlayer = activePlayer;
-            TourneyType = tourneyType;  
+            TourneyType = tourneyType;
         }
 
-        
+
     }
 }

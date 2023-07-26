@@ -19,11 +19,11 @@ namespace TrackerLibrary.CRUD
         /// <returns>A HashSet of unique Hands, that are not already existing in the DB;</returns>
         public static HashSet<Hand> ReturnHashSetWithUniqueHands(this List<Hand> handsToImport, string dbName, string getIdAndRoomQuery, ref NpgsqlConnection conn)
         {
-            
+
             var importedHandSet = new HashSet<(string Room, long HandId)>(); //already imported Hands;
             var handsToImportDistinctSet = new HashSet<Hand>(); //unique Hands
 
-            
+
             using (NpgsqlCommand command = new NpgsqlCommand(getIdAndRoomQuery, conn))
             {
                 using (NpgsqlDataReader reader = command.ExecuteReader())
@@ -40,7 +40,7 @@ namespace TrackerLibrary.CRUD
                         }
                     }
                 }
-            }  
+            }
 
             // Check if the Hand is in the importedHands List and if not add id to the toBeImported HashSet;
             foreach (var hand in handsToImport)

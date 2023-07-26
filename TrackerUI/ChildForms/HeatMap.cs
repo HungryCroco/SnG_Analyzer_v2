@@ -1,6 +1,6 @@
 ﻿using TrackerLibrary;
-using TrackerLibrary.Models;
 using TrackerLibrary.CRUD;
+using TrackerLibrary.Models;
 using TrackerLibrary.Queries.NoSQL;
 using TrackerLibrary.Queries.SQL;
 
@@ -16,7 +16,7 @@ namespace TrackerUI.ChildForms
         {
             InitializeComponent();
 
-       
+
         }
 
         /// <summary>
@@ -36,20 +36,20 @@ namespace TrackerUI.ChildForms
             var settings = DataManager_Settings.ReadSettings();
 
             // comboBox for choosing vs REG/FISH;
-            Dictionary<string, string> mapComboBoxVs = new() { { "vs FISHes", "fishes" } , { "vs REGs", "regs" } };
+            Dictionary<string, string> mapComboBoxVs = new() { { "vs FISHes", "fishes" }, { "vs REGs", "regs" } };
             cmbBoxVs.DataSource = new BindingSource(mapComboBoxVs, null);
             cmbBoxVs.DisplayMember = "Key";
             cmbBoxVs.ValueMember = "Value";
 
             // ComboBox for choosing ai /nai;
-            Dictionary<string, string> mapComboBoxAi = new() { { "NAI", "0" } , { "AI", "1" } };
+            Dictionary<string, string> mapComboBoxAi = new() { { "NAI", "0" }, { "AI", "1" } };
             cmbBoxAI.DataSource = new BindingSource(mapComboBoxAi, null);
             cmbBoxAI.DisplayMember = "Key";
             cmbBoxAI.ValueMember = "Value";
 
             // ComboBox with all available queries;
             Dictionary<string, Query> mapComboBoxQuery = new() { { "BvB ISO", settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? new Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_Iso , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_Iso) :
-                                                                                                                                     new Query(SQL_HeatMapQueries.SQL_ExportHeatMapAsJSON,SQL_HeatMapQueries.SQL_ExportDataGridViewByHoleCardsSimple, SQL_HeatMapQueries.SQL_WhereClauseHero_BvB_Iso , "", "bbSeatActionId", "sbSeatActionId" )   } , 
+                                                                                                                                     new Query(SQL_HeatMapQueries.SQL_ExportHeatMapAsJSON,SQL_HeatMapQueries.SQL_ExportDataGridViewByHoleCardsSimple, SQL_HeatMapQueries.SQL_WhereClauseHero_BvB_Iso , "", "bbSeatActionId", "sbSeatActionId" )   } ,
                                                                                 { "BvB oL", settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? new Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_oL , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_oL) :
                                                                                                                                         new Query(SQL_HeatMapQueries.SQL_ExportHeatMapAsJSON ,SQL_HeatMapQueries.SQL_ExportDataGridViewByHoleCardsSimple, SQL_HeatMapQueries.SQL_WhereClauseHero_BvB_oL , "", "sbSeatActionId", "bbSeatActionId")   } ,
                                                                                 { "BvB oR", settings.DbTypeRead == DataBaseType.NoSQL.GetDescription() ? new Query(NoSQL_HeatMapQueries.NoSQL_ExportHeatMapAsJSON, NoSQL_HeatMapQueries.NoSQL_ExportDataGridViewByHoleCardsSimple, NoSQL_HeatMapQueries.NoSQL_WhereClauseHero_BvB_oR , NoSQL_HeatMapQueries.NoSQL_WhereClauseVillain_BvB_oR) :
@@ -73,7 +73,7 @@ namespace TrackerUI.ChildForms
         /// <param name="vs">vsFISHes = "fishes, vs REGS = "regs"</param>
         /// <param name="es">Effective Stack; ; Accepting >,<,=, BETWEEN etc;</param>
         /// <param name="settings">Settings</param>
-        private void LoadHeatMap(Query query,  string hero, string tourneyType, string sinceDate, string ai, string size, string vs, string es, TrackerLibrary.Models.Settings settings)
+        private void LoadHeatMap(Query query, string hero, string tourneyType, string sinceDate, string ai, string size, string vs, string es, TrackerLibrary.Models.Settings settings)
         {
             DateTime startTime = DateTime.Now;
 
@@ -84,7 +84,7 @@ namespace TrackerUI.ChildForms
             if (request != null)
             {
 
-            
+
                 foreach (var stats in request)
                 {
                     if (stats.Situations > statsMaxValue)
@@ -120,7 +120,7 @@ namespace TrackerUI.ChildForms
                     {
                         throw;
                     }
-                } 
+                }
             }
 
             // calculate time:
@@ -136,7 +136,7 @@ namespace TrackerUI.ChildForms
         private void btn_Request_Click(object sender, EventArgs e)
         {
             TrackerLibrary.Models.Settings currSettings = DataManager_Settings.ReadSettings();
-            LoadHeatMap( (Query)cmbBoxQuery.SelectedValue, txtBoxPlayer.Text, txtBoxTourneyType.Text, txtBoxDate.Text, cmbBoxAI.SelectedValue.ToString(), txtBoxSize.Text, cmbBoxVs.SelectedValue.ToString(), txtBoxES.Text, currSettings);
+            LoadHeatMap((Query)cmbBoxQuery.SelectedValue, txtBoxPlayer.Text, txtBoxTourneyType.Text, txtBoxDate.Text, cmbBoxAI.SelectedValue.ToString(), txtBoxSize.Text, cmbBoxVs.SelectedValue.ToString(), txtBoxES.Text, currSettings);
         }
 
         /// <summary>
