@@ -1,0 +1,116 @@
+Import Started!
+
+Amount of HandSets to be imported: 4
+
+
+
+------------------
+
+60000 Hands readed for: 55s
+
+
+
+---
+
+current HandSet - CalcTime: 2.668s
+
+current HandSet - Hands Number: 60000
+
+current HandSet - Properties CalcTime: 52.494s
+
+---
+
+Import to NoSQL json_50s: 15.448s
+
+---
+
+Import to SQL sql_50s: 171.709s
+
+
+
+------------------
+
+60000 Hands readed for: 59s
+
+
+
+---
+
+current HandSet - CalcTime: 2.455s
+
+current HandSet - Hands Number: 60000
+
+current HandSet - Properties CalcTime: 52.69s
+
+---
+
+Import to NoSQL json_50s: 17.684s
+
+---
+
+Import to SQL sql_50s: 266.512s
+
+
+
+------------------
+
+60000 Hands readed for: 60s
+
+
+
+---
+
+current HandSet - CalcTime: 2.521s
+
+current HandSet - Hands Number: 60000
+
+current HandSet - Properties CalcTime: 58.285s
+
+---
+
+Import to NoSQL json_50s: 20.073s
+
+---
+
+Import to SQL sql_50s: 373.083s
+
+
+
+------------------
+
+58278 Hands readed for: 57s
+
+
+
+---
+
+current HandSet - CalcTime: 2.672s
+
+current HandSet - Hands Number: 58278
+
+current HandSet - Properties CalcTime: 51.879s
+
+---
+
+Import to NoSQL json_50s: 18.594s
+
+---
+
+Import to SQL sql_50s: 453.14s
+
+
+
+---
+
+sql_50s DashBoard-Page Calculated: 3.837s
+
+json_50s DashBoard-Page Calculated: 50.081s
+
+-----
+
+-----
+
+-----
+
+Import Finished!
+
